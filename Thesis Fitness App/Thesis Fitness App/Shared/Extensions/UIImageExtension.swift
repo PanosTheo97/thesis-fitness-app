@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 enum Image: String {
-    case test
+    case AppLogo
 }
 
 extension UIImage {

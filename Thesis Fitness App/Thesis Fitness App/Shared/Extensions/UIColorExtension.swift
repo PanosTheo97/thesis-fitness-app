@@ -44,28 +44,14 @@ extension UIColor {
     // MARK: - Application Generic Colors
     
     struct App {
-        static var lightGray: UIColor {
-            UIColor(hexString: "#FDFDFD")
-        }
-        
-        static var bluredWhite: UIColor {
-            UIColor(hexString: "#DEDEDF")
-        }
-        
-        static var mainRed: UIColor {
-            UIColor(hexString: "#F3090A")
-        }
-        
-        static var brightRed: UIColor {
-            UIColor(hexString: "#F30B0A")
-        }
-        
-        static var darkGray: UIColor {
-            UIColor(hexString: "#22252B")
-        }
-        
-        static var gray: UIColor {
-            UIColor(hexString: "#363B45")
+        static var mainGreen: UIColor {
+            UIColor { userTraits -> UIColor in
+                if userTraits.userInterfaceStyle == .dark {
+                    return UIColor(hexString: "#151816")
+                } else {
+                    return UIColor(hexString: "#2F4A34")
+                }
+            }
         }
         
     }

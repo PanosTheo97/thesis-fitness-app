@@ -14,7 +14,7 @@ class SplashViewController: UIViewController, BaseProtocol {
     @IBOutlet weak var logoImageView: UIImageView! {
         didSet {
             logoImageView.contentMode = .scaleAspectFit
-            logoImageView.image = UIImage.init(systemName: "heart.fill")
+            logoImageView.image = UIImage.get(image: .AppLogo)
         }
     }
     
@@ -36,7 +36,7 @@ class SplashViewController: UIViewController, BaseProtocol {
     private func setup() {
         registerObservers()
         
-        self.view.backgroundColor = .App.lightGray
+        self.view.backgroundColor = .App.mainGreen
         self.navigationController?.navigationBar.isHidden = true
     }
     
