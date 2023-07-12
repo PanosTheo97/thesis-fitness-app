@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		85E32E29A88C789CCF0702FA /* Pods_Thesis_Fitness_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42792E1741FAFEC16FCF47C3 /* Pods_Thesis_Fitness_App.framework */; };
 		86E30FF52A5E9E0E007EB56B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E30FF42A5E9E0E007EB56B /* AppDelegate.swift */; };
 		86E30FF72A5E9E0E007EB56B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E30FF62A5E9E0E007EB56B /* SceneDelegate.swift */; };
 		86E30FF92A5E9E0E007EB56B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E30FF82A5E9E0E007EB56B /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3AAEA953558CC1B4936948D4 /* Pods-Thesis Fitness App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thesis Fitness App.debug.xcconfig"; path = "Target Support Files/Pods-Thesis Fitness App/Pods-Thesis Fitness App.debug.xcconfig"; sourceTree = "<group>"; };
+		3EB7195C2E59E9EFFC1CE3E5 /* Pods-Thesis Fitness App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thesis Fitness App.release.xcconfig"; path = "Target Support Files/Pods-Thesis Fitness App/Pods-Thesis Fitness App.release.xcconfig"; sourceTree = "<group>"; };
+		42792E1741FAFEC16FCF47C3 /* Pods_Thesis_Fitness_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thesis_Fitness_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86E30FF12A5E9E0E007EB56B /* Thesis Fitness App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thesis Fitness App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86E30FF42A5E9E0E007EB56B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86E30FF62A5E9E0E007EB56B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85E32E29A88C789CCF0702FA /* Pods_Thesis_Fitness_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A6A9998272EA192771D9E5C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				42792E1741FAFEC16FCF47C3 /* Pods_Thesis_Fitness_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		86E30FE82A5E9E0E007EB56B = {
 			isa = PBXGroup;
 			children = (
 				86E30FF32A5E9E0E007EB56B /* Thesis Fitness App */,
 				86E30FF22A5E9E0E007EB56B /* Products */,
+				D52293BB1ED70D428AC6E2CD /* Pods */,
+				3A6A9998272EA192771D9E5C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,15 @@
 			path = "Thesis Fitness App";
 			sourceTree = "<group>";
 		};
+		D52293BB1ED70D428AC6E2CD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3AAEA953558CC1B4936948D4 /* Pods-Thesis Fitness App.debug.xcconfig */,
+				3EB7195C2E59E9EFFC1CE3E5 /* Pods-Thesis Fitness App.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86E310052A5E9E10007EB56B /* Build configuration list for PBXNativeTarget "Thesis Fitness App" */;
 			buildPhases = (
+				736221FB2B0ACD888B8CAE6F /* [CP] Check Pods Manifest.lock */,
 				86E30FED2A5E9E0E007EB56B /* Sources */,
 				86E30FEE2A5E9E0E007EB56B /* Frameworks */,
 				86E30FEF2A5E9E0E007EB56B /* Resources */,
+				1D73EC1BB095CCA40EE93A44 /* [CP] Embed Pods Frameworks */,
+				86E310082A5EA46A007EB56B /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,66 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D73EC1BB095CCA40EE93A44 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Thesis Fitness App/Pods-Thesis Fitness App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Thesis Fitness App/Pods-Thesis Fitness App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Thesis Fitness App/Pods-Thesis Fitness App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		736221FB2B0ACD888B8CAE6F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Thesis Fitness App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86E310082A5EA46A007EB56B /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse \n    echo \"warning: Swiftlint not installed\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		86E30FED2A5E9E0E007EB56B /* Sources */ = {
@@ -282,6 +369,7 @@
 		};
 		86E310062A5E9E10007EB56B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AAEA953558CC1B4936948D4 /* Pods-Thesis Fitness App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +398,7 @@
 		};
 		86E310072A5E9E10007EB56B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3EB7195C2E59E9EFFC1CE3E5 /* Pods-Thesis Fitness App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

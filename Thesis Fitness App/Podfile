@@ -1,0 +1,16 @@
+platform :ios, '13.0'
+
+target 'Thesis Fitness App' do
+  use_frameworks!
+
+  pod 'Alamofire', '~> 5.4'
+  pod 'ObjectMapper', '~> 4.2'
+  pod 'SwiftyJSON', '~> 5.0'
+  pod 'Kingfisher', '~> 5.15'
+  pod 'SwiftyUserDefaults', '~> 5.0'
+
+  pod 'SVProgressHUD', '~> 2.2'
+
+  pod 'SwiftLint'
+
+end
