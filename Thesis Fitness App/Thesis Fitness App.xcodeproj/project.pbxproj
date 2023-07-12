@@ -10,8 +10,6 @@
 		85E32E29A88C789CCF0702FA /* Pods_Thesis_Fitness_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42792E1741FAFEC16FCF47C3 /* Pods_Thesis_Fitness_App.framework */; };
 		86E30FF52A5E9E0E007EB56B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E30FF42A5E9E0E007EB56B /* AppDelegate.swift */; };
 		86E30FF72A5E9E0E007EB56B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E30FF62A5E9E0E007EB56B /* SceneDelegate.swift */; };
-		86E30FF92A5E9E0E007EB56B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E30FF82A5E9E0E007EB56B /* ViewController.swift */; };
-		86E30FFC2A5E9E0E007EB56B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E30FFA2A5E9E0E007EB56B /* Main.storyboard */; };
 		86E30FFE2A5E9E10007EB56B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86E30FFD2A5E9E10007EB56B /* Assets.xcassets */; };
 		86E310012A5E9E10007EB56B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E30FFF2A5E9E10007EB56B /* LaunchScreen.storyboard */; };
 		86E3100F2A5EA5E1007EB56B /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E3100E2A5EA5E1007EB56B /* Observable.swift */; };
@@ -28,6 +26,18 @@
 		86E310282A5EAC25007EB56B /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E310272A5EAC25007EB56B /* UICollectionViewExtension.swift */; };
 		86E3102A2A5EAC39007EB56B /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E310292A5EAC39007EB56B /* UIImageViewExtension.swift */; };
 		86E3102C2A5EAC52007EB56B /* JSONExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E3102B2A5EAC52007EB56B /* JSONExtension.swift */; };
+		86E310302A5EC323007EB56B /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E3102F2A5EC323007EB56B /* AppDIContainer.swift */; };
+		86E310332A5EC33C007EB56B /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E310322A5EC33C007EB56B /* AppViewModel.swift */; };
+		86E310362A5EC369007EB56B /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E310352A5EC369007EB56B /* AppFlowCoordinator.swift */; };
+		86E3103D2A5EC414007EB56B /* MainModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E3103C2A5EC414007EB56B /* MainModule.swift */; };
+		86E3103F2A5EC42D007EB56B /* MainFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E3103E2A5EC42D007EB56B /* MainFlowCoordinator.swift */; };
+		86E310412A5EC448007EB56B /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E310402A5EC448007EB56B /* MainNavigationController.swift */; };
+		86E310472A5EC4CF007EB56B /* SplashModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E310462A5EC4CF007EB56B /* SplashModule.swift */; };
+		86E310492A5EC4E8007EB56B /* SplashDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E310482A5EC4E8007EB56B /* SplashDIContainer.swift */; };
+		86E3104B2A5EC500007EB56B /* SplashFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E3104A2A5EC500007EB56B /* SplashFlowCoordinator.swift */; };
+		86E3104D2A5EC515007EB56B /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E3104C2A5EC514007EB56B /* SplashViewModel.swift */; };
+		86E3104F2A5EC52A007EB56B /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E3104E2A5EC52A007EB56B /* Splash.storyboard */; };
+		86E310512A5EC538007EB56B /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E310502A5EC538007EB56B /* SplashViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,8 +47,6 @@
 		86E30FF12A5E9E0E007EB56B /* Thesis Fitness App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thesis Fitness App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86E30FF42A5E9E0E007EB56B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86E30FF62A5E9E0E007EB56B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		86E30FF82A5E9E0E007EB56B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		86E30FFB2A5E9E0E007EB56B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		86E30FFD2A5E9E10007EB56B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86E310002A5E9E10007EB56B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86E310022A5E9E10007EB56B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Thesis Fitness App/Resources/Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -56,6 +64,18 @@
 		86E310272A5EAC25007EB56B /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
 		86E310292A5EAC39007EB56B /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		86E3102B2A5EAC52007EB56B /* JSONExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONExtension.swift; sourceTree = "<group>"; };
+		86E3102F2A5EC323007EB56B /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDIContainer.swift; path = "Thesis Fitness App/Shared/Extensions/AppDIContainer.swift"; sourceTree = SOURCE_ROOT; };
+		86E310322A5EC33C007EB56B /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppViewModel.swift; path = "Thesis Fitness App/Shared/Extensions/AppViewModel.swift"; sourceTree = SOURCE_ROOT; };
+		86E310352A5EC369007EB56B /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppFlowCoordinator.swift; path = "Thesis Fitness App/Shared/Extensions/AppFlowCoordinator.swift"; sourceTree = SOURCE_ROOT; };
+		86E3103C2A5EC414007EB56B /* MainModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModule.swift; sourceTree = "<group>"; };
+		86E3103E2A5EC42D007EB56B /* MainFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlowCoordinator.swift; sourceTree = "<group>"; };
+		86E310402A5EC448007EB56B /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		86E310462A5EC4CF007EB56B /* SplashModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashModule.swift; sourceTree = "<group>"; };
+		86E310482A5EC4E8007EB56B /* SplashDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashDIContainer.swift; sourceTree = "<group>"; };
+		86E3104A2A5EC500007EB56B /* SplashFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashFlowCoordinator.swift; sourceTree = "<group>"; };
+		86E3104C2A5EC514007EB56B /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		86E3104E2A5EC52A007EB56B /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
+		86E310502A5EC538007EB56B /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +120,10 @@
 			isa = PBXGroup;
 			children = (
 				86E310092A5EA56E007EB56B /* Shared */,
+				86E3102D2A5EC2C1007EB56B /* Launch */,
+				86E310392A5EC3F7007EB56B /* Main */,
+				86E310372A5EC383007EB56B /* Scenes */,
 				86E3100C2A5EA58D007EB56B /* Resources */,
-				86E30FF42A5E9E0E007EB56B /* AppDelegate.swift */,
-				86E30FF62A5E9E0E007EB56B /* SceneDelegate.swift */,
-				86E30FF82A5E9E0E007EB56B /* ViewController.swift */,
-				86E30FFA2A5E9E0E007EB56B /* Main.storyboard */,
-				86E30FFF2A5E9E10007EB56B /* LaunchScreen.storyboard */,
 			);
 			path = "Thesis Fitness App";
 			sourceTree = "<group>";
@@ -170,6 +188,130 @@
 				86E3102B2A5EAC52007EB56B /* JSONExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		86E3102D2A5EC2C1007EB56B /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				86E3102E2A5EC308007EB56B /* DIContainer */,
+				86E310342A5EC354007EB56B /* FlowCoordinator */,
+				86E310312A5EC32F007EB56B /* ViewModel */,
+				86E310522A5EC669007EB56B /* View */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		86E3102E2A5EC308007EB56B /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+				86E3102F2A5EC323007EB56B /* AppDIContainer.swift */,
+			);
+			path = DIContainer;
+			sourceTree = "<group>";
+		};
+		86E310312A5EC32F007EB56B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				86E310322A5EC33C007EB56B /* AppViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		86E310342A5EC354007EB56B /* FlowCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				86E310352A5EC369007EB56B /* AppFlowCoordinator.swift */,
+			);
+			path = FlowCoordinator;
+			sourceTree = "<group>";
+		};
+		86E310372A5EC383007EB56B /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				86E310382A5EC3DE007EB56B /* Splash */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		86E310382A5EC3DE007EB56B /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				86E310462A5EC4CF007EB56B /* SplashModule.swift */,
+				86E310452A5EC4B7007EB56B /* DIContainer */,
+				86E310442A5EC4B1007EB56B /* FlowCoordinator */,
+				86E310432A5EC4AB007EB56B /* ViewModel */,
+				86E310422A5EC4A7007EB56B /* View */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		86E310392A5EC3F7007EB56B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				86E3103C2A5EC414007EB56B /* MainModule.swift */,
+				86E3103B2A5EC407007EB56B /* FlowCoordinator */,
+				86E3103A2A5EC402007EB56B /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		86E3103A2A5EC402007EB56B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				86E310402A5EC448007EB56B /* MainNavigationController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		86E3103B2A5EC407007EB56B /* FlowCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				86E3103E2A5EC42D007EB56B /* MainFlowCoordinator.swift */,
+			);
+			path = FlowCoordinator;
+			sourceTree = "<group>";
+		};
+		86E310422A5EC4A7007EB56B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				86E3104E2A5EC52A007EB56B /* Splash.storyboard */,
+				86E310502A5EC538007EB56B /* SplashViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		86E310432A5EC4AB007EB56B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				86E3104C2A5EC514007EB56B /* SplashViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		86E310442A5EC4B1007EB56B /* FlowCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				86E3104A2A5EC500007EB56B /* SplashFlowCoordinator.swift */,
+			);
+			path = FlowCoordinator;
+			sourceTree = "<group>";
+		};
+		86E310452A5EC4B7007EB56B /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+				86E310482A5EC4E8007EB56B /* SplashDIContainer.swift */,
+			);
+			path = DIContainer;
+			sourceTree = "<group>";
+		};
+		86E310522A5EC669007EB56B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				86E30FFF2A5E9E10007EB56B /* LaunchScreen.storyboard */,
+				86E30FF62A5E9E0E007EB56B /* SceneDelegate.swift */,
+				86E30FF42A5E9E0E007EB56B /* AppDelegate.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		D52293BB1ED70D428AC6E2CD /* Pods */ = {
@@ -244,7 +386,7 @@
 			files = (
 				86E310012A5E9E10007EB56B /* LaunchScreen.storyboard in Resources */,
 				86E30FFE2A5E9E10007EB56B /* Assets.xcassets in Resources */,
-				86E30FFC2A5E9E0E007EB56B /* Main.storyboard in Resources */,
+				86E3104F2A5EC52A007EB56B /* Splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,7 +459,8 @@
 			files = (
 				86E3101B2A5EA69D007EB56B /* BaseProtocol.swift in Sources */,
 				86E3100F2A5EA5E1007EB56B /* Observable.swift in Sources */,
-				86E30FF92A5E9E0E007EB56B /* ViewController.swift in Sources */,
+				86E310332A5EC33C007EB56B /* AppViewModel.swift in Sources */,
+				86E310512A5EC538007EB56B /* SplashViewController.swift in Sources */,
 				86E310112A5EA61C007EB56B /* RefreshableTableView.swift in Sources */,
 				86E310282A5EAC25007EB56B /* UICollectionViewExtension.swift in Sources */,
 				86E30FF52A5E9E0E007EB56B /* AppDelegate.swift in Sources */,
@@ -326,26 +469,27 @@
 				86E3101E2A5EAB4D007EB56B /* UIColorExtension.swift in Sources */,
 				86E310142A5EA656007EB56B /* ReusableViewProtocol.swift in Sources */,
 				86E3102C2A5EAC52007EB56B /* JSONExtension.swift in Sources */,
+				86E3103F2A5EC42D007EB56B /* MainFlowCoordinator.swift in Sources */,
 				86E310242A5EABDA007EB56B /* UIImageExtension.swift in Sources */,
+				86E310492A5EC4E8007EB56B /* SplashDIContainer.swift in Sources */,
+				86E310302A5EC323007EB56B /* AppDIContainer.swift in Sources */,
+				86E310412A5EC448007EB56B /* MainNavigationController.swift in Sources */,
 				86E310222A5EABA9007EB56B /* UIWindowExtension.swift in Sources */,
 				86E310202A5EAB7F007EB56B /* UIViewControllerExtension.swift in Sources */,
+				86E3104B2A5EC500007EB56B /* SplashFlowCoordinator.swift in Sources */,
 				86E310192A5EA687007EB56B /* BaseFlowCoordinatorProtocol.swift in Sources */,
+				86E310472A5EC4CF007EB56B /* SplashModule.swift in Sources */,
+				86E3104D2A5EC515007EB56B /* SplashViewModel.swift in Sources */,
 				86E3102A2A5EAC39007EB56B /* UIImageViewExtension.swift in Sources */,
 				86E310262A5EAC08007EB56B /* UITableViewExtension.swift in Sources */,
+				86E3103D2A5EC414007EB56B /* MainModule.swift in Sources */,
+				86E310362A5EC369007EB56B /* AppFlowCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		86E30FFA2A5E9E0E007EB56B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				86E30FFB2A5E9E0E007EB56B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		86E30FFF2A5E9E10007EB56B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -484,9 +628,8 @@
 				INFOPLIST_FILE = "/Users/ptheodos/Documents/thesis-fitness-app/Thesis Fitness App/Thesis Fitness App/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -513,9 +656,8 @@
 				INFOPLIST_FILE = "/Users/ptheodos/Documents/thesis-fitness-app/Thesis Fitness App/Thesis Fitness App/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
