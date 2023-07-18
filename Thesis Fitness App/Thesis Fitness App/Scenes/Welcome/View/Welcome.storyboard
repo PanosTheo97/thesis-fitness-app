@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="WelcomeViewControllerIdentifier" id="Y6W-OH-hqX" customClass="WelcomeViewController" customModule="Thesis_Fitness_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TZD-PW-MMK">
+                                <rect key="frame" x="137.66666666666666" y="223" width="117.66666666666666" height="118"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="TZD-PW-MMK" secondAttribute="height" id="vlG-3v-fGt"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQv-nu-UL3">
+                                <rect key="frame" x="175.66666666666666" y="353" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ESz-T9-b8o" customClass="GIDSignInButton">
+                                <rect key="frame" x="78.666666666666671" y="390" width="235.66666666666663" height="35"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Cdw-TH-Rw6"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nq-VN-uHn">
+                                <rect key="frame" x="24" y="783" width="345" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="v5L-oz-K1B"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ESz-T9-b8o" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.6" id="0uP-w6-zBT"/>
+                            <constraint firstItem="TZD-PW-MMK" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vDu-zF-Fre" secondAttribute="top" constant="24" id="32q-9y-elv"/>
+                            <constraint firstItem="ESz-T9-b8o" firstAttribute="top" secondItem="VQv-nu-UL3" secondAttribute="bottom" constant="16" id="3ci-8e-jni"/>
+                            <constraint firstItem="VQv-nu-UL3" firstAttribute="top" secondItem="TZD-PW-MMK" secondAttribute="bottom" constant="12" id="MR7-Ax-n8j"/>
+                            <constraint firstItem="TZD-PW-MMK" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-144" id="Rdl-ga-LMW"/>
+                            <constraint firstItem="2nq-VN-uHn" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="S16-ZV-N5e"/>
+                            <constraint firstItem="2nq-VN-uHn" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ESz-T9-b8o" secondAttribute="bottom" constant="24" id="ZuQ-TJ-MQp"/>
+                            <constraint firstItem="2nq-VN-uHn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="adZ-FB-m1O"/>
+                            <constraint firstItem="TZD-PW-MMK" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="cRw-Dj-ENP"/>
+                            <constraint firstItem="TZD-PW-MMK" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.3" id="fnp-83-gos"/>
+                            <constraint firstItem="ESz-T9-b8o" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="kvH-FP-cCd"/>
+                            <constraint firstItem="VQv-nu-UL3" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="lNj-9p-gKb"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="2nq-VN-uHn" secondAttribute="trailing" constant="24" id="vNB-v8-jyk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="googleSignInButtonView" destination="ESz-T9-b8o" id="xnF-PS-hkt"/>
+                        <outlet property="guestButton" destination="2nq-VN-uHn" id="aMe-z1-Wct"/>
+                        <outlet property="logoImageView" destination="TZD-PW-MMK" id="f9A-wk-KZR"/>
+                        <outlet property="welcomeLabel" destination="VQv-nu-UL3" id="1Yd-El-HjZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="-13"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -9,6 +9,6 @@ import Foundation
 
 final class SplashDIContainer {
     
-    //let homeModule = HomeModule()
+    let welcomeModule = WelcomeModule()
     
 }

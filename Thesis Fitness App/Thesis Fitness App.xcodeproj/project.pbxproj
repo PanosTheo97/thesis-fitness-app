@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		85E32E29A88C789CCF0702FA /* Pods_Thesis_Fitness_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42792E1741FAFEC16FCF47C3 /* Pods_Thesis_Fitness_App.framework */; };
+		866F8FC02A66799000C3F30F /* WelcomeDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866F8FBF2A66799000C3F30F /* WelcomeDIContainer.swift */; };
+		866F8FC22A6679A700C3F30F /* WelcomeFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866F8FC12A6679A700C3F30F /* WelcomeFlowCoordinator.swift */; };
+		866F8FC42A667A3F00C3F30F /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866F8FC32A667A3F00C3F30F /* WelcomeViewModel.swift */; };
+		866F8FC62A667ABE00C3F30F /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 866F8FC52A667ABE00C3F30F /* Welcome.storyboard */; };
+		866F8FC82A667ACA00C3F30F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866F8FC72A667ACA00C3F30F /* WelcomeViewController.swift */; };
+		866F8FCA2A667C0100C3F30F /* WelcomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866F8FC92A667C0100C3F30F /* WelcomeModule.swift */; };
+		866F8FCC2A667FA900C3F30F /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866F8FCB2A667FA900C3F30F /* UIButtonExtension.swift */; };
+		866F8FCE2A667FCE00C3F30F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866F8FCD2A667FCE00C3F30F /* UIViewExtension.swift */; };
 		86E30FF52A5E9E0E007EB56B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E30FF42A5E9E0E007EB56B /* AppDelegate.swift */; };
 		86E30FF72A5E9E0E007EB56B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E30FF62A5E9E0E007EB56B /* SceneDelegate.swift */; };
 		86E30FFE2A5E9E10007EB56B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86E30FFD2A5E9E10007EB56B /* Assets.xcassets */; };
@@ -45,6 +53,14 @@
 		3AAEA953558CC1B4936948D4 /* Pods-Thesis Fitness App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thesis Fitness App.debug.xcconfig"; path = "Target Support Files/Pods-Thesis Fitness App/Pods-Thesis Fitness App.debug.xcconfig"; sourceTree = "<group>"; };
 		3EB7195C2E59E9EFFC1CE3E5 /* Pods-Thesis Fitness App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thesis Fitness App.release.xcconfig"; path = "Target Support Files/Pods-Thesis Fitness App/Pods-Thesis Fitness App.release.xcconfig"; sourceTree = "<group>"; };
 		42792E1741FAFEC16FCF47C3 /* Pods_Thesis_Fitness_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thesis_Fitness_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		866F8FBF2A66799000C3F30F /* WelcomeDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeDIContainer.swift; sourceTree = "<group>"; };
+		866F8FC12A6679A700C3F30F /* WelcomeFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeFlowCoordinator.swift; sourceTree = "<group>"; };
+		866F8FC32A667A3F00C3F30F /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
+		866F8FC52A667ABE00C3F30F /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
+		866F8FC72A667ACA00C3F30F /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		866F8FC92A667C0100C3F30F /* WelcomeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeModule.swift; sourceTree = "<group>"; };
+		866F8FCB2A667FA900C3F30F /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		866F8FCD2A667FCE00C3F30F /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		86E30FF12A5E9E0E007EB56B /* Thesis Fitness App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thesis Fitness App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86E30FF42A5E9E0E007EB56B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86E30FF62A5E9E0E007EB56B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +114,51 @@
 				42792E1741FAFEC16FCF47C3 /* Pods_Thesis_Fitness_App.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		866F8FBA2A66794A00C3F30F /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				866F8FC92A667C0100C3F30F /* WelcomeModule.swift */,
+				866F8FBE2A66797900C3F30F /* DIContainer */,
+				866F8FBD2A66797300C3F30F /* FlowCoordinator */,
+				866F8FBC2A66796900C3F30F /* ViewModel */,
+				866F8FBB2A66796300C3F30F /* View */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		866F8FBB2A66796300C3F30F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				866F8FC52A667ABE00C3F30F /* Welcome.storyboard */,
+				866F8FC72A667ACA00C3F30F /* WelcomeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		866F8FBC2A66796900C3F30F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				866F8FC32A667A3F00C3F30F /* WelcomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		866F8FBD2A66797300C3F30F /* FlowCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				866F8FC12A6679A700C3F30F /* WelcomeFlowCoordinator.swift */,
+			);
+			path = FlowCoordinator;
+			sourceTree = "<group>";
+		};
+		866F8FBE2A66797900C3F30F /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+				866F8FBF2A66799000C3F30F /* WelcomeDIContainer.swift */,
+			);
+			path = DIContainer;
 			sourceTree = "<group>";
 		};
 		86E30FE82A5E9E0E007EB56B = {
@@ -189,6 +250,8 @@
 				86E310272A5EAC25007EB56B /* UICollectionViewExtension.swift */,
 				86E310292A5EAC39007EB56B /* UIImageViewExtension.swift */,
 				86E3102B2A5EAC52007EB56B /* JSONExtension.swift */,
+				866F8FCB2A667FA900C3F30F /* UIButtonExtension.swift */,
+				866F8FCD2A667FCE00C3F30F /* UIViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -232,6 +295,7 @@
 			isa = PBXGroup;
 			children = (
 				86E310382A5EC3DE007EB56B /* Splash */,
+				866F8FBA2A66794A00C3F30F /* Welcome */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -387,6 +451,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				866F8FC62A667ABE00C3F30F /* Welcome.storyboard in Resources */,
 				86E310012A5E9E10007EB56B /* LaunchScreen.storyboard in Resources */,
 				86F828B42A61790F0017ABB8 /* credentials.plist in Resources */,
 				86E30FFE2A5E9E10007EB56B /* Assets.xcassets in Resources */,
@@ -461,14 +526,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				866F8FCA2A667C0100C3F30F /* WelcomeModule.swift in Sources */,
 				86E3101B2A5EA69D007EB56B /* BaseProtocol.swift in Sources */,
+				866F8FC42A667A3F00C3F30F /* WelcomeViewModel.swift in Sources */,
 				86E3100F2A5EA5E1007EB56B /* Observable.swift in Sources */,
 				86E310332A5EC33C007EB56B /* AppViewModel.swift in Sources */,
 				86E310512A5EC538007EB56B /* SplashViewController.swift in Sources */,
 				86E310112A5EA61C007EB56B /* RefreshableTableView.swift in Sources */,
 				86E310282A5EAC25007EB56B /* UICollectionViewExtension.swift in Sources */,
+				866F8FCE2A667FCE00C3F30F /* UIViewExtension.swift in Sources */,
 				86E30FF52A5E9E0E007EB56B /* AppDelegate.swift in Sources */,
 				86E30FF72A5E9E0E007EB56B /* SceneDelegate.swift in Sources */,
+				866F8FC82A667ACA00C3F30F /* WelcomeViewController.swift in Sources */,
 				86E310172A5EA673007EB56B /* BaseViewModelProtocol.swift in Sources */,
 				86E3101E2A5EAB4D007EB56B /* UIColorExtension.swift in Sources */,
 				86E310142A5EA656007EB56B /* ReusableViewProtocol.swift in Sources */,
@@ -480,6 +549,9 @@
 				86E310412A5EC448007EB56B /* MainNavigationController.swift in Sources */,
 				86E310222A5EABA9007EB56B /* UIWindowExtension.swift in Sources */,
 				86E310202A5EAB7F007EB56B /* UIViewControllerExtension.swift in Sources */,
+				866F8FC02A66799000C3F30F /* WelcomeDIContainer.swift in Sources */,
+				866F8FCC2A667FA900C3F30F /* UIButtonExtension.swift in Sources */,
+				866F8FC22A6679A700C3F30F /* WelcomeFlowCoordinator.swift in Sources */,
 				86E3104B2A5EC500007EB56B /* SplashFlowCoordinator.swift in Sources */,
 				86E310192A5EA687007EB56B /* BaseFlowCoordinatorProtocol.swift in Sources */,
 				86E310472A5EC4CF007EB56B /* SplashModule.swift in Sources */,
