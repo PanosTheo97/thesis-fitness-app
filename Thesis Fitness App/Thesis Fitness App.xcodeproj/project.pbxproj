@@ -38,6 +38,7 @@
 		86E3104D2A5EC515007EB56B /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E3104C2A5EC514007EB56B /* SplashViewModel.swift */; };
 		86E3104F2A5EC52A007EB56B /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E3104E2A5EC52A007EB56B /* Splash.storyboard */; };
 		86E310512A5EC538007EB56B /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E310502A5EC538007EB56B /* SplashViewController.swift */; };
+		86F828B42A61790F0017ABB8 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86F828B32A61790F0017ABB8 /* credentials.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		86E3104C2A5EC514007EB56B /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		86E3104E2A5EC52A007EB56B /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		86E310502A5EC538007EB56B /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		86F828B32A61790F0017ABB8 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 		86E3100C2A5EA58D007EB56B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				86F828B32A61790F0017ABB8 /* credentials.plist */,
 				86E310022A5E9E10007EB56B /* Info.plist */,
 				86E30FFD2A5E9E10007EB56B /* Assets.xcassets */,
 			);
@@ -385,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				86E310012A5E9E10007EB56B /* LaunchScreen.storyboard in Resources */,
+				86F828B42A61790F0017ABB8 /* credentials.plist in Resources */,
 				86E30FFE2A5E9E10007EB56B /* Assets.xcassets in Resources */,
 				86E3104F2A5EC52A007EB56B /* Splash.storyboard in Resources */,
 			);

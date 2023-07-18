@@ -10,6 +10,8 @@ target 'Thesis Fitness App' do
   pod 'SwiftyUserDefaults', '~> 5.0'
 
   pod 'SVProgressHUD', '~> 2.2'
+  
+  pod 'GoogleSignIn'
 
   pod 'SwiftLint'
 
