@@ -11,6 +11,7 @@ import UIKit
 
 enum Image: String {
     case AppLogo
+    case Google
 }
 
 extension UIImage {

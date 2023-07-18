@@ -28,11 +28,31 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ESz-T9-b8o" customClass="GIDSignInButton">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ESz-T9-b8o">
                                 <rect key="frame" x="78.666666666666671" y="390" width="235.66666666666663" height="35"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q11-Jp-kqd">
+                                        <rect key="frame" x="8" y="8" width="19" height="19"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Q11-Jp-kqd" secondAttribute="height" id="AcL-jR-q4i"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dvT-RV-1fW">
+                                        <rect key="frame" x="34.999999999999986" y="7" width="192.66666666666663" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Cdw-TH-Rw6"/>
+                                    <constraint firstItem="dvT-RV-1fW" firstAttribute="centerY" secondItem="Q11-Jp-kqd" secondAttribute="centerY" id="KFB-E5-K46"/>
+                                    <constraint firstAttribute="bottom" secondItem="Q11-Jp-kqd" secondAttribute="bottom" constant="8" id="MrC-lr-yG3"/>
+                                    <constraint firstAttribute="trailing" secondItem="dvT-RV-1fW" secondAttribute="trailing" constant="8" id="Spe-Ju-afY"/>
+                                    <constraint firstItem="Q11-Jp-kqd" firstAttribute="top" secondItem="ESz-T9-b8o" secondAttribute="top" constant="8" id="TXZ-27-dT0"/>
+                                    <constraint firstItem="Q11-Jp-kqd" firstAttribute="leading" secondItem="ESz-T9-b8o" secondAttribute="leading" constant="8" id="UJH-tZ-Fga"/>
+                                    <constraint firstItem="dvT-RV-1fW" firstAttribute="leading" secondItem="Q11-Jp-kqd" secondAttribute="trailing" constant="8" id="nXp-xv-cUM"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nq-VN-uHn">
@@ -63,7 +83,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="googleSignInButtonView" destination="ESz-T9-b8o" id="xnF-PS-hkt"/>
+                        <outlet property="googleImageView" destination="Q11-Jp-kqd" id="Nco-9i-kLe"/>
+                        <outlet property="googleSignInButtonView" destination="ESz-T9-b8o" id="7qF-3s-LGe"/>
+                        <outlet property="googleSignInLabel" destination="dvT-RV-1fW" id="6dW-yz-Iwu"/>
                         <outlet property="guestButton" destination="2nq-VN-uHn" id="aMe-z1-Wct"/>
                         <outlet property="logoImageView" destination="TZD-PW-MMK" id="f9A-wk-KZR"/>
                         <outlet property="welcomeLabel" destination="VQv-nu-UL3" id="1Yd-El-HjZ"/>
@@ -71,7 +93,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="-13"/>
+            <point key="canvasLocation" x="130.53435114503816" y="-13.380281690140846"/>
         </scene>
     </scenes>
     <resources>

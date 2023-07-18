@@ -9,4 +9,5 @@
 // MARK: - Welcome
 
 "Welcome_welcomeLabel" = "Καλωσήρθες";
+"Welcome_googleSignInLabel" = "Σύνδεση με Google";
 "Welcome_guestButton" = "Ή συνέχισε ως καλεσμένος";

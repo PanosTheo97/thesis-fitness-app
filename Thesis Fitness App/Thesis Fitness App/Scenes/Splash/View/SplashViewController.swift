@@ -36,7 +36,7 @@ class SplashViewController: UIViewController, BaseProtocol {
     private func setup() {
         registerObservers()
         
-        self.view.backgroundColor = .App.mainGreen
+        self.view.backgroundColor = .systemBackground
         self.navigationController?.navigationBar.isHidden = true
     }
     

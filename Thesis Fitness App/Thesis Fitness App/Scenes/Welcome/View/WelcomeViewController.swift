@@ -21,24 +21,41 @@ class WelcomeViewController: UIViewController, BaseProtocol {
     
     @IBOutlet weak var welcomeLabel: UILabel! {
         didSet {
-            welcomeLabel.textColor = .systemGray
+            welcomeLabel.textColor = .App.mainText
             welcomeLabel.text = "Welcome_welcomeLabel".getLocalized()
             welcomeLabel.font = .systemFont(ofSize: 20, weight: .bold)
         }
     }
     
-    @IBOutlet weak var googleSignInButtonView: GIDSignInButton! {
+    @IBOutlet weak var googleSignInButtonView: UIView! {
         didSet {
-            googleSignInButtonView.style = .wide
-            googleSignInButtonView.colorScheme = .dark
+            googleSignInButtonView.backgroundColor = .clear
+            googleSignInButtonView.layer.cornerRadius = 8
+            googleSignInButtonView.layer.borderColor = UIColor.App.mainText.cgColor
+            googleSignInButtonView.layer.borderWidth = 1.5
         }
     }
-     
+    
+    @IBOutlet weak var googleImageView: UIImageView! {
+        didSet {
+            googleImageView.contentMode = .scaleAspectFit
+            googleImageView.image = UIImage.get(image: .Google)
+        }
+    }
+    
+    @IBOutlet weak var googleSignInLabel: UILabel! {
+        didSet {
+            googleSignInLabel.textColor = .App.mainText
+            googleSignInLabel.text = "Welcome_googleSignInLabel".getLocalized()
+            googleSignInLabel.font = .systemFont(ofSize: 16, weight: .bold)
+        }
+    }
+    
     @IBOutlet weak var guestButton: UIButton! {
         didSet {
             guestButton.backgroundColor = .clear
             guestButton.applyStyle(buttonStyleEnum: .rounded(backgroundcolor: .clear,
-                                                             textColor: .systemGray,
+                                                             textColor: .App.mainText,
                                                              text: "Welcome_guestButton".getLocalized(),
                                                              font: .systemFont(ofSize: 20, weight: .bold)))
         }

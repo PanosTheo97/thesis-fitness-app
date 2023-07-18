@@ -9,4 +9,6 @@
 // MARK: - Welcome
 
 "Welcome_welcomeLabel" = "Welcome";
+"Welcome_googleSignInLabel" = "Sign in with Google";
 "Welcome_guestButton" = "Or continue as Guest";
+

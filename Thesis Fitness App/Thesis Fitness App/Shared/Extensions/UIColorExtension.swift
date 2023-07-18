@@ -54,6 +54,25 @@ extension UIColor {
             }
         }
         
+        static var mainOrange: UIColor {
+            UIColor { userTraits -> UIColor in
+                if userTraits.userInterfaceStyle == .dark {
+                    return UIColor(hexString: "#E67A19")
+                } else {
+                    return UIColor(hexString: "#E67A19")
+                }
+            }
+        }
+        
+        static var mainText: UIColor {
+            UIColor { userTraits -> UIColor in
+                if userTraits.userInterfaceStyle == .dark {
+                    return UIColor(hexString: "#1FB8BC")
+                } else {
+                    return UIColor(hexString: "#E67A19")
+                }
+            }
+        }
     }
     
 }
