@@ -22,7 +22,7 @@ class WelcomeViewController: UIViewController, BaseProtocol {
     @IBOutlet weak var welcomeLabel: UILabel! {
         didSet {
             welcomeLabel.textColor = .systemGray
-            welcomeLabel.text = "Welcome"
+            welcomeLabel.text = "Welcome_welcomeLabel".getLocalized()
             welcomeLabel.font = .systemFont(ofSize: 20, weight: .bold)
         }
     }
@@ -39,7 +39,7 @@ class WelcomeViewController: UIViewController, BaseProtocol {
             guestButton.backgroundColor = .clear
             guestButton.applyStyle(buttonStyleEnum: .rounded(backgroundcolor: .clear,
                                                              textColor: .systemGray,
-                                                             text: "Or continue as Guest",
+                                                             text: "Welcome_guestButton".getLocalized(),
                                                              font: .systemFont(ofSize: 20, weight: .bold)))
         }
     }

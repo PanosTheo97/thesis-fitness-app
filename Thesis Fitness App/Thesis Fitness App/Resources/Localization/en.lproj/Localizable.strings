@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  Thesis Fitness App
+
+  Created by Panagiotis Theodosiadis on 18/7/23.
+  
+*/
+
+// MARK: - Welcome
+
+"Welcome_welcomeLabel" = "Welcome";
+"Welcome_guestButton" = "Or continue as Guest";

@@ -16,6 +16,12 @@
 		866F8FCA2A667C0100C3F30F /* WelcomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866F8FC92A667C0100C3F30F /* WelcomeModule.swift */; };
 		866F8FCC2A667FA900C3F30F /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866F8FCB2A667FA900C3F30F /* UIButtonExtension.swift */; };
 		866F8FCE2A667FCE00C3F30F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866F8FCD2A667FCE00C3F30F /* UIViewExtension.swift */; };
+		866F8FD22A66839B00C3F30F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 866F8FD42A66839B00C3F30F /* Localizable.strings */; };
+		866F8FD82A66844300C3F30F /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866F8FD72A66844300C3F30F /* StringExtension.swift */; };
+		866F8FDB2A66849D00C3F30F /* LocalizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866F8FDA2A66849D00C3F30F /* LocalizationManager.swift */; };
+		866F8FDE2A6684C600C3F30F /* LanguageEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866F8FDD2A6684C600C3F30F /* LanguageEnum.swift */; };
+		866F8FE02A66852200C3F30F /* DefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866F8FDF2A66852200C3F30F /* DefaultsManager.swift */; };
+		866F8FE22A66859A00C3F30F /* DefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866F8FE12A66859A00C3F30F /* DefaultKeys.swift */; };
 		86E30FF52A5E9E0E007EB56B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E30FF42A5E9E0E007EB56B /* AppDelegate.swift */; };
 		86E30FF72A5E9E0E007EB56B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E30FF62A5E9E0E007EB56B /* SceneDelegate.swift */; };
 		86E30FFE2A5E9E10007EB56B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86E30FFD2A5E9E10007EB56B /* Assets.xcassets */; };
@@ -61,6 +67,14 @@
 		866F8FC92A667C0100C3F30F /* WelcomeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeModule.swift; sourceTree = "<group>"; };
 		866F8FCB2A667FA900C3F30F /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		866F8FCD2A667FCE00C3F30F /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		866F8FD32A66839B00C3F30F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		866F8FD52A66840B00C3F30F /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		866F8FD62A66840B00C3F30F /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Localizable.strings; sourceTree = "<group>"; };
+		866F8FD72A66844300C3F30F /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		866F8FDA2A66849D00C3F30F /* LocalizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationManager.swift; sourceTree = "<group>"; };
+		866F8FDD2A6684C600C3F30F /* LanguageEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageEnum.swift; sourceTree = "<group>"; };
+		866F8FDF2A66852200C3F30F /* DefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsManager.swift; sourceTree = "<group>"; };
+		866F8FE12A66859A00C3F30F /* DefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultKeys.swift; sourceTree = "<group>"; };
 		86E30FF12A5E9E0E007EB56B /* Thesis Fitness App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thesis Fitness App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86E30FF42A5E9E0E007EB56B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86E30FF62A5E9E0E007EB56B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -161,6 +175,31 @@
 			path = DIContainer;
 			sourceTree = "<group>";
 		};
+		866F8FCF2A66837500C3F30F /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				866F8FD42A66839B00C3F30F /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		866F8FD92A66849300C3F30F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				866F8FDA2A66849D00C3F30F /* LocalizationManager.swift */,
+				866F8FDF2A66852200C3F30F /* DefaultsManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		866F8FDC2A6684B900C3F30F /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				866F8FDD2A6684C600C3F30F /* LanguageEnum.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		86E30FE82A5E9E0E007EB56B = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +233,8 @@
 		86E310092A5EA56E007EB56B /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				866F8FDC2A6684B900C3F30F /* Enums */,
+				866F8FD92A66849300C3F30F /* Managers */,
 				86E3101C2A5EAB30007EB56B /* Extensions */,
 				86E310122A5EA63A007EB56B /* Protocols */,
 				86E3100D2A5EA5D4007EB56B /* Classes */,
@@ -204,6 +245,7 @@
 		86E3100C2A5EA58D007EB56B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				866F8FCF2A66837500C3F30F /* Localization */,
 				86F828B32A61790F0017ABB8 /* credentials.plist */,
 				86E310022A5E9E10007EB56B /* Info.plist */,
 				86E30FFD2A5E9E10007EB56B /* Assets.xcassets */,
@@ -252,6 +294,8 @@
 				86E3102B2A5EAC52007EB56B /* JSONExtension.swift */,
 				866F8FCB2A667FA900C3F30F /* UIButtonExtension.swift */,
 				866F8FCD2A667FCE00C3F30F /* UIViewExtension.swift */,
+				866F8FD72A66844300C3F30F /* StringExtension.swift */,
+				866F8FE12A66859A00C3F30F /* DefaultKeys.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -435,6 +479,7 @@
 			knownRegions = (
 				en,
 				Base,
+				el,
 			);
 			mainGroup = 86E30FE82A5E9E0E007EB56B;
 			productRefGroup = 86E30FF22A5E9E0E007EB56B /* Products */;
@@ -452,6 +497,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				866F8FC62A667ABE00C3F30F /* Welcome.storyboard in Resources */,
+				866F8FD22A66839B00C3F30F /* Localizable.strings in Resources */,
 				86E310012A5E9E10007EB56B /* LaunchScreen.storyboard in Resources */,
 				86F828B42A61790F0017ABB8 /* credentials.plist in Resources */,
 				86E30FFE2A5E9E10007EB56B /* Assets.xcassets in Resources */,
@@ -529,6 +575,7 @@
 				866F8FCA2A667C0100C3F30F /* WelcomeModule.swift in Sources */,
 				86E3101B2A5EA69D007EB56B /* BaseProtocol.swift in Sources */,
 				866F8FC42A667A3F00C3F30F /* WelcomeViewModel.swift in Sources */,
+				866F8FDE2A6684C600C3F30F /* LanguageEnum.swift in Sources */,
 				86E3100F2A5EA5E1007EB56B /* Observable.swift in Sources */,
 				86E310332A5EC33C007EB56B /* AppViewModel.swift in Sources */,
 				86E310512A5EC538007EB56B /* SplashViewController.swift in Sources */,
@@ -544,19 +591,23 @@
 				86E3102C2A5EAC52007EB56B /* JSONExtension.swift in Sources */,
 				86E3103F2A5EC42D007EB56B /* MainFlowCoordinator.swift in Sources */,
 				86E310242A5EABDA007EB56B /* UIImageExtension.swift in Sources */,
+				866F8FE02A66852200C3F30F /* DefaultsManager.swift in Sources */,
 				86E310492A5EC4E8007EB56B /* SplashDIContainer.swift in Sources */,
 				86E310302A5EC323007EB56B /* AppDIContainer.swift in Sources */,
 				86E310412A5EC448007EB56B /* MainNavigationController.swift in Sources */,
 				86E310222A5EABA9007EB56B /* UIWindowExtension.swift in Sources */,
+				866F8FD82A66844300C3F30F /* StringExtension.swift in Sources */,
 				86E310202A5EAB7F007EB56B /* UIViewControllerExtension.swift in Sources */,
 				866F8FC02A66799000C3F30F /* WelcomeDIContainer.swift in Sources */,
 				866F8FCC2A667FA900C3F30F /* UIButtonExtension.swift in Sources */,
 				866F8FC22A6679A700C3F30F /* WelcomeFlowCoordinator.swift in Sources */,
 				86E3104B2A5EC500007EB56B /* SplashFlowCoordinator.swift in Sources */,
+				866F8FDB2A66849D00C3F30F /* LocalizationManager.swift in Sources */,
 				86E310192A5EA687007EB56B /* BaseFlowCoordinatorProtocol.swift in Sources */,
 				86E310472A5EC4CF007EB56B /* SplashModule.swift in Sources */,
 				86E3104D2A5EC515007EB56B /* SplashViewModel.swift in Sources */,
 				86E3102A2A5EAC39007EB56B /* UIImageViewExtension.swift in Sources */,
+				866F8FE22A66859A00C3F30F /* DefaultKeys.swift in Sources */,
 				86E310262A5EAC08007EB56B /* UITableViewExtension.swift in Sources */,
 				86E3103D2A5EC414007EB56B /* MainModule.swift in Sources */,
 				86E310362A5EC369007EB56B /* AppFlowCoordinator.swift in Sources */,
@@ -566,10 +617,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		866F8FD42A66839B00C3F30F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				866F8FD32A66839B00C3F30F /* en */,
+				866F8FD62A66840B00C3F30F /* el */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		86E30FFF2A5E9E10007EB56B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				86E310002A5E9E10007EB56B /* Base */,
+				866F8FD52A66840B00C3F30F /* el */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -581,6 +642,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -641,6 +703,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

@@ -9,6 +9,14 @@ import Foundation
 import SVProgressHUD
 
 class AppViewModel {
+    
+    let localizationManagerProtocol: LocalizationManagerProtocol
+    let defaultsManagerProtocol: DefaultsManagerProtocol
+    
+    init(localizationManagerProtocol: LocalizationManagerProtocol = LocalizationManager(), defaultsManagerProtocol: DefaultsManagerProtocol = DefaultsManager()) {
+        self.localizationManagerProtocol = localizationManagerProtocol
+        self.defaultsManagerProtocol = defaultsManagerProtocol
+    }
 
     // MARK: - Methods
 
