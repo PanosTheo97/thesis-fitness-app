@@ -90,7 +90,9 @@ class WelcomeViewController: UIViewController, BaseProtocol {
         
         viewModel?.routingEnum.addObserver({ [weak self] routingEnum in
             switch routingEnum {
-            case .test:
+            case .dashboard:
+                print(AccountManager.shared.user?.email)
+            case .firstTimeSignIn:
                 return
             default: ()
             }
@@ -99,24 +101,14 @@ class WelcomeViewController: UIViewController, BaseProtocol {
     }
     
     @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
-        guard let clientID = FirebaseApp.app()?.options.clientID else {
-            print("No client ID")
-            return
-        }
-        let config = GIDConfiguration(clientID: clientID)
-        GIDSignIn.sharedInstance.signIn(with: config, presenting: self) { googleUser, error in
-            if let googleUser = googleUser {
-                print(googleUser)
-            } else {
-                print(error)
-            }
-        }
+        self.viewModel?.executeWelcomeSignInUseCase()
     }
 
 }
 
 struct Welcome {
     enum RoutingEnum {
-        case test
+        case dashboard
+        case firstTimeSignIn
     }
 }

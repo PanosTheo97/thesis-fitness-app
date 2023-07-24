@@ -53,6 +53,8 @@
 		86E3104D2A5EC515007EB56B /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E3104C2A5EC514007EB56B /* SplashViewModel.swift */; };
 		86E3104F2A5EC52A007EB56B /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E3104E2A5EC52A007EB56B /* Splash.storyboard */; };
 		86E310512A5EC538007EB56B /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E310502A5EC538007EB56B /* SplashViewController.swift */; };
+		86E4CE4B2A6F1B2C00B53C32 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4CE4A2A6F1B2C00B53C32 /* AccountManager.swift */; };
+		86E4CE4F2A6F223900B53C32 /* WelcomeSignInUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4CE4E2A6F223900B53C32 /* WelcomeSignInUseCase.swift */; };
 		86F828B42A61790F0017ABB8 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86F828B32A61790F0017ABB8 /* credentials.plist */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +111,8 @@
 		86E3104C2A5EC514007EB56B /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		86E3104E2A5EC52A007EB56B /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		86E310502A5EC538007EB56B /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		86E4CE4A2A6F1B2C00B53C32 /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
+		86E4CE4E2A6F223900B53C32 /* WelcomeSignInUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeSignInUseCase.swift; sourceTree = "<group>"; };
 		86F828B32A61790F0017ABB8 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,6 +160,7 @@
 		866F8FBC2A66796900C3F30F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				86E4CE4C2A6F221800B53C32 /* UseCases */,
 				866F8FC32A667A3F00C3F30F /* WelcomeViewModel.swift */,
 			);
 			path = ViewModel;
@@ -190,6 +195,7 @@
 			children = (
 				866F8FDA2A66849D00C3F30F /* LocalizationManager.swift */,
 				866F8FDF2A66852200C3F30F /* DefaultsManager.swift */,
+				86E4CE4A2A6F1B2C00B53C32 /* AccountManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -428,6 +434,22 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		86E4CE4C2A6F221800B53C32 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				86E4CE4D2A6F222200B53C32 /* WelcomeSignInUseCase */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		86E4CE4D2A6F222200B53C32 /* WelcomeSignInUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				86E4CE4E2A6F223900B53C32 /* WelcomeSignInUseCase.swift */,
+			);
+			path = WelcomeSignInUseCase;
+			sourceTree = "<group>";
+		};
 		D52293BB1ED70D428AC6E2CD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -591,6 +613,7 @@
 				866F8FC82A667ACA00C3F30F /* WelcomeViewController.swift in Sources */,
 				86E310172A5EA673007EB56B /* BaseViewModelProtocol.swift in Sources */,
 				86E3101E2A5EAB4D007EB56B /* UIColorExtension.swift in Sources */,
+				86E4CE4B2A6F1B2C00B53C32 /* AccountManager.swift in Sources */,
 				86E310142A5EA656007EB56B /* ReusableViewProtocol.swift in Sources */,
 				86E3102C2A5EAC52007EB56B /* JSONExtension.swift in Sources */,
 				86E3103F2A5EC42D007EB56B /* MainFlowCoordinator.swift in Sources */,
@@ -606,6 +629,7 @@
 				866F8FCC2A667FA900C3F30F /* UIButtonExtension.swift in Sources */,
 				866F8FC22A6679A700C3F30F /* WelcomeFlowCoordinator.swift in Sources */,
 				86E3104B2A5EC500007EB56B /* SplashFlowCoordinator.swift in Sources */,
+				86E4CE4F2A6F223900B53C32 /* WelcomeSignInUseCase.swift in Sources */,
 				866F8FDB2A66849D00C3F30F /* LocalizationManager.swift in Sources */,
 				86E310192A5EA687007EB56B /* BaseFlowCoordinatorProtocol.swift in Sources */,
 				86E310472A5EC4CF007EB56B /* SplashModule.swift in Sources */,
