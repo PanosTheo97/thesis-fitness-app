@@ -7,6 +7,7 @@
 
 import UIKit
 import GoogleSignIn
+import FirebaseCore
 
 class WelcomeViewController: UIViewController, BaseProtocol {
     
@@ -33,6 +34,8 @@ class WelcomeViewController: UIViewController, BaseProtocol {
             googleSignInButtonView.layer.cornerRadius = 8
             googleSignInButtonView.layer.borderColor = UIColor.App.mainText.cgColor
             googleSignInButtonView.layer.borderWidth = 1.5
+            let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
+            googleSignInButtonView.addGestureRecognizer(tap)
         }
     }
     
@@ -93,6 +96,21 @@ class WelcomeViewController: UIViewController, BaseProtocol {
             }
         })
         
+    }
+    
+    @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
+        guard let clientID = FirebaseApp.app()?.options.clientID else {
+            print("No client ID")
+            return
+        }
+        let config = GIDConfiguration(clientID: clientID)
+        GIDSignIn.sharedInstance.signIn(with: config, presenting: self) { googleUser, error in
+            if let googleUser = googleUser {
+                print(googleUser)
+            } else {
+                print(error)
+            }
+        }
     }
 
 }

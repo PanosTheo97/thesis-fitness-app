@@ -7,6 +7,7 @@
 
 import UIKit
 import GoogleSignIn
+import FirebaseCore
 
 let appDelegate: AppDelegate? = UIApplication.shared.delegate as? AppDelegate
 let appFlowCoordinator = AppFlowCoordinator(appDIContainer: AppDIContainer())
@@ -20,7 +21,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        FirebaseApp.configure()
         appViewModel.configureLoader()
+        
+        GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
+            if error != nil || user == nil {
+              print("Signed out")
+            } else {
+                print("Signed in")
+            }
+          }
+        
         return true
     }
     

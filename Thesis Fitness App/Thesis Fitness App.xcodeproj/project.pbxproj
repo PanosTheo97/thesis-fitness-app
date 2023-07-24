@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		85E32E29A88C789CCF0702FA /* Pods_Thesis_Fitness_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42792E1741FAFEC16FCF47C3 /* Pods_Thesis_Fitness_App.framework */; };
+		86252C882A6E722A009FEAF9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86252C872A6E71CA009FEAF9 /* GoogleService-Info.plist */; };
 		866F8FC02A66799000C3F30F /* WelcomeDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866F8FBF2A66799000C3F30F /* WelcomeDIContainer.swift */; };
 		866F8FC22A6679A700C3F30F /* WelcomeFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866F8FC12A6679A700C3F30F /* WelcomeFlowCoordinator.swift */; };
 		866F8FC42A667A3F00C3F30F /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866F8FC32A667A3F00C3F30F /* WelcomeViewModel.swift */; };
@@ -59,6 +60,7 @@
 		3AAEA953558CC1B4936948D4 /* Pods-Thesis Fitness App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thesis Fitness App.debug.xcconfig"; path = "Target Support Files/Pods-Thesis Fitness App/Pods-Thesis Fitness App.debug.xcconfig"; sourceTree = "<group>"; };
 		3EB7195C2E59E9EFFC1CE3E5 /* Pods-Thesis Fitness App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thesis Fitness App.release.xcconfig"; path = "Target Support Files/Pods-Thesis Fitness App/Pods-Thesis Fitness App.release.xcconfig"; sourceTree = "<group>"; };
 		42792E1741FAFEC16FCF47C3 /* Pods_Thesis_Fitness_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thesis_Fitness_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86252C872A6E71CA009FEAF9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		866F8FBF2A66799000C3F30F /* WelcomeDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeDIContainer.swift; sourceTree = "<group>"; };
 		866F8FC12A6679A700C3F30F /* WelcomeFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeFlowCoordinator.swift; sourceTree = "<group>"; };
 		866F8FC32A667A3F00C3F30F /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 				866F8FCF2A66837500C3F30F /* Localization */,
 				86F828B32A61790F0017ABB8 /* credentials.plist */,
 				86E310022A5E9E10007EB56B /* Info.plist */,
+				86252C872A6E71CA009FEAF9 /* GoogleService-Info.plist */,
 				86E30FFD2A5E9E10007EB56B /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -502,6 +505,7 @@
 				86F828B42A61790F0017ABB8 /* credentials.plist in Resources */,
 				86E30FFE2A5E9E10007EB56B /* Assets.xcassets in Resources */,
 				86E3104F2A5EC52A007EB56B /* Splash.storyboard in Resources */,
+				86252C882A6E722A009FEAF9 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
