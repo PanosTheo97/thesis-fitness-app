@@ -24,14 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         appViewModel.configureLoader()
         
-        GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
-            if error != nil || user == nil {
-              print("Signed out")
-            } else {
-                print("Signed in")
-            }
-          }
-        
         return true
     }
     
