@@ -13,6 +13,8 @@ class ProfileModule {
     func makeProfileNavigationController() -> UINavigationController? {
         if let viewController = self.makeProfileViewController() {
             let profileNavigationController = UINavigationController(rootViewController: viewController)
+            profileNavigationController.navigationBar.tintColor = .App.mainText
+            profileNavigationController.navigationBar.barTintColor = .clear
             return profileNavigationController
         }
         return nil

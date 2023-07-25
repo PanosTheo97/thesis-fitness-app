@@ -29,7 +29,7 @@ class ProfileViewController: UIViewController, BaseProtocol {
         registerObservers()
         
         self.view.backgroundColor = .systemBackground
-        self.navigationController?.navigationBar.isHidden = true
+        self.addSettingsButton()
     }
     
     private func registerObservers() {
@@ -42,6 +42,17 @@ class ProfileViewController: UIViewController, BaseProtocol {
             }
         })
         
+    }
+    
+    func addSettingsButton() {
+        self.navigationItem.addButtons(barButtonPositionEnum: .right,
+                                       navigationButtons: [(navigationButtonTypeEnum: .settings,
+                                                            action: #selector(settingsButtonTapped),
+                                                            target: self)])
+    }
+    
+    @objc func settingsButtonTapped() {
+        print("Settings")
     }
 }
 

@@ -13,6 +13,8 @@ class ActivityModule {
     func makeActivityNavigationController() -> UINavigationController? {
         if let viewController = self.makeActivityViewController() {
             let activityNavigationController = UINavigationController(rootViewController: viewController)
+            activityNavigationController.navigationBar.tintColor = .App.mainText
+            activityNavigationController.navigationBar.barTintColor = .clear
             return activityNavigationController
         }
         return nil

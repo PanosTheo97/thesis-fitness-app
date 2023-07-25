@@ -13,6 +13,8 @@ class WorkoutModule {
     func makeWorkoutNavigationController() -> UINavigationController? {
         if let viewController = self.makeWorkoutViewController() {
             let workoutNavigationController = UINavigationController(rootViewController: viewController)
+            workoutNavigationController.navigationBar.tintColor = .App.mainText
+            workoutNavigationController.navigationBar.barTintColor = .clear
             return workoutNavigationController
         }
         return nil

@@ -13,6 +13,8 @@ class DietModule {
     func makeDietNavigationController() -> UINavigationController? {
         if let viewController = self.makeDietViewController() {
             let dietNavigationController = UINavigationController(rootViewController: viewController)
+            dietNavigationController.navigationBar.tintColor = .App.mainText
+            dietNavigationController.navigationBar.barTintColor = .clear
             return dietNavigationController
         }
         return nil

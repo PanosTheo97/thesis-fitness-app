@@ -13,6 +13,8 @@ class HomeModule {
     func makeHomeNavigationController() -> UINavigationController? {
         if let viewController = self.makeHomeViewController() {
             let homeNavigationController = UINavigationController(rootViewController: viewController)
+            homeNavigationController.navigationBar.tintColor = .App.mainText
+            homeNavigationController.navigationBar.barTintColor = .clear
             return homeNavigationController
         }
         return nil

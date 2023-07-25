@@ -29,7 +29,7 @@ class HomeViewController: UIViewController, BaseProtocol {
         registerObservers()
         
         self.view.backgroundColor = .systemBackground
-        self.navigationController?.navigationBar.isHidden = true
+        self.addEditButton()
     }
     
     private func registerObservers() {
@@ -42,6 +42,17 @@ class HomeViewController: UIViewController, BaseProtocol {
             }
         })
         
+    }
+    
+    func addEditButton() {
+        self.navigationItem.addButtons(barButtonPositionEnum: .right,
+                                       navigationButtons: [(navigationButtonTypeEnum: .edit,
+                                                            action: #selector(editButtonTapped),
+                                                            target: self)])
+    }
+    
+    @objc func editButtonTapped() {
+        print("Edit")
     }
 
 }

@@ -29,7 +29,7 @@ class ActivityViewController: UIViewController, BaseProtocol {
         registerObservers()
         
         self.view.backgroundColor = .systemBackground
-        self.navigationController?.navigationBar.isHidden = true
+        self.addNavigationButtons()
     }
     
     private func registerObservers() {
@@ -42,6 +42,24 @@ class ActivityViewController: UIViewController, BaseProtocol {
             }
         })
         
+    }
+    
+    func addNavigationButtons() {
+        self.navigationItem.addButtons(barButtonPositionEnum: .right,
+                                       navigationButtons: [(navigationButtonTypeEnum: .history,
+                                                            action: #selector(editButtonTapped),
+                                                            target: self),
+                                                           (navigationButtonTypeEnum: .edit,
+                                                                                action: #selector(editButtonTapped),
+                                                                                target: self)])
+    }
+    
+    @objc func editButtonTapped() {
+        print("Edit")
+    }
+    
+    @objc func historyButtonTapped() {
+        print("History")
     }
 }
 

@@ -6,8 +6,8 @@
 //
 
 import Foundation
+
 protocol WelcomeViewModelProtocol: BaseViewModelProtocol {
-    
     
     // MARK: - Observables
     

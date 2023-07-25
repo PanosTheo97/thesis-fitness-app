@@ -17,6 +17,9 @@ enum Image: String {
     case Workout
     case Diet
     case Profile
+    case Edit
+    case Settings
+    case History
 }
 
 extension UIImage {
