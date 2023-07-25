@@ -11,6 +11,14 @@ class ProfileViewController: UIViewController, BaseProtocol {
 
     // MARK: - IBProperties
     
+    @IBOutlet weak var logoutButton: UIButton! {
+        didSet {
+            logoutButton.backgroundColor = .clear
+            logoutButton.setTitleColor(.App.mainText, for: .normal)
+            logoutButton.setTitle("Profile_logoutButton".getLocalized(), for: .normal)
+        }
+    }
+    
     // MARK: - Properties
     
     var viewModel: ProfileViewModel?
@@ -54,6 +62,14 @@ class ProfileViewController: UIViewController, BaseProtocol {
     @objc func settingsButtonTapped() {
         print("Settings")
     }
+    
+    // MARK: - IBActions
+    
+    
+    @IBAction func logoutButtonTapped(_ sender: UIButton) {
+        self.viewModel?.executeProfileLogoutUseCase()
+    }
+    
 }
 
 struct Profile {

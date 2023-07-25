@@ -20,3 +20,6 @@
 "Lobby_dietTitle" = "Diet";
 "Lobby_profileTitle" = "Profile";
 
+// MARK: - Profile
+
+"Profile_logoutButton" = "Logout";

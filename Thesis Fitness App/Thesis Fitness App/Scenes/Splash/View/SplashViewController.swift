@@ -28,7 +28,7 @@ class SplashViewController: UIViewController, BaseProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setup()
-        self.viewModel?.update(routing: .welcome)
+        self.viewModel?.executeSplashCheckForUserUseCase()
     }
 
     // MARK: - Methods
@@ -50,6 +50,10 @@ class SplashViewController: UIViewController, BaseProtocol {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
                     self?.flowCoordinator?.moveToWelcome()
                 })
+            case .lobby:
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+                    self?.flowCoordinator?.moveToLobby()
+                })
             default: ()
             }
         })
@@ -60,5 +64,6 @@ class SplashViewController: UIViewController, BaseProtocol {
 struct Splash {
     enum RoutingEnum {
         case welcome
+        case lobby
     }
 }

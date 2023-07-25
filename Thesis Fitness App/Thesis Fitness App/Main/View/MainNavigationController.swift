@@ -14,10 +14,6 @@ class MainNavigationController: UINavigationController {
     
     var flowCoordinator: MainFlowCoordinator?
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-    
     // MARK: - Life cycle
     
     override func viewDidLoad() {

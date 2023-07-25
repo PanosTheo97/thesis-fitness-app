@@ -30,7 +30,7 @@ class ProfileModule {
     }
     
     private func makeProfileViewModel() -> ProfileViewModel {
-        ProfileViewModel()
+        ProfileViewModel(profileLogoutUseCase: makeProfileLogoutUseCase())
     }
     
     private func makeProfileFlowCoordinator(_ viewController: ProfileViewController) -> ProfileFlowCoordinator {
@@ -39,5 +39,9 @@ class ProfileModule {
     
     private func makeProfileDIContainer() -> ProfileDIContainer {
         ProfileDIContainer()
+    }
+    
+    private func makeProfileLogoutUseCase() -> ProfileLogoutUseCaseProtocol {
+        ProfileLogoutUseCase()
     }
 }

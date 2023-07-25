@@ -19,3 +19,7 @@
 "Lobby_workoutTitle" = "Γυμναστήριο";
 "Lobby_dietTitle" = "Διατροφή";
 "Lobby_profileTitle" = "Προφίλ";
+
+// MARK: - Profile
+
+"Profile_logoutButton" = "Αποσύνδεση";

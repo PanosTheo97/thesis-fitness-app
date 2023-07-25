@@ -14,13 +14,27 @@ class SplashViewModel: BaseViewModelProtocol {
     var isLoading = Observable<Bool?>(value: nil)
     var routingEnum = Observable<Splash.RoutingEnum?>(value: nil)
     
+    // MARK: - Properties
+    
+    var splashCheckForUserUseCase: SplashCheckForUserUseCaseProtocol
+    
     // MARK: - Life cycle
     
-    init() {
-        
+    init(splashCheckForUserUseCase: SplashCheckForUserUseCaseProtocol) {
+        self.splashCheckForUserUseCase = splashCheckForUserUseCase
     }
     
     func update(routing: Splash.RoutingEnum) {
         self.routingEnum.value = routing
+    }
+    
+    func executeSplashCheckForUserUseCase() {
+        self.splashCheckForUserUseCase.execute { isSignedInUser in
+            if isSignedInUser {
+                self.update(routing: .lobby)
+            } else {
+                self.update(routing: .welcome)
+            }
+        }
     }
 }

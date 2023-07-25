@@ -59,17 +59,22 @@ class AccountManager {
         }
     }
     
-    func signOut() {
+    func signOut(completion: @escaping (Bool) -> Void) {
         let firebaseAuth = Auth.auth()
         do {
             try firebaseAuth.signOut()
         } catch let signOutError as NSError {
             print("Error signing out: %@", signOutError)
+            completion(false)
         }
+        
+        self.user = nil
+        completion(true)
     }
     
     func checkForSignedInUser(completion: @escaping (Bool) -> Void) {
         if Auth.auth().currentUser != nil {
+            self.user = Auth.auth().currentUser
             completion(true)
         } else {
             completion(false)

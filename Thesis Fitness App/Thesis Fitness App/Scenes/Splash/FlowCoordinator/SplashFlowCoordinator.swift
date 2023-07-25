@@ -28,5 +28,12 @@ class SplashFlowCoordinator: BaseFlowCoordinatorProtocol {
         guard let welocmeViewController = self.splashDIContainer.welcomeModule.makeWelcomeViewController() else { return }
         self.splashViewController?.navigationController?.pushViewController(welocmeViewController, animated: true)
     }
+    
+    func moveToLobby() {
+        guard let mainNavigation = self.splashViewController?.navigationController as? MainNavigationController else {
+            return
+        }
+        mainNavigation.flowCoordinator?.moveToLobby()
+    }
 
 }

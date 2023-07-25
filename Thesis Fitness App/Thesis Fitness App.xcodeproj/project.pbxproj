@@ -93,6 +93,8 @@
 		86E4CEB72A6FD4A800B53C32 /* MainDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4CEB62A6FD4A800B53C32 /* MainDIContainer.swift */; };
 		86E4CEB92A6FED8A00B53C32 /* NavigationButtonTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4CEB82A6FED8A00B53C32 /* NavigationButtonTypeEnum.swift */; };
 		86E4CEBB2A6FEE2600B53C32 /* UINavigationItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4CEBA2A6FEE2600B53C32 /* UINavigationItemExtension.swift */; };
+		86E4CEBF2A6FF80C00B53C32 /* ProfileLogoutUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4CEBE2A6FF80C00B53C32 /* ProfileLogoutUseCase.swift */; };
+		86E4CEC32A6FF95400B53C32 /* SplashCheckForUserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4CEC22A6FF95400B53C32 /* SplashCheckForUserUseCase.swift */; };
 		86F828B42A61790F0017ABB8 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86F828B32A61790F0017ABB8 /* credentials.plist */; };
 /* End PBXBuildFile section */
 
@@ -189,6 +191,8 @@
 		86E4CEB62A6FD4A800B53C32 /* MainDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDIContainer.swift; sourceTree = "<group>"; };
 		86E4CEB82A6FED8A00B53C32 /* NavigationButtonTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButtonTypeEnum.swift; sourceTree = "<group>"; };
 		86E4CEBA2A6FEE2600B53C32 /* UINavigationItemExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationItemExtension.swift; sourceTree = "<group>"; };
+		86E4CEBE2A6FF80C00B53C32 /* ProfileLogoutUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLogoutUseCase.swift; sourceTree = "<group>"; };
+		86E4CEC22A6FF95400B53C32 /* SplashCheckForUserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCheckForUserUseCase.swift; sourceTree = "<group>"; };
 		86F828B32A61790F0017ABB8 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -236,8 +240,8 @@
 		866F8FBC2A66796900C3F30F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				86E4CE4C2A6F221800B53C32 /* UseCases */,
 				866F8FC32A667A3F00C3F30F /* WelcomeViewModel.swift */,
+				86E4CE4C2A6F221800B53C32 /* UseCases */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -489,6 +493,7 @@
 			isa = PBXGroup;
 			children = (
 				86E3104C2A5EC514007EB56B /* SplashViewModel.swift */,
+				86E4CEC02A6FF92B00B53C32 /* UseCases */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -740,6 +745,7 @@
 			isa = PBXGroup;
 			children = (
 				86E4CEA02A6FB22200B53C32 /* ProfileViewModel.swift */,
+				86E4CEBC2A6FF7F100B53C32 /* UseCases */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -810,6 +816,38 @@
 				86E4CEB62A6FD4A800B53C32 /* MainDIContainer.swift */,
 			);
 			path = DIContainer;
+			sourceTree = "<group>";
+		};
+		86E4CEBC2A6FF7F100B53C32 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				86E4CEBD2A6FF7FE00B53C32 /* Logout */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		86E4CEBD2A6FF7FE00B53C32 /* Logout */ = {
+			isa = PBXGroup;
+			children = (
+				86E4CEBE2A6FF80C00B53C32 /* ProfileLogoutUseCase.swift */,
+			);
+			path = Logout;
+			sourceTree = "<group>";
+		};
+		86E4CEC02A6FF92B00B53C32 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				86E4CEC12A6FF93500B53C32 /* CheckForUser */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		86E4CEC12A6FF93500B53C32 /* CheckForUser */ = {
+			isa = PBXGroup;
+			children = (
+				86E4CEC22A6FF95400B53C32 /* SplashCheckForUserUseCase.swift */,
+			);
+			path = CheckForUser;
 			sourceTree = "<group>";
 		};
 		D52293BB1ED70D428AC6E2CD /* Pods */ = {
@@ -970,6 +1008,7 @@
 				866F8FC42A667A3F00C3F30F /* WelcomeViewModel.swift in Sources */,
 				86E4CE5C2A6FA58700B53C32 /* HomeViewModel.swift in Sources */,
 				866F8FDE2A6684C600C3F30F /* LanguageEnum.swift in Sources */,
+				86E4CEBF2A6FF80C00B53C32 /* ProfileLogoutUseCase.swift in Sources */,
 				86E4CE602A6FA5E700B53C32 /* HomeDIContainer.swift in Sources */,
 				86E4CEA52A6FB24E00B53C32 /* ProfileViewController.swift in Sources */,
 				86E3100F2A5EA5E1007EB56B /* Observable.swift in Sources */,
@@ -990,6 +1029,7 @@
 				86E4CE6A2A6FA92700B53C32 /* ActivityModule.swift in Sources */,
 				86E4CE912A6FB02800B53C32 /* DietViewModel.swift in Sources */,
 				86E4CE832A6FAD9E00B53C32 /* WorkoutFlowCoordinator.swift in Sources */,
+				86E4CEC32A6FF95400B53C32 /* SplashCheckForUserUseCase.swift in Sources */,
 				86E4CE742A6FA97400B53C32 /* ActivityDIContainer.swift in Sources */,
 				86E310172A5EA673007EB56B /* BaseViewModelProtocol.swift in Sources */,
 				86E3101E2A5EAB4D007EB56B /* UIColorExtension.swift in Sources */,
