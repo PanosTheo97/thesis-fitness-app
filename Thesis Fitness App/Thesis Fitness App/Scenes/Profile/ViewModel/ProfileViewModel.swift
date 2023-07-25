@@ -30,7 +30,7 @@ class ProfileViewModel: BaseViewModelProtocol {
     
     func executeProfileLogoutUseCase() {
         self.profileLogoutUseCase.execute { successfulLogout in
-            print("User Logged out")
+            self.update(routing: .welcome)
         }
     }
 }

@@ -23,3 +23,7 @@
 // MARK: - Profile
 
 "Profile_logoutButton" = "Logout";
+
+// MARK: - Home
+
+"Home_displayNameLabel" = "Welcome back \n %@";

@@ -95,6 +95,9 @@
 		86E4CEBB2A6FEE2600B53C32 /* UINavigationItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4CEBA2A6FEE2600B53C32 /* UINavigationItemExtension.swift */; };
 		86E4CEBF2A6FF80C00B53C32 /* ProfileLogoutUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4CEBE2A6FF80C00B53C32 /* ProfileLogoutUseCase.swift */; };
 		86E4CEC32A6FF95400B53C32 /* SplashCheckForUserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4CEC22A6FF95400B53C32 /* SplashCheckForUserUseCase.swift */; };
+		86E4CEC62A7005F500B53C32 /* MainNavigationController+ProfileViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4CEC52A7005F500B53C32 /* MainNavigationController+ProfileViewControllerProtocol.swift */; };
+		86E4CEC92A70091700B53C32 /* LobbyTabBarController+UITabBarControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4CEC82A70091700B53C32 /* LobbyTabBarController+UITabBarControllerDelegate.swift */; };
+		86E4CECB2A700FC600B53C32 /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4CECA2A700FC600B53C32 /* UINavigationControllerExtension.swift */; };
 		86F828B42A61790F0017ABB8 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86F828B32A61790F0017ABB8 /* credentials.plist */; };
 /* End PBXBuildFile section */
 
@@ -193,6 +196,9 @@
 		86E4CEBA2A6FEE2600B53C32 /* UINavigationItemExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationItemExtension.swift; sourceTree = "<group>"; };
 		86E4CEBE2A6FF80C00B53C32 /* ProfileLogoutUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLogoutUseCase.swift; sourceTree = "<group>"; };
 		86E4CEC22A6FF95400B53C32 /* SplashCheckForUserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCheckForUserUseCase.swift; sourceTree = "<group>"; };
+		86E4CEC52A7005F500B53C32 /* MainNavigationController+ProfileViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainNavigationController+ProfileViewControllerProtocol.swift"; sourceTree = "<group>"; };
+		86E4CEC82A70091700B53C32 /* LobbyTabBarController+UITabBarControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LobbyTabBarController+UITabBarControllerDelegate.swift"; sourceTree = "<group>"; };
+		86E4CECA2A700FC600B53C32 /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
 		86F828B32A61790F0017ABB8 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -388,6 +394,7 @@
 				866F8FD72A66844300C3F30F /* StringExtension.swift */,
 				866F8FE12A66859A00C3F30F /* DefaultKeys.swift */,
 				86E4CEBA2A6FEE2600B53C32 /* UINavigationItemExtension.swift */,
+				86E4CECA2A700FC600B53C32 /* UINavigationControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -467,6 +474,7 @@
 		86E3103A2A5EC402007EB56B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				86E4CEC42A7005E200B53C32 /* Protocols */,
 				86E310402A5EC448007EB56B /* MainNavigationController.swift */,
 			);
 			path = View;
@@ -781,7 +789,9 @@
 		86E4CEA72A6FCF6500B53C32 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				86E4CEC72A7008EA00B53C32 /* Protocols */,
 				86E4CEB12A6FD03E00B53C32 /* LobbyTabBarController.swift */,
+				86E4CEC82A70091700B53C32 /* LobbyTabBarController+UITabBarControllerDelegate.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -848,6 +858,21 @@
 				86E4CEC22A6FF95400B53C32 /* SplashCheckForUserUseCase.swift */,
 			);
 			path = CheckForUser;
+			sourceTree = "<group>";
+		};
+		86E4CEC42A7005E200B53C32 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				86E4CEC52A7005F500B53C32 /* MainNavigationController+ProfileViewControllerProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		86E4CEC72A7008EA00B53C32 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		D52293BB1ED70D428AC6E2CD /* Pods */ = {
@@ -1062,17 +1087,20 @@
 				86E4CEA12A6FB22200B53C32 /* ProfileViewModel.swift in Sources */,
 				86E4CE5A2A6FA57800B53C32 /* HomeModule.swift in Sources */,
 				86E3104B2A5EC500007EB56B /* SplashFlowCoordinator.swift in Sources */,
+				86E4CEC62A7005F500B53C32 /* MainNavigationController+ProfileViewControllerProtocol.swift in Sources */,
 				86E4CEAE2A6FCFDA00B53C32 /* LobbyDIContainer.swift in Sources */,
 				86E4CE8F2A6FAFCE00B53C32 /* DietFlowCoordinator.swift in Sources */,
 				86E4CE4F2A6F223900B53C32 /* WelcomeSignInUseCase.swift in Sources */,
 				866F8FDB2A66849D00C3F30F /* LocalizationManager.swift in Sources */,
 				86E310192A5EA687007EB56B /* BaseFlowCoordinatorProtocol.swift in Sources */,
 				86E4CEAC2A6FCF9700B53C32 /* LobbyModule.swift in Sources */,
+				86E4CECB2A700FC600B53C32 /* UINavigationControllerExtension.swift in Sources */,
 				86E310472A5EC4CF007EB56B /* SplashModule.swift in Sources */,
 				86E4CE812A6FAD9100B53C32 /* WorkoutViewModel.swift in Sources */,
 				86E4CE722A6FA96B00B53C32 /* ActivityFlowCoordinator.swift in Sources */,
 				86E3104D2A5EC515007EB56B /* SplashViewModel.swift in Sources */,
 				86E3102A2A5EAC39007EB56B /* UIImageViewExtension.swift in Sources */,
+				86E4CEC92A70091700B53C32 /* LobbyTabBarController+UITabBarControllerDelegate.swift in Sources */,
 				866F8FE22A66859A00C3F30F /* DefaultKeys.swift in Sources */,
 				86E310262A5EAC08007EB56B /* UITableViewExtension.swift in Sources */,
 				86E3103D2A5EC414007EB56B /* MainModule.swift in Sources */,

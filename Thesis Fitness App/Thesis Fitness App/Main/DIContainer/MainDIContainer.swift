@@ -11,6 +11,8 @@ final class MainDIContainer {
     
     let lobbyModule = LobbyModule()
     
+    let welcomeModule = WelcomeModule()
+    
     let homeModule = HomeModule()
     let activityModule = ActivityModule()
     let workoutModule = WorkoutModule()

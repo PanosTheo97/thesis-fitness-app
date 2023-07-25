@@ -23,3 +23,7 @@
 // MARK: - Profile
 
 "Profile_logoutButton" = "Αποσύνδεση";
+
+// MARK: - Home
+
+"Home_displayNameLabel" = "Γειά σου και πάλι, %@";

@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol ProfileViewControllerProtocol: AnyObject {
+    func moveToWelcome()
+}
+
 class ProfileViewController: UIViewController, BaseProtocol {
 
     // MARK: - IBProperties
@@ -14,8 +18,10 @@ class ProfileViewController: UIViewController, BaseProtocol {
     @IBOutlet weak var logoutButton: UIButton! {
         didSet {
             logoutButton.backgroundColor = .clear
-            logoutButton.setTitleColor(.App.mainText, for: .normal)
-            logoutButton.setTitle("Profile_logoutButton".getLocalized(), for: .normal)
+            logoutButton.applyStyle(buttonStyleEnum: .rounded(backgroundcolor: .clear,
+                                                             textColor: .App.mainText,
+                                                             text: "Profile_logoutButton".getLocalized(),
+                                                             font: .systemFont(ofSize: 16, weight: .bold)))
         }
     }
     
@@ -23,6 +29,8 @@ class ProfileViewController: UIViewController, BaseProtocol {
     
     var viewModel: ProfileViewModel?
     var flowCoordinator: ProfileFlowCoordinator?
+    
+    weak var profileViewControllerDelegate: ProfileViewControllerProtocol?
     
     // MARK: - Life cycle
     
@@ -38,6 +46,7 @@ class ProfileViewController: UIViewController, BaseProtocol {
         
         self.view.backgroundColor = .systemBackground
         self.addSettingsButton()
+        
     }
     
     private func registerObservers() {
@@ -46,6 +55,8 @@ class ProfileViewController: UIViewController, BaseProtocol {
         
         viewModel?.routingEnum.addObserver({ [weak self] routingEnum in
             switch routingEnum {
+            case .welcome:
+                self?.profileViewControllerDelegate?.moveToWelcome()
             default: ()
             }
         })
@@ -65,7 +76,6 @@ class ProfileViewController: UIViewController, BaseProtocol {
     
     // MARK: - IBActions
     
-    
     @IBAction func logoutButtonTapped(_ sender: UIButton) {
         self.viewModel?.executeProfileLogoutUseCase()
     }
@@ -74,6 +84,6 @@ class ProfileViewController: UIViewController, BaseProtocol {
 
 struct Profile {
     enum RoutingEnum {
-        case test
+        case welcome
     }
 }

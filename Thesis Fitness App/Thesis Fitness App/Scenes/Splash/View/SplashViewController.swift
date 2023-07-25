@@ -47,11 +47,11 @@ class SplashViewController: UIViewController, BaseProtocol {
         viewModel?.routingEnum.addObserver({ [weak self] routingEnum in
             switch routingEnum {
             case .welcome:
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
                     self?.flowCoordinator?.moveToWelcome()
                 })
             case .lobby:
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
                     self?.flowCoordinator?.moveToLobby()
                 })
             default: ()

@@ -11,6 +11,13 @@ class HomeViewController: UIViewController, BaseProtocol {
 
     // MARK: - IBProperties
     
+    @IBOutlet weak var displayNameLabel: UILabel! {
+        didSet {
+            displayNameLabel.font = .systemFont(ofSize: 24, weight: .bold)
+            displayNameLabel.textColor = .App.mainText
+            displayNameLabel.isHidden = true
+        }
+    }
     // MARK: - Properties
     
     var viewModel: HomeViewModel?
@@ -30,6 +37,11 @@ class HomeViewController: UIViewController, BaseProtocol {
         
         self.view.backgroundColor = .systemBackground
         self.addEditButton()
+        
+        if let name = AccountManager.shared.user?.displayName {
+            self.displayNameLabel.text = String(format: "Home_displayNameLabel".getLocalized(), name)
+            self.displayNameLabel.isHidden = false
+        }
     }
     
     private func registerObservers() {

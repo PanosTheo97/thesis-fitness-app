@@ -50,7 +50,7 @@ final class MainFlowCoordinator {
         dietNavigationController.tabBarItem.image = .get(image: .Diet)
         dietNavigationController.title = "Lobby_dietTitle".getLocalized()
         
-        guard let profileNavigationController = self.mainDIContainer.profileModule.makeProfileNavigationController() else {
+        guard let profileNavigationController = self.mainDIContainer.profileModule.makeProfileNavigationController(profileViewControllerDelegate: self.mainNavigationController) else {
             return
         }
         profileNavigationController.tabBarItem.image = .get(image: .Profile)
@@ -67,6 +67,19 @@ final class MainFlowCoordinator {
         // Push Lobby to MainNavigation
         
         self.mainNavigationController?.pushViewController(lobbyTabBarController, animated: true)
+    }
+    
+    func moveToWelcome() {
+        if let welcomeViewController = self.mainNavigationController?.viewControllers.last as? WelcomeViewController {
+            self.mainNavigationController?.popViewController(animated: true)
+        } else {
+            #warning("Needs fixing, Lobby is still in the navigationStack")
+            guard let welocmeViewController = self.mainDIContainer.welcomeModule.makeWelcomeViewController() else { return }
+            self.mainNavigationController?.pushViewController(welocmeViewController, animated: true)
+            self.mainNavigationController?.removeViewController(LobbyTabBarController.self)
+            
+            print(self.mainNavigationController?.viewControllers)
+        }
     }
     
 }

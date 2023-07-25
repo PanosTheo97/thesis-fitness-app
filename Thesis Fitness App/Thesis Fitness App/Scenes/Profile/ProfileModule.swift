@@ -10,8 +10,8 @@ import UIKit
 
 class ProfileModule {
     
-    func makeProfileNavigationController() -> UINavigationController? {
-        if let viewController = self.makeProfileViewController() {
+    func makeProfileNavigationController(profileViewControllerDelegate: ProfileViewControllerProtocol?) -> UINavigationController? {
+        if let viewController = self.makeProfileViewController(profileViewControllerDelegate: profileViewControllerDelegate) {
             let profileNavigationController = UINavigationController(rootViewController: viewController)
             profileNavigationController.navigationBar.tintColor = .App.mainText
             profileNavigationController.navigationBar.barTintColor = .clear
@@ -20,8 +20,9 @@ class ProfileModule {
         return nil
     }
     
-    func makeProfileViewController() -> ProfileViewController? {
+    func makeProfileViewController(profileViewControllerDelegate: ProfileViewControllerProtocol?) -> ProfileViewController? {
         if let viewController = ProfileViewController.create(storyboardName: "Profile") {
+            viewController.profileViewControllerDelegate = profileViewControllerDelegate
             viewController.viewModel = makeProfileViewModel()
             viewController.flowCoordinator = makeProfileFlowCoordinator(viewController)
             return viewController

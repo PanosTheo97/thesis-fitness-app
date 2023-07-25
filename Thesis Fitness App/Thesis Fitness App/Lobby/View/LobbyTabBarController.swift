@@ -35,6 +35,8 @@ class LobbyTabBarController: UITabBarController, BaseProtocol {
         self.tabBar.unselectedItemTintColor = .gray
         self.tabBar.tintColor = .App.mainText
         
+        delegate = self
+        
     }
     
     private func registerObservers() {
