@@ -85,6 +85,12 @@
 		86E4CEA12A6FB22200B53C32 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4CEA02A6FB22200B53C32 /* ProfileViewModel.swift */; };
 		86E4CEA32A6FB24500B53C32 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E4CEA22A6FB24500B53C32 /* Profile.storyboard */; };
 		86E4CEA52A6FB24E00B53C32 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4CEA42A6FB24E00B53C32 /* ProfileViewController.swift */; };
+		86E4CEAC2A6FCF9700B53C32 /* LobbyModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4CEAB2A6FCF9700B53C32 /* LobbyModule.swift */; };
+		86E4CEAE2A6FCFDA00B53C32 /* LobbyDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4CEAD2A6FCFDA00B53C32 /* LobbyDIContainer.swift */; };
+		86E4CEB02A6FCFF800B53C32 /* LobbyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4CEAF2A6FCFF800B53C32 /* LobbyViewModel.swift */; };
+		86E4CEB22A6FD03E00B53C32 /* LobbyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4CEB12A6FD03E00B53C32 /* LobbyTabBarController.swift */; };
+		86E4CEB42A6FD0B600B53C32 /* LobbyFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4CEB32A6FD0B600B53C32 /* LobbyFlowCoordinator.swift */; };
+		86E4CEB72A6FD4A800B53C32 /* MainDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4CEB62A6FD4A800B53C32 /* MainDIContainer.swift */; };
 		86F828B42A61790F0017ABB8 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86F828B32A61790F0017ABB8 /* credentials.plist */; };
 /* End PBXBuildFile section */
 
@@ -173,6 +179,12 @@
 		86E4CEA02A6FB22200B53C32 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		86E4CEA22A6FB24500B53C32 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		86E4CEA42A6FB24E00B53C32 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		86E4CEAB2A6FCF9700B53C32 /* LobbyModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyModule.swift; sourceTree = "<group>"; };
+		86E4CEAD2A6FCFDA00B53C32 /* LobbyDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyDIContainer.swift; sourceTree = "<group>"; };
+		86E4CEAF2A6FCFF800B53C32 /* LobbyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyViewModel.swift; sourceTree = "<group>"; };
+		86E4CEB12A6FD03E00B53C32 /* LobbyTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyTabBarController.swift; sourceTree = "<group>"; };
+		86E4CEB32A6FD0B600B53C32 /* LobbyFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyFlowCoordinator.swift; sourceTree = "<group>"; };
+		86E4CEB62A6FD4A800B53C32 /* MainDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDIContainer.swift; sourceTree = "<group>"; };
 		86F828B32A61790F0017ABB8 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -292,6 +304,7 @@
 				86E310092A5EA56E007EB56B /* Shared */,
 				86E3102D2A5EC2C1007EB56B /* Launch */,
 				86E310392A5EC3F7007EB56B /* Main */,
+				86E4CEA62A6FCF4C00B53C32 /* Lobby */,
 				86E310372A5EC383007EB56B /* Scenes */,
 				86E3100C2A5EA58D007EB56B /* Resources */,
 			);
@@ -434,6 +447,7 @@
 			isa = PBXGroup;
 			children = (
 				86E3103C2A5EC414007EB56B /* MainModule.swift */,
+				86E4CEB52A6FD49C00B53C32 /* DIContainer */,
 				86E3103B2A5EC407007EB56B /* FlowCoordinator */,
 				86E3103A2A5EC402007EB56B /* View */,
 			);
@@ -740,6 +754,58 @@
 			path = DIContainer;
 			sourceTree = "<group>";
 		};
+		86E4CEA62A6FCF4C00B53C32 /* Lobby */ = {
+			isa = PBXGroup;
+			children = (
+				86E4CEAB2A6FCF9700B53C32 /* LobbyModule.swift */,
+				86E4CEAA2A6FCF7D00B53C32 /* DIContainer */,
+				86E4CEA92A6FCF7500B53C32 /* FlowCoordinator */,
+				86E4CEA82A6FCF6F00B53C32 /* ViewModel */,
+				86E4CEA72A6FCF6500B53C32 /* View */,
+			);
+			path = Lobby;
+			sourceTree = "<group>";
+		};
+		86E4CEA72A6FCF6500B53C32 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				86E4CEB12A6FD03E00B53C32 /* LobbyTabBarController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		86E4CEA82A6FCF6F00B53C32 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				86E4CEAF2A6FCFF800B53C32 /* LobbyViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		86E4CEA92A6FCF7500B53C32 /* FlowCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				86E4CEB32A6FD0B600B53C32 /* LobbyFlowCoordinator.swift */,
+			);
+			path = FlowCoordinator;
+			sourceTree = "<group>";
+		};
+		86E4CEAA2A6FCF7D00B53C32 /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+				86E4CEAD2A6FCFDA00B53C32 /* LobbyDIContainer.swift */,
+			);
+			path = DIContainer;
+			sourceTree = "<group>";
+		};
+		86E4CEB52A6FD49C00B53C32 /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+				86E4CEB62A6FD4A800B53C32 /* MainDIContainer.swift */,
+			);
+			path = DIContainer;
+			sourceTree = "<group>";
+		};
 		D52293BB1ED70D428AC6E2CD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -923,12 +989,14 @@
 				86E4CE4B2A6F1B2C00B53C32 /* AccountManager.swift in Sources */,
 				86E310142A5EA656007EB56B /* ReusableViewProtocol.swift in Sources */,
 				86E3102C2A5EAC52007EB56B /* JSONExtension.swift in Sources */,
+				86E4CEB02A6FCFF800B53C32 /* LobbyViewModel.swift in Sources */,
 				86E3103F2A5EC42D007EB56B /* MainFlowCoordinator.swift in Sources */,
 				86E310242A5EABDA007EB56B /* UIImageExtension.swift in Sources */,
 				86E4CE9D2A6FB1C100B53C32 /* ProfileDIContainer.swift in Sources */,
 				866F8FE02A66852200C3F30F /* DefaultsManager.swift in Sources */,
 				86E310492A5EC4E8007EB56B /* SplashDIContainer.swift in Sources */,
 				86E4CE852A6FADA700B53C32 /* WorkoutDIContainer.swift in Sources */,
+				86E4CEB72A6FD4A800B53C32 /* MainDIContainer.swift in Sources */,
 				86E310302A5EC323007EB56B /* AppDIContainer.swift in Sources */,
 				86E4CE9F2A6FB1DE00B53C32 /* ProfileFlowCoordinator.swift in Sources */,
 				86E310412A5EC448007EB56B /* MainNavigationController.swift in Sources */,
@@ -946,10 +1014,12 @@
 				86E4CEA12A6FB22200B53C32 /* ProfileViewModel.swift in Sources */,
 				86E4CE5A2A6FA57800B53C32 /* HomeModule.swift in Sources */,
 				86E3104B2A5EC500007EB56B /* SplashFlowCoordinator.swift in Sources */,
+				86E4CEAE2A6FCFDA00B53C32 /* LobbyDIContainer.swift in Sources */,
 				86E4CE8F2A6FAFCE00B53C32 /* DietFlowCoordinator.swift in Sources */,
 				86E4CE4F2A6F223900B53C32 /* WelcomeSignInUseCase.swift in Sources */,
 				866F8FDB2A66849D00C3F30F /* LocalizationManager.swift in Sources */,
 				86E310192A5EA687007EB56B /* BaseFlowCoordinatorProtocol.swift in Sources */,
+				86E4CEAC2A6FCF9700B53C32 /* LobbyModule.swift in Sources */,
 				86E310472A5EC4CF007EB56B /* SplashModule.swift in Sources */,
 				86E4CE812A6FAD9100B53C32 /* WorkoutViewModel.swift in Sources */,
 				86E4CE722A6FA96B00B53C32 /* ActivityFlowCoordinator.swift in Sources */,
@@ -958,7 +1028,9 @@
 				866F8FE22A66859A00C3F30F /* DefaultKeys.swift in Sources */,
 				86E310262A5EAC08007EB56B /* UITableViewExtension.swift in Sources */,
 				86E3103D2A5EC414007EB56B /* MainModule.swift in Sources */,
+				86E4CEB22A6FD03E00B53C32 /* LobbyTabBarController.swift in Sources */,
 				86E310362A5EC369007EB56B /* AppFlowCoordinator.swift in Sources */,
+				86E4CEB42A6FD0B600B53C32 /* LobbyFlowCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

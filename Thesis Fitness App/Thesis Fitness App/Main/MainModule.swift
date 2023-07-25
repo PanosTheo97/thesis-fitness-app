@@ -16,7 +16,11 @@ class MainModule {
     }
     
     func makeMainFlowCoordinator(mainNavigationController: MainNavigationController) -> MainFlowCoordinator {
-        MainFlowCoordinator(mainNavigationController: mainNavigationController)
+        MainFlowCoordinator(mainDIContainer: makeMainDIContainer(), mainNavigationController: mainNavigationController)
+    }
+    
+    private func makeMainDIContainer() -> MainDIContainer {
+        MainDIContainer()
     }
     
 }

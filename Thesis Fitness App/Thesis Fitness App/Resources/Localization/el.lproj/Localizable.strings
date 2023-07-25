@@ -11,3 +11,11 @@
 "Welcome_welcomeLabel" = "Καλωσήρθες";
 "Welcome_googleSignInLabel" = "Σύνδεση με Google";
 "Welcome_guestButton" = "Ή συνέχισε ως καλεσμένος";
+
+// MARK: - Lobby
+
+"Lobby_homeTitle" = "Αρχική";
+"Lobby_activityTitle" = "Άθληση";
+"Lobby_workoutTitle" = "Γυμναστήριο";
+"Lobby_dietTitle" = "Διατροφή";
+"Lobby_profileTitle" = "Προφίλ";

@@ -12,3 +12,11 @@
 "Welcome_googleSignInLabel" = "Sign in with Google";
 "Welcome_guestButton" = "Or continue as Guest";
 
+// MARK: - Lobby
+
+"Lobby_homeTitle" = "Home";
+"Lobby_activityTitle" = "Activity";
+"Lobby_workoutTitle" = "Workout";
+"Lobby_dietTitle" = "Diet";
+"Lobby_profileTitle" = "Profile";
+

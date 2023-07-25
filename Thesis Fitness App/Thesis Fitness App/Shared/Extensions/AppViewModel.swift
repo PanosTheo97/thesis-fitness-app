@@ -20,9 +20,9 @@ class AppViewModel {
 
     // MARK: - Methods
 
-    func configureLoader(thickness: CGFloat = 5, color: UIColor = UIColor.systemGray3, offset: UIOffset = UIOffset(horizontal: 0, vertical: 0)) {
+    func configureLoader(thickness: CGFloat = 5, color: UIColor = UIColor.darkGray, offset: UIOffset = UIOffset(horizontal: 0, vertical: 0)) {
         SVProgressHUD.setDefaultMaskType(.clear)
-        SVProgressHUD.setBackgroundColor(UIColor.clear)
+        SVProgressHUD.setBackgroundColor(.clear)
         SVProgressHUD.setOffsetFromCenter(offset)
         SVProgressHUD.setRingThickness(thickness)
         SVProgressHUD.setForegroundColor(color)

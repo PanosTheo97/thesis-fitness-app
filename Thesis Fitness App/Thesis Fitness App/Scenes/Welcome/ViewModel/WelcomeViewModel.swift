@@ -48,7 +48,7 @@ class WelcomeViewModel: WelcomeViewModelProtocol {
         self.welcomeSignInUseCase.execute { successfulSignIn in
             self.isLoading.value = false
             if successfulSignIn {
-                self.update(routingEnum: .dashboard)
+                self.update(routingEnum: .lobby)
             }
         }
     }

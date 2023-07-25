@@ -33,7 +33,6 @@ class MainNavigationController: UINavigationController {
         
         self.interactivePopGestureRecognizer?.isEnabled = false
        
-        self.navigationBar.tintColor = UIColor.white
         self.navigationBar.isTranslucent = true
         
         let appearance = UINavigationBarAppearance()

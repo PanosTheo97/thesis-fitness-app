@@ -10,7 +10,7 @@ import UIKit
 
 class ActivityModule {
     
-    func makeHomeNavigationController() -> UINavigationController? {
+    func makeActivityNavigationController() -> UINavigationController? {
         if let viewController = self.makeActivityViewController() {
             let activityNavigationController = UINavigationController(rootViewController: viewController)
             return activityNavigationController

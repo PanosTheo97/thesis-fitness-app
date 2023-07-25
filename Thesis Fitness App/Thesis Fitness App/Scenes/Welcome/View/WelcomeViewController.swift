@@ -90,7 +90,8 @@ class WelcomeViewController: UIViewController, BaseProtocol {
         
         viewModel?.routingEnum.addObserver({ [weak self] routingEnum in
             switch routingEnum {
-            case .dashboard:
+            case .lobby:
+                self?.flowCoordinator?.moveToLobby()
                 print(AccountManager.shared.user?.email)
             case .firstTimeSignIn:
                 return
@@ -108,7 +109,7 @@ class WelcomeViewController: UIViewController, BaseProtocol {
 
 struct Welcome {
     enum RoutingEnum {
-        case dashboard
+        case lobby
         case firstTimeSignIn
     }
 }
