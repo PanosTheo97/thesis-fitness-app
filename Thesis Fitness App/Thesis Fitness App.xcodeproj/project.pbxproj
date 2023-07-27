@@ -98,6 +98,13 @@
 		86E4CEC62A7005F500B53C32 /* MainNavigationController+ProfileViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4CEC52A7005F500B53C32 /* MainNavigationController+ProfileViewControllerProtocol.swift */; };
 		86E4CEC92A70091700B53C32 /* LobbyTabBarController+UITabBarControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4CEC82A70091700B53C32 /* LobbyTabBarController+UITabBarControllerDelegate.swift */; };
 		86E4CECB2A700FC600B53C32 /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4CECA2A700FC600B53C32 /* UINavigationControllerExtension.swift */; };
+		86E4CECF2A7109D200B53C32 /* ActivityCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4CECE2A7109D200B53C32 /* ActivityCollectionView.swift */; };
+		86E4CED22A710C3100B53C32 /* ActivityCollectionView+UICollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4CED12A710C3100B53C32 /* ActivityCollectionView+UICollectionViewDataSource.swift */; };
+		86E4CED42A710C9E00B53C32 /* ActivityCollectionView+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4CED32A710C9E00B53C32 /* ActivityCollectionView+UICollectionViewDelegate.swift */; };
+		86E4CED82A710D1600B53C32 /* ActivityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4CED62A710D1600B53C32 /* ActivityCollectionViewCell.swift */; };
+		86E4CED92A710D1600B53C32 /* ActivityCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86E4CED72A710D1600B53C32 /* ActivityCollectionViewCell.xib */; };
+		86E4CEDB2A71109C00B53C32 /* ActivityViewController+ActivityCollectionViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4CEDA2A71109C00B53C32 /* ActivityViewController+ActivityCollectionViewProtocol.swift */; };
+		86E4CEDF2A71116500B53C32 /* ActivitySetupUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4CEDE2A71116500B53C32 /* ActivitySetupUseCase.swift */; };
 		86F828B42A61790F0017ABB8 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86F828B32A61790F0017ABB8 /* credentials.plist */; };
 /* End PBXBuildFile section */
 
@@ -199,6 +206,13 @@
 		86E4CEC52A7005F500B53C32 /* MainNavigationController+ProfileViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainNavigationController+ProfileViewControllerProtocol.swift"; sourceTree = "<group>"; };
 		86E4CEC82A70091700B53C32 /* LobbyTabBarController+UITabBarControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LobbyTabBarController+UITabBarControllerDelegate.swift"; sourceTree = "<group>"; };
 		86E4CECA2A700FC600B53C32 /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
+		86E4CECE2A7109D200B53C32 /* ActivityCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCollectionView.swift; sourceTree = "<group>"; };
+		86E4CED12A710C3100B53C32 /* ActivityCollectionView+UICollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityCollectionView+UICollectionViewDataSource.swift"; sourceTree = "<group>"; };
+		86E4CED32A710C9E00B53C32 /* ActivityCollectionView+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityCollectionView+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
+		86E4CED62A710D1600B53C32 /* ActivityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCollectionViewCell.swift; sourceTree = "<group>"; };
+		86E4CED72A710D1600B53C32 /* ActivityCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityCollectionViewCell.xib; sourceTree = "<group>"; };
+		86E4CEDA2A71109C00B53C32 /* ActivityViewController+ActivityCollectionViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityViewController+ActivityCollectionViewProtocol.swift"; sourceTree = "<group>"; };
+		86E4CEDE2A71116500B53C32 /* ActivitySetupUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySetupUseCase.swift; sourceTree = "<group>"; };
 		86F828B32A61790F0017ABB8 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -646,6 +660,8 @@
 			children = (
 				86E4CE6B2A6FA93400B53C32 /* ActivityViewController.swift */,
 				86E4CE6D2A6FA93D00B53C32 /* Activity.storyboard */,
+				86E4CECD2A71099700B53C32 /* Protocols */,
+				86E4CECC2A71098A00B53C32 /* ActivityCollectionView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -654,6 +670,7 @@
 			isa = PBXGroup;
 			children = (
 				86E4CE6F2A6FA96100B53C32 /* ActivityViewModel.swift */,
+				86E4CEDC2A71112A00B53C32 /* UseCases */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -875,6 +892,58 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		86E4CECC2A71098A00B53C32 /* ActivityCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				86E4CECE2A7109D200B53C32 /* ActivityCollectionView.swift */,
+				86E4CED02A710A3600B53C32 /* Protocols */,
+				86E4CED52A710CF200B53C32 /* Cells */,
+			);
+			path = ActivityCollectionView;
+			sourceTree = "<group>";
+		};
+		86E4CECD2A71099700B53C32 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				86E4CEDA2A71109C00B53C32 /* ActivityViewController+ActivityCollectionViewProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		86E4CED02A710A3600B53C32 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				86E4CED12A710C3100B53C32 /* ActivityCollectionView+UICollectionViewDataSource.swift */,
+				86E4CED32A710C9E00B53C32 /* ActivityCollectionView+UICollectionViewDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		86E4CED52A710CF200B53C32 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				86E4CED62A710D1600B53C32 /* ActivityCollectionViewCell.swift */,
+				86E4CED72A710D1600B53C32 /* ActivityCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		86E4CEDC2A71112A00B53C32 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				86E4CEDD2A71113400B53C32 /* SetupUseCase */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		86E4CEDD2A71113400B53C32 /* SetupUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				86E4CEDE2A71116500B53C32 /* ActivitySetupUseCase.swift */,
+			);
+			path = SetupUseCase;
+			sourceTree = "<group>";
+		};
 		D52293BB1ED70D428AC6E2CD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -957,6 +1026,7 @@
 				86E3104F2A5EC52A007EB56B /* Splash.storyboard in Resources */,
 				86252C882A6E722A009FEAF9 /* GoogleService-Info.plist in Resources */,
 				86E4CE7F2A6FAD8500B53C32 /* Workout.storyboard in Resources */,
+				86E4CED92A710D1600B53C32 /* ActivityCollectionViewCell.xib in Resources */,
 				86E4CE622A6FA5F100B53C32 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1037,8 +1107,10 @@
 				86E4CE602A6FA5E700B53C32 /* HomeDIContainer.swift in Sources */,
 				86E4CEA52A6FB24E00B53C32 /* ProfileViewController.swift in Sources */,
 				86E3100F2A5EA5E1007EB56B /* Observable.swift in Sources */,
+				86E4CED82A710D1600B53C32 /* ActivityCollectionViewCell.swift in Sources */,
 				86E4CEBB2A6FEE2600B53C32 /* UINavigationItemExtension.swift in Sources */,
 				86E4CE7B2A6FAD6900B53C32 /* WorkoutModule.swift in Sources */,
+				86E4CEDF2A71116500B53C32 /* ActivitySetupUseCase.swift in Sources */,
 				86E4CE8D2A6FAFB700B53C32 /* DietDIContainer.swift in Sources */,
 				86E310332A5EC33C007EB56B /* AppViewModel.swift in Sources */,
 				86E310512A5EC538007EB56B /* SplashViewController.swift in Sources */,
@@ -1058,6 +1130,7 @@
 				86E4CE742A6FA97400B53C32 /* ActivityDIContainer.swift in Sources */,
 				86E310172A5EA673007EB56B /* BaseViewModelProtocol.swift in Sources */,
 				86E3101E2A5EAB4D007EB56B /* UIColorExtension.swift in Sources */,
+				86E4CEDB2A71109C00B53C32 /* ActivityViewController+ActivityCollectionViewProtocol.swift in Sources */,
 				86E4CE6C2A6FA93400B53C32 /* ActivityViewController.swift in Sources */,
 				86E4CE4B2A6F1B2C00B53C32 /* AccountManager.swift in Sources */,
 				86E310142A5EA656007EB56B /* ReusableViewProtocol.swift in Sources */,
@@ -1071,12 +1144,14 @@
 				86E4CE852A6FADA700B53C32 /* WorkoutDIContainer.swift in Sources */,
 				86E4CEB72A6FD4A800B53C32 /* MainDIContainer.swift in Sources */,
 				86E310302A5EC323007EB56B /* AppDIContainer.swift in Sources */,
+				86E4CECF2A7109D200B53C32 /* ActivityCollectionView.swift in Sources */,
 				86E4CE9F2A6FB1DE00B53C32 /* ProfileFlowCoordinator.swift in Sources */,
 				86E310412A5EC448007EB56B /* MainNavigationController.swift in Sources */,
 				86E310222A5EABA9007EB56B /* UIWindowExtension.swift in Sources */,
 				86E4CE702A6FA96100B53C32 /* ActivityViewModel.swift in Sources */,
 				866F8FD82A66844300C3F30F /* StringExtension.swift in Sources */,
 				86E4CE642A6FA60300B53C32 /* HomeViewController.swift in Sources */,
+				86E4CED22A710C3100B53C32 /* ActivityCollectionView+UICollectionViewDataSource.swift in Sources */,
 				86E310202A5EAB7F007EB56B /* UIViewControllerExtension.swift in Sources */,
 				86E4CE9B2A6FB13400B53C32 /* ProfileModule.swift in Sources */,
 				866F8FC02A66799000C3F30F /* WelcomeDIContainer.swift in Sources */,
@@ -1089,6 +1164,7 @@
 				86E3104B2A5EC500007EB56B /* SplashFlowCoordinator.swift in Sources */,
 				86E4CEC62A7005F500B53C32 /* MainNavigationController+ProfileViewControllerProtocol.swift in Sources */,
 				86E4CEAE2A6FCFDA00B53C32 /* LobbyDIContainer.swift in Sources */,
+				86E4CED42A710C9E00B53C32 /* ActivityCollectionView+UICollectionViewDelegate.swift in Sources */,
 				86E4CE8F2A6FAFCE00B53C32 /* DietFlowCoordinator.swift in Sources */,
 				86E4CE4F2A6F223900B53C32 /* WelcomeSignInUseCase.swift in Sources */,
 				866F8FDB2A66849D00C3F30F /* LocalizationManager.swift in Sources */,

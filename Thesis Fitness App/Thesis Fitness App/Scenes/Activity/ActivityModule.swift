@@ -30,7 +30,7 @@ class ActivityModule {
     }
     
     private func makeActivityViewModel() -> ActivityViewModel {
-        ActivityViewModel()
+        ActivityViewModel(activitySetupUseCase: makeActivitySetupUseCase())
     }
     
     private func makeActivityFlowCoordinator(_ viewController: ActivityViewController) -> ActivityFlowCoordinator {
@@ -39,5 +39,9 @@ class ActivityModule {
     
     private func makeActivityDIContainer() -> ActivityDIContainer {
         ActivityDIContainer()
+    }
+    
+    private func makeActivitySetupUseCase() -> ActivitySetupUseCaseProtocol {
+        ActivitySetupUseCase()
     }
 }

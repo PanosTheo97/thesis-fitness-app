@@ -13,14 +13,27 @@ class ActivityViewModel: BaseViewModelProtocol {
     
     var isLoading = Observable<Bool?>(value: nil)
     var routingEnum = Observable<Activity.RoutingEnum?>(value: nil)
+    var activityData = Observable<[ActivityCollectionViewModel]>(value: [])
+    
+    // MARK: - Properties
+    
+    var activitySetupUseCase: ActivitySetupUseCaseProtocol
     
     // MARK: - Life cycle
     
-    init() {
-        
+    init(activitySetupUseCase: ActivitySetupUseCaseProtocol) {
+        self.activitySetupUseCase = activitySetupUseCase
     }
+    
+    // MARK: - Methods
     
     func update(routing: Activity.RoutingEnum) {
         self.routingEnum.value = routing
+    }
+    
+    func executeActivitySetupuseCase() {
+        self.activitySetupUseCase.execute { data in
+            self.activityData.value = data
+        }
     }
 }

@@ -11,6 +11,12 @@ class ActivityViewController: UIViewController, BaseProtocol {
 
     // MARK: - IBProperties
     
+    @IBOutlet weak var activityCollectionView: ActivityCollectionView! {
+        didSet {
+            activityCollectionView.activityCollectionViewDelegate = self
+        }
+    }
+    
     // MARK: - Properties
     
     var viewModel: ActivityViewModel?
@@ -21,6 +27,7 @@ class ActivityViewController: UIViewController, BaseProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setup()
+        self.viewModel?.executeActivitySetupuseCase()
     }
 
     // MARK: - Methods
@@ -40,6 +47,10 @@ class ActivityViewController: UIViewController, BaseProtocol {
             switch routingEnum {
             default: ()
             }
+        })
+        
+        viewModel?.activityData.addObserver({ [weak self] activityData in
+            self?.activityCollectionView.data = activityData
         })
         
     }

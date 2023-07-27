@@ -31,9 +31,9 @@ extension UINavigationItem {
                 customView.frame = button.frame
                 customView.addSubview(button)
             case .settings:
-                let button = self.makeCustomButton(image: .get(image: .Settings),
+                let button = self.makeCustomButton(image: .init(systemName: "gearshape"),
                                                    highlightedImage: .get(image: .Settings),
-                                                   rect: CGRect(x: 0, y: 0, width: 40, height: 40),
+                                                   rect: CGRect(x: 0, y: 0, width: 25, height: 25),
                                                    navigationButton: navigationButton)
                 button.backgroundColor = .clear
                 
