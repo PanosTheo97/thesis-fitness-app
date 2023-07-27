@@ -70,15 +70,13 @@ final class MainFlowCoordinator {
     }
     
     func moveToWelcome() {
-        if let welcomeViewController = self.mainNavigationController?.viewControllers.last as? WelcomeViewController {
+        if let welcomeViewController = self.mainNavigationController?.viewControllers.first(where: {$0 is WelcomeViewController}) {
             self.mainNavigationController?.popViewController(animated: true)
         } else {
-            #warning("Needs fixing, Lobby is still in the navigationStack")
             guard let welocmeViewController = self.mainDIContainer.welcomeModule.makeWelcomeViewController() else { return }
-            self.mainNavigationController?.pushViewController(welocmeViewController, animated: true)
-            self.mainNavigationController?.removeViewController(LobbyTabBarController.self)
             
-            print(self.mainNavigationController?.viewControllers)
+            self.mainNavigationController?.removeViewController(LobbyTabBarController.self)
+            self.mainNavigationController?.pushViewController(welocmeViewController, animated: false)
         }
     }
     
