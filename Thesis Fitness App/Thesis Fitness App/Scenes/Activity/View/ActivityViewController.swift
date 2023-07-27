@@ -29,7 +29,15 @@ class ActivityViewController: UIViewController, BaseProtocol {
         self.setup()
         self.viewModel?.executeActivitySetupuseCase()
     }
-
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        
+        // Reset the view in case of edit mode
+        
+        self.addNavigationButtons()
+        self.activityCollectionView.isInEditMode = false
+        self.activityCollectionView.setup(data: self.viewModel?.activityData.value ?? [])
+    }
     // MARK: - Methods
     
     private func setup() {
@@ -50,12 +58,14 @@ class ActivityViewController: UIViewController, BaseProtocol {
         })
         
         viewModel?.activityData.addObserver({ [weak self] activityData in
-            self?.activityCollectionView.data = activityData
+            self?.activityCollectionView.setup(data: activityData)
         })
         
     }
     
     func addNavigationButtons() {
+    
+        self.navigationItem.addTitle(title: "Lobby_activityTitle".getLocalized())
         self.navigationItem.addButtons(barButtonPositionEnum: .right,
                                        navigationButtons: [(navigationButtonTypeEnum: .history,
                                                             action: #selector(editButtonTapped),
@@ -66,7 +76,30 @@ class ActivityViewController: UIViewController, BaseProtocol {
     }
     
     @objc func editButtonTapped() {
-        print("Edit")
+        self.activityCollectionView.isInEditMode = true
+        self.activityCollectionView.reloadData()
+        
+        self.navigationItem.addButtons(barButtonPositionEnum: .right,
+                                       navigationButtons: [(navigationButtonTypeEnum: .checkmark,
+                                                            action: #selector(checkButtonTapped),
+                                                            target: self)])
+    }
+    
+    @objc func checkButtonTapped() {
+        
+        // Use case to actually save updated favorites
+        
+        self.viewModel?.activityData.value = self.activityCollectionView.data
+        
+        self.navigationItem.addButtons(barButtonPositionEnum: .right,
+                                       navigationButtons: [(navigationButtonTypeEnum: .history,
+                                                            action: #selector(editButtonTapped),
+                                                            target: self),
+                                                           (navigationButtonTypeEnum: .edit,
+                                                                                action: #selector(editButtonTapped),
+                                                                                target: self)])
+        self.activityCollectionView.isInEditMode = false
+        self.activityCollectionView.reloadData()
     }
     
     @objc func historyButtonTapped() {

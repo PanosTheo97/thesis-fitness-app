@@ -12,6 +12,17 @@ typealias NavigationButton = (navigationButtonTypeEnum: NavigationButtonTypeEnum
 
 extension UINavigationItem {
     
+    func addTitle(title: String) {
+        let label = UILabel()
+        label.textColor = .App.mainText
+        label.text = title
+        label.font = .systemFont(ofSize: 16, weight: .bold)
+        label.numberOfLines = 0
+        label.sizeToFit()
+        label.adjustsFontSizeToFitWidth = true
+        leftBarButtonItem = UIBarButtonItem.init(customView: label)
+    }
+    
     func addButtons(barButtonPositionEnum: NavigationButtonPositionEnum, navigationButtons: [NavigationButton]) {
         
         var barButtonItems: [UIBarButtonItem] = []
@@ -32,7 +43,7 @@ extension UINavigationItem {
                 customView.addSubview(button)
             case .settings:
                 let button = self.makeCustomButton(image: .init(systemName: "gearshape"),
-                                                   highlightedImage: .get(image: .Settings),
+                                                   highlightedImage: .init(systemName: "gearshape"),
                                                    rect: CGRect(x: 0, y: 0, width: 25, height: 25),
                                                    navigationButton: navigationButton)
                 button.backgroundColor = .clear
@@ -48,6 +59,19 @@ extension UINavigationItem {
                 
                 customView.frame = button.frame
                 customView.addSubview(button)
+            case .checkmark:
+                let button = self.makeCustomButton(image: .init(systemName: "checkmark")?.withTintColor(.systemGreen, renderingMode: .alwaysOriginal),
+                                                   highlightedImage: .init(systemName: "checkmark")?.withTintColor(.systemGreen, renderingMode: .alwaysOriginal),
+                                                   rect: CGRect(x: 0, y: 0, width: 25, height: 25),
+                                                   navigationButton: navigationButton)
+                button.backgroundColor = .clear
+                
+                customView.frame = button.frame
+                customView.addSubview(button)
+            case .title(let title):
+                let label = UILabel()
+                label.textColor = .App.mainText
+                label.text = title
             default: ()
             }
             let barButton = UIBarButtonItem(customView: customView)

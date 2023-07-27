@@ -29,7 +29,7 @@ class WorkoutViewController: UIViewController, BaseProtocol {
         registerObservers()
         
         self.view.backgroundColor = .systemBackground
-        self.navigationController?.navigationBar.isHidden = true
+        self.addNavigationButtons()
     }
     
     private func registerObservers() {
@@ -42,6 +42,10 @@ class WorkoutViewController: UIViewController, BaseProtocol {
             }
         })
         
+    }
+    
+    func addNavigationButtons() {
+        self.navigationItem.addTitle(title: "Lobby_workoutTitle".getLocalized())
     }
 
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ActivityCollectionViewModel {
+struct ActivityCollectionViewModel {
     
     // MARK: - Properties
     
@@ -32,13 +32,11 @@ class ActivityCollectionView: UICollectionView {
 
     // MARK: - Properties
 
-    var data: [ActivityCollectionViewModel] = [] {
-        didSet {
-            self.reloadData()
-        }
-    }
+    var data: [ActivityCollectionViewModel] = []
 
     weak var activityCollectionViewDelegate: ActivityCollectionViewProtocol?
+    
+    var isInEditMode: Bool = false
 
     // MARK: - Life cycle
 
@@ -58,6 +56,7 @@ class ActivityCollectionView: UICollectionView {
     
     func setup(data: [ActivityCollectionViewModel]) {
         self.data = data
+        self.reloadData()
     }
 
 }

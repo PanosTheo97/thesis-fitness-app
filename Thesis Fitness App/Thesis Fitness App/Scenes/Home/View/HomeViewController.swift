@@ -57,6 +57,7 @@ class HomeViewController: UIViewController, BaseProtocol {
     }
     
     func addEditButton() {
+        self.navigationItem.addTitle(title: "Lobby_homeTitle".getLocalized())
         self.navigationItem.addButtons(barButtonPositionEnum: .right,
                                        navigationButtons: [(navigationButtonTypeEnum: .edit,
                                                             action: #selector(editButtonTapped),

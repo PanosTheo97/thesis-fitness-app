@@ -29,7 +29,16 @@ extension ActivityCollectionView: UICollectionViewDelegate, UICollectionViewDele
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        self.activityCollectionViewDelegate?.activityTapped()
+        if self.isInEditMode {
+            guard let cell = collectionView.cellForItem(at: indexPath) as? ActivityCollectionViewCell else {
+                return
+            }
+            cell.favoriteImageView.isHidden.toggle()
+            self.data[indexPath.row].isFavorite.toggle()
+        } else {
+            self.activityCollectionViewDelegate?.activityTapped()
+        }
+        
     }
     
 }

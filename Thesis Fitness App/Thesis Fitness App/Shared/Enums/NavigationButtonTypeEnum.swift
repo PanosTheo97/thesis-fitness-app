@@ -15,6 +15,8 @@ enum NavigationButtonTypeEnum {
     case back
     case close
     case scan
+    case title(title: String)
+    case checkmark
 }
 
 enum NavigationButtonPositionEnum {

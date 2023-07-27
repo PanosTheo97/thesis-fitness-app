@@ -64,6 +64,7 @@ class ProfileViewController: UIViewController, BaseProtocol {
     }
     
     func addSettingsButton() {
+        self.navigationItem.addTitle(title: "Lobby_profileTitle".getLocalized())
         self.navigationItem.addButtons(barButtonPositionEnum: .right,
                                        navigationButtons: [(navigationButtonTypeEnum: .settings,
                                                             action: #selector(settingsButtonTapped),

@@ -16,7 +16,7 @@ extension ActivityCollectionView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: ActivityCollectionViewCell? = collectionView.dequeueReusableCell(for: indexPath)
-        cell?.setup(model: self.data[indexPath.row])
+        cell?.setup(model: self.data[indexPath.row], isInEditMode: self.isInEditMode)
         return cell ?? UICollectionViewCell()
     }
 
