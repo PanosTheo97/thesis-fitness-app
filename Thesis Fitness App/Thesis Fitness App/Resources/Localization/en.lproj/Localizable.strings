@@ -27,3 +27,8 @@
 // MARK: - Home
 
 "Home_displayNameLabel" = "Welcome back \n %@";
+
+// MARK: - Activity
+
+"Activity_activityTitleLabel" = "Pick an activity and start exercising!";
+"Activity_pickYourFavorites" = "Choose your favorite activities to receive exciting challenges!";

@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension LobbyTabBarController: UITabBarControllerDelegate  {
+extension LobbyTabBarController: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         
         guard let fromView = selectedViewController?.view, let toView = viewController.view else {

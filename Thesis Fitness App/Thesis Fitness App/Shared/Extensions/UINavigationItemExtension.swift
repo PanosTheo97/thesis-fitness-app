@@ -32,6 +32,19 @@ extension UINavigationItem {
             let customView = UIView()
 
             switch navigationButton.navigationButtonTypeEnum {
+            case .title(let title):
+                let label = UILabel()
+                label.textColor = .App.mainText
+                label.text = title
+            case .back:
+                let button = self.makeCustomButton(image: .init(systemName: "chevron.backward"),
+                                                   highlightedImage: .init(systemName: "chevron.backward"),
+                                                   rect: CGRect(x: 0, y: 0, width: 25, height: 25),
+                                                   navigationButton: navigationButton)
+                button.backgroundColor = .clear
+                
+                customView.frame = button.frame
+                customView.addSubview(button)
             case .edit:
                 let button = self.makeCustomButton(image: .get(image: .Edit),
                                                    highlightedImage: .get(image: .Edit),
@@ -68,10 +81,6 @@ extension UINavigationItem {
                 
                 customView.frame = button.frame
                 customView.addSubview(button)
-            case .title(let title):
-                let label = UILabel()
-                label.textColor = .App.mainText
-                label.text = title
             default: ()
             }
             let barButton = UIBarButtonItem(customView: customView)

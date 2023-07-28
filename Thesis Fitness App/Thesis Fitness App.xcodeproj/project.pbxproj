@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		85E32E29A88C789CCF0702FA /* Pods_Thesis_Fitness_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42792E1741FAFEC16FCF47C3 /* Pods_Thesis_Fitness_App.framework */; };
+		860F95292A7465B3003131EC /* ActivityParameterModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860F95282A7465B3003131EC /* ActivityParameterModule.swift */; };
+		860F952B2A7465C2003131EC /* ActivityParameterDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860F952A2A7465C2003131EC /* ActivityParameterDIContainer.swift */; };
+		860F952D2A7465CF003131EC /* ActivityParameterFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860F952C2A7465CF003131EC /* ActivityParameterFlowCoordinator.swift */; };
+		860F952F2A7465DB003131EC /* ActivityParameterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860F952E2A7465DB003131EC /* ActivityParameterViewModel.swift */; };
+		860F95312A7465EF003131EC /* ActivityParameterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860F95302A7465EF003131EC /* ActivityParameterViewController.swift */; };
+		860F95332A7465F8003131EC /* ActivityParameter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 860F95322A7465F8003131EC /* ActivityParameter.storyboard */; };
+		860F95372A7469B5003131EC /* ActivityParameterSetupUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860F95362A7469B5003131EC /* ActivityParameterSetupUseCase.swift */; };
+		860F95392A746D0A003131EC /* TabBarViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860F95382A746D0A003131EC /* TabBarViewControllerProtocol.swift */; };
 		86252C882A6E722A009FEAF9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86252C872A6E71CA009FEAF9 /* GoogleService-Info.plist */; };
 		866F8FC02A66799000C3F30F /* WelcomeDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866F8FBF2A66799000C3F30F /* WelcomeDIContainer.swift */; };
 		866F8FC22A6679A700C3F30F /* WelcomeFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866F8FC12A6679A700C3F30F /* WelcomeFlowCoordinator.swift */; };
@@ -112,6 +120,14 @@
 		3AAEA953558CC1B4936948D4 /* Pods-Thesis Fitness App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thesis Fitness App.debug.xcconfig"; path = "Target Support Files/Pods-Thesis Fitness App/Pods-Thesis Fitness App.debug.xcconfig"; sourceTree = "<group>"; };
 		3EB7195C2E59E9EFFC1CE3E5 /* Pods-Thesis Fitness App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thesis Fitness App.release.xcconfig"; path = "Target Support Files/Pods-Thesis Fitness App/Pods-Thesis Fitness App.release.xcconfig"; sourceTree = "<group>"; };
 		42792E1741FAFEC16FCF47C3 /* Pods_Thesis_Fitness_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thesis_Fitness_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		860F95282A7465B3003131EC /* ActivityParameterModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityParameterModule.swift; sourceTree = "<group>"; };
+		860F952A2A7465C2003131EC /* ActivityParameterDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityParameterDIContainer.swift; sourceTree = "<group>"; };
+		860F952C2A7465CF003131EC /* ActivityParameterFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityParameterFlowCoordinator.swift; sourceTree = "<group>"; };
+		860F952E2A7465DB003131EC /* ActivityParameterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityParameterViewModel.swift; sourceTree = "<group>"; };
+		860F95302A7465EF003131EC /* ActivityParameterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityParameterViewController.swift; sourceTree = "<group>"; };
+		860F95322A7465F8003131EC /* ActivityParameter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ActivityParameter.storyboard; sourceTree = "<group>"; };
+		860F95362A7469B5003131EC /* ActivityParameterSetupUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityParameterSetupUseCase.swift; sourceTree = "<group>"; };
+		860F95382A746D0A003131EC /* TabBarViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewControllerProtocol.swift; sourceTree = "<group>"; };
 		86252C872A6E71CA009FEAF9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		866F8FBF2A66799000C3F30F /* WelcomeDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeDIContainer.swift; sourceTree = "<group>"; };
 		866F8FC12A6679A700C3F30F /* WelcomeFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeFlowCoordinator.swift; sourceTree = "<group>"; };
@@ -234,6 +250,80 @@
 				42792E1741FAFEC16FCF47C3 /* Pods_Thesis_Fitness_App.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		860F95222A746559003131EC /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				86E4CE692A6FA92700B53C32 /* ActivityModule.swift */,
+				86E4CE682A6FA91B00B53C32 /* DIContainer */,
+				86E4CE672A6FA8BF00B53C32 /* FlowCoordinator */,
+				86E4CE662A6FA8B900B53C32 /* ViewModel */,
+				86E4CE652A6FA8B300B53C32 /* View */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
+		860F95232A746579003131EC /* ActivityParameter */ = {
+			isa = PBXGroup;
+			children = (
+				860F95282A7465B3003131EC /* ActivityParameterModule.swift */,
+				860F95272A746599003131EC /* DIContainer */,
+				860F95262A746592003131EC /* FlowCoordinator */,
+				860F95252A74658C003131EC /* ViewModel */,
+				860F95242A746587003131EC /* View */,
+			);
+			path = ActivityParameter;
+			sourceTree = "<group>";
+		};
+		860F95242A746587003131EC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				860F95302A7465EF003131EC /* ActivityParameterViewController.swift */,
+				860F95322A7465F8003131EC /* ActivityParameter.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		860F95252A74658C003131EC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				860F952E2A7465DB003131EC /* ActivityParameterViewModel.swift */,
+				860F95342A746983003131EC /* UseCases */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		860F95262A746592003131EC /* FlowCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				860F952C2A7465CF003131EC /* ActivityParameterFlowCoordinator.swift */,
+			);
+			path = FlowCoordinator;
+			sourceTree = "<group>";
+		};
+		860F95272A746599003131EC /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+				860F952A2A7465C2003131EC /* ActivityParameterDIContainer.swift */,
+			);
+			path = DIContainer;
+			sourceTree = "<group>";
+		};
+		860F95342A746983003131EC /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				860F95352A74698F003131EC /* SetupUseCase */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		860F95352A74698F003131EC /* SetupUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				860F95362A7469B5003131EC /* ActivityParameterSetupUseCase.swift */,
+			);
+			path = SetupUseCase;
 			sourceTree = "<group>";
 		};
 		866F8FBA2A66794A00C3F30F /* Welcome */ = {
@@ -378,6 +468,7 @@
 			children = (
 				86E310152A5EA665007EB56B /* Base */,
 				86E310132A5EA656007EB56B /* ReusableViewProtocol.swift */,
+				860F95382A746D0A003131EC /* TabBarViewControllerProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -577,11 +668,8 @@
 		86E4CE512A6FA52A00B53C32 /* Activity */ = {
 			isa = PBXGroup;
 			children = (
-				86E4CE692A6FA92700B53C32 /* ActivityModule.swift */,
-				86E4CE682A6FA91B00B53C32 /* DIContainer */,
-				86E4CE672A6FA8BF00B53C32 /* FlowCoordinator */,
-				86E4CE662A6FA8B900B53C32 /* ViewModel */,
-				86E4CE652A6FA8B300B53C32 /* View */,
+				860F95222A746559003131EC /* Activity */,
+				860F95232A746579003131EC /* ActivityParameter */,
 			);
 			path = Activity;
 			sourceTree = "<group>";
@@ -1016,6 +1104,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				866F8FC62A667ABE00C3F30F /* Welcome.storyboard in Resources */,
+				860F95332A7465F8003131EC /* ActivityParameter.storyboard in Resources */,
 				86E4CE932A6FB04800B53C32 /* Diet.storyboard in Resources */,
 				86E4CE6E2A6FA93D00B53C32 /* Activity.storyboard in Resources */,
 				866F8FD22A66839B00C3F30F /* Localizable.strings in Resources */,
@@ -1108,6 +1197,7 @@
 				86E4CEA52A6FB24E00B53C32 /* ProfileViewController.swift in Sources */,
 				86E3100F2A5EA5E1007EB56B /* Observable.swift in Sources */,
 				86E4CED82A710D1600B53C32 /* ActivityCollectionViewCell.swift in Sources */,
+				860F95392A746D0A003131EC /* TabBarViewControllerProtocol.swift in Sources */,
 				86E4CEBB2A6FEE2600B53C32 /* UINavigationItemExtension.swift in Sources */,
 				86E4CE7B2A6FAD6900B53C32 /* WorkoutModule.swift in Sources */,
 				86E4CEDF2A71116500B53C32 /* ActivitySetupUseCase.swift in Sources */,
@@ -1119,15 +1209,18 @@
 				86E4CE5E2A6FA5DC00B53C32 /* HomeFlowCoordinator.swift in Sources */,
 				86E310282A5EAC25007EB56B /* UICollectionViewExtension.swift in Sources */,
 				866F8FCE2A667FCE00C3F30F /* UIViewExtension.swift in Sources */,
+				860F952B2A7465C2003131EC /* ActivityParameterDIContainer.swift in Sources */,
 				86E30FF52A5E9E0E007EB56B /* AppDelegate.swift in Sources */,
 				86E30FF72A5E9E0E007EB56B /* SceneDelegate.swift in Sources */,
 				86E4CEB92A6FED8A00B53C32 /* NavigationButtonTypeEnum.swift in Sources */,
 				866F8FC82A667ACA00C3F30F /* WelcomeViewController.swift in Sources */,
 				86E4CE6A2A6FA92700B53C32 /* ActivityModule.swift in Sources */,
+				860F952D2A7465CF003131EC /* ActivityParameterFlowCoordinator.swift in Sources */,
 				86E4CE912A6FB02800B53C32 /* DietViewModel.swift in Sources */,
 				86E4CE832A6FAD9E00B53C32 /* WorkoutFlowCoordinator.swift in Sources */,
 				86E4CEC32A6FF95400B53C32 /* SplashCheckForUserUseCase.swift in Sources */,
 				86E4CE742A6FA97400B53C32 /* ActivityDIContainer.swift in Sources */,
+				860F952F2A7465DB003131EC /* ActivityParameterViewModel.swift in Sources */,
 				86E310172A5EA673007EB56B /* BaseViewModelProtocol.swift in Sources */,
 				86E3101E2A5EAB4D007EB56B /* UIColorExtension.swift in Sources */,
 				86E4CEDB2A71109C00B53C32 /* ActivityViewController+ActivityCollectionViewProtocol.swift in Sources */,
@@ -1140,6 +1233,7 @@
 				86E310242A5EABDA007EB56B /* UIImageExtension.swift in Sources */,
 				86E4CE9D2A6FB1C100B53C32 /* ProfileDIContainer.swift in Sources */,
 				866F8FE02A66852200C3F30F /* DefaultsManager.swift in Sources */,
+				860F95292A7465B3003131EC /* ActivityParameterModule.swift in Sources */,
 				86E310492A5EC4E8007EB56B /* SplashDIContainer.swift in Sources */,
 				86E4CE852A6FADA700B53C32 /* WorkoutDIContainer.swift in Sources */,
 				86E4CEB72A6FD4A800B53C32 /* MainDIContainer.swift in Sources */,
@@ -1163,6 +1257,7 @@
 				86E4CE5A2A6FA57800B53C32 /* HomeModule.swift in Sources */,
 				86E3104B2A5EC500007EB56B /* SplashFlowCoordinator.swift in Sources */,
 				86E4CEC62A7005F500B53C32 /* MainNavigationController+ProfileViewControllerProtocol.swift in Sources */,
+				860F95312A7465EF003131EC /* ActivityParameterViewController.swift in Sources */,
 				86E4CEAE2A6FCFDA00B53C32 /* LobbyDIContainer.swift in Sources */,
 				86E4CED42A710C9E00B53C32 /* ActivityCollectionView+UICollectionViewDelegate.swift in Sources */,
 				86E4CE8F2A6FAFCE00B53C32 /* DietFlowCoordinator.swift in Sources */,
@@ -1177,6 +1272,7 @@
 				86E3104D2A5EC515007EB56B /* SplashViewModel.swift in Sources */,
 				86E3102A2A5EAC39007EB56B /* UIImageViewExtension.swift in Sources */,
 				86E4CEC92A70091700B53C32 /* LobbyTabBarController+UITabBarControllerDelegate.swift in Sources */,
+				860F95372A7469B5003131EC /* ActivityParameterSetupUseCase.swift in Sources */,
 				866F8FE22A66859A00C3F30F /* DefaultKeys.swift in Sources */,
 				86E310262A5EAC08007EB56B /* UITableViewExtension.swift in Sources */,
 				86E3103D2A5EC414007EB56B /* MainModule.swift in Sources */,

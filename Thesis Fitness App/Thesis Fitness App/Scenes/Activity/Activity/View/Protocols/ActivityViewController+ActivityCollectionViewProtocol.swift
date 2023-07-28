@@ -8,8 +8,8 @@
 import Foundation
 
 extension ActivityViewController: ActivityCollectionViewProtocol {
-    func activityTapped() {
-        // Use case, check if in edit mode, etc etc
+    func activityTapped(activityId: String) {
+        self.viewModel?.update(routing: .activityParameter(activityId: activityId))
     }
     
 }

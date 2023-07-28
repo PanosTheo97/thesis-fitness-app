@@ -19,5 +19,4 @@ extension ActivityCollectionView: UICollectionViewDataSource {
         cell?.setup(model: self.data[indexPath.row], isInEditMode: self.isInEditMode)
         return cell ?? UICollectionViewCell()
     }
-
 }

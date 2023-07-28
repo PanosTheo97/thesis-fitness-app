@@ -24,4 +24,12 @@ class ActivityFlowCoordinator: BaseFlowCoordinatorProtocol {
     
     // MARK: - Methods
 
+    func moveToActivityParameter(activityId: String) {
+        guard let activityParameterViewController = self.activityDIContainer.activityParameterModule.makeActivityParameterViewController(activityId: activityId) else {
+            return
+        }
+        
+        self.activityViewController?.navigationController?.pushViewController(activityParameterViewController, animated: true)
+    }
+    
 }

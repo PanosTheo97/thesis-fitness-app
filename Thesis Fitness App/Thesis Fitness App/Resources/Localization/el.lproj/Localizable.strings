@@ -27,3 +27,8 @@
 // MARK: - Home
 
 "Home_displayNameLabel" = "Γειά σου και πάλι, %@";
+
+// MARK: - Activity
+
+"Activity_activityTitleLabel" = "Διάλεξε μια δραστηριότητα και ξεκίνα να αθλείσαι!";
+"Activity_pickYourFavorites" = "Διάλεξε τις αγαπημένες σου δραστηριότητες για να λαμβάνεις ενδιαφέρουσες προκλήσεις!";

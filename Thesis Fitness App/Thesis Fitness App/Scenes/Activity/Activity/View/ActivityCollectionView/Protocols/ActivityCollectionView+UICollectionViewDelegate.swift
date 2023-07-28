@@ -36,7 +36,8 @@ extension ActivityCollectionView: UICollectionViewDelegate, UICollectionViewDele
             cell.favoriteImageView.isHidden.toggle()
             self.data[indexPath.row].isFavorite.toggle()
         } else {
-            self.activityCollectionViewDelegate?.activityTapped()
+            #warning("ActivityId Already known, get it based on index")
+            self.activityCollectionViewDelegate?.activityTapped(activityId: "Dummy")
         }
         
     }

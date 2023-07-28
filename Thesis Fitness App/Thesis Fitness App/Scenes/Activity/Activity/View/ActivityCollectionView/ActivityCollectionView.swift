@@ -25,7 +25,7 @@ struct ActivityCollectionViewModel {
 }
 
 protocol ActivityCollectionViewProtocol: AnyObject {
-    func activityTapped()
+    func activityTapped(activityId: String)
 }
 
 class ActivityCollectionView: UICollectionView {

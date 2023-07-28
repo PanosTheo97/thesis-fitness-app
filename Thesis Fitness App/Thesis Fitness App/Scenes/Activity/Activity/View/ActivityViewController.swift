@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ActivityViewController: UIViewController, BaseProtocol {
+class ActivityViewController: UIViewController, BaseProtocol, TabBarViewControllerProtocol {
 
     // MARK: - IBProperties
     
@@ -17,6 +17,13 @@ class ActivityViewController: UIViewController, BaseProtocol {
         }
     }
     
+    @IBOutlet weak var activityTitleLabel: UILabel! {
+        didSet {
+            activityTitleLabel.textColor = .App.mainText
+            activityTitleLabel.font = .systemFont(ofSize: 20, weight: .bold)
+            activityTitleLabel.text = "Activity_activityTitleLabel".getLocalized()
+        }
+    }
     // MARK: - Properties
     
     var viewModel: ActivityViewModel?
@@ -30,14 +37,19 @@ class ActivityViewController: UIViewController, BaseProtocol {
         self.viewModel?.executeActivitySetupuseCase()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.showTabBar()
+    }
+    
     override func viewDidDisappear(_ animated: Bool) {
-        
         // Reset the view in case of edit mode
         
         self.addNavigationButtons()
         self.activityCollectionView.isInEditMode = false
         self.activityCollectionView.setup(data: self.viewModel?.activityData.value ?? [])
     }
+    
     // MARK: - Methods
     
     private func setup() {
@@ -53,6 +65,8 @@ class ActivityViewController: UIViewController, BaseProtocol {
         
         viewModel?.routingEnum.addObserver({ [weak self] routingEnum in
             switch routingEnum {
+            case .activityParameter(let activityId):
+                self?.flowCoordinator?.moveToActivityParameter(activityId: activityId)
             default: ()
             }
         })
@@ -76,6 +90,8 @@ class ActivityViewController: UIViewController, BaseProtocol {
     }
     
     @objc func editButtonTapped() {
+        self.activityTitleLabel.text = "Activity_pickYourFavorites".getLocalized()
+        
         self.activityCollectionView.isInEditMode = true
         self.activityCollectionView.reloadData()
         
@@ -98,6 +114,7 @@ class ActivityViewController: UIViewController, BaseProtocol {
                                                            (navigationButtonTypeEnum: .edit,
                                                                                 action: #selector(editButtonTapped),
                                                                                 target: self)])
+        self.activityTitleLabel.text = "Activity_activityTitleLabel".getLocalized()
         self.activityCollectionView.isInEditMode = false
         self.activityCollectionView.reloadData()
     }
@@ -109,6 +126,6 @@ class ActivityViewController: UIViewController, BaseProtocol {
 
 struct Activity {
     enum RoutingEnum {
-        case test
+        case activityParameter(activityId: String)
     }
 }
