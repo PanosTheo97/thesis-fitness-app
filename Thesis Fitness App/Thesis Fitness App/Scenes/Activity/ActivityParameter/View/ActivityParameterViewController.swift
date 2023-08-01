@@ -44,6 +44,16 @@ class ActivityParameterViewController: UIViewController, BaseProtocol, TabBarVie
             parameterValueTextField.setLeftPaddingPoints(10)
         }
     }
+    
+    @IBOutlet weak var startButton: UIButton! {
+        didSet {
+            startButton.applyStyle(buttonStyleEnum: .rounded(backgroundcolor: .App.mainText,
+                                                             textColor: .label,
+                                                             text: "ActivityParameter_startButton".getLocalized(),
+                                                             font: .systemFont(ofSize: 28, weight: .black)))
+        }
+    }
+    
     // MARK: - Properties
     
     var viewModel: ActivityParameterViewModel?
@@ -59,6 +69,7 @@ class ActivityParameterViewController: UIViewController, BaseProtocol, TabBarVie
                 self.parameterValueTextField.isHidden = false
                 self.parameterValueTextField.becomeFirstResponder()
                 self.parameterValueTextField.text = ""
+                self.startButton.isEnabled = false
             }),
             UIAction(title: "Distance (in m.)", image: UIImage(systemName: "road.lanes")?.withTintColor(.App.mainText, renderingMode: .alwaysOriginal), handler: { (_) in
                 self.parameterButton.applyStyle(buttonStyleEnum: .simple(text: "Distance (in m.)",
@@ -67,6 +78,16 @@ class ActivityParameterViewController: UIViewController, BaseProtocol, TabBarVie
                 self.parameterValueTextField.isHidden = false
                 self.parameterValueTextField.becomeFirstResponder()
                 self.parameterValueTextField.text = ""
+                self.startButton.isEnabled = false
+            })
+            ,
+            UIAction(title: "Clear", image: UIImage(systemName: "clear")?.withTintColor(.systemRed, renderingMode: .alwaysOriginal), handler: { (_) in
+                self.parameterButton.applyStyle(buttonStyleEnum: .underlined(text: "ActivityParameter_parameterButton".getLocalized(),
+                                                                             textColor: .App.mainText,
+                                                                             font: .systemFont(ofSize: 16, weight: .semibold)))
+                self.parameterValueTextField.isHidden = true
+                self.parameterValueTextField.text = ""
+                self.startButton.isEnabled = true
             })
         ]
     }
@@ -94,6 +115,7 @@ class ActivityParameterViewController: UIViewController, BaseProtocol, TabBarVie
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
         self.view.addGestureRecognizer(tapGesture)
+        self.parameterButton.addGestureRecognizer(tapGesture)
     }
     
     private func registerObservers() {
@@ -104,6 +126,8 @@ class ActivityParameterViewController: UIViewController, BaseProtocol, TabBarVie
             switch routingEnum {
             case .back:
                 self?.flowCoordinator?.pop()
+            case .activitySession:
+                return
             default: ()
             }
         })
@@ -124,10 +148,18 @@ class ActivityParameterViewController: UIViewController, BaseProtocol, TabBarVie
     @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {
         self.parameterValueTextField.resignFirstResponder()
     }
+    
+    // MARK: - IBMethods
+    
+    @IBAction func startButtonTapped(_ sender: UIButton) {
+        print("Enabled")
+        //self.viewModel?.update(routing: .activitySession)
+    }
 }
 
 struct ActivityParameter {
     enum RoutingEnum {
         case back
+        case activitySession
     }
 }

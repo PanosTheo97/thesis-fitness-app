@@ -36,23 +36,36 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQg-Xy-Tgx">
+                                <rect key="frame" x="12" y="720.66666666666663" width="369" height="85.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="startButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="1ns-H3-Mlb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="WQg-Xy-Tgx" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.1" id="48E-Qz-eB9"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="QSo-CP-4Op" secondAttribute="trailing" constant="12" id="9Bh-KQ-URn"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="WQg-Xy-Tgx" secondAttribute="bottom" constant="12" id="Bmm-K3-hwQ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="WQg-Xy-Tgx" secondAttribute="trailing" constant="12" id="ECr-8Y-KOM"/>
                             <constraint firstItem="QSo-CP-4Op" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="12" id="JAS-WV-WDr"/>
                             <constraint firstItem="rtV-wx-hjy" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="12" id="MGH-fN-Kje"/>
                             <constraint firstItem="rtV-wx-hjy" firstAttribute="top" secondItem="QSo-CP-4Op" secondAttribute="bottom" constant="48" id="SG8-uS-buc"/>
                             <constraint firstItem="6N6-35-CLy" firstAttribute="centerY" secondItem="rtV-wx-hjy" secondAttribute="centerY" id="aMr-3I-jvD"/>
                             <constraint firstItem="6N6-35-CLy" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.4" id="baV-cc-fjA"/>
                             <constraint firstItem="QSo-CP-4Op" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="8" id="cis-jN-PNq"/>
+                            <constraint firstItem="WQg-Xy-Tgx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="12" id="r24-YR-t2U"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="6N6-35-CLy" secondAttribute="trailing" constant="12" id="sOH-G7-w2Q"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="parameterButton" destination="rtV-wx-hjy" id="6Kp-S5-xDo"/>
                         <outlet property="parameterValueTextField" destination="6N6-35-CLy" id="Fij-dq-beb"/>
+                        <outlet property="startButton" destination="WQg-Xy-Tgx" id="GHY-Hn-2qT"/>
                         <outlet property="titleLabel" destination="QSo-CP-4Op" id="A77-88-qUQ"/>
                     </connections>
                 </viewController>

@@ -17,9 +17,12 @@ protocol TabBarViewControllerProtocol: UIViewController {
 extension TabBarViewControllerProtocol {
     
     func hideTabBar() {
+        #warning("Hide animation bug - low priority")
         guard let tabBarController = self.navigationController?.parent as? LobbyTabBarController else {
             return
         }
+        
+        tabBarController.tabBar.isHidden = true
         
         var frame = tabBarController.tabBar.frame
         frame.origin.y = self.view.frame.size.height + frame.size.height
@@ -27,7 +30,7 @@ extension TabBarViewControllerProtocol {
         UIView.animate(withDuration: 0.12, animations: {
             tabBarController.tabBar.frame = frame
         }, completion: { _ in
-            tabBarController.tabBar.isHidden = true
+            //tabBarController.tabBar.isHidden = true
         })
     }
     
