@@ -16,6 +16,8 @@
 		860F95332A7465F8003131EC /* ActivityParameter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 860F95322A7465F8003131EC /* ActivityParameter.storyboard */; };
 		860F95372A7469B5003131EC /* ActivityParameterSetupUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860F95362A7469B5003131EC /* ActivityParameterSetupUseCase.swift */; };
 		860F95392A746D0A003131EC /* TabBarViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860F95382A746D0A003131EC /* TabBarViewControllerProtocol.swift */; };
+		860F95402A792F3A003131EC /* ActivityParameterViewController+UITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860F953F2A792F3A003131EC /* ActivityParameterViewController+UITextFieldDelegate.swift */; };
+		860F95422A79302C003131EC /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860F95412A79302C003131EC /* UITextFieldExtension.swift */; };
 		86252C882A6E722A009FEAF9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86252C872A6E71CA009FEAF9 /* GoogleService-Info.plist */; };
 		866F8FC02A66799000C3F30F /* WelcomeDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866F8FBF2A66799000C3F30F /* WelcomeDIContainer.swift */; };
 		866F8FC22A6679A700C3F30F /* WelcomeFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866F8FC12A6679A700C3F30F /* WelcomeFlowCoordinator.swift */; };
@@ -128,6 +130,8 @@
 		860F95322A7465F8003131EC /* ActivityParameter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ActivityParameter.storyboard; sourceTree = "<group>"; };
 		860F95362A7469B5003131EC /* ActivityParameterSetupUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityParameterSetupUseCase.swift; sourceTree = "<group>"; };
 		860F95382A746D0A003131EC /* TabBarViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewControllerProtocol.swift; sourceTree = "<group>"; };
+		860F953F2A792F3A003131EC /* ActivityParameterViewController+UITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityParameterViewController+UITextFieldDelegate.swift"; sourceTree = "<group>"; };
+		860F95412A79302C003131EC /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		86252C872A6E71CA009FEAF9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		866F8FBF2A66799000C3F30F /* WelcomeDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeDIContainer.swift; sourceTree = "<group>"; };
 		866F8FC12A6679A700C3F30F /* WelcomeFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeFlowCoordinator.swift; sourceTree = "<group>"; };
@@ -279,6 +283,7 @@
 		860F95242A746587003131EC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				860F953E2A792F13003131EC /* Protocols */,
 				860F95302A7465EF003131EC /* ActivityParameterViewController.swift */,
 				860F95322A7465F8003131EC /* ActivityParameter.storyboard */,
 			);
@@ -324,6 +329,14 @@
 				860F95362A7469B5003131EC /* ActivityParameterSetupUseCase.swift */,
 			);
 			path = SetupUseCase;
+			sourceTree = "<group>";
+		};
+		860F953E2A792F13003131EC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				860F953F2A792F3A003131EC /* ActivityParameterViewController+UITextFieldDelegate.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		866F8FBA2A66794A00C3F30F /* Welcome */ = {
@@ -500,6 +513,7 @@
 				866F8FE12A66859A00C3F30F /* DefaultKeys.swift */,
 				86E4CEBA2A6FEE2600B53C32 /* UINavigationItemExtension.swift */,
 				86E4CECA2A700FC600B53C32 /* UINavigationControllerExtension.swift */,
+				860F95412A79302C003131EC /* UITextFieldExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1204,6 +1218,7 @@
 				86E4CE8D2A6FAFB700B53C32 /* DietDIContainer.swift in Sources */,
 				86E310332A5EC33C007EB56B /* AppViewModel.swift in Sources */,
 				86E310512A5EC538007EB56B /* SplashViewController.swift in Sources */,
+				860F95422A79302C003131EC /* UITextFieldExtension.swift in Sources */,
 				86E310112A5EA61C007EB56B /* RefreshableTableView.swift in Sources */,
 				86E4CE8B2A6FAF1700B53C32 /* DietModule.swift in Sources */,
 				86E4CE5E2A6FA5DC00B53C32 /* HomeFlowCoordinator.swift in Sources */,
@@ -1256,6 +1271,7 @@
 				86E4CEA12A6FB22200B53C32 /* ProfileViewModel.swift in Sources */,
 				86E4CE5A2A6FA57800B53C32 /* HomeModule.swift in Sources */,
 				86E3104B2A5EC500007EB56B /* SplashFlowCoordinator.swift in Sources */,
+				860F95402A792F3A003131EC /* ActivityParameterViewController+UITextFieldDelegate.swift in Sources */,
 				86E4CEC62A7005F500B53C32 /* MainNavigationController+ProfileViewControllerProtocol.swift in Sources */,
 				860F95312A7465EF003131EC /* ActivityParameterViewController.swift in Sources */,
 				86E4CEAE2A6FCFDA00B53C32 /* LobbyDIContainer.swift in Sources */,

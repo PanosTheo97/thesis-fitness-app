@@ -16,9 +16,45 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="QSo-CP-4Op">
+                                <rect key="frame" x="12" y="67" width="369" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rtV-wx-hjy">
+                                <rect key="frame" x="12" y="136" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6N6-35-CLy">
+                                <rect key="frame" x="223.66666666666663" y="131" width="157.33333333333337" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="IDy-ct-H0f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="QSo-CP-4Op" secondAttribute="trailing" constant="12" id="9Bh-KQ-URn"/>
+                            <constraint firstItem="QSo-CP-4Op" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="12" id="JAS-WV-WDr"/>
+                            <constraint firstItem="rtV-wx-hjy" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="12" id="MGH-fN-Kje"/>
+                            <constraint firstItem="rtV-wx-hjy" firstAttribute="top" secondItem="QSo-CP-4Op" secondAttribute="bottom" constant="48" id="SG8-uS-buc"/>
+                            <constraint firstItem="6N6-35-CLy" firstAttribute="centerY" secondItem="rtV-wx-hjy" secondAttribute="centerY" id="aMr-3I-jvD"/>
+                            <constraint firstItem="6N6-35-CLy" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.4" id="baV-cc-fjA"/>
+                            <constraint firstItem="QSo-CP-4Op" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="8" id="cis-jN-PNq"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="6N6-35-CLy" secondAttribute="trailing" constant="12" id="sOH-G7-w2Q"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="parameterButton" destination="rtV-wx-hjy" id="6Kp-S5-xDo"/>
+                        <outlet property="parameterValueTextField" destination="6N6-35-CLy" id="Fij-dq-beb"/>
+                        <outlet property="titleLabel" destination="QSo-CP-4Op" id="A77-88-qUQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

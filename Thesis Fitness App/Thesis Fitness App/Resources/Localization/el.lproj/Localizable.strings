@@ -32,3 +32,8 @@
 
 "Activity_activityTitleLabel" = "Διάλεξε μια δραστηριότητα και ξεκίνα να αθλείσαι!";
 "Activity_pickYourFavorites" = "Διάλεξε τις αγαπημένες σου δραστηριότητες για να λαμβάνεις ενδιαφέρουσες προκλήσεις!";
+
+// MARK: - ActivityParameter
+
+"ActivityParameter_titleLabel" = "Θέσε ένα στόχο για την άθληση σου";
+"ActivityParameter_parameterButton" = "Πάτησε εδώ και διάλεξε";

@@ -32,3 +32,9 @@
 
 "Activity_activityTitleLabel" = "Pick an activity and start exercising!";
 "Activity_pickYourFavorites" = "Choose your favorite activities to receive exciting challenges!";
+
+
+// MARK: - ActivityParameter
+
+"ActivityParameter_titleLabel" = "Set your Activity Goal";
+"ActivityParameter_parameterButton" = "Tap here to choose";
