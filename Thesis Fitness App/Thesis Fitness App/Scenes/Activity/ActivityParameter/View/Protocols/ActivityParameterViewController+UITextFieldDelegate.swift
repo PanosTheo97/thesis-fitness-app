@@ -11,17 +11,17 @@ import UIKit
 extension ActivityParameterViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField.text == nil || textField.text == "" {
-            self.startButton.isEnabled = false
+            self.updateStartButton(isEnabled: false)
         } else {
-            self.startButton.isEnabled = true
+            self.updateStartButton(isEnabled: true)
         }
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField.text == nil || textField.text == "" {
-            self.startButton.isEnabled = false
+            self.updateStartButton(isEnabled: false)
         } else {
-            self.startButton.isEnabled = true
+            self.updateStartButton(isEnabled: true)
         }
     }
 }

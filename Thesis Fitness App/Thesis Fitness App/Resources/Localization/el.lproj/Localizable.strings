@@ -35,6 +35,6 @@
 
 // MARK: - ActivityParameter
 
-"ActivityParameter_titleLabel" = "Θέσε ένα στόχο για την άθληση σου";
-"ActivityParameter_parameterButton" = "Πάτησε εδώ και διάλεξε";
+"ActivityParameter_titleLabel" = "Εαν επιθυμείς, θέσε ένα στόχο για την άθληση σου";
+"ActivityParameter_parameterButton" = "Πάτησε εδώ και διάλεξε ένα στόχο";
 "ActivityParameter_startButton" = "Εκκίνηση";

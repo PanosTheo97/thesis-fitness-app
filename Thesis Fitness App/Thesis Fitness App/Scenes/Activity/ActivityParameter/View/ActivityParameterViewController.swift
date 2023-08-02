@@ -28,6 +28,8 @@ class ActivityParameterViewController: UIViewController, BaseProtocol, TabBarVie
                 parameterButton.showsMenuAsPrimaryAction = true
                 parameterButton.menu = parametersMenu
             }
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
+            self.parameterButton.addGestureRecognizer(tapGesture)
         }
     }
     @IBOutlet weak var parameterValueTextField: UITextField! {
@@ -69,7 +71,7 @@ class ActivityParameterViewController: UIViewController, BaseProtocol, TabBarVie
                 self.parameterValueTextField.isHidden = false
                 self.parameterValueTextField.becomeFirstResponder()
                 self.parameterValueTextField.text = ""
-                self.startButton.isEnabled = false
+                self.updateStartButton(isEnabled: false)
             }),
             UIAction(title: "Distance (in m.)", image: UIImage(systemName: "road.lanes")?.withTintColor(.App.mainText, renderingMode: .alwaysOriginal), handler: { (_) in
                 self.parameterButton.applyStyle(buttonStyleEnum: .simple(text: "Distance (in m.)",
@@ -78,7 +80,7 @@ class ActivityParameterViewController: UIViewController, BaseProtocol, TabBarVie
                 self.parameterValueTextField.isHidden = false
                 self.parameterValueTextField.becomeFirstResponder()
                 self.parameterValueTextField.text = ""
-                self.startButton.isEnabled = false
+                self.updateStartButton(isEnabled: false)
             })
             ,
             UIAction(title: "Clear", image: UIImage(systemName: "clear")?.withTintColor(.systemRed, renderingMode: .alwaysOriginal), handler: { (_) in
@@ -87,7 +89,7 @@ class ActivityParameterViewController: UIViewController, BaseProtocol, TabBarVie
                                                                              font: .systemFont(ofSize: 16, weight: .semibold)))
                 self.parameterValueTextField.isHidden = true
                 self.parameterValueTextField.text = ""
-                self.startButton.isEnabled = true
+                self.updateStartButton(isEnabled: true)
             })
         ]
     }
@@ -115,7 +117,7 @@ class ActivityParameterViewController: UIViewController, BaseProtocol, TabBarVie
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
         self.view.addGestureRecognizer(tapGesture)
-        self.parameterButton.addGestureRecognizer(tapGesture)
+        
     }
     
     private func registerObservers() {
@@ -139,6 +141,21 @@ class ActivityParameterViewController: UIViewController, BaseProtocol, TabBarVie
                                        navigationButtons: [(navigationButtonTypeEnum: .back,
                                                             action: #selector(backButtonTapped),
                                                             target: self)])
+    }
+    
+    func updateStartButton(isEnabled: Bool) {
+        startButton.isEnabled = isEnabled
+        if isEnabled {
+            self.startButton.applyStyle(buttonStyleEnum: .rounded(backgroundcolor: .App.mainText,
+                                                             textColor: .label,
+                                                             text: "ActivityParameter_startButton".getLocalized(),
+                                                             font: .systemFont(ofSize: 28, weight: .black)))
+        } else {
+            self.startButton.applyStyle(buttonStyleEnum: .rounded(backgroundcolor: .systemGray,
+                                                             textColor: .label,
+                                                             text: "ActivityParameter_startButton".getLocalized(),
+                                                             font: .systemFont(ofSize: 28, weight: .black)))
+        }
     }
     
     @objc func backButtonTapped() {

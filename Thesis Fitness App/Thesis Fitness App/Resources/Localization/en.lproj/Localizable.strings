@@ -36,6 +36,6 @@
 
 // MARK: - ActivityParameter
 
-"ActivityParameter_titleLabel" = "Set your Activity Goal";
-"ActivityParameter_parameterButton" = "Tap here to choose";
+"ActivityParameter_titleLabel" = "If you want, set your Activity Goal";
+"ActivityParameter_parameterButton" = "Tap here to choose a goal";
 "ActivityParameter_startButton" = "Start";
