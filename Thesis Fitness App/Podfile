@@ -8,6 +8,7 @@ target 'Thesis Fitness App' do
   pod 'SwiftyJSON', '~> 5.0'
   pod 'Kingfisher', '~> 5.15'
   pod 'SwiftyUserDefaults', '~> 5.0'
+  pod 'lottie-ios'
 
   pod 'SVProgressHUD', '~> 2.2'
   
