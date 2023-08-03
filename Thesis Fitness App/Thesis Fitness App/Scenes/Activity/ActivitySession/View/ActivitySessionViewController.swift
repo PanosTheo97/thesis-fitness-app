@@ -30,6 +30,74 @@ class ActivitySessionViewController: UIViewController, BaseProtocol {
         }
     }
     
+    @IBOutlet weak var stopButton: UIButton! {
+        didSet {
+            stopButton.backgroundColor = .systemGray
+            stopButton.clipsToBounds = true
+            stopButton.layer.cornerRadius = playPauseButton.frame.size.width / 2
+            stopButton.setTitle("", for: .normal)
+            stopButton.setImage(.init(systemName: "stop.fill")?.withTintColor(.label, renderingMode: .alwaysOriginal), for: .normal)
+            
+            stopButton.isEnabled = false
+        }
+    }
+    
+    @IBOutlet weak var breakTitleLabel: UILabel! {
+        didSet {
+            breakTitleLabel.textColor = .label
+            breakTitleLabel.font = .systemFont(ofSize: 12, weight: .semibold)
+            breakTitleLabel.text = "ActivitySession_breakTitleLabel".getLocalized()
+        }
+    }
+    
+    @IBOutlet weak var breakLabel: UILabel! {
+        didSet {
+            breakLabel.textColor = .label
+            breakLabel.font = .systemFont(ofSize: 16, weight: .bold)
+            breakLabel.text = "-"
+        }
+    }
+    
+    @IBOutlet weak var paceTitleLabel: UILabel! {
+        didSet {
+            paceTitleLabel.textColor = .label
+            paceTitleLabel.font = .systemFont(ofSize: 12, weight: .semibold)
+            paceTitleLabel.text = "ActivitySession_paceTitleLabel".getLocalized()
+        }
+    }
+    
+    @IBOutlet weak var paceLabel: UILabel! {
+        didSet {
+            paceLabel.textColor = .label
+            paceLabel.font = .systemFont(ofSize: 16, weight: .bold)
+            paceLabel.text = "-"
+        }
+    }
+    
+    @IBOutlet weak var distanceTitleLabel: UILabel! {
+        didSet {
+            distanceTitleLabel.textColor = .label
+            distanceTitleLabel.font = .systemFont(ofSize: 12, weight: .semibold)
+            distanceTitleLabel.text = "ActivitySession_distanceTitleLabel".getLocalized()
+        }
+    }
+    
+    @IBOutlet weak var distanceLabel: UILabel! {
+        didSet {
+            distanceLabel.textColor = .label
+            distanceLabel.font = .systemFont(ofSize: 16, weight: .bold)
+            distanceLabel.text = "-"
+        }
+    }
+    
+    @IBOutlet weak var timeLabel: UILabel! {
+        didSet {
+            timeLabel.textColor = .label
+            timeLabel.font = .systemFont(ofSize: 36, weight: .bold)
+            timeLabel.text = "00:00:00:00"
+        }
+    }
+    
     // MARK: - Properties
     
     var viewModel: ActivitySessionViewModel?
@@ -83,9 +151,15 @@ class ActivitySessionViewController: UIViewController, BaseProtocol {
             UIView.animate(withDuration: 0.4, animations: {
                 self.countdownAnimationView.alpha = 0.0
             })
+            self.stopButton.backgroundColor = .App.mainText
+            self.stopButton.isEnabled = true
+            self.playPauseButton.setImage(.init(systemName: "pause.fill")?.withTintColor(.label, renderingMode: .alwaysOriginal), for: .normal)
         })
     }
     
+    @IBAction func stopButtonTapped(_ sender: Any) {
+        // LongPrees to stop (Maybe with animation )
+    }
 }
 
 struct ActivitySession {

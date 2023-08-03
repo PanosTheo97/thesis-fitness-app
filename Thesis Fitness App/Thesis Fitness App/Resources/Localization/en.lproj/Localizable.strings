@@ -39,3 +39,9 @@
 "ActivityParameter_titleLabel" = "If you want, set your Activity Goal";
 "ActivityParameter_parameterButton" = "Tap here to choose a goal";
 "ActivityParameter_startButton" = "Start";
+
+// MARK: - ActivitySession
+
+"ActivitySession_breakTitleLabel" = "Break";
+"ActivitySession_paceTitleLabel" = "Pace";
+"ActivitySession_distanceTitleLabel" = "Distance";

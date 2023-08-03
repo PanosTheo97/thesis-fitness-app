@@ -6,14 +6,25 @@
 //
 
 import Foundation
+import UIKit
 
 class ActivitySessionModule {
+    
+    func makeActivitySessionNavigationController() -> UINavigationController? {
+        if let viewController = self.makeActivitySessionViewController() {
+            let activityNavigationController = UINavigationController(rootViewController: viewController)
+            activityNavigationController.navigationBar.tintColor = .App.mainText
+            activityNavigationController.navigationBar.barTintColor = .clear
+            activityNavigationController.modalPresentationStyle = .fullScreen
+            return activityNavigationController
+        }
+        return nil
+    }
     
     func makeActivitySessionViewController() -> ActivitySessionViewController? {
         if let viewController = ActivitySessionViewController.create(storyboardName: "ActivitySession") {
             viewController.viewModel = makeActivitySessionViewModel()
             viewController.flowCoordinator = makeActivitySessionFlowCoordinator(viewController)
-            viewController.modalPresentationStyle = .fullScreen
             return viewController
         }
         return nil

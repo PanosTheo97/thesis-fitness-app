@@ -38,3 +38,9 @@
 "ActivityParameter_titleLabel" = "Εαν επιθυμείς, θέσε ένα στόχο για την άθληση σου";
 "ActivityParameter_parameterButton" = "Πάτησε εδώ και διάλεξε ένα στόχο";
 "ActivityParameter_startButton" = "Εκκίνηση";
+
+// MARK: - ActivitySession
+
+"ActivitySession_breakTitleLabel" = "Διάλειμμα";
+"ActivitySession_paceTitleLabel" = "Ρυθμός";
+"ActivitySession_distanceTitleLabel" = "Αποόσταση";

@@ -29,11 +29,11 @@ class ActivityParameterFlowCoordinator: BaseFlowCoordinatorProtocol {
     }
     
     func moveToActivitySession() {
-        guard let activitySessionViewController = self.activityParameterDIContainer.activitySessionModule.makeActivitySessionViewController() else {
+        guard let activitySessionNavigationController = self.activityParameterDIContainer.activitySessionModule.makeActivitySessionNavigationController() else {
             return
         }
         
-        self.activityParameterViewController?.present(activitySessionViewController, animated: true)
+        self.activityParameterViewController?.present(activitySessionNavigationController, animated: true)
     }
     
 }
