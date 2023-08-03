@@ -19,7 +19,7 @@
 		860F95402A792F3A003131EC /* ActivityParameterViewController+UITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860F953F2A792F3A003131EC /* ActivityParameterViewController+UITextFieldDelegate.swift */; };
 		860F95422A79302C003131EC /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860F95412A79302C003131EC /* UITextFieldExtension.swift */; };
 		86252C882A6E722A009FEAF9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86252C872A6E71CA009FEAF9 /* GoogleService-Info.plist */; };
-		8644ABFD2A7A910F0019C943 /* countdown_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 8644ABFC2A7A910B0019C943 /* countdown_animation.json */; };
+		863F99FC2A7BBC87004140AF /* countdown_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 863F99FB2A7BBC84004140AF /* countdown_animation.json */; };
 		8644AC032A7A91810019C943 /* ActivitySessionModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644AC022A7A91810019C943 /* ActivitySessionModule.swift */; };
 		8644AC052A7A91B60019C943 /* ActivitySessionDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644AC042A7A91B60019C943 /* ActivitySessionDIContainer.swift */; };
 		8644AC072A7A91D20019C943 /* ActivitySessionFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644AC062A7A91D20019C943 /* ActivitySessionFlowCoordinator.swift */; };
@@ -140,7 +140,7 @@
 		860F953F2A792F3A003131EC /* ActivityParameterViewController+UITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityParameterViewController+UITextFieldDelegate.swift"; sourceTree = "<group>"; };
 		860F95412A79302C003131EC /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		86252C872A6E71CA009FEAF9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		8644ABFC2A7A910B0019C943 /* countdown_animation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = countdown_animation.json; sourceTree = "<group>"; };
+		863F99FB2A7BBC84004140AF /* countdown_animation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = countdown_animation.json; sourceTree = "<group>"; };
 		8644AC022A7A91810019C943 /* ActivitySessionModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySessionModule.swift; sourceTree = "<group>"; };
 		8644AC042A7A91B60019C943 /* ActivitySessionDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySessionDIContainer.swift; sourceTree = "<group>"; };
 		8644AC062A7A91D20019C943 /* ActivitySessionFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySessionFlowCoordinator.swift; sourceTree = "<group>"; };
@@ -368,7 +368,7 @@
 		8644ABFB2A7A90F50019C943 /* JsonAnimations */ = {
 			isa = PBXGroup;
 			children = (
-				8644ABFC2A7A910B0019C943 /* countdown_animation.json */,
+				863F99FB2A7BBC84004140AF /* countdown_animation.json */,
 			);
 			path = JsonAnimations;
 			sourceTree = "<group>";
@@ -1135,8 +1135,8 @@
 				86E30FED2A5E9E0E007EB56B /* Sources */,
 				86E30FEE2A5E9E0E007EB56B /* Frameworks */,
 				86E30FEF2A5E9E0E007EB56B /* Resources */,
-				1D73EC1BB095CCA40EE93A44 /* [CP] Embed Pods Frameworks */,
 				86E310082A5EA46A007EB56B /* Swiftlint */,
+				260BE2FDFE5AA3A0049A07BE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1194,10 +1194,10 @@
 				866F8FD22A66839B00C3F30F /* Localizable.strings in Resources */,
 				86E310012A5E9E10007EB56B /* LaunchScreen.storyboard in Resources */,
 				86F828B42A61790F0017ABB8 /* credentials.plist in Resources */,
+				863F99FC2A7BBC87004140AF /* countdown_animation.json in Resources */,
 				86E4CEA32A6FB24500B53C32 /* Profile.storyboard in Resources */,
 				86E30FFE2A5E9E10007EB56B /* Assets.xcassets in Resources */,
 				86E3104F2A5EC52A007EB56B /* Splash.storyboard in Resources */,
-				8644ABFD2A7A910F0019C943 /* countdown_animation.json in Resources */,
 				86252C882A6E722A009FEAF9 /* GoogleService-Info.plist in Resources */,
 				86E4CE7F2A6FAD8500B53C32 /* Workout.storyboard in Resources */,
 				86E4CED92A710D1600B53C32 /* ActivityCollectionViewCell.xib in Resources */,
@@ -1208,7 +1208,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1D73EC1BB095CCA40EE93A44 /* [CP] Embed Pods Frameworks */ = {
+		260BE2FDFE5AA3A0049A07BE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (

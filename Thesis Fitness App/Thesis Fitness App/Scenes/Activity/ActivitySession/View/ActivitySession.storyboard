@@ -16,9 +16,43 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nlK-Pd-k53" customClass="LottieAnimationView" customModule="Lottie">
+                                <rect key="frame" x="24" y="277" width="345" height="298"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="countdown_animation"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hK-eh-cyQ">
+                                <rect key="frame" x="160.33333333333334" y="729.66666666666663" width="72.333333333333343" height="72.333333333333371"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0hK-eh-cyQ" secondAttribute="height" id="dAF-7U-0lL"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="playPauseButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ib4-q9-9WB"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0hK-eh-cyQ" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.085" id="4Sh-gz-cIB"/>
+                            <constraint firstItem="nlK-Pd-k53" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="7Rt-bh-uFd"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="nlK-Pd-k53" secondAttribute="trailing" constant="24" id="H6l-f0-p8W"/>
+                            <constraint firstItem="nlK-Pd-k53" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.35" id="TAT-rn-X5n"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="0hK-eh-cyQ" secondAttribute="bottom" constant="16" id="V5K-UX-mBu"/>
+                            <constraint firstItem="nlK-Pd-k53" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="ZRn-e6-RXw"/>
+                            <constraint firstItem="nlK-Pd-k53" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="ef2-Hk-qMk"/>
+                            <constraint firstItem="0hK-eh-cyQ" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="he7-hs-XTN"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="countdownAnimationView" destination="nlK-Pd-k53" id="ht0-Gi-vlH"/>
+                        <outlet property="playPauseButton" destination="0hK-eh-cyQ" id="O9s-2K-PIg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -24,8 +24,8 @@ class ActivitySessionFlowCoordinator: BaseFlowCoordinatorProtocol {
     
     // MARK: - Methods
 
-    func pop() {
-        self.activitySessionViewController?.navigationController?.popViewController(animated: true)
+    func dismiss() {
+        self.activitySessionViewController?.dismiss(animated: true)
     }
     
 }

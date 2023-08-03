@@ -28,4 +28,12 @@ class ActivityParameterFlowCoordinator: BaseFlowCoordinatorProtocol {
         self.activityParameterViewController?.navigationController?.popViewController(animated: true)
     }
     
+    func moveToActivitySession() {
+        guard let activitySessionViewController = self.activityParameterDIContainer.activitySessionModule.makeActivitySessionViewController() else {
+            return
+        }
+        
+        self.activityParameterViewController?.present(activitySessionViewController, animated: true)
+    }
+    
 }

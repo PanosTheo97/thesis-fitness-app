@@ -129,7 +129,7 @@ class ActivityParameterViewController: UIViewController, BaseProtocol, TabBarVie
             case .back:
                 self?.flowCoordinator?.pop()
             case .activitySession:
-                return
+                self?.flowCoordinator?.moveToActivitySession()
             default: ()
             }
         })
@@ -169,8 +169,7 @@ class ActivityParameterViewController: UIViewController, BaseProtocol, TabBarVie
     // MARK: - IBMethods
     
     @IBAction func startButtonTapped(_ sender: UIButton) {
-        print("Enabled")
-        //self.viewModel?.update(routing: .activitySession)
+        self.viewModel?.update(routing: .activitySession)
     }
 }
 

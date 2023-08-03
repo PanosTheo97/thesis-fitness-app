@@ -9,5 +9,6 @@ import Foundation
 
 final class ActivityParameterDIContainer {
     
+    let activitySessionModule = ActivitySessionModule()
     
 }

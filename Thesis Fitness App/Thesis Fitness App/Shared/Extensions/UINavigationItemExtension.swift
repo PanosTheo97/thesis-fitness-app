@@ -45,6 +45,15 @@ extension UINavigationItem {
                 
                 customView.frame = button.frame
                 customView.addSubview(button)
+            case .close:
+                let button = self.makeCustomButton(image: .init(systemName: "xmark")?.withTintColor(.systemRed, renderingMode: .alwaysOriginal),
+                                                   highlightedImage: .init(systemName: "xmark"),
+                                                   rect: CGRect(x: 0, y: 0, width: 25, height: 25),
+                                                   navigationButton: navigationButton)
+                button.backgroundColor = .clear
+                
+                customView.frame = button.frame
+                customView.addSubview(button)
             case .edit:
                 let button = self.makeCustomButton(image: .get(image: .Edit),
                                                    highlightedImage: .get(image: .Edit),
