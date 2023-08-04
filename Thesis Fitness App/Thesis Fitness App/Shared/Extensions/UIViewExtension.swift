@@ -101,4 +101,37 @@ extension UIView {
         }
         layer.addSublayer(shapeLayer)
     }
+    
+    func  addAndExpand(inside parentView: UIView) {
+        self.translatesAutoresizingMaskIntoConstraints = false
+        parentView.addSubview(self)
+        self.bottomAnchor.constraint(equalTo: parentView.bottomAnchor, constant: 0).isActive = true
+        self.leadingAnchor.constraint(equalTo: parentView.leadingAnchor, constant: 0).isActive = true
+        self.trailingAnchor.constraint(equalTo: parentView.trailingAnchor, constant: 0).isActive = true
+        self.topAnchor.constraint(equalTo: parentView.topAnchor, constant: 0).isActive = true
+    }
+    
+    func addAndExpandWithSafeArea(inside controller: UIViewController) {
+        self.translatesAutoresizingMaskIntoConstraints = false
+        controller.view.addSubview(self)
+        let margins = controller.view.layoutMarginsGuide
+        NSLayoutConstraint.activate([
+            leadingAnchor.constraint(equalTo: margins.leadingAnchor),
+            trailingAnchor.constraint(equalTo: margins.trailingAnchor)
+        ])
+        
+        if #available(iOS 11, *) {
+            let guide = controller.view.safeAreaLayoutGuide
+            NSLayoutConstraint.activate([
+                topAnchor.constraint(equalToSystemSpacingBelow: guide.topAnchor, multiplier: 1.0),
+                guide.bottomAnchor.constraint(equalToSystemSpacingBelow: bottomAnchor, multiplier: 1.0)
+            ])
+        } else {
+            let standardSpacing: CGFloat = 8.0
+            NSLayoutConstraint.activate([
+                topAnchor.constraint(equalTo: controller.topLayoutGuide.bottomAnchor, constant: standardSpacing),
+                controller.bottomLayoutGuide.topAnchor.constraint(equalTo: bottomAnchor, constant: standardSpacing)
+            ])
+        }
+    }
 }

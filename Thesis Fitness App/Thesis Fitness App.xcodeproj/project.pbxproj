@@ -41,6 +41,18 @@
 		866F8FE02A66852200C3F30F /* DefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866F8FDF2A66852200C3F30F /* DefaultsManager.swift */; };
 		866F8FE22A66859A00C3F30F /* DefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866F8FE12A66859A00C3F30F /* DefaultKeys.swift */; };
 		86B2F7862A7CEF0C00B364FB /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2F7852A7CEF0C00B364FB /* Stopwatch.swift */; };
+		86B2F78C2A7D06A900B364FB /* EdgeInsetLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2F78B2A7D06A900B364FB /* EdgeInsetLabel.swift */; };
+		86B2F7932A7D06EE00B364FB /* PopoverModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2F7922A7D06EE00B364FB /* PopoverModule.swift */; };
+		86B2F7952A7D071100B364FB /* PopoverDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2F7942A7D071100B364FB /* PopoverDIContainer.swift */; };
+		86B2F7972A7D072700B364FB /* PopoverFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2F7962A7D072700B364FB /* PopoverFlowCoordinator.swift */; };
+		86B2F7992A7D074400B364FB /* PopoverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2F7982A7D074400B364FB /* PopoverViewModel.swift */; };
+		86B2F79B2A7D078200B364FB /* PopoverSetUpUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2F79A2A7D078200B364FB /* PopoverSetUpUseCase.swift */; };
+		86B2F79D2A7D07ED00B364FB /* Popover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86B2F79C2A7D07ED00B364FB /* Popover.storyboard */; };
+		86B2F79F2A7D07FA00B364FB /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2F79E2A7D07FA00B364FB /* PopoverViewController.swift */; };
+		86B2F7A22A7D085C00B364FB /* PopoverConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2F7A12A7D085C00B364FB /* PopoverConfiguration.swift */; };
+		86B2F7A42A7D088600B364FB /* PopoverPresentingViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2F7A32A7D088600B364FB /* PopoverPresentingViewControllerProtocol.swift */; };
+		86B2F7A62A7D08B900B364FB /* PopoverPresentingFlowCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2F7A52A7D08B900B364FB /* PopoverPresentingFlowCoordinatorProtocol.swift */; };
+		86B2F7A82A7D08E000B364FB /* PopoverPresentableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2F7A72A7D08E000B364FB /* PopoverPresentableViewController.swift */; };
 		86E30FF52A5E9E0E007EB56B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E30FF42A5E9E0E007EB56B /* AppDelegate.swift */; };
 		86E30FF72A5E9E0E007EB56B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E30FF62A5E9E0E007EB56B /* SceneDelegate.swift */; };
 		86E30FFE2A5E9E10007EB56B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86E30FFD2A5E9E10007EB56B /* Assets.xcassets */; };
@@ -165,6 +177,18 @@
 		866F8FDF2A66852200C3F30F /* DefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsManager.swift; sourceTree = "<group>"; };
 		866F8FE12A66859A00C3F30F /* DefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultKeys.swift; sourceTree = "<group>"; };
 		86B2F7852A7CEF0C00B364FB /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
+		86B2F78B2A7D06A900B364FB /* EdgeInsetLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeInsetLabel.swift; sourceTree = "<group>"; };
+		86B2F7922A7D06EE00B364FB /* PopoverModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverModule.swift; sourceTree = "<group>"; };
+		86B2F7942A7D071100B364FB /* PopoverDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverDIContainer.swift; sourceTree = "<group>"; };
+		86B2F7962A7D072700B364FB /* PopoverFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverFlowCoordinator.swift; sourceTree = "<group>"; };
+		86B2F7982A7D074400B364FB /* PopoverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverViewModel.swift; sourceTree = "<group>"; };
+		86B2F79A2A7D078200B364FB /* PopoverSetUpUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverSetUpUseCase.swift; sourceTree = "<group>"; };
+		86B2F79C2A7D07ED00B364FB /* Popover.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Popover.storyboard; sourceTree = "<group>"; };
+		86B2F79E2A7D07FA00B364FB /* PopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
+		86B2F7A12A7D085C00B364FB /* PopoverConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverConfiguration.swift; sourceTree = "<group>"; };
+		86B2F7A32A7D088600B364FB /* PopoverPresentingViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverPresentingViewControllerProtocol.swift; sourceTree = "<group>"; };
+		86B2F7A52A7D08B900B364FB /* PopoverPresentingFlowCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverPresentingFlowCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		86B2F7A72A7D08E000B364FB /* PopoverPresentableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverPresentableViewController.swift; sourceTree = "<group>"; };
 		86E30FF12A5E9E0E007EB56B /* Thesis Fitness App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thesis Fitness App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86E30FF42A5E9E0E007EB56B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86E30FF62A5E9E0E007EB56B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -497,6 +521,80 @@
 			path = "New Group";
 			sourceTree = "<group>";
 		};
+		86B2F7892A7D069400B364FB /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				86B2F78D2A7D06BC00B364FB /* Popover */,
+				86B2F78A2A7D069900B364FB /* EdgeInsetLabel */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		86B2F78A2A7D069900B364FB /* EdgeInsetLabel */ = {
+			isa = PBXGroup;
+			children = (
+				86B2F78B2A7D06A900B364FB /* EdgeInsetLabel.swift */,
+			);
+			path = EdgeInsetLabel;
+			sourceTree = "<group>";
+		};
+		86B2F78D2A7D06BC00B364FB /* Popover */ = {
+			isa = PBXGroup;
+			children = (
+				86B2F7922A7D06EE00B364FB /* PopoverModule.swift */,
+				86B2F7912A7D06DD00B364FB /* DIContainer */,
+				86B2F7902A7D06D100B364FB /* FlowCoordinator */,
+				86B2F78F2A7D06CB00B364FB /* ViewModel */,
+				86B2F78E2A7D06C700B364FB /* View */,
+			);
+			path = Popover;
+			sourceTree = "<group>";
+		};
+		86B2F78E2A7D06C700B364FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				86B2F79C2A7D07ED00B364FB /* Popover.storyboard */,
+				86B2F79E2A7D07FA00B364FB /* PopoverViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		86B2F78F2A7D06CB00B364FB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				86B2F7982A7D074400B364FB /* PopoverViewModel.swift */,
+				86B2F79A2A7D078200B364FB /* PopoverSetUpUseCase.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		86B2F7902A7D06D100B364FB /* FlowCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				86B2F7962A7D072700B364FB /* PopoverFlowCoordinator.swift */,
+			);
+			path = FlowCoordinator;
+			sourceTree = "<group>";
+		};
+		86B2F7912A7D06DD00B364FB /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+				86B2F7942A7D071100B364FB /* PopoverDIContainer.swift */,
+			);
+			path = DIContainer;
+			sourceTree = "<group>";
+		};
+		86B2F7A02A7D084800B364FB /* PopoverPresentingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				86B2F7A12A7D085C00B364FB /* PopoverConfiguration.swift */,
+				86B2F7A32A7D088600B364FB /* PopoverPresentingViewControllerProtocol.swift */,
+				86B2F7A52A7D08B900B364FB /* PopoverPresentingFlowCoordinatorProtocol.swift */,
+				86B2F7A72A7D08E000B364FB /* PopoverPresentableViewController.swift */,
+			);
+			path = PopoverPresentingViewController;
+			sourceTree = "<group>";
+		};
 		86E30FE82A5E9E0E007EB56B = {
 			isa = PBXGroup;
 			children = (
@@ -556,6 +654,7 @@
 		86E3100D2A5EA5D4007EB56B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				86B2F7892A7D069400B364FB /* UI */,
 				86E3100E2A5EA5E1007EB56B /* Observable.swift */,
 				86E310102A5EA61C007EB56B /* RefreshableTableView.swift */,
 				86B2F7852A7CEF0C00B364FB /* Stopwatch.swift */,
@@ -566,6 +665,7 @@
 		86E310122A5EA63A007EB56B /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				86B2F7A02A7D084800B364FB /* PopoverPresentingViewController */,
 				86E310152A5EA665007EB56B /* Base */,
 				86E310132A5EA656007EB56B /* ReusableViewProtocol.swift */,
 				860F95382A746D0A003131EC /* TabBarViewControllerProtocol.swift */,
@@ -1213,6 +1313,7 @@
 				866F8FD22A66839B00C3F30F /* Localizable.strings in Resources */,
 				86E310012A5E9E10007EB56B /* LaunchScreen.storyboard in Resources */,
 				86F828B42A61790F0017ABB8 /* credentials.plist in Resources */,
+				86B2F79D2A7D07ED00B364FB /* Popover.storyboard in Resources */,
 				863F99FC2A7BBC87004140AF /* countdown_animation.json in Resources */,
 				86E4CEA32A6FB24500B53C32 /* Profile.storyboard in Resources */,
 				86E30FFE2A5E9E10007EB56B /* Assets.xcassets in Resources */,
@@ -1305,7 +1406,9 @@
 				86E4CED82A710D1600B53C32 /* ActivityCollectionViewCell.swift in Sources */,
 				860F95392A746D0A003131EC /* TabBarViewControllerProtocol.swift in Sources */,
 				86E4CEBB2A6FEE2600B53C32 /* UINavigationItemExtension.swift in Sources */,
+				86B2F7A82A7D08E000B364FB /* PopoverPresentableViewController.swift in Sources */,
 				86E4CE7B2A6FAD6900B53C32 /* WorkoutModule.swift in Sources */,
+				86B2F7992A7D074400B364FB /* PopoverViewModel.swift in Sources */,
 				86E4CEDF2A71116500B53C32 /* ActivitySetupUseCase.swift in Sources */,
 				86E4CE8D2A6FAFB700B53C32 /* DietDIContainer.swift in Sources */,
 				86E310332A5EC33C007EB56B /* AppViewModel.swift in Sources */,
@@ -1315,14 +1418,19 @@
 				86E4CE8B2A6FAF1700B53C32 /* DietModule.swift in Sources */,
 				86E4CE5E2A6FA5DC00B53C32 /* HomeFlowCoordinator.swift in Sources */,
 				86E310282A5EAC25007EB56B /* UICollectionViewExtension.swift in Sources */,
+				86B2F79B2A7D078200B364FB /* PopoverSetUpUseCase.swift in Sources */,
+				86B2F7A42A7D088600B364FB /* PopoverPresentingViewControllerProtocol.swift in Sources */,
 				866F8FCE2A667FCE00C3F30F /* UIViewExtension.swift in Sources */,
 				8644AC052A7A91B60019C943 /* ActivitySessionDIContainer.swift in Sources */,
 				860F952B2A7465C2003131EC /* ActivityParameterDIContainer.swift in Sources */,
+				86B2F79F2A7D07FA00B364FB /* PopoverViewController.swift in Sources */,
 				86E30FF52A5E9E0E007EB56B /* AppDelegate.swift in Sources */,
 				86E30FF72A5E9E0E007EB56B /* SceneDelegate.swift in Sources */,
 				86E4CEB92A6FED8A00B53C32 /* NavigationButtonTypeEnum.swift in Sources */,
+				86B2F7972A7D072700B364FB /* PopoverFlowCoordinator.swift in Sources */,
 				866F8FC82A667ACA00C3F30F /* WelcomeViewController.swift in Sources */,
 				86E4CE6A2A6FA92700B53C32 /* ActivityModule.swift in Sources */,
+				86B2F7A22A7D085C00B364FB /* PopoverConfiguration.swift in Sources */,
 				860F952D2A7465CF003131EC /* ActivityParameterFlowCoordinator.swift in Sources */,
 				86E4CE912A6FB02800B53C32 /* DietViewModel.swift in Sources */,
 				86E4CE832A6FAD9E00B53C32 /* WorkoutFlowCoordinator.swift in Sources */,
@@ -1365,6 +1473,7 @@
 				866F8FC22A6679A700C3F30F /* WelcomeFlowCoordinator.swift in Sources */,
 				86E4CE952A6FB05000B53C32 /* DietViewController.swift in Sources */,
 				86E4CEA12A6FB22200B53C32 /* ProfileViewModel.swift in Sources */,
+				86B2F78C2A7D06A900B364FB /* EdgeInsetLabel.swift in Sources */,
 				86E4CE5A2A6FA57800B53C32 /* HomeModule.swift in Sources */,
 				86E3104B2A5EC500007EB56B /* SplashFlowCoordinator.swift in Sources */,
 				860F95402A792F3A003131EC /* ActivityParameterViewController+UITextFieldDelegate.swift in Sources */,
@@ -1373,6 +1482,7 @@
 				86E4CEAE2A6FCFDA00B53C32 /* LobbyDIContainer.swift in Sources */,
 				86E4CED42A710C9E00B53C32 /* ActivityCollectionView+UICollectionViewDelegate.swift in Sources */,
 				86E4CE8F2A6FAFCE00B53C32 /* DietFlowCoordinator.swift in Sources */,
+				86B2F7932A7D06EE00B364FB /* PopoverModule.swift in Sources */,
 				86E4CE4F2A6F223900B53C32 /* WelcomeSignInUseCase.swift in Sources */,
 				866F8FDB2A66849D00C3F30F /* LocalizationManager.swift in Sources */,
 				86E310192A5EA687007EB56B /* BaseFlowCoordinatorProtocol.swift in Sources */,
@@ -1382,10 +1492,12 @@
 				86E4CE812A6FAD9100B53C32 /* WorkoutViewModel.swift in Sources */,
 				86E4CE722A6FA96B00B53C32 /* ActivityFlowCoordinator.swift in Sources */,
 				86E3104D2A5EC515007EB56B /* SplashViewModel.swift in Sources */,
+				86B2F7A62A7D08B900B364FB /* PopoverPresentingFlowCoordinatorProtocol.swift in Sources */,
 				86E3102A2A5EAC39007EB56B /* UIImageViewExtension.swift in Sources */,
 				86E4CEC92A70091700B53C32 /* LobbyTabBarController+UITabBarControllerDelegate.swift in Sources */,
 				860F95372A7469B5003131EC /* ActivityParameterSetupUseCase.swift in Sources */,
 				866F8FE22A66859A00C3F30F /* DefaultKeys.swift in Sources */,
+				86B2F7952A7D071100B364FB /* PopoverDIContainer.swift in Sources */,
 				86E310262A5EAC08007EB56B /* UITableViewExtension.swift in Sources */,
 				86E3103D2A5EC414007EB56B /* MainModule.swift in Sources */,
 				86E4CEB22A6FD03E00B53C32 /* LobbyTabBarController.swift in Sources */,
