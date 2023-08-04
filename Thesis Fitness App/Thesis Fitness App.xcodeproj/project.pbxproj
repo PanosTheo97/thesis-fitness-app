@@ -53,6 +53,7 @@
 		86B2F7A42A7D088600B364FB /* PopoverPresentingViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2F7A32A7D088600B364FB /* PopoverPresentingViewControllerProtocol.swift */; };
 		86B2F7A62A7D08B900B364FB /* PopoverPresentingFlowCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2F7A52A7D08B900B364FB /* PopoverPresentingFlowCoordinatorProtocol.swift */; };
 		86B2F7A82A7D08E000B364FB /* PopoverPresentableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2F7A72A7D08E000B364FB /* PopoverPresentableViewController.swift */; };
+		86B2F7AA2A7D0B3100B364FB /* ActivityParameterViewController+ActivitySessionViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2F7A92A7D0B3100B364FB /* ActivityParameterViewController+ActivitySessionViewControllerProtocol.swift */; };
 		86E30FF52A5E9E0E007EB56B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E30FF42A5E9E0E007EB56B /* AppDelegate.swift */; };
 		86E30FF72A5E9E0E007EB56B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E30FF62A5E9E0E007EB56B /* SceneDelegate.swift */; };
 		86E30FFE2A5E9E10007EB56B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86E30FFD2A5E9E10007EB56B /* Assets.xcassets */; };
@@ -189,6 +190,7 @@
 		86B2F7A32A7D088600B364FB /* PopoverPresentingViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverPresentingViewControllerProtocol.swift; sourceTree = "<group>"; };
 		86B2F7A52A7D08B900B364FB /* PopoverPresentingFlowCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverPresentingFlowCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		86B2F7A72A7D08E000B364FB /* PopoverPresentableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverPresentableViewController.swift; sourceTree = "<group>"; };
+		86B2F7A92A7D0B3100B364FB /* ActivityParameterViewController+ActivitySessionViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityParameterViewController+ActivitySessionViewControllerProtocol.swift"; sourceTree = "<group>"; };
 		86E30FF12A5E9E0E007EB56B /* Thesis Fitness App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thesis Fitness App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86E30FF42A5E9E0E007EB56B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86E30FF62A5E9E0E007EB56B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -375,6 +377,7 @@
 			isa = PBXGroup;
 			children = (
 				860F953F2A792F3A003131EC /* ActivityParameterViewController+UITextFieldDelegate.swift */,
+				86B2F7A92A7D0B3100B364FB /* ActivityParameterViewController+ActivitySessionViewControllerProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -1472,6 +1475,7 @@
 				866F8FCC2A667FA900C3F30F /* UIButtonExtension.swift in Sources */,
 				866F8FC22A6679A700C3F30F /* WelcomeFlowCoordinator.swift in Sources */,
 				86E4CE952A6FB05000B53C32 /* DietViewController.swift in Sources */,
+				86B2F7AA2A7D0B3100B364FB /* ActivityParameterViewController+ActivitySessionViewControllerProtocol.swift in Sources */,
 				86E4CEA12A6FB22200B53C32 /* ProfileViewModel.swift in Sources */,
 				86B2F78C2A7D06A900B364FB /* EdgeInsetLabel.swift in Sources */,
 				86E4CE5A2A6FA57800B53C32 /* HomeModule.swift in Sources */,

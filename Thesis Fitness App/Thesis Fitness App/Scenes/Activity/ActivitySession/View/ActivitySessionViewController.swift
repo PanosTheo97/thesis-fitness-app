@@ -9,6 +9,10 @@ import UIKit
 import Lottie
 import MapKit
 
+protocol ActivitySessionViewControllerProtocol: AnyObject {
+    func dismissToActivity()
+}
+
 class ActivitySessionViewController: UIViewController, BaseProtocol {
     
     // MARK: - IBProperties
@@ -113,6 +117,8 @@ class ActivitySessionViewController: UIViewController, BaseProtocol {
     var isPlayingState: Bool = false
     var firstTimePlaying: Bool = true
     
+    weak var activitySessionViewControllerDelegate: ActivitySessionViewControllerProtocol?
+    
     // MARK: - Life cycle
     
     override func viewDidLoad() {
@@ -171,6 +177,7 @@ class ActivitySessionViewController: UIViewController, BaseProtocol {
         
         // Show custom alert for ending session
         
+        self.activitySessionViewControllerDelegate?.dismissToActivity()
         self.viewModel?.update(routing: .dismiss)
     }
     
@@ -178,6 +185,9 @@ class ActivitySessionViewController: UIViewController, BaseProtocol {
         // Save the session
         
         // Dismiss to Activity
+        
+        self.activitySessionViewControllerDelegate?.dismissToActivity()
+        self.viewModel?.update(routing: .dismiss)
     }
     
     // MARK: - IBMethods

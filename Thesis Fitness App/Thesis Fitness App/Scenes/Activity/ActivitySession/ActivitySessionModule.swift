@@ -10,8 +10,8 @@ import UIKit
 
 class ActivitySessionModule {
     
-    func makeActivitySessionNavigationController() -> UINavigationController? {
-        if let viewController = self.makeActivitySessionViewController() {
+    func makeActivitySessionNavigationController(activitySessionViewControllerDelegate: ActivitySessionViewControllerProtocol?) -> UINavigationController? {
+        if let viewController = self.makeActivitySessionViewController(activitySessionViewControllerDelegate: activitySessionViewControllerDelegate) {
             let activityNavigationController = UINavigationController(rootViewController: viewController)
             activityNavigationController.navigationBar.tintColor = .App.mainText
             activityNavigationController.navigationBar.barTintColor = .clear
@@ -21,10 +21,11 @@ class ActivitySessionModule {
         return nil
     }
     
-    func makeActivitySessionViewController() -> ActivitySessionViewController? {
+    func makeActivitySessionViewController(activitySessionViewControllerDelegate: ActivitySessionViewControllerProtocol?) -> ActivitySessionViewController? {
         if let viewController = ActivitySessionViewController.create(storyboardName: "ActivitySession") {
             viewController.viewModel = makeActivitySessionViewModel()
             viewController.flowCoordinator = makeActivitySessionFlowCoordinator(viewController)
+            viewController.activitySessionViewControllerDelegate = activitySessionViewControllerDelegate
             return viewController
         }
         return nil
