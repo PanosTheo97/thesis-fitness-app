@@ -39,6 +39,10 @@ class ActivitySessionViewController: UIViewController, BaseProtocol {
             stopButton.setImage(.init(systemName: "stop.fill")?.withTintColor(.label, renderingMode: .alwaysOriginal), for: .normal)
             
             stopButton.isEnabled = false
+            
+            let longGesture = UILongPressGestureRecognizer(target: self, action: #selector(stopButtonLongPress))
+            longGesture.minimumPressDuration = 3
+            stopButton.addGestureRecognizer(longGesture)
         }
     }
     
@@ -93,7 +97,7 @@ class ActivitySessionViewController: UIViewController, BaseProtocol {
     @IBOutlet weak var timeLabel: UILabel! {
         didSet {
             timeLabel.textColor = .label
-            timeLabel.font = .systemFont(ofSize: 36, weight: .bold)
+            timeLabel.font = .systemFont(ofSize: 60, weight: .bold)
             timeLabel.text = "00:00:00:00"
         }
     }
@@ -102,6 +106,9 @@ class ActivitySessionViewController: UIViewController, BaseProtocol {
     
     var viewModel: ActivitySessionViewModel?
     var flowCoordinator: ActivitySessionFlowCoordinator?
+    
+    var isPlayingState: Bool = false
+    var firstTimePlaying: Bool = true
     
     // MARK: - Life cycle
     
@@ -131,6 +138,14 @@ class ActivitySessionViewController: UIViewController, BaseProtocol {
             }
         })
         
+        viewModel?.timeString.addObserver({ [weak self] timeString in
+            self?.timeLabel.text = timeString
+        })
+        
+        viewModel?.breakTimeString.addObserver({ [weak self] breakString in
+            self?.breakLabel.text = breakString
+        })
+        
     }
     
     func addNavigationButtons() {
@@ -140,25 +155,58 @@ class ActivitySessionViewController: UIViewController, BaseProtocol {
                                                             target: self)])
     }
     
+    func updatePlayPauseButtonState() {
+        if self.isPlayingState {
+            self.playPauseButton.setImage(.init(systemName: "pause.fill")?.withTintColor(.label, renderingMode: .alwaysOriginal), for: .normal)
+        } else {
+            self.playPauseButton.setImage(.init(systemName: "play.fill")?.withTintColor(.label, renderingMode: .alwaysOriginal), for: .normal)
+        }
+       
+    }
+    
     @objc func closeButtonTapped() {
         self.viewModel?.update(routing: .dismiss)
     }
-
+    
     // MARK: - IBMethods
     
     @IBAction func playPauseButtonTapped(_ sender: Any) {
-        self.countdownAnimationView.play(completion: { _ in
-            UIView.animate(withDuration: 0.4, animations: {
-                self.countdownAnimationView.alpha = 0.0
+        
+        if self.firstTimePlaying {
+            // Show Lottie animation and then continue with the flow
+            self.countdownAnimationView.play(completion: { _ in
+                UIView.animate(withDuration: 0.4, animations: {
+                    self.countdownAnimationView.alpha = 0.0
+                    self.isPlayingState.toggle()
+                    self.updatePlayPauseButtonState()
+                    self.viewModel?.handleStopwatch(isPlayingState: self.isPlayingState)
+                })
+                self.firstTimePlaying = false
+                self.stopButton.backgroundColor = .App.mainText
+                self.stopButton.isEnabled = true
             })
-            self.stopButton.backgroundColor = .App.mainText
-            self.stopButton.isEnabled = true
-            self.playPauseButton.setImage(.init(systemName: "pause.fill")?.withTintColor(.label, renderingMode: .alwaysOriginal), for: .normal)
-        })
+        } else {
+            self.isPlayingState.toggle()
+            self.updatePlayPauseButtonState()
+            self.viewModel?.handleStopwatch(isPlayingState: self.isPlayingState)
+        }
     }
     
     @IBAction func stopButtonTapped(_ sender: Any) {
-        // LongPrees to stop (Maybe with animation )
+    }
+    
+    @objc func stopButtonLongPress() {
+
+        // Show alert for ending session
+        
+        // Custom Alert
+        
+        // Custom Popover
+        
+        // Map
+        
+        print("Session Stopped")
+        self.viewModel?.update(routing: .dismiss)
     }
 }
 

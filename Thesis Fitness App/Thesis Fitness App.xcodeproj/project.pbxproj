@@ -40,6 +40,7 @@
 		866F8FDE2A6684C600C3F30F /* LanguageEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866F8FDD2A6684C600C3F30F /* LanguageEnum.swift */; };
 		866F8FE02A66852200C3F30F /* DefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866F8FDF2A66852200C3F30F /* DefaultsManager.swift */; };
 		866F8FE22A66859A00C3F30F /* DefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866F8FE12A66859A00C3F30F /* DefaultKeys.swift */; };
+		86B2F7862A7CEF0C00B364FB /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2F7852A7CEF0C00B364FB /* Stopwatch.swift */; };
 		86E30FF52A5E9E0E007EB56B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E30FF42A5E9E0E007EB56B /* AppDelegate.swift */; };
 		86E30FF72A5E9E0E007EB56B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E30FF62A5E9E0E007EB56B /* SceneDelegate.swift */; };
 		86E30FFE2A5E9E10007EB56B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86E30FFD2A5E9E10007EB56B /* Assets.xcassets */; };
@@ -163,6 +164,7 @@
 		866F8FDD2A6684C600C3F30F /* LanguageEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageEnum.swift; sourceTree = "<group>"; };
 		866F8FDF2A66852200C3F30F /* DefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsManager.swift; sourceTree = "<group>"; };
 		866F8FE12A66859A00C3F30F /* DefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultKeys.swift; sourceTree = "<group>"; };
+		86B2F7852A7CEF0C00B364FB /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
 		86E30FF12A5E9E0E007EB56B /* Thesis Fitness App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thesis Fitness App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86E30FF42A5E9E0E007EB56B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86E30FF62A5E9E0E007EB56B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -385,6 +387,7 @@
 		8644ABFF2A7A91610019C943 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				86B2F7872A7CF26400B364FB /* UseCases */,
 				8644AC082A7A92210019C943 /* ActivitySessionViewModel.swift */,
 			);
 			path = ViewModel;
@@ -479,6 +482,21 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
+		86B2F7872A7CF26400B364FB /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				86B2F7882A7CF26A00B364FB /* New Group */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		86B2F7882A7CF26A00B364FB /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		86E30FE82A5E9E0E007EB56B = {
 			isa = PBXGroup;
 			children = (
@@ -540,6 +558,7 @@
 			children = (
 				86E3100E2A5EA5E1007EB56B /* Observable.swift */,
 				86E310102A5EA61C007EB56B /* RefreshableTableView.swift */,
+				86B2F7852A7CEF0C00B364FB /* Stopwatch.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1279,6 +1298,7 @@
 				86E4CE5C2A6FA58700B53C32 /* HomeViewModel.swift in Sources */,
 				866F8FDE2A6684C600C3F30F /* LanguageEnum.swift in Sources */,
 				86E4CEBF2A6FF80C00B53C32 /* ProfileLogoutUseCase.swift in Sources */,
+				86B2F7862A7CEF0C00B364FB /* Stopwatch.swift in Sources */,
 				86E4CE602A6FA5E700B53C32 /* HomeDIContainer.swift in Sources */,
 				86E4CEA52A6FB24E00B53C32 /* ProfileViewController.swift in Sources */,
 				86E3100F2A5EA5E1007EB56B /* Observable.swift in Sources */,
