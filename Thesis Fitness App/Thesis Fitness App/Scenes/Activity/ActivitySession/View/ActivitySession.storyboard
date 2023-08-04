@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,6 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nl8-M2-ZrW">
+                                <rect key="frame" x="0.0" y="59" width="393" height="519.66666666666663"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="txV-Sh-OVC">
                                 <rect key="frame" x="0.0" y="732.66666666666663" width="196.66666666666666" height="85.333333333333371"/>
                                 <subviews>
@@ -164,6 +169,7 @@
                             <constraint firstItem="txV-Sh-OVC" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.5" id="5PP-Ql-zgR"/>
                             <constraint firstItem="nlK-Pd-k53" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="7Rt-bh-uFd"/>
                             <constraint firstItem="TuI-hL-fow" firstAttribute="width" secondItem="kah-HF-F0I" secondAttribute="width" id="8jD-uW-RKV"/>
+                            <constraint firstItem="nl8-M2-ZrW" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="B3h-XO-8I4"/>
                             <constraint firstItem="mBG-I9-UHN" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="1/3" id="CyX-nG-xf9"/>
                             <constraint firstItem="kah-HF-F0I" firstAttribute="top" secondItem="GuM-km-0bV" secondAttribute="bottom" constant="24" id="EZB-hc-9mw"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="nlK-Pd-k53" secondAttribute="trailing" id="H6l-f0-p8W"/>
@@ -173,13 +179,16 @@
                             <constraint firstItem="txV-Sh-OVC" firstAttribute="top" secondItem="kah-HF-F0I" secondAttribute="bottom" id="Om6-ER-gRR"/>
                             <constraint firstItem="Vwk-tz-DRH" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.085" id="PoE-Tk-lB0"/>
                             <constraint firstItem="mBG-I9-UHN" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.1" id="Q8A-i0-6MU"/>
+                            <constraint firstItem="GuM-km-0bV" firstAttribute="top" secondItem="nl8-M2-ZrW" secondAttribute="bottom" constant="24" id="Swv-da-4Iv"/>
                             <constraint firstItem="nlK-Pd-k53" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ZRn-e6-RXw"/>
                             <constraint firstItem="7qd-gg-grI" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="coP-Dj-FPC"/>
                             <constraint firstItem="TuI-hL-fow" firstAttribute="leading" secondItem="kah-HF-F0I" secondAttribute="trailing" id="e3m-Ux-0Ok"/>
+                            <constraint firstItem="nl8-M2-ZrW" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="egN-I3-Igs"/>
                             <constraint firstItem="7qd-gg-grI" firstAttribute="height" secondItem="txV-Sh-OVC" secondAttribute="height" id="fZe-2z-U7t"/>
                             <constraint firstItem="GuM-km-0bV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="12" id="hwp-G1-Rcv"/>
                             <constraint firstItem="GuM-km-0bV" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="iMs-eo-QLC"/>
                             <constraint firstItem="txV-Sh-OVC" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.1" id="jdf-ee-gLh"/>
+                            <constraint firstItem="nl8-M2-ZrW" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="mTy-rq-haa"/>
                             <constraint firstItem="txV-Sh-OVC" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="mpL-j6-3wa"/>
                             <constraint firstItem="TuI-hL-fow" firstAttribute="height" secondItem="kah-HF-F0I" secondAttribute="height" id="nfB-dn-kOi"/>
                             <constraint firstItem="txV-Sh-OVC" firstAttribute="top" secondItem="mBG-I9-UHN" secondAttribute="bottom" id="nw5-jQ-KmL"/>
@@ -194,6 +203,7 @@
                         <outlet property="countdownAnimationView" destination="nlK-Pd-k53" id="ht0-Gi-vlH"/>
                         <outlet property="distanceLabel" destination="2g7-el-drD" id="PXS-sH-EoD"/>
                         <outlet property="distanceTitleLabel" destination="mq5-3b-xWC" id="hgN-JG-Orj"/>
+                        <outlet property="mapKitView" destination="nl8-M2-ZrW" id="TTm-2T-Ats"/>
                         <outlet property="paceLabel" destination="ln7-Gs-R5o" id="YfZ-n6-FKh"/>
                         <outlet property="paceTitleLabel" destination="PpR-Ko-5ZL" id="mZp-ao-bwW"/>
                         <outlet property="playPauseButton" destination="0hK-eh-cyQ" id="O9s-2K-PIg"/>

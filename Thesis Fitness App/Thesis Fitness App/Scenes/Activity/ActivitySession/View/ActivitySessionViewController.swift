@@ -7,10 +7,13 @@
 
 import UIKit
 import Lottie
+import MapKit
 
 class ActivitySessionViewController: UIViewController, BaseProtocol {
     
     // MARK: - IBProperties
+    
+    @IBOutlet weak var mapKitView: MKMapView!
     
     @IBOutlet weak var countdownAnimationView: LottieAnimationView! {
         didSet {
@@ -165,7 +168,16 @@ class ActivitySessionViewController: UIViewController, BaseProtocol {
     }
     
     @objc func closeButtonTapped() {
+        
+        // Show custom alert for ending session
+        
         self.viewModel?.update(routing: .dismiss)
+    }
+    
+    @objc func checkButtonTapped() {
+        // Save the session
+        
+        // Dismiss to Activity
     }
     
     // MARK: - IBMethods
@@ -174,12 +186,18 @@ class ActivitySessionViewController: UIViewController, BaseProtocol {
         
         if self.firstTimePlaying {
             // Show Lottie animation and then continue with the flow
+            
             self.countdownAnimationView.play(completion: { _ in
                 UIView.animate(withDuration: 0.4, animations: {
                     self.countdownAnimationView.alpha = 0.0
                     self.isPlayingState.toggle()
                     self.updatePlayPauseButtonState()
                     self.viewModel?.handleStopwatch(isPlayingState: self.isPlayingState)
+                    
+                    self.navigationItem.addButtons(barButtonPositionEnum: .right,
+                                                   navigationButtons: [(navigationButtonTypeEnum: .checkmark,
+                                                                        action: #selector(self.checkButtonTapped),
+                                                                        target: self)])
                 })
                 self.firstTimePlaying = false
                 self.stopButton.backgroundColor = .App.mainText
@@ -193,20 +211,17 @@ class ActivitySessionViewController: UIViewController, BaseProtocol {
     }
     
     @IBAction func stopButtonTapped(_ sender: Any) {
+        // Custom Popover Tooltip
     }
     
     @objc func stopButtonLongPress() {
-
-        // Show alert for ending session
         
-        // Custom Alert
+        // Stop the stopwatches
+        // Disable the play button
         
-        // Custom Popover
-        
-        // Map
-        
-        print("Session Stopped")
-        self.viewModel?.update(routing: .dismiss)
+        self.playPauseButton.backgroundColor = .systemGray
+        self.playPauseButton.isEnabled = false
+        self.viewModel?.stopSession()
     }
 }
 

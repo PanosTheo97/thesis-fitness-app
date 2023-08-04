@@ -55,4 +55,12 @@ class ActivitySessionViewModel: BaseViewModelProtocol {
             }
         }
     }
+    
+    func stopSession() {
+        self.mainStopwatch.stop()
+        self.breakStopwatch.stop()
+        
+        self.mainTimer.invalidate()
+        self.breakTimer.invalidate()
+    }
 }
