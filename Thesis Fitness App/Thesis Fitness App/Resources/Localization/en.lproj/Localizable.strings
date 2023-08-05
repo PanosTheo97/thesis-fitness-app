@@ -46,3 +46,6 @@
 "ActivitySession_paceTitleLabel" = "Pace";
 "ActivitySession_distanceTitleLabel" = "Distance";
 "ActivitySession_stopButtonPopover" = "Hold to stop session";
+"ActivitySession_discardSession_mainText" = "Are you sure you want to discard your session?\n All session data will be lost!";
+"ActivitySession_discardSession_cancel" = "Cancel";
+"ActivitySession_discardSession_discard" = "Discard";

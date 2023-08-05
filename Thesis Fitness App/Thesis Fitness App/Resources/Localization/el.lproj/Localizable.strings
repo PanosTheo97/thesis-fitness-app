@@ -45,3 +45,6 @@
 "ActivitySession_paceTitleLabel" = "Ρυθμός";
 "ActivitySession_distanceTitleLabel" = "Αποόσταση";
 "ActivitySession_stopButtonPopover" = "Κράτα για να σταματήσεις την άθληση";
+"ActivitySession_discardSession_mainText" = "Είσαι σίγουρος ότι θέλεις να φύγεις;\n Όλα τα δεδομένα αυτής της άθλησης θα χαθούν!";
+"ActivitySession_discardSession_cancel" = "Άκυρο";
+"ActivitySession_discardSession_discard" = "Έξοδος";

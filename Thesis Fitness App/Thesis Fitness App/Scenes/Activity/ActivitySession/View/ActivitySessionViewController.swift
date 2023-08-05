@@ -206,10 +206,12 @@ class ActivitySessionViewController: UIViewController, BaseProtocol, PopoverPres
     
     @objc func closeButtonTapped() {
         
-        // Show custom alert for ending session
-        
-        self.activitySessionViewControllerDelegate?.dismissToActivity()
-        self.viewModel?.update(routing: .dismiss)
+        if self.stopButton.isEnabled {
+            self.flowCoordinator?.discardSession()
+        } else {
+            self.activitySessionViewControllerDelegate?.dismissToActivity()
+            self.viewModel?.update(routing: .dismiss)
+        }
     }
     
     @objc func checkButtonTapped() {

@@ -11,7 +11,7 @@ import UIKit
 class ActivitySessionFlowCoordinator: BaseFlowCoordinatorProtocol, PopoverPresentingFlowCoordinatorProtocol {
     
     // MARK: - Properties
-
+    
     var activitySessionDIContainer: ActivitySessionDIContainer
     
     weak var activitySessionViewController: ActivitySessionViewController?
@@ -24,9 +24,22 @@ class ActivitySessionFlowCoordinator: BaseFlowCoordinatorProtocol, PopoverPresen
     }
     
     // MARK: - Methods
-
+    
     func dismiss() {
         self.activitySessionViewController?.dismiss(animated: true)
+    }
+    
+    func discardSession() {
+        let alert = CustomAlert.createAlert(message: "ActivitySession_discardSession_mainText".getLocalized(),
+                                            action: [UIAlertAction(title: "ActivitySession_discardSession_cancel".getLocalized(),
+                                                                   style: .cancel, handler: nil),
+                                                     UIAlertAction(title: "ActivitySession_discardSession_discard".getLocalized(),
+                                                                   style: .destructive, handler: { _ in
+            self.activitySessionViewController?.activitySessionViewControllerDelegate?.dismissToActivity()
+            self.activitySessionViewController?.viewModel?.update(routing: .dismiss)
+        })])
+        
+        activitySessionViewController?.present(alert, animated: true)
     }
     
     func displayPopover(text: String, sourceView: UIView, preferedSize: CGSize, injectedView: UIView) {
@@ -38,7 +51,7 @@ class ActivitySessionFlowCoordinator: BaseFlowCoordinatorProtocol, PopoverPresen
                                                     backgroundColor: popoverConfiguration.backgroundColor)
         // ViewController
         guard let viewController = activitySessionDIContainer.popoverModule.makePopoverViewController(popOverConfiguration: popoverConfiguration,
-                                                                                                 popOverSetupUseCaseEnum: .label(text)) else {
+                                                                                                      popOverSetupUseCaseEnum: .label(text)) else {
             return
         }
         // Get presentation controller
