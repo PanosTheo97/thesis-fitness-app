@@ -54,6 +54,8 @@
 		86B2F7A62A7D08B900B364FB /* PopoverPresentingFlowCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2F7A52A7D08B900B364FB /* PopoverPresentingFlowCoordinatorProtocol.swift */; };
 		86B2F7A82A7D08E000B364FB /* PopoverPresentableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2F7A72A7D08E000B364FB /* PopoverPresentableViewController.swift */; };
 		86B2F7AA2A7D0B3100B364FB /* ActivityParameterViewController+ActivitySessionViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2F7A92A7D0B3100B364FB /* ActivityParameterViewController+ActivitySessionViewControllerProtocol.swift */; };
+		86B2F7AC2A7D0E4200B364FB /* anim_start_session_dark.json in Resources */ = {isa = PBXBuildFile; fileRef = 86B2F7AB2A7D0E3D00B364FB /* anim_start_session_dark.json */; };
+		86B2F7AE2A7D0E5000B364FB /* anim_start_session_light.json in Resources */ = {isa = PBXBuildFile; fileRef = 86B2F7AD2A7D0E5000B364FB /* anim_start_session_light.json */; };
 		86E30FF52A5E9E0E007EB56B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E30FF42A5E9E0E007EB56B /* AppDelegate.swift */; };
 		86E30FF72A5E9E0E007EB56B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E30FF62A5E9E0E007EB56B /* SceneDelegate.swift */; };
 		86E30FFE2A5E9E10007EB56B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86E30FFD2A5E9E10007EB56B /* Assets.xcassets */; };
@@ -191,6 +193,8 @@
 		86B2F7A52A7D08B900B364FB /* PopoverPresentingFlowCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverPresentingFlowCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		86B2F7A72A7D08E000B364FB /* PopoverPresentableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverPresentableViewController.swift; sourceTree = "<group>"; };
 		86B2F7A92A7D0B3100B364FB /* ActivityParameterViewController+ActivitySessionViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityParameterViewController+ActivitySessionViewControllerProtocol.swift"; sourceTree = "<group>"; };
+		86B2F7AB2A7D0E3D00B364FB /* anim_start_session_dark.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = anim_start_session_dark.json; sourceTree = "<group>"; };
+		86B2F7AD2A7D0E5000B364FB /* anim_start_session_light.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = anim_start_session_light.json; sourceTree = "<group>"; };
 		86E30FF12A5E9E0E007EB56B /* Thesis Fitness App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thesis Fitness App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86E30FF42A5E9E0E007EB56B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86E30FF62A5E9E0E007EB56B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -397,6 +401,8 @@
 		8644ABFB2A7A90F50019C943 /* JsonAnimations */ = {
 			isa = PBXGroup;
 			children = (
+				86B2F7AB2A7D0E3D00B364FB /* anim_start_session_dark.json */,
+				86B2F7AD2A7D0E5000B364FB /* anim_start_session_light.json */,
 				863F99FB2A7BBC84004140AF /* countdown_animation.json */,
 			);
 			path = JsonAnimations;
@@ -1314,6 +1320,7 @@
 				86E4CE932A6FB04800B53C32 /* Diet.storyboard in Resources */,
 				86E4CE6E2A6FA93D00B53C32 /* Activity.storyboard in Resources */,
 				866F8FD22A66839B00C3F30F /* Localizable.strings in Resources */,
+				86B2F7AE2A7D0E5000B364FB /* anim_start_session_light.json in Resources */,
 				86E310012A5E9E10007EB56B /* LaunchScreen.storyboard in Resources */,
 				86F828B42A61790F0017ABB8 /* credentials.plist in Resources */,
 				86B2F79D2A7D07ED00B364FB /* Popover.storyboard in Resources */,
@@ -1322,6 +1329,7 @@
 				86E30FFE2A5E9E10007EB56B /* Assets.xcassets in Resources */,
 				86E3104F2A5EC52A007EB56B /* Splash.storyboard in Resources */,
 				86252C882A6E722A009FEAF9 /* GoogleService-Info.plist in Resources */,
+				86B2F7AC2A7D0E4200B364FB /* anim_start_session_dark.json in Resources */,
 				86E4CE7F2A6FAD8500B53C32 /* Workout.storyboard in Resources */,
 				86E4CED92A710D1600B53C32 /* ActivityCollectionViewCell.xib in Resources */,
 				86E4CE622A6FA5F100B53C32 /* Home.storyboard in Resources */,

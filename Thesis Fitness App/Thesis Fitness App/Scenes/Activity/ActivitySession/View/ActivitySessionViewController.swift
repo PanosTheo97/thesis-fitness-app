@@ -24,6 +24,18 @@ class ActivitySessionViewController: UIViewController, BaseProtocol {
             countdownAnimationView.contentMode = .scaleAspectFit
             countdownAnimationView.loopMode = .playOnce
             countdownAnimationView.animationSpeed = 1
+            
+            var path = ""
+            if self.traitCollection.userInterfaceStyle == .dark {
+               path = Bundle.main.path(forResource: "anim_start_session_dark",
+                                                ofType: "json") ?? ""
+                countdownAnimationView.animation = LottieAnimation.filepath(path)
+            } else {
+                path = Bundle.main.path(forResource: "anim_start_session_light",
+                                                ofType: "json") ?? ""
+                
+            }
+            countdownAnimationView.animation = LottieAnimation.filepath(path)
         }
     }
     
@@ -170,7 +182,7 @@ class ActivitySessionViewController: UIViewController, BaseProtocol {
         } else {
             self.playPauseButton.setImage(.init(systemName: "play.fill")?.withTintColor(.label, renderingMode: .alwaysOriginal), for: .normal)
         }
-       
+        
     }
     
     @objc func closeButtonTapped() {
