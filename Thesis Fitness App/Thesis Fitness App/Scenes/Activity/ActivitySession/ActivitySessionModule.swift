@@ -32,7 +32,7 @@ class ActivitySessionModule {
     }
     
     private func makeActivitySessionViewModel() -> ActivitySessionViewModel {
-        ActivitySessionViewModel()
+        ActivitySessionViewModel(activitySessionSetupUseCase: makeActivitySessionSetupUseCase())
     }
     
     private func makeActivitySessionFlowCoordinator(_ viewController: ActivitySessionViewController) -> ActivitySessionFlowCoordinator {
@@ -41,5 +41,9 @@ class ActivitySessionModule {
     
     private func makeActivitySessionDIContainer() -> ActivitySessionDIContainer {
         ActivitySessionDIContainer()
+    }
+    
+    private func makeActivitySessionSetupUseCase() -> ActivitySessionSetupUseCaseProtocol {
+        ActivitySessionSetupUseCase()
     }
 }

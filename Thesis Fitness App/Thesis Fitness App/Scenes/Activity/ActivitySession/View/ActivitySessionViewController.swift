@@ -135,11 +135,16 @@ class ActivitySessionViewController: UIViewController, BaseProtocol, PopoverPres
     
     weak var activitySessionViewControllerDelegate: ActivitySessionViewControllerProtocol?
     
+    // MARK: - Constraints
+    
+    @IBOutlet weak var mapKitHeightConstraint: NSLayoutConstraint!
+    
     // MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setup()
+        self.viewModel?.executeActivitySessionSetupUseCase()
     }
     
     // MARK: - Methods
@@ -169,6 +174,16 @@ class ActivitySessionViewController: UIViewController, BaseProtocol, PopoverPres
         
         viewModel?.breakTimeString.addObserver({ [weak self] breakString in
             self?.breakLabel.text = breakString
+        })
+        
+        viewModel?.showMap.addObserver({ [weak self] showMap in
+            self?.mapKitView.isHidden = !showMap
+            self?.distanceLabel.isHidden = !showMap
+            self?.distanceTitleLabel.isHidden = !showMap
+            self?.paceLabel.isHidden = !showMap
+            self?.paceTitleLabel.isHidden = !showMap
+            self?.mapKitHeightConstraint.constant = showMap ? UIScreen.main.bounds.height * 0.5 : UIScreen.main.bounds.height * 0.1
+            self?.view.layoutIfNeeded()
         })
         
     }
@@ -237,7 +252,6 @@ class ActivitySessionViewController: UIViewController, BaseProtocol, PopoverPres
     }
     
     @IBAction func stopButtonTapped(_ sender: Any) {
-        // Custom Popover Tooltip
         
         let height: CGFloat = 45
         let popoverMessage = "ActivitySession_stopButtonPopover".getLocalized()

@@ -14,6 +14,8 @@ class ActivitySessionViewModel: BaseViewModelProtocol {
     var isLoading = Observable<Bool?>(value: nil)
     var routingEnum = Observable<ActivitySession.RoutingEnum?>(value: nil)
     
+    var showMap = Observable<Bool>(value: false)
+    
     var timeString = Observable<String?>(value: nil)
     var breakTimeString = Observable<String?>(value: nil)
     
@@ -25,9 +27,12 @@ class ActivitySessionViewModel: BaseViewModelProtocol {
     
     // MARK: - Properties
     
+    var activitySessionSetupUseCase: ActivitySessionSetupUseCaseProtocol
+    
     // MARK: - Life cycle
     
-    init() {
+    init(activitySessionSetupUseCase: ActivitySessionSetupUseCaseProtocol) {
+        self.activitySessionSetupUseCase = activitySessionSetupUseCase
     }
     
     // MARK: - Methods
@@ -62,5 +67,11 @@ class ActivitySessionViewModel: BaseViewModelProtocol {
         
         self.mainTimer.invalidate()
         self.breakTimer.invalidate()
+    }
+    
+    func executeActivitySessionSetupUseCase() {
+        self.activitySessionSetupUseCase.execute { showMap in
+            self.showMap.value = showMap
+        }
     }
 }
