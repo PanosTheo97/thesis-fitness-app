@@ -58,6 +58,8 @@
 		86B2F7AE2A7D0E5000B364FB /* anim_start_session_light.json in Resources */ = {isa = PBXBuildFile; fileRef = 86B2F7AD2A7D0E5000B364FB /* anim_start_session_light.json */; };
 		86B2F7B12A7ED11700B364FB /* ActivitySessionSetupUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2F7B02A7ED11700B364FB /* ActivitySessionSetupUseCase.swift */; };
 		86B2F7B32A7ED5CA00B364FB /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2F7B22A7ED5CA00B364FB /* CustomAlert.swift */; };
+		86B2F7B62A7EE87400B364FB /* ActivitySessionViewController+CLLocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2F7B52A7EE87400B364FB /* ActivitySessionViewController+CLLocationManagerDelegate.swift */; };
+		86B2F7B82A7EEC1100B364FB /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2F7B72A7EEC1100B364FB /* CustomAnnotation.swift */; };
 		86E30FF52A5E9E0E007EB56B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E30FF42A5E9E0E007EB56B /* AppDelegate.swift */; };
 		86E30FF72A5E9E0E007EB56B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E30FF62A5E9E0E007EB56B /* SceneDelegate.swift */; };
 		86E30FFE2A5E9E10007EB56B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86E30FFD2A5E9E10007EB56B /* Assets.xcassets */; };
@@ -199,6 +201,8 @@
 		86B2F7AD2A7D0E5000B364FB /* anim_start_session_light.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = anim_start_session_light.json; sourceTree = "<group>"; };
 		86B2F7B02A7ED11700B364FB /* ActivitySessionSetupUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySessionSetupUseCase.swift; sourceTree = "<group>"; };
 		86B2F7B22A7ED5CA00B364FB /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
+		86B2F7B52A7EE87400B364FB /* ActivitySessionViewController+CLLocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivitySessionViewController+CLLocationManagerDelegate.swift"; sourceTree = "<group>"; };
+		86B2F7B72A7EEC1100B364FB /* CustomAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
 		86E30FF12A5E9E0E007EB56B /* Thesis Fitness App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thesis Fitness App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86E30FF42A5E9E0E007EB56B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86E30FF62A5E9E0E007EB56B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -415,6 +419,7 @@
 		8644ABFE2A7A915C0019C943 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				86B2F7B42A7EE85A00B364FB /* Protocols */,
 				8644AC0A2A7A924F0019C943 /* ActivitySession.storyboard */,
 				8644AC0C2A7A925B0019C943 /* ActivitySessionViewController.swift */,
 			);
@@ -530,6 +535,7 @@
 		86B2F7892A7D069400B364FB /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				86B2F7B72A7EEC1100B364FB /* CustomAnnotation.swift */,
 				86B2F7B22A7ED5CA00B364FB /* CustomAlert.swift */,
 				86B2F78D2A7D06BC00B364FB /* Popover */,
 				86B2F78A2A7D069900B364FB /* EdgeInsetLabel */,
@@ -608,6 +614,14 @@
 				86B2F7B02A7ED11700B364FB /* ActivitySessionSetupUseCase.swift */,
 			);
 			path = SetupUseCase;
+			sourceTree = "<group>";
+		};
+		86B2F7B42A7EE85A00B364FB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				86B2F7B52A7EE87400B364FB /* ActivitySessionViewController+CLLocationManagerDelegate.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		86E30FE82A5E9E0E007EB56B = {
@@ -1506,6 +1520,7 @@
 				86E4CE4F2A6F223900B53C32 /* WelcomeSignInUseCase.swift in Sources */,
 				866F8FDB2A66849D00C3F30F /* LocalizationManager.swift in Sources */,
 				86E310192A5EA687007EB56B /* BaseFlowCoordinatorProtocol.swift in Sources */,
+				86B2F7B62A7EE87400B364FB /* ActivitySessionViewController+CLLocationManagerDelegate.swift in Sources */,
 				86E4CEAC2A6FCF9700B53C32 /* LobbyModule.swift in Sources */,
 				86E4CECB2A700FC600B53C32 /* UINavigationControllerExtension.swift in Sources */,
 				86E310472A5EC4CF007EB56B /* SplashModule.swift in Sources */,
@@ -1523,6 +1538,7 @@
 				86E4CEB22A6FD03E00B53C32 /* LobbyTabBarController.swift in Sources */,
 				86E310362A5EC369007EB56B /* AppFlowCoordinator.swift in Sources */,
 				86E4CEB42A6FD0B600B53C32 /* LobbyFlowCoordinator.swift in Sources */,
+				86B2F7B82A7EEC1100B364FB /* CustomAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1677,6 +1693,9 @@
 				DEVELOPMENT_TEAM = 6LT8JX65CX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "/Users/ptheodos/Documents/thesis-fitness-app/Thesis Fitness App/Thesis Fitness App/Resources/Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "\"App needs your location to track outdoor activities\"";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "\"App needs your location to track outdoor activities\"";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "\"App needs your location to track outdoor activities\"";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -1706,6 +1725,9 @@
 				DEVELOPMENT_TEAM = 6LT8JX65CX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "/Users/ptheodos/Documents/thesis-fitness-app/Thesis Fitness App/Thesis Fitness App/Resources/Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "\"App needs your location to track outdoor activities\"";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "\"App needs your location to track outdoor activities\"";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "\"App needs your location to track outdoor activities\"";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

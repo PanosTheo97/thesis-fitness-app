@@ -29,6 +29,14 @@ class ActivitySessionFlowCoordinator: BaseFlowCoordinatorProtocol, PopoverPresen
         self.activitySessionViewController?.dismiss(animated: true)
     }
     
+    func displayLocationAlert() {
+        let alert = CustomAlert.createAlert(message: "ActivitySession_locationAlert".getLocalized(),
+                                            action: [UIAlertAction(title: "OK",
+                                                                   style: .cancel, handler: nil)])
+        
+        activitySessionViewController?.present(alert, animated: true)
+    }
+    
     func discardSession() {
         let alert = CustomAlert.createAlert(message: "ActivitySession_discardSession_mainText".getLocalized(),
                                             action: [UIAlertAction(title: "ActivitySession_discardSession_cancel".getLocalized(),

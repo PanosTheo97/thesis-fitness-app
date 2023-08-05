@@ -48,3 +48,9 @@
 "ActivitySession_discardSession_mainText" = "Είσαι σίγουρος ότι θέλεις να φύγεις;\n Όλα τα δεδομένα αυτής της άθλησης θα χαθούν!";
 "ActivitySession_discardSession_cancel" = "Άκυρο";
 "ActivitySession_discardSession_discard" = "Έξοδος";
+"ActivitySession_kilometers" = "%.3fχλμ.";
+"ActivitySession_locationAlert" = "Εαν επιθυμείς τη λειτουργικότητα του χάρτη, επέτρεψε τη χρήση τοποθεσίας πάντα από τις ρυθμήσεις";
+"ActivitySession_annotation_start" = "Σημείο εκκίνησης";
+"ActivitySession_annotation_finish" = "Σημείο τερματισμού";
+"ActivitySession_annotation_start_description" = "Εδώ ξεκίνησες τη διαδρομή σου";
+"ActivitySession_annotation_finish_description" = "Εδώ τελείωσες τη διαδρομή σου";

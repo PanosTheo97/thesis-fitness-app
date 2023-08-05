@@ -8,6 +8,7 @@
 import UIKit
 import Lottie
 import MapKit
+import CoreLocation
 
 protocol ActivitySessionViewControllerProtocol: AnyObject {
     func dismissToActivity()
@@ -21,7 +22,14 @@ class ActivitySessionViewController: UIViewController, BaseProtocol, PopoverPres
     
     // MARK: - IBProperties
     
-    @IBOutlet weak var mapKitView: MKMapView!
+    @IBOutlet weak var mapKitView: MKMapView! {
+        didSet {
+            mapKitView.showsUserLocation = true
+            mapKitView.showsCompass = true
+            mapKitView.setUserTrackingMode(.followWithHeading, animated: true)
+            mapKitView.delegate = self
+        }
+    }
     
     @IBOutlet weak var countdownAnimationView: LottieAnimationView! {
         didSet {
@@ -135,6 +143,10 @@ class ActivitySessionViewController: UIViewController, BaseProtocol, PopoverPres
     
     weak var activitySessionViewControllerDelegate: ActivitySessionViewControllerProtocol?
     
+    let locationManager = CLLocationManager()
+    var locationsTraversed: [CLLocation] = []
+    var route: MKPolyline?
+    
     // MARK: - Constraints
     
     @IBOutlet weak var mapKitHeightConstraint: NSLayoutConstraint!
@@ -147,12 +159,24 @@ class ActivitySessionViewController: UIViewController, BaseProtocol, PopoverPres
         self.viewModel?.executeActivitySessionSetupUseCase()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.locationManager.allowsBackgroundLocationUpdates = false
+        self.locationManager.showsBackgroundLocationIndicator = false
+        self.locationManager.stopUpdatingLocation()
+    }
+    
     // MARK: - Methods
     
     private func setup() {
         registerObservers()
         
         self.view.backgroundColor = .systemBackground
+        
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        self.locationManager.distanceFilter = 5
+        self.locationManager.delegate = self
+        
         self.addNavigationButtons()
     }
     
@@ -177,15 +201,23 @@ class ActivitySessionViewController: UIViewController, BaseProtocol, PopoverPres
         })
         
         viewModel?.showMap.addObserver({ [weak self] showMap in
-            self?.mapKitView.isHidden = !showMap
-            self?.distanceLabel.isHidden = !showMap
-            self?.distanceTitleLabel.isHidden = !showMap
-            self?.paceLabel.isHidden = !showMap
-            self?.paceTitleLabel.isHidden = !showMap
-            self?.mapKitHeightConstraint.constant = showMap ? UIScreen.main.bounds.height * 0.5 : UIScreen.main.bounds.height * 0.1
-            self?.view.layoutIfNeeded()
+            self?.configureMap(showMap: showMap)
         })
         
+    }
+    
+    func configureMap(showMap: Bool) {
+        self.mapKitView.isHidden = !showMap
+        self.distanceLabel.isHidden = !showMap
+        self.distanceTitleLabel.isHidden = !showMap
+        self.paceLabel.isHidden = !showMap
+        self.paceTitleLabel.isHidden = !showMap
+        self.mapKitHeightConstraint.constant = showMap ? UIScreen.main.bounds.height * 0.5 : UIScreen.main.bounds.height * 0.1
+        self.view.layoutIfNeeded()
+        
+        if showMap {
+            self.locationManager.requestAlwaysAuthorization()
+        }
     }
     
     func addNavigationButtons() {
@@ -198,8 +230,14 @@ class ActivitySessionViewController: UIViewController, BaseProtocol, PopoverPres
     func updatePlayPauseButtonState() {
         if self.isPlayingState {
             self.playPauseButton.setImage(.init(systemName: "pause.fill")?.withTintColor(.label, renderingMode: .alwaysOriginal), for: .normal)
+            self.locationManager.allowsBackgroundLocationUpdates = true
+            self.locationManager.showsBackgroundLocationIndicator = true
+            self.locationManager.startUpdatingLocation()
         } else {
             self.playPauseButton.setImage(.init(systemName: "play.fill")?.withTintColor(.label, renderingMode: .alwaysOriginal), for: .normal)
+            self.locationManager.allowsBackgroundLocationUpdates = false
+            self.locationManager.showsBackgroundLocationIndicator = false
+            self.locationManager.stopUpdatingLocation()
         }
         
     }
@@ -236,6 +274,10 @@ class ActivitySessionViewController: UIViewController, BaseProtocol, PopoverPres
                     self.isPlayingState.toggle()
                     self.updatePlayPauseButtonState()
                     self.viewModel?.handleStopwatch(isPlayingState: self.isPlayingState)
+                    if let currentLocation = self.locationManager.location {
+                        let userRegion = MKCoordinateRegion(center: currentLocation.coordinate, latitudinalMeters: 500, longitudinalMeters: 500)
+                        self.mapKitView.setRegion(userRegion, animated: true)
+                    }
                     
                     self.navigationItem.addButtons(barButtonPositionEnum: .right,
                                                    navigationButtons: [(navigationButtonTypeEnum: .checkmark,
@@ -277,11 +319,18 @@ class ActivitySessionViewController: UIViewController, BaseProtocol, PopoverPres
     @objc func stopButtonLongPress() {
         
         // Stop the stopwatches
+        // Stop user location
         // Disable the play button
         
         self.playPauseButton.backgroundColor = .systemGray
         self.playPauseButton.isEnabled = false
+        
         self.viewModel?.stopSession()
+        
+        self.locationManager.allowsBackgroundLocationUpdates = false
+        self.locationManager.stopUpdatingLocation()
+        
+        self.setupAnnotations()
     }
 }
 

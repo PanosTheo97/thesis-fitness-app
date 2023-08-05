@@ -49,3 +49,9 @@
 "ActivitySession_discardSession_mainText" = "Are you sure you want to discard your session?\n All session data will be lost!";
 "ActivitySession_discardSession_cancel" = "Cancel";
 "ActivitySession_discardSession_discard" = "Discard";
+"ActivitySession_kilometers" = "%.3fkm.";
+"ActivitySession_locationAlert" = "Please allow Always location from settings for map functionality";
+"ActivitySession_annotation_start" = "Starting Point";
+"ActivitySession_annotation_finish" = "Ending Point";
+"ActivitySession_annotation_start_description" = "This is where you started";
+"ActivitySession_annotation_finish_description" = "This is where you finished";
