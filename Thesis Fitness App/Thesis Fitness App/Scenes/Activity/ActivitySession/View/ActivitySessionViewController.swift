@@ -13,7 +13,11 @@ protocol ActivitySessionViewControllerProtocol: AnyObject {
     func dismissToActivity()
 }
 
-class ActivitySessionViewController: UIViewController, BaseProtocol {
+class ActivitySessionViewController: UIViewController, BaseProtocol, PopoverPresentingViewControllerProtocol {
+    
+    func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+        return .none
+    }
     
     // MARK: - IBProperties
     
@@ -234,6 +238,24 @@ class ActivitySessionViewController: UIViewController, BaseProtocol {
     
     @IBAction func stopButtonTapped(_ sender: Any) {
         // Custom Popover Tooltip
+        
+        let height: CGFloat = 45
+        let popoverMessage = "ActivitySession_stopButtonPopover".getLocalized()
+        
+        let width = popoverMessage.width(withConstrainedHeight: height, font: .systemFont(ofSize: 10, weight: .regular)) + 25
+        
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: height))
+        label.text = popoverMessage
+        label.textColor = .label
+        label.textAlignment = .center
+        label.font = .systemFont(ofSize: 10, weight: .regular)
+        label.numberOfLines = 0
+        label.sizeToFit()
+        
+        self.flowCoordinator?.displayPopover(text: popoverMessage,
+                                             sourceView: self.stopButton,
+                                             preferedSize: CGSize(width: width, height: height),
+                                             injectedView: label)
     }
     
     @objc func stopButtonLongPress() {

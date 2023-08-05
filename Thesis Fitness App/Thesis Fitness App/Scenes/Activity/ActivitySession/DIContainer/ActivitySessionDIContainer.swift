@@ -9,4 +9,5 @@ import Foundation
 
 class ActivitySessionDIContainer {
     
+    let popoverModule = PopoverModule()
 }

@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import UIKit
 
-class ActivitySessionFlowCoordinator: BaseFlowCoordinatorProtocol {
+class ActivitySessionFlowCoordinator: BaseFlowCoordinatorProtocol, PopoverPresentingFlowCoordinatorProtocol {
     
     // MARK: - Properties
 
@@ -26,6 +27,24 @@ class ActivitySessionFlowCoordinator: BaseFlowCoordinatorProtocol {
 
     func dismiss() {
         self.activitySessionViewController?.dismiss(animated: true)
+    }
+    
+    func displayPopover(text: String, sourceView: UIView, preferedSize: CGSize, injectedView: UIView) {
+        // Configuration
+        var popoverConfiguration = PopoverConfiguration(size: preferedSize)
+        popoverConfiguration = PopoverConfiguration(popoverDesiredSize: preferedSize,
+                                                    permittedArrowDirection: .down,
+                                                    popoverLayoutMargins: popoverConfiguration.popoverLayoutMargins,
+                                                    backgroundColor: popoverConfiguration.backgroundColor)
+        // ViewController
+        guard let viewController = activitySessionDIContainer.popoverModule.makePopoverViewController(popOverConfiguration: popoverConfiguration,
+                                                                                                 popOverSetupUseCaseEnum: .label(text)) else {
+            return
+        }
+        // Get presentation controller
+        guard let popoverPrsenetationViewController = activitySessionViewController else { return }
+        // Display popover
+        displayPopover(sourceView: sourceView, with: viewController, from: popoverPrsenetationViewController, completion: nil)
     }
     
 }

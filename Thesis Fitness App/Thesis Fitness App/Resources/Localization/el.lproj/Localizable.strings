@@ -44,3 +44,4 @@
 "ActivitySession_breakTitleLabel" = "Διάλειμμα";
 "ActivitySession_paceTitleLabel" = "Ρυθμός";
 "ActivitySession_distanceTitleLabel" = "Αποόσταση";
+"ActivitySession_stopButtonPopover" = "Κράτα για να σταματήσεις την άθληση";

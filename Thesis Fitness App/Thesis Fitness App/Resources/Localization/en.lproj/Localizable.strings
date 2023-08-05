@@ -45,3 +45,4 @@
 "ActivitySession_breakTitleLabel" = "Break";
 "ActivitySession_paceTitleLabel" = "Pace";
 "ActivitySession_distanceTitleLabel" = "Distance";
+"ActivitySession_stopButtonPopover" = "Hold to stop session";
