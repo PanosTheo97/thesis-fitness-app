@@ -33,7 +33,7 @@ enum MacroTypeEnum {
     func getText() -> String {
         switch self {
         case .protein:
-            return "Pr"
+            return "P"
         case .carbonhydrates:
             return "C"
         case .fats:
