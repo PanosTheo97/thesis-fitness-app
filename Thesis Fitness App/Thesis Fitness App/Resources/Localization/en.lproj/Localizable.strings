@@ -49,6 +49,7 @@
 "ActivitySession_discardSession_mainText" = "Are you sure you want to discard your session?\n All session data will be lost!";
 "ActivitySession_discardSession_cancel" = "Cancel";
 "ActivitySession_discardSession_discard" = "Discard";
+"ActivitySession_pace" = "%.2f min/km";
 "ActivitySession_kilometers" = "%.3fkm.";
 "ActivitySession_locationAlert" = "Please allow Always location from settings for map functionality";
 "ActivitySession_annotation_start" = "Starting Point";

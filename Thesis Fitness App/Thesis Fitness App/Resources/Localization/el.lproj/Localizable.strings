@@ -49,6 +49,7 @@
 "ActivitySession_discardSession_cancel" = "Άκυρο";
 "ActivitySession_discardSession_discard" = "Έξοδος";
 "ActivitySession_kilometers" = "%.3fχλμ.";
+"ActivitySession_pace" = "%.2f λεπ/χλμ";
 "ActivitySession_locationAlert" = "Εαν επιθυμείς τη λειτουργικότητα του χάρτη, επέτρεψε τη χρήση τοποθεσίας πάντα από τις ρυθμήσεις";
 "ActivitySession_annotation_start" = "Σημείο εκκίνησης";
 "ActivitySession_annotation_finish" = "Σημείο τερματισμού";

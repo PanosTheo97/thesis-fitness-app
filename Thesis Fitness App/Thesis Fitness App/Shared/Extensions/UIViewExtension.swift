@@ -111,6 +111,13 @@ extension UIView {
         self.topAnchor.constraint(equalTo: parentView.topAnchor, constant: 0).isActive = true
     }
     
+    func addAndCenter(inside parentView: UIView) {
+        self.translatesAutoresizingMaskIntoConstraints = false
+        parentView.addSubview(self)
+        self.centerXAnchor.constraint(equalTo: parentView.centerXAnchor).isActive = true
+        self.centerYAnchor.constraint(equalTo: parentView.centerYAnchor).isActive = true
+    }
+    
     func addAndExpandWithSafeArea(inside controller: UIViewController) {
         self.translatesAutoresizingMaskIntoConstraints = false
         controller.view.addSubview(self)

@@ -83,6 +83,23 @@ extension ActivitySessionViewController: CLLocationManagerDelegate, MKMapViewDel
             let distanceInKm = round(totalDistance) / 1000
             self.distanceLabel.text = String(format: "ActivitySession_kilometers".getLocalized(), distanceInKm)
         }
+        self.updatePace(distanceInKm: round(totalDistance) / 1000)
+    }
+    
+    func updatePace(distanceInKm: Double) {
+        guard let elapsedTime = self.viewModel?.mainStopwatch.elapsedTime() else {
+            self.paceLabel.text = "-"
+            return
+        }
+        let elapsedMinutes = Int(elapsedTime / 60) % 60
+        
+        let pace = Double(elapsedMinutes) / distanceInKm
+        
+        if pace > 0 && pace < 120 {
+            self.paceLabel.text = String(format: "ActivitySession_pace".getLocalized(), pace)
+        } else {
+            self.paceLabel.text = "-"
+        }
     }
     
     func setupAnnotations() {
