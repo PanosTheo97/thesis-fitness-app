@@ -9,5 +9,5 @@ import Foundation
 
 final class DietDIContainer {
     
-    
+    let macrosModule = MacrosModule()
 }

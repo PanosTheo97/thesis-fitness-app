@@ -52,6 +52,8 @@ class DietViewController: UIViewController, BaseProtocol {
         
         viewModel?.routingEnum.addObserver({ [weak self] routingEnum in
             switch routingEnum {
+            case .macros:
+                self?.flowCoordinator?.moveToMacros()
             default: ()
             }
         })
@@ -73,8 +75,9 @@ class DietViewController: UIViewController, BaseProtocol {
         addMacrosItem.titleColor = .label
         addMacrosItem.icon = .init(systemName: "atom")
         addMacrosItem.iconTintColor = .label
-        addMacrosItem.handler = { _ in
-            self.addMetricsFAB.close()
+        addMacrosItem.handler = { [weak self] _ in
+            self?.viewModel?.update(routing: .macros)
+            self?.addMetricsFAB.close()
         }
         
         let addFoodItem = FloatyItem()
@@ -95,6 +98,6 @@ class DietViewController: UIViewController, BaseProtocol {
 
 struct Diet {
     enum RoutingEnum {
-        case test
+        case macros
     }
 }

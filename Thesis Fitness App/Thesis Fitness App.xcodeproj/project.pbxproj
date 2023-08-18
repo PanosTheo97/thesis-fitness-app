@@ -151,6 +151,12 @@
 		86EC39B62A8F72CD007E7045 /* DietTableView+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EC39B52A8F72CD007E7045 /* DietTableView+UITableViewDataSource.swift */; };
 		86EC39BA2A8F736E007E7045 /* DietTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EC39B82A8F736E007E7045 /* DietTableViewCell.swift */; };
 		86EC39BB2A8F736E007E7045 /* DietTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86EC39B92A8F736E007E7045 /* DietTableViewCell.xib */; };
+		86EC39C32A8F9397007E7045 /* MacrosModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EC39C22A8F9397007E7045 /* MacrosModule.swift */; };
+		86EC39C52A8F9463007E7045 /* MacrosDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EC39C42A8F9463007E7045 /* MacrosDIContainer.swift */; };
+		86EC39C72A8F9489007E7045 /* MacrosFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EC39C62A8F9489007E7045 /* MacrosFlowCoordinator.swift */; };
+		86EC39C92A8F94E9007E7045 /* MacrosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EC39C82A8F94E9007E7045 /* MacrosViewModel.swift */; };
+		86EC39CB2A8F9517007E7045 /* Macros.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86EC39CA2A8F9517007E7045 /* Macros.storyboard */; };
+		86EC39CD2A8F9527007E7045 /* MacrosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EC39CC2A8F9527007E7045 /* MacrosViewController.swift */; };
 		86F828B42A61790F0017ABB8 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86F828B32A61790F0017ABB8 /* credentials.plist */; };
 /* End PBXBuildFile section */
 
@@ -305,6 +311,12 @@
 		86EC39B52A8F72CD007E7045 /* DietTableView+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DietTableView+UITableViewDataSource.swift"; sourceTree = "<group>"; };
 		86EC39B82A8F736E007E7045 /* DietTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietTableViewCell.swift; sourceTree = "<group>"; };
 		86EC39B92A8F736E007E7045 /* DietTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DietTableViewCell.xib; sourceTree = "<group>"; };
+		86EC39C22A8F9397007E7045 /* MacrosModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MacrosModule.swift; path = ../../../../../../MacrosModule.swift; sourceTree = "<group>"; };
+		86EC39C42A8F9463007E7045 /* MacrosDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MacrosDIContainer.swift; path = ../../../../../../../MacrosDIContainer.swift; sourceTree = "<group>"; };
+		86EC39C62A8F9489007E7045 /* MacrosFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MacrosFlowCoordinator.swift; path = ../../../../../../../MacrosFlowCoordinator.swift; sourceTree = "<group>"; };
+		86EC39C82A8F94E9007E7045 /* MacrosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MacrosViewModel.swift; path = ../../../../../../../MacrosViewModel.swift; sourceTree = "<group>"; };
+		86EC39CA2A8F9517007E7045 /* Macros.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Macros.storyboard; path = ../../../../../../../Macros.storyboard; sourceTree = "<group>"; };
+		86EC39CC2A8F9527007E7045 /* MacrosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MacrosViewController.swift; path = ../../../../../../../MacrosViewController.swift; sourceTree = "<group>"; };
 		86F828B32A61790F0017ABB8 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -799,7 +811,7 @@
 				86E4CE502A6FA51800B53C32 /* Home */,
 				86E4CE512A6FA52A00B53C32 /* Activity */,
 				86E4CE522A6FA54000B53C32 /* Workout */,
-				86E4CE532A6FA54700B53C32 /* Diet */,
+				86EC39BC2A8F8718007E7045 /* Diet */,
 				86E4CE542A6FA54C00B53C32 /* Profile */,
 			);
 			path = Scenes;
@@ -1314,6 +1326,60 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		86EC39BC2A8F8718007E7045 /* Diet */ = {
+			isa = PBXGroup;
+			children = (
+				86E4CE532A6FA54700B53C32 /* Diet */,
+				86EC39BD2A8F8740007E7045 /* Macros */,
+			);
+			path = Diet;
+			sourceTree = "<group>";
+		};
+		86EC39BD2A8F8740007E7045 /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				86EC39C22A8F9397007E7045 /* MacrosModule.swift */,
+				86EC39C12A8F9387007E7045 /* DIContainer */,
+				86EC39C02A8F937E007E7045 /* FlowCoordinator */,
+				86EC39BF2A8F9378007E7045 /* ViewModel */,
+				86EC39BE2A8F9374007E7045 /* View */,
+			);
+			path = Macros;
+			sourceTree = "<group>";
+		};
+		86EC39BE2A8F9374007E7045 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				86EC39CA2A8F9517007E7045 /* Macros.storyboard */,
+				86EC39CC2A8F9527007E7045 /* MacrosViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		86EC39BF2A8F9378007E7045 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				86EC39C82A8F94E9007E7045 /* MacrosViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		86EC39C02A8F937E007E7045 /* FlowCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				86EC39C62A8F9489007E7045 /* MacrosFlowCoordinator.swift */,
+			);
+			path = FlowCoordinator;
+			sourceTree = "<group>";
+		};
+		86EC39C12A8F9387007E7045 /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+				86EC39C42A8F9463007E7045 /* MacrosDIContainer.swift */,
+			);
+			path = DIContainer;
+			sourceTree = "<group>";
+		};
 		D52293BB1ED70D428AC6E2CD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1403,6 +1469,7 @@
 				86B2F7AC2A7D0E4200B364FB /* anim_start_session_dark.json in Resources */,
 				86E4CE7F2A6FAD8500B53C32 /* Workout.storyboard in Resources */,
 				86E4CED92A710D1600B53C32 /* ActivityCollectionViewCell.xib in Resources */,
+				86EC39CB2A8F9517007E7045 /* Macros.storyboard in Resources */,
 				86E4CE622A6FA5F100B53C32 /* Home.storyboard in Resources */,
 				86EC39BB2A8F736E007E7045 /* DietTableViewCell.xib in Resources */,
 			);
@@ -1493,6 +1560,7 @@
 				86E4CEBB2A6FEE2600B53C32 /* UINavigationItemExtension.swift in Sources */,
 				86B2F7A82A7D08E000B364FB /* PopoverPresentableViewController.swift in Sources */,
 				86E4CE7B2A6FAD6900B53C32 /* WorkoutModule.swift in Sources */,
+				86EC39C32A8F9397007E7045 /* MacrosModule.swift in Sources */,
 				86B2F7992A7D074400B364FB /* PopoverViewModel.swift in Sources */,
 				86E4CEDF2A71116500B53C32 /* ActivitySetupUseCase.swift in Sources */,
 				86E4CE8D2A6FAFB700B53C32 /* DietDIContainer.swift in Sources */,
@@ -1501,6 +1569,7 @@
 				860F95422A79302C003131EC /* UITextFieldExtension.swift in Sources */,
 				86E310112A5EA61C007EB56B /* RefreshableTableView.swift in Sources */,
 				86E4CE8B2A6FAF1700B53C32 /* DietModule.swift in Sources */,
+				86EC39C72A8F9489007E7045 /* MacrosFlowCoordinator.swift in Sources */,
 				86E4CE5E2A6FA5DC00B53C32 /* HomeFlowCoordinator.swift in Sources */,
 				86E310282A5EAC25007EB56B /* UICollectionViewExtension.swift in Sources */,
 				86B2F79B2A7D078200B364FB /* PopoverSetUpUseCase.swift in Sources */,
@@ -1570,6 +1639,7 @@
 				860F95402A792F3A003131EC /* ActivityParameterViewController+UITextFieldDelegate.swift in Sources */,
 				86E4CEC62A7005F500B53C32 /* MainNavigationController+ProfileViewControllerProtocol.swift in Sources */,
 				860F95312A7465EF003131EC /* ActivityParameterViewController.swift in Sources */,
+				86EC39C92A8F94E9007E7045 /* MacrosViewModel.swift in Sources */,
 				86E4CEAE2A6FCFDA00B53C32 /* LobbyDIContainer.swift in Sources */,
 				86E4CED42A710C9E00B53C32 /* ActivityCollectionView+UICollectionViewDelegate.swift in Sources */,
 				86B2F7BA2A7FC68E00B364FB /* CustomCircleView.swift in Sources */,
@@ -1585,8 +1655,10 @@
 				86E310472A5EC4CF007EB56B /* SplashModule.swift in Sources */,
 				86E4CE812A6FAD9100B53C32 /* WorkoutViewModel.swift in Sources */,
 				86E4CE722A6FA96B00B53C32 /* ActivityFlowCoordinator.swift in Sources */,
+				86EC39C52A8F9463007E7045 /* MacrosDIContainer.swift in Sources */,
 				86E3104D2A5EC515007EB56B /* SplashViewModel.swift in Sources */,
 				86B2F7A62A7D08B900B364FB /* PopoverPresentingFlowCoordinatorProtocol.swift in Sources */,
+				86EC39CD2A8F9527007E7045 /* MacrosViewController.swift in Sources */,
 				86E3102A2A5EAC39007EB56B /* UIImageViewExtension.swift in Sources */,
 				86B2F7BC2A7FC8B800B364FB /* MacroTypeEnum.swift in Sources */,
 				86E4CEC92A70091700B53C32 /* LobbyTabBarController+UITabBarControllerDelegate.swift in Sources */,

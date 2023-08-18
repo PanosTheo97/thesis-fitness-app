@@ -24,4 +24,12 @@ class DietFlowCoordinator: BaseFlowCoordinatorProtocol {
     
     // MARK: - Methods
 
+    func moveToMacros() {
+        guard let macrosViewController = self.dietDIContainer.macrosModule.makeMacrosViewController() else {
+            return
+        }
+        
+        self.dietViewController?.present(macrosViewController, animated: true)
+    }
+    
 }
