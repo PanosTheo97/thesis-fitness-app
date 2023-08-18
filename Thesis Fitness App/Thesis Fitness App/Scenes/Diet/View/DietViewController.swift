@@ -16,10 +16,12 @@ class DietViewController: UIViewController, BaseProtocol {
         didSet {
             addMetricsFAB.buttonColor = .App.mainText
             addMetricsFAB.plusColor = .label
-            addMetricsFAB.overlayColor = .systemBackground
+            addMetricsFAB.overlayColor = .systemBackground.withAlphaComponent(0.3)
             addMetricsFAB.openAnimationType = .slideUp
         }
     }
+    
+    @IBOutlet weak var dietTableView: DietTableView!
     
     // MARK: - Properties
     
@@ -31,6 +33,7 @@ class DietViewController: UIViewController, BaseProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setup()
+        self.viewModel?.setup()
     }
 
     // MARK: - Methods
@@ -53,6 +56,10 @@ class DietViewController: UIViewController, BaseProtocol {
             }
         })
         
+        viewModel?.dietData.addObserver({ [weak self] data in
+            self?.dietTableView.setup(data: data)
+        })
+        
     }
     
     func addNavigationButtons() {
@@ -62,23 +69,21 @@ class DietViewController: UIViewController, BaseProtocol {
     func configureFAB() {
         let addMacrosItem = FloatyItem()
         addMacrosItem.buttonColor = .App.mainText
-        addMacrosItem.title = "Add Macros"
+        addMacrosItem.title = "Diet_FAB_addMacros".getLocalized()
         addMacrosItem.titleColor = .label
         addMacrosItem.icon = .init(systemName: "atom")
         addMacrosItem.iconTintColor = .label
         addMacrosItem.handler = { _ in
-            print("Add macros")
             self.addMetricsFAB.close()
         }
         
         let addFoodItem = FloatyItem()
         addFoodItem.buttonColor = .App.mainText
-        addFoodItem.title = "Add Food"
+        addFoodItem.title = "Diet_FAB_addFood".getLocalized()
         addFoodItem.titleColor = .label
         addFoodItem.icon = .init(systemName: "carrot.fill")
         addFoodItem.iconTintColor = .label
         addFoodItem.handler = { _ in
-            print("Add food")
             self.addMetricsFAB.close()
         }
         

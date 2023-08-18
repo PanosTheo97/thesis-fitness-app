@@ -44,4 +44,19 @@ enum MacroTypeEnum {
             return "CAL"
         }
     }
+    
+    func getLocalizedTitle() -> String {
+        switch self {
+        case .protein:
+            return "MacroTypeEnum_proteinTitle".getLocalized()
+        case .carbonhydrates:
+            return "MacroTypeEnum_carbohydratesTitle".getLocalized()
+        case .fats:
+            return "MacroTypeEnum_fatsTitle".getLocalized()
+        case .water:
+            return "MacroTypeEnum_waterTitle".getLocalized()
+        case .calories:
+            return "MacroTypeEnum_caloriesTitle".getLocalized()
+        }
+    }
 }

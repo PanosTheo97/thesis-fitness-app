@@ -13,7 +13,7 @@ enum CircleViewTypeEnum {
     case half
 }
 
-class SharesCircleView: UIView {
+class CustomCircleView: UIView {
     
     // MARK: - Properties
     
@@ -22,7 +22,6 @@ class SharesCircleView: UIView {
     private var macroTypeEnum: MacroTypeEnum = .protein
     
     private var circleLayer = CAShapeLayer()
-    private var progressLayer = CAShapeLayer()
     private var startingLayer = CAShapeLayer()
     private var startPoint = CGFloat(Double.pi / 2)
     private var endPoint = CGFloat(5 * Double.pi / 2)
@@ -46,8 +45,9 @@ class SharesCircleView: UIView {
     
     // MARK: - Methods
     
-    func configure(circleViewTypeEnum: CircleViewTypeEnum, macroTypeEnum: MacroTypeEnum, maxQuantity: Int, consumedQuantity: Int, radius: CGFloat = 40, lineWidth: CGFloat = 10) {
+    func configure(circleViewTypeEnum: CircleViewTypeEnum, macroTypeEnum: MacroTypeEnum, maxQuantity: Int, consumedQuantity: Int, radius: CGFloat = 60, lineWidth: CGFloat = 14) {
         layer.sublayers = nil // remove all layers on reuse
+        self.backgroundColor = .clear
         
         self.maxQuantity = maxQuantity
         self.consumedQuantity = consumedQuantity
@@ -72,7 +72,7 @@ class SharesCircleView: UIView {
         
         // Circle Layer configuration
         circleLayer.path = circularPath.cgPath
-        circleLayer.fillColor = (self.circleViewTypeEnum == .full) ? UIColor.clear.cgColor : UIColor.white.cgColor
+        circleLayer.fillColor = UIColor.clear.cgColor
         circleLayer.lineCap = .round
         circleLayer.lineWidth = self.lineWidth
         circleLayer.strokeEnd = 1.0
@@ -94,12 +94,13 @@ class SharesCircleView: UIView {
         startingLayer.fillColor = UIColor.clear.cgColor
         startingLayer.lineCap = .round
         startingLayer.lineWidth = self.lineWidth
-        startingLayer.strokeEnd = Double(self.consumedQuantity) / Double(self.maxQuantity)
+        startingLayer.strokeStart = 0
+        startingLayer.strokeEnd = 0
         startingLayer.strokeColor = self.macroTypeEnum.getColor().cgColor
         layer.addSublayer(startingLayer)
+        self.progressAnimation(duration: 0.4, fromValue: 0, toValue: Double(self.consumedQuantity) / Double(self.maxQuantity))
         
         self.addSharesLabel()
-        self.addSharesOverlayView()
     }
     
     func addSharesOverlayView() {
@@ -109,16 +110,16 @@ class SharesCircleView: UIView {
         case .full:
             let sharesOverlayViewY = (frame.size.height / 2.0) + radius - circleLayer.lineWidth
             let sharesOverlayViewX = (frame.size.width / 2.0) - ((circleLayer.lineWidth * 3) / 2)
-            sharesOverlayView = UIView(frame: CGRect(origin: CGPoint(x: sharesOverlayViewX, y: sharesOverlayViewY), size: CGSize(width: circleLayer.lineWidth * 3, height: circleLayer.lineWidth * 2)))
+            sharesOverlayView = UIView(frame: CGRect(origin: CGPoint(x: sharesOverlayViewX, y: sharesOverlayViewY), size: CGSize(width: circleLayer.lineWidth * 2, height: circleLayer.lineWidth)))
             
             sharesOverlayView.layer.borderColor = UIColor.white.cgColor
             sharesOverlayView.layer.borderWidth = 2
             self.addSubview(sharesOverlayView)
         case .half:
             sharesOverlayView.translatesAutoresizingMaskIntoConstraints = false
-            sharesOverlayView.frame.size = CGSize(width: circleLayer.lineWidth * 3, height: circleLayer.lineWidth * 2)
+            sharesOverlayView.frame.size = CGSize(width: circleLayer.lineWidth * 2, height: circleLayer.lineWidth)
             self.addSubview(sharesOverlayView)
-            sharesOverlayView.topAnchor.constraint(equalTo: self.topAnchor, constant: self.lineWidth + 4).isActive = true
+            sharesOverlayView.topAnchor.constraint(equalTo: self.topAnchor, constant: self.lineWidth + 12).isActive = true
             sharesOverlayView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
             sharesOverlayView.widthAnchor.constraint(equalToConstant: circleLayer.lineWidth * 3).isActive = true
             sharesOverlayView.heightAnchor.constraint(equalToConstant: circleLayer.lineWidth * 2).isActive = true
@@ -153,24 +154,17 @@ class SharesCircleView: UIView {
                                                                     font: .systemFont(ofSize: 10, weight: .bold))])
     }
     
-    // MARK: - Progress Layer Calculation and Animation
-//    func calculateProgressValue(addedValue: Int) {
-//        let previousSharesCount = Double(self.boughtShares + self.sharesToBuy) / Double(self.maxShares)
-//        let currentSharesCount = Double((self.boughtShares + self.sharesToBuy + addedValue)) / Double(self.maxShares)
-//        self.progressAnimation(duration: 0.3, fromValue: previousSharesCount, toValue: currentSharesCount)
-//        self.sharesToBuy += addedValue
-//        self.sharesLabel.text = "\(self.boughtShares + self.sharesToBuy)/\(self.maxShares)\n" + "SharesCircleView_sharesLabel".getLocalized()
-//    }
-//
-//    func progressAnimation(duration: TimeInterval, fromValue: Double, toValue: Double) {
-//        let progressAnimation = CABasicAnimation(keyPath: "strokeEnd")
-//
-//        progressAnimation.duration = duration
-//        progressAnimation.fromValue = fromValue
-//        progressAnimation.toValue = toValue
-//        progressAnimation.fillMode = .forwards
-//        progressAnimation.isRemovedOnCompletion = false
-//        progressLayer.add(progressAnimation, forKey: nil)
-//    }
+    // MARK: - Starting Layer Animation
+
+    func progressAnimation(duration: TimeInterval, fromValue: Double, toValue: Double) {
+        let progressAnimation = CABasicAnimation(keyPath: "strokeEnd")
+
+        progressAnimation.duration = duration
+        progressAnimation.fromValue = fromValue
+        progressAnimation.toValue = toValue
+        progressAnimation.fillMode = .forwards
+        progressAnimation.isRemovedOnCompletion = false
+        startingLayer.add(progressAnimation, forKey: nil)
+    }
     
 }

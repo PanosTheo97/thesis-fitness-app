@@ -55,3 +55,16 @@
 "ActivitySession_annotation_finish" = "Σημείο τερματισμού";
 "ActivitySession_annotation_start_description" = "Εδώ ξεκίνησες τη διαδρομή σου";
 "ActivitySession_annotation_finish_description" = "Εδώ τελείωσες τη διαδρομή σου";
+
+// MARK: - Diet
+
+"Diet_FAB_addMacros" = "Πρόσθεσε Μακροθρεπτικά";
+"Diet_FAB_addFood" = "Πρόσθεσε Φαγητό";
+
+// MARK: - MacroTypeEnum
+
+"MacroTypeEnum_caloriesTitle" = "Θερμίδες";
+"MacroTypeEnum_waterTitle" = "Νερό";
+"MacroTypeEnum_proteinTitle" = "Πρωτεΐνη";
+"MacroTypeEnum_carbohydratesTitle" = "Υδατάνθρακες";
+"MacroTypeEnum_fatsTitle" = "Λίπη";

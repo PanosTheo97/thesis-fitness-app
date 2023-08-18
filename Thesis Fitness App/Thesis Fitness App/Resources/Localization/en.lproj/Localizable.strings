@@ -56,3 +56,16 @@
 "ActivitySession_annotation_finish" = "Ending Point";
 "ActivitySession_annotation_start_description" = "This is where you started";
 "ActivitySession_annotation_finish_description" = "This is where you finished";
+
+// MARK: - Diet
+
+"Diet_FAB_addMacros" = "Add Macros";
+"Diet_FAB_addFood" = "Add Food";
+
+// MARK: - MacroTypeEnum
+
+"MacroTypeEnum_caloriesTitle" = "Calories";
+"MacroTypeEnum_waterTitle" = "Water";
+"MacroTypeEnum_proteinTitle" = "Protein";
+"MacroTypeEnum_carbohydratesTitle" = "Carbohydrates";
+"MacroTypeEnum_fatsTitle" = "Fats";

@@ -17,6 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="X0w-m9-Jix" customClass="DietTableView" customModule="Thesis_Fitness_App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="88S-eP-F1R" customClass="Floaty" customModule="Floaty">
                                 <rect key="frame" x="318" y="735" width="59" height="59"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -30,16 +34,21 @@
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="88S-eP-F1R" secondAttribute="trailing" constant="16" id="2YD-jl-kaT"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="88S-eP-F1R" secondAttribute="bottom" constant="24" id="7HB-P6-fod"/>
+                            <constraint firstItem="X0w-m9-Jix" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="KLH-5V-57g"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="X0w-m9-Jix" secondAttribute="bottom" id="LPh-Ta-FNi"/>
                             <constraint firstItem="88S-eP-F1R" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.15" id="Y8s-xp-PbZ"/>
+                            <constraint firstItem="X0w-m9-Jix" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="dIk-kA-51s"/>
+                            <constraint firstItem="X0w-m9-Jix" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="fGL-V9-uez"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="addMetricsFAB" destination="88S-eP-F1R" id="yZL-3o-bPn"/>
+                        <outlet property="dietTableView" destination="X0w-m9-Jix" id="hBW-T4-G5f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="-13"/>
+            <point key="canvasLocation" x="130.53435114503816" y="-13.380281690140846"/>
         </scene>
     </scenes>
     <resources>

@@ -146,6 +146,11 @@
 		86E4CED92A710D1600B53C32 /* ActivityCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86E4CED72A710D1600B53C32 /* ActivityCollectionViewCell.xib */; };
 		86E4CEDB2A71109C00B53C32 /* ActivityViewController+ActivityCollectionViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4CEDA2A71109C00B53C32 /* ActivityViewController+ActivityCollectionViewProtocol.swift */; };
 		86E4CEDF2A71116500B53C32 /* ActivitySetupUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4CEDE2A71116500B53C32 /* ActivitySetupUseCase.swift */; };
+		86EC39B12A8F71EF007E7045 /* DietTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EC39B02A8F71EF007E7045 /* DietTableView.swift */; };
+		86EC39B42A8F7267007E7045 /* DietTableView+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EC39B32A8F7267007E7045 /* DietTableView+UITableViewDelegate.swift */; };
+		86EC39B62A8F72CD007E7045 /* DietTableView+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EC39B52A8F72CD007E7045 /* DietTableView+UITableViewDataSource.swift */; };
+		86EC39BA2A8F736E007E7045 /* DietTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EC39B82A8F736E007E7045 /* DietTableViewCell.swift */; };
+		86EC39BB2A8F736E007E7045 /* DietTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86EC39B92A8F736E007E7045 /* DietTableViewCell.xib */; };
 		86F828B42A61790F0017ABB8 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86F828B32A61790F0017ABB8 /* credentials.plist */; };
 /* End PBXBuildFile section */
 
@@ -295,6 +300,11 @@
 		86E4CED72A710D1600B53C32 /* ActivityCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityCollectionViewCell.xib; sourceTree = "<group>"; };
 		86E4CEDA2A71109C00B53C32 /* ActivityViewController+ActivityCollectionViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityViewController+ActivityCollectionViewProtocol.swift"; sourceTree = "<group>"; };
 		86E4CEDE2A71116500B53C32 /* ActivitySetupUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySetupUseCase.swift; sourceTree = "<group>"; };
+		86EC39B02A8F71EF007E7045 /* DietTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietTableView.swift; sourceTree = "<group>"; };
+		86EC39B32A8F7267007E7045 /* DietTableView+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DietTableView+UITableViewDelegate.swift"; sourceTree = "<group>"; };
+		86EC39B52A8F72CD007E7045 /* DietTableView+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DietTableView+UITableViewDataSource.swift"; sourceTree = "<group>"; };
+		86EC39B82A8F736E007E7045 /* DietTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietTableViewCell.swift; sourceTree = "<group>"; };
+		86EC39B92A8F736E007E7045 /* DietTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DietTableViewCell.xib; sourceTree = "<group>"; };
 		86F828B32A61790F0017ABB8 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1060,6 +1070,7 @@
 			children = (
 				86E4CE922A6FB04800B53C32 /* Diet.storyboard */,
 				86E4CE942A6FB05000B53C32 /* DietViewController.swift */,
+				86EC39AF2A8F71AF007E7045 /* TableView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1275,6 +1286,34 @@
 			path = SetupUseCase;
 			sourceTree = "<group>";
 		};
+		86EC39AF2A8F71AF007E7045 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				86EC39B02A8F71EF007E7045 /* DietTableView.swift */,
+				86EC39B22A8F7237007E7045 /* Protocols */,
+				86EC39B72A8F7352007E7045 /* Cells */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		86EC39B22A8F7237007E7045 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				86EC39B32A8F7267007E7045 /* DietTableView+UITableViewDelegate.swift */,
+				86EC39B52A8F72CD007E7045 /* DietTableView+UITableViewDataSource.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		86EC39B72A8F7352007E7045 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				86EC39B82A8F736E007E7045 /* DietTableViewCell.swift */,
+				86EC39B92A8F736E007E7045 /* DietTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		D52293BB1ED70D428AC6E2CD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1365,6 +1404,7 @@
 				86E4CE7F2A6FAD8500B53C32 /* Workout.storyboard in Resources */,
 				86E4CED92A710D1600B53C32 /* ActivityCollectionViewCell.xib in Resources */,
 				86E4CE622A6FA5F100B53C32 /* Home.storyboard in Resources */,
+				86EC39BB2A8F736E007E7045 /* DietTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1444,8 +1484,10 @@
 				86E4CEBF2A6FF80C00B53C32 /* ProfileLogoutUseCase.swift in Sources */,
 				86B2F7862A7CEF0C00B364FB /* Stopwatch.swift in Sources */,
 				86E4CE602A6FA5E700B53C32 /* HomeDIContainer.swift in Sources */,
+				86EC39B12A8F71EF007E7045 /* DietTableView.swift in Sources */,
 				86E4CEA52A6FB24E00B53C32 /* ProfileViewController.swift in Sources */,
 				86E3100F2A5EA5E1007EB56B /* Observable.swift in Sources */,
+				86EC39B42A8F7267007E7045 /* DietTableView+UITableViewDelegate.swift in Sources */,
 				86E4CED82A710D1600B53C32 /* ActivityCollectionViewCell.swift in Sources */,
 				860F95392A746D0A003131EC /* TabBarViewControllerProtocol.swift in Sources */,
 				86E4CEBB2A6FEE2600B53C32 /* UINavigationItemExtension.swift in Sources */,
@@ -1504,6 +1546,7 @@
 				86E310302A5EC323007EB56B /* AppDIContainer.swift in Sources */,
 				86E4CECF2A7109D200B53C32 /* ActivityCollectionView.swift in Sources */,
 				86E4CE9F2A6FB1DE00B53C32 /* ProfileFlowCoordinator.swift in Sources */,
+				86EC39BA2A8F736E007E7045 /* DietTableViewCell.swift in Sources */,
 				86E310412A5EC448007EB56B /* MainNavigationController.swift in Sources */,
 				86E310222A5EABA9007EB56B /* UIWindowExtension.swift in Sources */,
 				86E4CE702A6FA96100B53C32 /* ActivityViewModel.swift in Sources */,
@@ -1519,6 +1562,7 @@
 				866F8FC22A6679A700C3F30F /* WelcomeFlowCoordinator.swift in Sources */,
 				86E4CE952A6FB05000B53C32 /* DietViewController.swift in Sources */,
 				86B2F7AA2A7D0B3100B364FB /* ActivityParameterViewController+ActivitySessionViewControllerProtocol.swift in Sources */,
+				86EC39B62A8F72CD007E7045 /* DietTableView+UITableViewDataSource.swift in Sources */,
 				86E4CEA12A6FB22200B53C32 /* ProfileViewModel.swift in Sources */,
 				86B2F78C2A7D06A900B364FB /* EdgeInsetLabel.swift in Sources */,
 				86E4CE5A2A6FA57800B53C32 /* HomeModule.swift in Sources */,

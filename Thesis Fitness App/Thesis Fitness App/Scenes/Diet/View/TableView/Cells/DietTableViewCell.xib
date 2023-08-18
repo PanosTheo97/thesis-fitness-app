@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DietTableViewCellIdentifier" rowHeight="152" id="KGk-i7-Jjw" customClass="DietTableViewCell" customModule="Thesis_Fitness_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="487" height="152"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="487" height="152"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y6A-5M-fbV">
+                        <rect key="frame" x="12" y="8" width="463" height="136"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vzn-XQ-3Xm">
+                                <rect key="frame" x="0.0" y="0.0" width="463" height="136"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJH-Eb-Baq" customClass="CustomCircleView" customModule="Thesis_Fitness_App" customModuleProvider="target">
+                                        <rect key="frame" x="12" y="41" width="130" height="130"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="130" id="8Do-px-Ikv"/>
+                                            <constraint firstAttribute="width" secondItem="nJH-Eb-Baq" secondAttribute="height" id="oqn-Xv-hgK"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NMF-tC-uhl">
+                                        <rect key="frame" x="154" y="103" width="297" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="NMF-tC-uhl" secondAttribute="bottom" constant="12" id="0S4-E9-bXW"/>
+                                    <constraint firstAttribute="trailing" secondItem="NMF-tC-uhl" secondAttribute="trailing" constant="12" id="20c-nz-9pA"/>
+                                    <constraint firstAttribute="bottom" secondItem="nJH-Eb-Baq" secondAttribute="bottom" constant="-35" id="K69-28-VFg"/>
+                                    <constraint firstItem="nJH-Eb-Baq" firstAttribute="leading" secondItem="vzn-XQ-3Xm" secondAttribute="leading" constant="12" id="o9W-Nf-8Ds"/>
+                                    <constraint firstItem="NMF-tC-uhl" firstAttribute="leading" secondItem="nJH-Eb-Baq" secondAttribute="trailing" constant="12" id="wNv-kK-tTZ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="vzn-XQ-3Xm" secondAttribute="trailing" id="FLv-lK-N8d"/>
+                            <constraint firstAttribute="bottom" secondItem="vzn-XQ-3Xm" secondAttribute="bottom" id="FO2-Jb-ywR"/>
+                            <constraint firstItem="vzn-XQ-3Xm" firstAttribute="top" secondItem="Y6A-5M-fbV" secondAttribute="top" id="rC4-jQ-CdH"/>
+                            <constraint firstItem="vzn-XQ-3Xm" firstAttribute="leading" secondItem="Y6A-5M-fbV" secondAttribute="leading" id="xb7-Yc-KBl"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Y6A-5M-fbV" secondAttribute="trailing" constant="12" id="1b9-ld-EkV"/>
+                    <constraint firstAttribute="bottom" secondItem="Y6A-5M-fbV" secondAttribute="bottom" constant="8" id="2SH-VP-bQs"/>
+                    <constraint firstItem="Y6A-5M-fbV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="ktd-C2-wby"/>
+                    <constraint firstItem="Y6A-5M-fbV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="rSw-10-n9C"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="backgroundShadowView" destination="Y6A-5M-fbV" id="Hz4-Vw-WQv"/>
+                <outlet property="cellView" destination="vzn-XQ-3Xm" id="bU8-py-AXd"/>
+                <outlet property="customCircleView" destination="nJH-Eb-Baq" id="cgt-YQ-9Z0"/>
+                <outlet property="titleLabel" destination="NMF-tC-uhl" id="Ka7-Ts-1Gn"/>
+            </connections>
+            <point key="canvasLocation" x="164.12213740458014" y="46.478873239436624"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
