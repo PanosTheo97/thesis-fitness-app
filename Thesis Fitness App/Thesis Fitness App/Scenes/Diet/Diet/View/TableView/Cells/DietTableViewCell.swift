@@ -38,10 +38,6 @@ class DietTableViewCell: UITableViewCell {
         }
     }
     
-    // MARK: - Properties
-    
-    var currentValue: Int = 0
-    
     // MARK: - LifeCycle
     
     override func awakeFromNib() {
@@ -63,8 +59,6 @@ class DietTableViewCell: UITableViewCell {
                                         macroTypeEnum: model.macroTypeEnum,
                                         maxQuantity: model.maxQuantity,
                                         consumedQuantity: model.consumedQuantity)
-        self.currentValue = model.consumedQuantity
-        
-        self.layoutIfNeeded()
+        //self.layoutIfNeeded()
     }
 }

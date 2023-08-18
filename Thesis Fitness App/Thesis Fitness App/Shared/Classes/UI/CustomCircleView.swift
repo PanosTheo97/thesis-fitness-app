@@ -98,7 +98,7 @@ class CustomCircleView: UIView {
         startingLayer.strokeEnd = 0
         startingLayer.strokeColor = self.macroTypeEnum.getColor().cgColor
         layer.addSublayer(startingLayer)
-        self.progressAnimation(duration: 0.4, fromValue: 0, toValue: Double(self.consumedQuantity) / Double(self.maxQuantity))
+        self.progressAnimation(duration: 1.2, fromValue: 0, toValue: Double(self.consumedQuantity) / Double(self.maxQuantity))
         
         self.addSharesLabel()
     }
