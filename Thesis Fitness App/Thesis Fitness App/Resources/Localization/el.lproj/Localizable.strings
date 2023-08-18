@@ -68,3 +68,13 @@
 "MacroTypeEnum_proteinTitle" = "Πρωτεΐνη";
 "MacroTypeEnum_carbohydratesTitle" = "Υδατάνθρακες";
 "MacroTypeEnum_fatsTitle" = "Λίπη";
+
+// MARK: - Macros
+
+"Macros_titleLabel" = "Πρόσθεσε την ποσότητα για ένα ή περισσότερα από τα παρακάτω Μακρο-στοιχεία!";
+"Macros_placeholder_calories" = "Θερμίδες (σε kcal)";
+"Macros_placeholder_protein" = "Πρωτεΐνη (σε γραμ.)";
+"Macros_placeholder_carbohydrates" = "Υδατάνθρακες (σε γραμ.)";
+"Macros_placeholder_fats" = "Λίπη (σε γραμ.)";
+"Macros_placeholder_water" = "Νερό (σε μλ.)";
+"Macros_saveButton" = "Αποθήκευση";

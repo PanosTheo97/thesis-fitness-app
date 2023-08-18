@@ -25,12 +25,12 @@ extension UIButton {
         case .rounded(let backgroundcolor, let textColor, let text, let font):
             self.attributedWith(font: font, textColor: textColor, text: text, underlined: false)
             self.backgroundColor = backgroundcolor
-            self.layer.cornerRadius = 4
+            self.layer.cornerRadius = 8
             self.dropShadow()
         case .roundedWithBorder(let backgroundcolor, let borderColor, let borderWidth, let textColor, let text, let font):
             self.attributedWith(font: font, textColor: textColor, text: text, underlined: false)
             self.backgroundColor = backgroundcolor
-            self.layer.cornerRadius = 4
+            self.layer.cornerRadius = 8
             self.layer.borderColor = borderColor.cgColor
             self.layer.borderWidth = borderWidth
         case .simple(let text, let textColor, let font):

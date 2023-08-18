@@ -69,3 +69,13 @@
 "MacroTypeEnum_proteinTitle" = "Protein";
 "MacroTypeEnum_carbohydratesTitle" = "Carbohydrates";
 "MacroTypeEnum_fatsTitle" = "Fats";
+
+// MARK: - Macros
+
+"Macros_titleLabel" = "Select and add the quantity of one or more of the Macro-elements!";
+"Macros_placeholder_calories" = "Calories (in kcal)";
+"Macros_placeholder_protein" = "Protein (in gram.)";
+"Macros_placeholder_carbohydrates" = "Carbohydrates (in gram.)";
+"Macros_placeholder_fats" = "Fats (in gram.)";
+"Macros_placeholder_water" = "Water (in mL.)";
+"Macros_saveButton" = "Save";
