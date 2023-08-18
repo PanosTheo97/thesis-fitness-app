@@ -11,6 +11,7 @@ target 'Thesis Fitness App' do
   
   pod 'lottie-ios'
   pod 'Floaty', '~> 4.2.0'
+  pod 'IQKeyboardManagerSwift', '~> 6.5'
   
   pod 'SVProgressHUD', '~> 2.2'
   

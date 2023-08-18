@@ -8,6 +8,7 @@
 import UIKit
 import GoogleSignIn
 import FirebaseCore
+import IQKeyboardManagerSwift
 
 let appDelegate: AppDelegate? = UIApplication.shared.delegate as? AppDelegate
 let appFlowCoordinator = AppFlowCoordinator(appDIContainer: AppDIContainer())
@@ -22,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
+        IQKeyboardManager.shared.enable = true
         appViewModel.configureLoader()
         
         return true

@@ -799,6 +799,7 @@ PODS:
     - AppAuth/Core (~> 1.6)
     - GTMSessionFetcher/Core (< 3.0, >= 1.5)
   - GTMSessionFetcher/Core (2.1.0)
+  - IQKeyboardManagerSwift (6.5.10)
   - Kingfisher (5.15.8):
     - Kingfisher/Core (= 5.15.8)
   - Kingfisher/Core (5.15.8)
@@ -823,6 +824,7 @@ DEPENDENCIES:
   - FirebaseFirestore
   - Floaty (~> 4.2.0)
   - GoogleSignIn
+  - IQKeyboardManagerSwift (~> 6.5)
   - Kingfisher (~> 5.15)
   - lottie-ios
   - ObjectMapper (~> 4.2)
@@ -852,6 +854,7 @@ SPEC REPOS:
     - gRPC-Core
     - GTMAppAuth
     - GTMSessionFetcher
+    - IQKeyboardManagerSwift
     - Kingfisher
     - leveldb-library
     - lottie-ios
@@ -883,6 +886,7 @@ SPEC CHECKSUMS:
   gRPC-Core: 17108291d84332196d3c8466b48f016fc17d816d
   GTMAppAuth: 0ff230db599948a9ad7470ca667337803b3fc4dd
   GTMSessionFetcher: ffbb25ec00ebcb5201adab0a56d808f6f1902d9f
+  IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
   Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
   leveldb-library: f03246171cce0484482ec291f88b6d563699ee06
   lottie-ios: d0954d3150061f662ed0adf96ef98d7421864c47
@@ -894,6 +898,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   SwiftyUserDefaults: 63f80248cf5bfb3458825d9a78f2eb7e1293a040
 
-PODFILE CHECKSUM: 33ddeae3e3f003fb29924d0a0760c328b8a4c502
+PODFILE CHECKSUM: 4680df52c3ecb830fb64bfad54f4c677b1f37634
 
 COCOAPODS: 1.11.3
