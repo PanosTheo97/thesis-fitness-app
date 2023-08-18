@@ -157,8 +157,8 @@
 		86EC39C92A8F94E9007E7045 /* MacrosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EC39C82A8F94E9007E7045 /* MacrosViewModel.swift */; };
 		86EC39CB2A8F9517007E7045 /* Macros.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86EC39CA2A8F9517007E7045 /* Macros.storyboard */; };
 		86EC39CD2A8F9527007E7045 /* MacrosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EC39CC2A8F9527007E7045 /* MacrosViewController.swift */; };
-		86EC39D02A8FA398007E7045 /* MacrosViewCotroller+UITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EC39CF2A8FA397007E7045 /* MacrosViewCotroller+UITextFieldDelegate.swift */; };
-		86EC39D32A8FB4C2007E7045 /* DietViewController+MacrosViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EC39D22A8FB4C2007E7045 /* DietViewController+MacrosViewControllerProtocol.swift */; };
+		86EC39D52A8FBCA6007E7045 /* DietViewController+MacrosViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EC39D42A8FBCA6007E7045 /* DietViewController+MacrosViewControllerProtocol.swift */; };
+		86EC39D72A8FBCE2007E7045 /* MacrosViewController+UITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EC39D62A8FBCE2007E7045 /* MacrosViewController+UITextFieldDelegate.swift */; };
 		86F828B42A61790F0017ABB8 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86F828B32A61790F0017ABB8 /* credentials.plist */; };
 /* End PBXBuildFile section */
 
@@ -319,8 +319,8 @@
 		86EC39C82A8F94E9007E7045 /* MacrosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MacrosViewModel.swift; path = ../../../../../../../MacrosViewModel.swift; sourceTree = "<group>"; };
 		86EC39CA2A8F9517007E7045 /* Macros.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Macros.storyboard; path = ../../../../../../../Macros.storyboard; sourceTree = "<group>"; };
 		86EC39CC2A8F9527007E7045 /* MacrosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MacrosViewController.swift; path = ../../../../../../../MacrosViewController.swift; sourceTree = "<group>"; };
-		86EC39CF2A8FA397007E7045 /* MacrosViewCotroller+UITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "MacrosViewCotroller+UITextFieldDelegate.swift"; path = "../../../../../../../../../Desktop/MacrosViewCotroller+UITextFieldDelegate.swift"; sourceTree = "<group>"; };
-		86EC39D22A8FB4C2007E7045 /* DietViewController+MacrosViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DietViewController+MacrosViewControllerProtocol.swift"; path = "../../../../../../../../../Desktop/DietViewController+MacrosViewControllerProtocol.swift"; sourceTree = "<group>"; };
+		86EC39D42A8FBCA6007E7045 /* DietViewController+MacrosViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DietViewController+MacrosViewControllerProtocol.swift"; sourceTree = "<group>"; };
+		86EC39D62A8FBCE2007E7045 /* MacrosViewController+UITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MacrosViewController+UITextFieldDelegate.swift"; sourceTree = "<group>"; };
 		86F828B32A61790F0017ABB8 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1389,7 +1389,7 @@
 		86EC39CE2A8FA382007E7045 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				86EC39CF2A8FA397007E7045 /* MacrosViewCotroller+UITextFieldDelegate.swift */,
+				86EC39D62A8FBCE2007E7045 /* MacrosViewController+UITextFieldDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -1397,7 +1397,7 @@
 		86EC39D12A8FB4AD007E7045 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				86EC39D22A8FB4C2007E7045 /* DietViewController+MacrosViewControllerProtocol.swift */,
+				86EC39D42A8FBCA6007E7045 /* DietViewController+MacrosViewControllerProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -1569,7 +1569,7 @@
 				8644AC032A7A91810019C943 /* ActivitySessionModule.swift in Sources */,
 				866F8FC42A667A3F00C3F30F /* WelcomeViewModel.swift in Sources */,
 				86E4CE5C2A6FA58700B53C32 /* HomeViewModel.swift in Sources */,
-				86EC39D32A8FB4C2007E7045 /* DietViewController+MacrosViewControllerProtocol.swift in Sources */,
+				86EC39D52A8FBCA6007E7045 /* DietViewController+MacrosViewControllerProtocol.swift in Sources */,
 				866F8FDE2A6684C600C3F30F /* LanguageEnum.swift in Sources */,
 				86E4CEBF2A6FF80C00B53C32 /* ProfileLogoutUseCase.swift in Sources */,
 				86B2F7862A7CEF0C00B364FB /* Stopwatch.swift in Sources */,
@@ -1626,10 +1626,10 @@
 				8644AC072A7A91D20019C943 /* ActivitySessionFlowCoordinator.swift in Sources */,
 				86E4CEB02A6FCFF800B53C32 /* LobbyViewModel.swift in Sources */,
 				86E3103F2A5EC42D007EB56B /* MainFlowCoordinator.swift in Sources */,
-				86EC39D02A8FA398007E7045 /* MacrosViewCotroller+UITextFieldDelegate.swift in Sources */,
 				86E310242A5EABDA007EB56B /* UIImageExtension.swift in Sources */,
 				8644AC0D2A7A925B0019C943 /* ActivitySessionViewController.swift in Sources */,
 				86E4CE9D2A6FB1C100B53C32 /* ProfileDIContainer.swift in Sources */,
+				86EC39D72A8FBCE2007E7045 /* MacrosViewController+UITextFieldDelegate.swift in Sources */,
 				866F8FE02A66852200C3F30F /* DefaultsManager.swift in Sources */,
 				860F95292A7465B3003131EC /* ActivityParameterModule.swift in Sources */,
 				86E310492A5EC4E8007EB56B /* SplashDIContainer.swift in Sources */,
