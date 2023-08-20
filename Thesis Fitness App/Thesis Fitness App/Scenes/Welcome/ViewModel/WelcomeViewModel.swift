@@ -48,7 +48,8 @@ class WelcomeViewModel: WelcomeViewModelProtocol {
         self.welcomeSignInUseCase.execute { successfulSignIn in
             self.isLoading.value = false
             if successfulSignIn {
-                self.update(routingEnum: .lobby)
+                #warning("Check needed to manage routing to Lobby or Registration")
+                self.update(routingEnum: .firstTimeSignIn)
             }
         }
     }

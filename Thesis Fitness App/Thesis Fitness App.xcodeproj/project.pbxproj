@@ -40,6 +40,14 @@
 		866F8FDE2A6684C600C3F30F /* LanguageEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866F8FDD2A6684C600C3F30F /* LanguageEnum.swift */; };
 		866F8FE02A66852200C3F30F /* DefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866F8FDF2A66852200C3F30F /* DefaultsManager.swift */; };
 		866F8FE22A66859A00C3F30F /* DefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866F8FE12A66859A00C3F30F /* DefaultKeys.swift */; };
+		86AFC0082A926DFF008B7439 /* RegistrationModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFC0072A926DFE008B7439 /* RegistrationModule.swift */; };
+		86AFC00A2A926E79008B7439 /* RegistrationNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFC0092A926E79008B7439 /* RegistrationNavigationController.swift */; };
+		86AFC00C2A926EB9008B7439 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFC00B2A926EB9008B7439 /* RegistrationViewModel.swift */; };
+		86AFC00E2A926F1C008B7439 /* RegistrationFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFC00D2A926F1C008B7439 /* RegistrationFlowCoordinator.swift */; };
+		86AFC0102A926F7A008B7439 /* RegistrationDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFC00F2A926F7A008B7439 /* RegistrationDIContainer.swift */; };
+		86AFC0152A9270B7008B7439 /* Name.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86AFC0142A9270B7008B7439 /* Name.storyboard */; };
+		86AFC0172A9270C7008B7439 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFC0162A9270C7008B7439 /* NameViewController.swift */; };
+		86AFC0192A927348008B7439 /* RegistrationViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFC0182A927348008B7439 /* RegistrationViewControllerProtocol.swift */; };
 		86B2F7862A7CEF0C00B364FB /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2F7852A7CEF0C00B364FB /* Stopwatch.swift */; };
 		86B2F78C2A7D06A900B364FB /* EdgeInsetLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2F78B2A7D06A900B364FB /* EdgeInsetLabel.swift */; };
 		86B2F7932A7D06EE00B364FB /* PopoverModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2F7922A7D06EE00B364FB /* PopoverModule.swift */; };
@@ -200,6 +208,14 @@
 		866F8FDD2A6684C600C3F30F /* LanguageEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageEnum.swift; sourceTree = "<group>"; };
 		866F8FDF2A66852200C3F30F /* DefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsManager.swift; sourceTree = "<group>"; };
 		866F8FE12A66859A00C3F30F /* DefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultKeys.swift; sourceTree = "<group>"; };
+		86AFC0072A926DFE008B7439 /* RegistrationModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationModule.swift; sourceTree = "<group>"; };
+		86AFC0092A926E79008B7439 /* RegistrationNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationNavigationController.swift; sourceTree = "<group>"; };
+		86AFC00B2A926EB9008B7439 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		86AFC00D2A926F1C008B7439 /* RegistrationFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationFlowCoordinator.swift; sourceTree = "<group>"; };
+		86AFC00F2A926F7A008B7439 /* RegistrationDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationDIContainer.swift; sourceTree = "<group>"; };
+		86AFC0142A9270B7008B7439 /* Name.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Name.storyboard; sourceTree = "<group>"; };
+		86AFC0162A9270C7008B7439 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
+		86AFC0182A927348008B7439 /* RegistrationViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewControllerProtocol.swift; sourceTree = "<group>"; };
 		86B2F7852A7CEF0C00B364FB /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
 		86B2F78B2A7D06A900B364FB /* EdgeInsetLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeInsetLabel.swift; sourceTree = "<group>"; };
 		86B2F7922A7D06EE00B364FB /* PopoverModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverModule.swift; sourceTree = "<group>"; };
@@ -559,6 +575,76 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
+		86AFC0022A926DA3008B7439 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				86AFC0112A927079008B7439 /* Navigation */,
+				86AFC0122A927091008B7439 /* Controllers */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		86AFC0032A926DBD008B7439 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				86AFC0092A926E79008B7439 /* RegistrationNavigationController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		86AFC0042A926DC6008B7439 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				86AFC00B2A926EB9008B7439 /* RegistrationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		86AFC0052A926DCD008B7439 /* FlowCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				86AFC00D2A926F1C008B7439 /* RegistrationFlowCoordinator.swift */,
+			);
+			path = FlowCoordinator;
+			sourceTree = "<group>";
+		};
+		86AFC0062A926DD3008B7439 /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+				86AFC00F2A926F7A008B7439 /* RegistrationDIContainer.swift */,
+			);
+			path = DIContainer;
+			sourceTree = "<group>";
+		};
+		86AFC0112A927079008B7439 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				86AFC0072A926DFE008B7439 /* RegistrationModule.swift */,
+				86AFC0062A926DD3008B7439 /* DIContainer */,
+				86AFC0052A926DCD008B7439 /* FlowCoordinator */,
+				86AFC0042A926DC6008B7439 /* ViewModel */,
+				86AFC0032A926DBD008B7439 /* View */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		86AFC0122A927091008B7439 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				86AFC0132A9270AC008B7439 /* Name */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		86AFC0132A9270AC008B7439 /* Name */ = {
+			isa = PBXGroup;
+			children = (
+				86AFC0142A9270B7008B7439 /* Name.storyboard */,
+				86AFC0162A9270C7008B7439 /* NameViewController.swift */,
+			);
+			path = Name;
+			sourceTree = "<group>";
+		};
 		86B2F7872A7CF26400B364FB /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
@@ -735,6 +821,7 @@
 				86E310152A5EA665007EB56B /* Base */,
 				86E310132A5EA656007EB56B /* ReusableViewProtocol.swift */,
 				860F95382A746D0A003131EC /* TabBarViewControllerProtocol.swift */,
+				86AFC0182A927348008B7439 /* RegistrationViewControllerProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -812,6 +899,7 @@
 			children = (
 				86E310382A5EC3DE007EB56B /* Splash */,
 				866F8FBA2A66794A00C3F30F /* Welcome */,
+				86AFC0022A926DA3008B7439 /* Registration */,
 				86E4CE502A6FA51800B53C32 /* Home */,
 				86E4CE512A6FA52A00B53C32 /* Activity */,
 				86E4CE522A6FA54000B53C32 /* Workout */,
@@ -1494,6 +1582,7 @@
 				86EC39CB2A8F9517007E7045 /* Macros.storyboard in Resources */,
 				86E4CE622A6FA5F100B53C32 /* Home.storyboard in Resources */,
 				86EC39BB2A8F736E007E7045 /* DietTableViewCell.xib in Resources */,
+				86AFC0152A9270B7008B7439 /* Name.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1583,6 +1672,7 @@
 				86E4CEBB2A6FEE2600B53C32 /* UINavigationItemExtension.swift in Sources */,
 				86B2F7A82A7D08E000B364FB /* PopoverPresentableViewController.swift in Sources */,
 				86E4CE7B2A6FAD6900B53C32 /* WorkoutModule.swift in Sources */,
+				86AFC00E2A926F1C008B7439 /* RegistrationFlowCoordinator.swift in Sources */,
 				86EC39C32A8F9397007E7045 /* MacrosModule.swift in Sources */,
 				86B2F7992A7D074400B364FB /* PopoverViewModel.swift in Sources */,
 				86E4CEDF2A71116500B53C32 /* ActivitySetupUseCase.swift in Sources */,
@@ -1590,6 +1680,7 @@
 				86E310332A5EC33C007EB56B /* AppViewModel.swift in Sources */,
 				86E310512A5EC538007EB56B /* SplashViewController.swift in Sources */,
 				860F95422A79302C003131EC /* UITextFieldExtension.swift in Sources */,
+				86AFC00A2A926E79008B7439 /* RegistrationNavigationController.swift in Sources */,
 				86E310112A5EA61C007EB56B /* RefreshableTableView.swift in Sources */,
 				86E4CE8B2A6FAF1700B53C32 /* DietModule.swift in Sources */,
 				86EC39C72A8F9489007E7045 /* MacrosFlowCoordinator.swift in Sources */,
@@ -1613,6 +1704,7 @@
 				86E4CE832A6FAD9E00B53C32 /* WorkoutFlowCoordinator.swift in Sources */,
 				86E4CEC32A6FF95400B53C32 /* SplashCheckForUserUseCase.swift in Sources */,
 				86E4CE742A6FA97400B53C32 /* ActivityDIContainer.swift in Sources */,
+				86AFC0172A9270C7008B7439 /* NameViewController.swift in Sources */,
 				860F952F2A7465DB003131EC /* ActivityParameterViewModel.swift in Sources */,
 				86E310172A5EA673007EB56B /* BaseViewModelProtocol.swift in Sources */,
 				86E3101E2A5EAB4D007EB56B /* UIColorExtension.swift in Sources */,
@@ -1636,6 +1728,7 @@
 				86E4CE852A6FADA700B53C32 /* WorkoutDIContainer.swift in Sources */,
 				86B2F7B32A7ED5CA00B364FB /* CustomAlert.swift in Sources */,
 				86E4CEB72A6FD4A800B53C32 /* MainDIContainer.swift in Sources */,
+				86AFC0082A926DFF008B7439 /* RegistrationModule.swift in Sources */,
 				86E310302A5EC323007EB56B /* AppDIContainer.swift in Sources */,
 				86E4CECF2A7109D200B53C32 /* ActivityCollectionView.swift in Sources */,
 				86E4CE9F2A6FB1DE00B53C32 /* ProfileFlowCoordinator.swift in Sources */,
@@ -1663,9 +1756,11 @@
 				860F95402A792F3A003131EC /* ActivityParameterViewController+UITextFieldDelegate.swift in Sources */,
 				86E4CEC62A7005F500B53C32 /* MainNavigationController+ProfileViewControllerProtocol.swift in Sources */,
 				860F95312A7465EF003131EC /* ActivityParameterViewController.swift in Sources */,
+				86AFC00C2A926EB9008B7439 /* RegistrationViewModel.swift in Sources */,
 				86EC39C92A8F94E9007E7045 /* MacrosViewModel.swift in Sources */,
 				86E4CEAE2A6FCFDA00B53C32 /* LobbyDIContainer.swift in Sources */,
 				86E4CED42A710C9E00B53C32 /* ActivityCollectionView+UICollectionViewDelegate.swift in Sources */,
+				86AFC0192A927348008B7439 /* RegistrationViewControllerProtocol.swift in Sources */,
 				86B2F7BA2A7FC68E00B364FB /* CustomCircleView.swift in Sources */,
 				86E4CE8F2A6FAFCE00B53C32 /* DietFlowCoordinator.swift in Sources */,
 				86B2F7932A7D06EE00B364FB /* PopoverModule.swift in Sources */,
@@ -1675,6 +1770,7 @@
 				86E310192A5EA687007EB56B /* BaseFlowCoordinatorProtocol.swift in Sources */,
 				86B2F7B62A7EE87400B364FB /* ActivitySessionViewController+CLLocationManagerDelegate.swift in Sources */,
 				86E4CEAC2A6FCF9700B53C32 /* LobbyModule.swift in Sources */,
+				86AFC0102A926F7A008B7439 /* RegistrationDIContainer.swift in Sources */,
 				86E4CECB2A700FC600B53C32 /* UINavigationControllerExtension.swift in Sources */,
 				86E310472A5EC4CF007EB56B /* SplashModule.swift in Sources */,
 				86E4CE812A6FAD9100B53C32 /* WorkoutViewModel.swift in Sources */,

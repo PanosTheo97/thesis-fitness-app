@@ -70,6 +70,7 @@ final class MainFlowCoordinator {
     }
     
     func moveToWelcome() {
+        #warning("Might be bugged cause of registration navigation / additional pops needed")
         if let welcomeViewController = self.mainNavigationController?.viewControllers.first(where: {$0 is WelcomeViewController}) {
             self.mainNavigationController?.popViewController(animated: true)
         } else {
@@ -78,6 +79,13 @@ final class MainFlowCoordinator {
             self.mainNavigationController?.removeViewController(LobbyTabBarController.self)
             self.mainNavigationController?.pushViewController(welocmeViewController, animated: false)
         }
+    }
+    
+    func moveToRegistration() {
+        let registrationNavigationController = self.mainDIContainer.registrationModule.makeRegistrationNavigationController()
+        registrationNavigationController.flowCoordinator?.moveToName()
+        
+        self.mainNavigationController?.present(registrationNavigationController, animated: true)
     }
     
 }

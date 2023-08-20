@@ -94,7 +94,7 @@ class WelcomeViewController: UIViewController, BaseProtocol {
                 self?.flowCoordinator?.moveToLobby()
                 print(AccountManager.shared.user?.email)
             case .firstTimeSignIn:
-                return
+                self?.flowCoordinator?.moveToRegistration()
             default: ()
             }
         })

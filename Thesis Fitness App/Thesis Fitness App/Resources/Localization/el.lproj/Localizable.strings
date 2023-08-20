@@ -12,6 +12,10 @@
 "Welcome_googleSignInLabel" = "Σύνδεση με Google";
 "Welcome_guestButton" = "Ή συνέχισε ως καλεσμένος";
 
+// MARK: - Registration
+
+"Registration_Name_titleLabel" = "Ποιό είναι το όνομα σου;";
+
 // MARK: - Lobby
 
 "Lobby_homeTitle" = "Αρχική";

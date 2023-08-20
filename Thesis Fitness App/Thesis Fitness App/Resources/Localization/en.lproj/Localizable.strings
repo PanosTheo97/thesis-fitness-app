@@ -12,6 +12,10 @@
 "Welcome_googleSignInLabel" = "Sign in with Google";
 "Welcome_guestButton" = "Or continue as Guest";
 
+// MARK: - Registration
+
+"Registration_Name_titleLabel" = "What is your name?";
+
 // MARK: - Lobby
 
 "Lobby_homeTitle" = "Home";

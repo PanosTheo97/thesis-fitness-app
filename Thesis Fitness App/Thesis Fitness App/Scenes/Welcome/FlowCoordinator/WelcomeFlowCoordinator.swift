@@ -16,6 +16,7 @@ protocol WelcomeFlowCoordinatorProtocol: BaseFlowCoordinatorProtocol {
     // MARK: - Methods
     
     func moveToLobby()
+    func moveToRegistration()
 }
 
 class WelcomeFlowCoordinator: WelcomeFlowCoordinatorProtocol {
@@ -40,5 +41,12 @@ class WelcomeFlowCoordinator: WelcomeFlowCoordinatorProtocol {
             return
         }
         mainNavigation.flowCoordinator?.moveToLobby()
+    }
+    
+    func moveToRegistration() {
+        guard let mainNavigation = self.welcomeViewController?.navigationController as? MainNavigationController else {
+            return
+        }
+        mainNavigation.flowCoordinator?.moveToRegistration()
     }
 }

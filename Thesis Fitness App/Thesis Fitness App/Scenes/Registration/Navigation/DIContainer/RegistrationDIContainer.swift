@@ -1,18 +1,17 @@
 //
-//  MainDIContainer.swift
+//  RegistrationDIContainer.swift
 //  Thesis Fitness App
 //
-//  Created by Panagiotis Theodosiadis on 25/7/23.
+//  Created by Panagiotis Theodosiadis on 20/8/23.
 //
 
 import Foundation
 
-final class MainDIContainer {
+final class RegistrationDIContainer {
     
     let lobbyModule = LobbyModule()
     
     let welcomeModule = WelcomeModule()
-    let registrationModule = RegistrationModule()
     
     let homeModule = HomeModule()
     let activityModule = ActivityModule()
