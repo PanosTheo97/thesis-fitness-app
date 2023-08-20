@@ -9,6 +9,7 @@ import Foundation
 
 enum NavigationButtonTypeEnum {
     case edit
+    case done
     case next
     case history
     case settings

@@ -18,16 +18,17 @@ class UserModel {
     var dailyStepGoal: Int?
     var dailyCalorieBurnGoal: Int?
     var favoriteActivities: [ActivityEnum]
+    var calorieGoal: String?
+    var proteinGoal: String?
+    var carbGoal: String?
+    var fatsGoal: String?
+    var waterGoal: String?
     
     // MARK: - LifeCycle
     
-    init(name: String, bodyweight: String, musclePercentage: String?, fatPercentage: String?, dailyStepGoal: Int?, dailyCalorieBurnGoal: Int?, favoriteActivities: [ActivityEnum]) {
+    init(name: String, bodyweight: String, favoriteActivities: [ActivityEnum]) {
         self.name = name
         self.bodyweight = bodyweight
-        self.musclePercentage = musclePercentage
-        self.fatPercentage = fatPercentage
-        self.dailyStepGoal = dailyStepGoal
-        self.dailyCalorieBurnGoal = dailyCalorieBurnGoal
         self.favoriteActivities = favoriteActivities
     }
     

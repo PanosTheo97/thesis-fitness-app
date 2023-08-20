@@ -15,10 +15,6 @@ class RegistrationViewModel: BaseViewModelProtocol {
     
     var user = UserModel(name: AccountManager.shared.user?.displayName ?? "user".getLocalized(),
                          bodyweight: "0.0",
-                         musclePercentage: nil,
-                         fatPercentage: nil,
-                         dailyStepGoal: nil,
-                         dailyCalorieBurnGoal: nil,
                          favoriteActivities: [])
     
     // MARK: - Life cycle
@@ -44,6 +40,14 @@ class RegistrationViewModel: BaseViewModelProtocol {
     
     func setUserFavoriteActivities(favoriteActivities: [ActivityEnum]) {
         self.user.favoriteActivities = favoriteActivities
+    }
+    
+    func setUserDietGoals(calorieGoal: String?, proteinGoal: String?, carbGoal: String?, fatsGoal: String?, waterGoal: String?) {
+        self.user.calorieGoal = calorieGoal
+        self.user.proteinGoal = proteinGoal
+        self.user.carbGoal = carbGoal
+        self.user.fatsGoal = fatsGoal
+        self.user.waterGoal = waterGoal
     }
     
 }

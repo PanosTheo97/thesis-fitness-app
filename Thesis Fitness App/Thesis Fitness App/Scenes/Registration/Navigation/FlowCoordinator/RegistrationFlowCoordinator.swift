@@ -63,13 +63,21 @@ final class RegistrationFlowCoordinator {
     }
     
     func moveToDietGoals() {
-//        guard let nameViewController = NameViewController.create(storyboardName: "Name") else {
-//            return
-//        }
-//        nameViewController.viewModel = registrationNavigationController?.viewModel
-//        nameViewController.registrationNavigation = registrationNavigationController
-//
-//        registrationNavigationController?.pushViewController(activityGoalsViewController, animated: true)
+        guard let dietGoalsViewController = DietGoalsViewController.create(storyboardName: "DietGoals") else {
+            return
+        }
+        dietGoalsViewController.viewModel = registrationNavigationController?.viewModel
+        dietGoalsViewController.registrationNavigation = registrationNavigationController
+
+        registrationNavigationController?.pushViewController(dietGoalsViewController, animated: true)
+    }
+    
+    func moveToLobby(user: UserModel) {
+        guard let presentingViewController = self.registrationNavigationController?.presentingViewController as? MainNavigationController else {
+            return
+        }
+        presentingViewController.flowCoordinator?.moveToLobby(user: user)
+        self.registrationNavigationController?.dismiss(animated: true)
     }
     
     func pop() {

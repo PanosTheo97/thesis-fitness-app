@@ -99,6 +99,14 @@ extension UINavigationItem {
                 
                 customView.frame = button.frame
                 customView.addSubview(button)
+            case .done:
+                let button = self.makeCustomButton(title: "Done",
+                                                   rect: CGRect(x: 0, y: 0, width: 25, height: 25),
+                                                   navigationButton: navigationButton)
+                button.backgroundColor = .clear
+                
+                customView.frame = button.frame
+                customView.addSubview(button)
             default: ()
             }
             let barButton = UIBarButtonItem(customView: customView)
@@ -112,12 +120,12 @@ extension UINavigationItem {
         }
     }
     
-    private func makeCustomButton(title: String? = nil, textColor: UIColor = .white, image: UIImage? = nil, highlightedImage: UIImage? = nil, rect: CGRect? = nil, navigationButton: NavigationButton) -> UIButton {
+    private func makeCustomButton(title: String? = nil, textColor: UIColor = .App.mainText, image: UIImage? = nil, highlightedImage: UIImage? = nil, rect: CGRect? = nil, navigationButton: NavigationButton) -> UIButton {
         let customButton = UIButton(type: .system)
         if let rect = rect {
             customButton.frame = rect
         }
-        customButton.attributedWith(font: UIFont.systemFont(ofSize: 12),
+        customButton.attributedWith(font: UIFont.systemFont(ofSize: 16),
                                     textColor: textColor, text: title ?? "",
                                     underlined: false,
                                     state: .normal)

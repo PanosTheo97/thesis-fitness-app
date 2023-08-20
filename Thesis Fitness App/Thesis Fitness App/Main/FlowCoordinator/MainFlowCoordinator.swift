@@ -22,7 +22,7 @@ final class MainFlowCoordinator {
         self.mainDIContainer = mainDIContainer
     }
     
-    func moveToLobby() {
+    func moveToLobby(user: UserModel) {
         
         // Create Lobby controllers
         
@@ -60,7 +60,7 @@ final class MainFlowCoordinator {
         
         let lobbyControllers = [homeNavigationController, activityNavigationController, workoutNavigationController, dietNavigationController, profileNavigationController]
         
-        guard let lobbyTabBarController = self.mainDIContainer.lobbyModule.makeLobbyTabBarController(tabBarControllers: lobbyControllers) else {
+        guard let lobbyTabBarController = self.mainDIContainer.lobbyModule.makeLobbyTabBarController(tabBarControllers: lobbyControllers, user: user) else {
             return
         }
         

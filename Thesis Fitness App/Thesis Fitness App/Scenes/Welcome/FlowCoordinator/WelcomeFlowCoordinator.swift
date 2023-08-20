@@ -40,7 +40,7 @@ class WelcomeFlowCoordinator: WelcomeFlowCoordinatorProtocol {
         guard let mainNavigation = self.welcomeViewController?.navigationController as? MainNavigationController else {
             return
         }
-        mainNavigation.flowCoordinator?.moveToLobby()
+        mainNavigation.flowCoordinator?.moveToLobby(user: UserModel(name: "", bodyweight: "", favoriteActivities: []))
     }
     
     func moveToRegistration() {

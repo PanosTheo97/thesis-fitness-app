@@ -24,9 +24,17 @@
 "Registration_BodyComposition_musclePlaceholder" = "Lean Muscle Mass Percentage (%) - Optional";
 "Registration_BodyComposition_fatPlaceholder" = "Fat Mass Percentage (%) - Optional";
 
-"Registration_ActivityGoals_titleLabel" = "If you want, set some daily goals and we will help you track them!";
+"Registration_ActivityGoals_titleLabel" = "If you want, set daily goals and we will help you track them!";
 "Registration_ActivityGoals_stepsPlaceholder" = "Steps";
 "Registration_ActivityGoals_caloriesPlaceholder" = "Calories Burned";
+
+"Registration_DietyGoals_titleLabel" = "Almost Done!/nIf you want, set daily diet goals and track them in the diet tab!";
+"Registration_DietGoals_caloriesPlaceholder" = "Calorie Intake (in kcal)";
+"Registration_DietGoals_proteinPlaceholder" = "Protein Intake (in gram.)";
+"Registration_DietGoals_carbsPlaceholder" = "Carbohydrates Intake (in gram.)";
+"Registration_DietGoals_fatsPlaceholder" = "Fats Intake (in gram.)";
+"Registration_DietGoals_waterPlaceholder" = "Water Intake (in mL.)";
+
 
 
 // MARK: - Lobby

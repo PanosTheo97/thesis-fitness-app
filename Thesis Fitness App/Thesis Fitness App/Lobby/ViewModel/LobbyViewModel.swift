@@ -14,10 +14,14 @@ class LobbyViewModel: BaseViewModelProtocol {
     var isLoading = Observable<Bool?>(value: nil)
     var routingEnum = Observable<Lobby.RoutingEnum?>(value: nil)
     
+    // MARK: - Properties
+    
+    var user: UserModel
+    
     // MARK: - Life cycle
     
-    init() {
-        
+    init(user: UserModel) {
+        self.user = user
     }
     
     func update(routing: Lobby.RoutingEnum) {

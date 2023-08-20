@@ -28,6 +28,13 @@
 "Registration_ActivityGoals_stepsPlaceholder" = "Βήματα";
 "Registration_ActivityGoals_caloriesPlaceholder" = "Καύση Θερμίδων";
 
+"Registration_DietyGoals_titleLabel" = "Σχεδον τελείωσες!/nΕαν θέλεις, θέσε ημερίσιους διατροφικούς στόχος και έλεγξε τους στο αντίστοιχο παράθυρο!";
+"Registration_DietGoals_caloriesPlaceholder" = "Πρόσληψη Θερμίδων (in kcal)";
+"Registration_DietGoals_proteinPlaceholder" = "Πρόσληψη Πρωτεΐνης (σε γραμ.)";
+"Registration_DietGoals_carbsPlaceholder" = "Πρόσληψη Υδατανθράκων (σε γραμ.)";
+"Registration_DietGoals_fatsPlaceholder" = "Πρόσληψη Λίπους (σε γραμ.)";
+"Registration_DietGoals_waterPlaceholder" = "Πρόσληψη Νερού (σε μλ.)";
+
 // MARK: - Lobby
 
 "Lobby_homeTitle" = "Αρχική";

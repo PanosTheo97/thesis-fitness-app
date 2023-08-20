@@ -10,16 +10,16 @@ import UIKit
 
 class LobbyModule {
     
-    func makeLobbyTabBarController(tabBarControllers: [UIViewController]) -> LobbyTabBarController? {
+    func makeLobbyTabBarController(tabBarControllers: [UIViewController], user: UserModel) -> LobbyTabBarController? {
         let viewController = LobbyTabBarController()
         viewController.setViewControllers(tabBarControllers, animated: false)
-        viewController.viewModel = makeLobbyViewModel()
+        viewController.viewModel = makeLobbyViewModel(user: user)
         viewController.flowCoordinator = makeLobbyFlowCoordinator(viewController)
         return viewController
     }
     
-    private func makeLobbyViewModel() -> LobbyViewModel {
-        LobbyViewModel()
+    private func makeLobbyViewModel(user: UserModel) -> LobbyViewModel {
+        LobbyViewModel(user: user)
     }
     
     private func makeLobbyFlowCoordinator(_ viewController: LobbyTabBarController) -> LobbyFlowCoordinator {

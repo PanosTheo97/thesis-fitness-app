@@ -58,6 +58,9 @@
 		86AFC02E2A929154008B7439 /* ActivityEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFC02D2A929154008B7439 /* ActivityEnum.swift */; };
 		86AFC0312A929582008B7439 /* FavoriteActivities.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86AFC0302A929582008B7439 /* FavoriteActivities.storyboard */; };
 		86AFC0332A929595008B7439 /* FavoriteActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFC0322A929595008B7439 /* FavoriteActivitiesViewController.swift */; };
+		86AFC0362A929B66008B7439 /* DietGoals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86AFC0352A929B66008B7439 /* DietGoals.storyboard */; };
+		86AFC0382A929B71008B7439 /* DietGoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFC0372A929B71008B7439 /* DietGoalsViewController.swift */; };
+		86AFC03A2A929B82008B7439 /* DietGoalsViewController+UITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFC0392A929B82008B7439 /* DietGoalsViewController+UITextFieldDelegate.swift */; };
 		86B2F7862A7CEF0C00B364FB /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2F7852A7CEF0C00B364FB /* Stopwatch.swift */; };
 		86B2F78C2A7D06A900B364FB /* EdgeInsetLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2F78B2A7D06A900B364FB /* EdgeInsetLabel.swift */; };
 		86B2F7932A7D06EE00B364FB /* PopoverModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2F7922A7D06EE00B364FB /* PopoverModule.swift */; };
@@ -236,6 +239,9 @@
 		86AFC02D2A929154008B7439 /* ActivityEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityEnum.swift; sourceTree = "<group>"; };
 		86AFC0302A929582008B7439 /* FavoriteActivities.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavoriteActivities.storyboard; sourceTree = "<group>"; };
 		86AFC0322A929595008B7439 /* FavoriteActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteActivitiesViewController.swift; sourceTree = "<group>"; };
+		86AFC0352A929B66008B7439 /* DietGoals.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DietGoals.storyboard; sourceTree = "<group>"; };
+		86AFC0372A929B71008B7439 /* DietGoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietGoalsViewController.swift; sourceTree = "<group>"; };
+		86AFC0392A929B82008B7439 /* DietGoalsViewController+UITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DietGoalsViewController+UITextFieldDelegate.swift"; sourceTree = "<group>"; };
 		86B2F7852A7CEF0C00B364FB /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
 		86B2F78B2A7D06A900B364FB /* EdgeInsetLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeInsetLabel.swift; sourceTree = "<group>"; };
 		86B2F7922A7D06EE00B364FB /* PopoverModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverModule.swift; sourceTree = "<group>"; };
@@ -656,6 +662,7 @@
 				86AFC01A2A927B69008B7439 /* BodyComposition */,
 				86AFC01B2A927B72008B7439 /* ActivityGoals */,
 				86AFC02F2A929553008B7439 /* FavoriteActivities */,
+				86AFC0342A929B4B008B7439 /* DietGoals */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -704,6 +711,16 @@
 				86AFC0322A929595008B7439 /* FavoriteActivitiesViewController.swift */,
 			);
 			path = FavoriteActivities;
+			sourceTree = "<group>";
+		};
+		86AFC0342A929B4B008B7439 /* DietGoals */ = {
+			isa = PBXGroup;
+			children = (
+				86AFC0352A929B66008B7439 /* DietGoals.storyboard */,
+				86AFC0372A929B71008B7439 /* DietGoalsViewController.swift */,
+				86AFC0392A929B82008B7439 /* DietGoalsViewController+UITextFieldDelegate.swift */,
+			);
+			path = DietGoals;
 			sourceTree = "<group>";
 		};
 		86B2F7872A7CF26400B364FB /* UseCases */ = {
@@ -1644,6 +1661,7 @@
 				86B2F7AC2A7D0E4200B364FB /* anim_start_session_dark.json in Resources */,
 				86E4CE7F2A6FAD8500B53C32 /* Workout.storyboard in Resources */,
 				86E4CED92A710D1600B53C32 /* ActivityCollectionViewCell.xib in Resources */,
+				86AFC0362A929B66008B7439 /* DietGoals.storyboard in Resources */,
 				86EC39CB2A8F9517007E7045 /* Macros.storyboard in Resources */,
 				86E4CE622A6FA5F100B53C32 /* Home.storyboard in Resources */,
 				86EC39BB2A8F736E007E7045 /* DietTableViewCell.xib in Resources */,
@@ -1719,6 +1737,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				866F8FCA2A667C0100C3F30F /* WelcomeModule.swift in Sources */,
+				86AFC03A2A929B82008B7439 /* DietGoalsViewController+UITextFieldDelegate.swift in Sources */,
 				86E3101B2A5EA69D007EB56B /* BaseProtocol.swift in Sources */,
 				8644AC032A7A91810019C943 /* ActivitySessionModule.swift in Sources */,
 				866F8FC42A667A3F00C3F30F /* WelcomeViewModel.swift in Sources */,
@@ -1751,6 +1770,7 @@
 				86E4CE8B2A6FAF1700B53C32 /* DietModule.swift in Sources */,
 				86EC39C72A8F9489007E7045 /* MacrosFlowCoordinator.swift in Sources */,
 				86AFC02C2A928E46008B7439 /* ActivityGoalsViewController+UITextFieldDelegate.swift in Sources */,
+				86AFC0382A929B71008B7439 /* DietGoalsViewController.swift in Sources */,
 				86E4CE5E2A6FA5DC00B53C32 /* HomeFlowCoordinator.swift in Sources */,
 				86E310282A5EAC25007EB56B /* UICollectionViewExtension.swift in Sources */,
 				86B2F79B2A7D078200B364FB /* PopoverSetUpUseCase.swift in Sources */,
