@@ -49,6 +49,15 @@
 "Activity_activityTitleLabel" = "Διάλεξε μια δραστηριότητα και ξεκίνα να αθλείσαι!";
 "Activity_pickYourFavorites" = "Διάλεξε τις αγαπημένες σου δραστηριότητες για να λαμβάνεις ενδιαφέρουσες προκλήσεις!";
 
+"Activity_running" = "Τρέξιμο";
+"Activity_climbing" = "Αναρρίχηση";
+"Activity_cycling" = "Ποδηλασία";
+"Activity_indoorRunning" = "Διάδρομος";
+"Activity_walking" = "Περπάτημα";
+"Activity_jumpingRope" = "Σχοινάκι";
+"Activity_boxing" = "Πυγμαχία";
+"Activity_pingPong" = "Πινγκ Πονγκ";
+
 // MARK: - ActivityParameter
 
 "ActivityParameter_titleLabel" = "Εαν επιθυμείς, θέσε ένα στόχο για την άθληση σου";

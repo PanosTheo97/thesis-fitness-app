@@ -11,15 +11,13 @@ struct ActivityCollectionViewModel {
     
     // MARK: - Properties
     
-    var activityImage: UIImage?
-    var activityName: String
+    var type: ActivityEnum
     var isFavorite: Bool
     
     // MARK: - LifeCycle
     
-    init(activityImage: UIImage?, activityName: String, isFavorite: Bool) {
-        self.activityImage = activityImage
-        self.activityName = activityName
+    init(type: ActivityEnum, isFavorite: Bool) {
+        self.type = type
         self.isFavorite = isFavorite
     }
 }

@@ -50,6 +50,15 @@
 "Activity_activityTitleLabel" = "Pick an activity and start exercising!";
 "Activity_pickYourFavorites" = "Choose your favorite activities to receive exciting challenges!";
 
+"Activity_running" = "Running";
+"Activity_climbing" = "Climbing";
+"Activity_cycling" = "Cycling";
+"Activity_indoorRunning" = "Indoor Running";
+"Activity_walking" = "Walking";
+"Activity_jumpingRope" = "Jumbing Rope";
+"Activity_boxing" = "Boxing";
+"Activity_pingPong" = "Ping Pong";
+
 
 // MARK: - ActivityParameter
 

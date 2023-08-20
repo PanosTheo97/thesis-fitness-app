@@ -47,8 +47,8 @@ class ActivityCollectionViewCell: UICollectionViewCell {
     // MARK: - Methods
 
     func setup(model: ActivityCollectionViewModel, isInEditMode: Bool) {
-        self.activityImageView.image = model.activityImage
-        self.activityLabel.text = model.activityName
+        self.activityImageView.image = model.type.getImage()
+        self.activityLabel.text = model.type.getName()
         self.favoriteImageView.isHidden = !model.isFavorite
         
         if isInEditMode {

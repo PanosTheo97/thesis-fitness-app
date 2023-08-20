@@ -55,6 +55,9 @@
 		86AFC0282A928CD8008B7439 /* ActivityGoals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86AFC0272A928CD8008B7439 /* ActivityGoals.storyboard */; };
 		86AFC02A2A928CE1008B7439 /* ActivityGoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFC0292A928CE1008B7439 /* ActivityGoalsViewController.swift */; };
 		86AFC02C2A928E46008B7439 /* ActivityGoalsViewController+UITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFC02B2A928E46008B7439 /* ActivityGoalsViewController+UITextFieldDelegate.swift */; };
+		86AFC02E2A929154008B7439 /* ActivityEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFC02D2A929154008B7439 /* ActivityEnum.swift */; };
+		86AFC0312A929582008B7439 /* FavoriteActivities.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86AFC0302A929582008B7439 /* FavoriteActivities.storyboard */; };
+		86AFC0332A929595008B7439 /* FavoriteActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFC0322A929595008B7439 /* FavoriteActivitiesViewController.swift */; };
 		86B2F7862A7CEF0C00B364FB /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2F7852A7CEF0C00B364FB /* Stopwatch.swift */; };
 		86B2F78C2A7D06A900B364FB /* EdgeInsetLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2F78B2A7D06A900B364FB /* EdgeInsetLabel.swift */; };
 		86B2F7932A7D06EE00B364FB /* PopoverModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2F7922A7D06EE00B364FB /* PopoverModule.swift */; };
@@ -230,6 +233,9 @@
 		86AFC0272A928CD8008B7439 /* ActivityGoals.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ActivityGoals.storyboard; sourceTree = "<group>"; };
 		86AFC0292A928CE1008B7439 /* ActivityGoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityGoalsViewController.swift; sourceTree = "<group>"; };
 		86AFC02B2A928E46008B7439 /* ActivityGoalsViewController+UITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityGoalsViewController+UITextFieldDelegate.swift"; sourceTree = "<group>"; };
+		86AFC02D2A929154008B7439 /* ActivityEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityEnum.swift; sourceTree = "<group>"; };
+		86AFC0302A929582008B7439 /* FavoriteActivities.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavoriteActivities.storyboard; sourceTree = "<group>"; };
+		86AFC0322A929595008B7439 /* FavoriteActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteActivitiesViewController.swift; sourceTree = "<group>"; };
 		86B2F7852A7CEF0C00B364FB /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
 		86B2F78B2A7D06A900B364FB /* EdgeInsetLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeInsetLabel.swift; sourceTree = "<group>"; };
 		86B2F7922A7D06EE00B364FB /* PopoverModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverModule.swift; sourceTree = "<group>"; };
@@ -585,6 +591,7 @@
 				866F8FDD2A6684C600C3F30F /* LanguageEnum.swift */,
 				86E4CEB82A6FED8A00B53C32 /* NavigationButtonTypeEnum.swift */,
 				86B2F7BB2A7FC8B800B364FB /* MacroTypeEnum.swift */,
+				86AFC02D2A929154008B7439 /* ActivityEnum.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -648,6 +655,7 @@
 				86AFC0132A9270AC008B7439 /* Name */,
 				86AFC01A2A927B69008B7439 /* BodyComposition */,
 				86AFC01B2A927B72008B7439 /* ActivityGoals */,
+				86AFC02F2A929553008B7439 /* FavoriteActivities */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -687,6 +695,15 @@
 				86AFC0252A928645008B7439 /* UserModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		86AFC02F2A929553008B7439 /* FavoriteActivities */ = {
+			isa = PBXGroup;
+			children = (
+				86AFC0302A929582008B7439 /* FavoriteActivities.storyboard */,
+				86AFC0322A929595008B7439 /* FavoriteActivitiesViewController.swift */,
+			);
+			path = FavoriteActivities;
 			sourceTree = "<group>";
 		};
 		86B2F7872A7CF26400B364FB /* UseCases */ = {
@@ -1617,6 +1634,7 @@
 				86E310012A5E9E10007EB56B /* LaunchScreen.storyboard in Resources */,
 				86F828B42A61790F0017ABB8 /* credentials.plist in Resources */,
 				86B2F79D2A7D07ED00B364FB /* Popover.storyboard in Resources */,
+				86AFC0312A929582008B7439 /* FavoriteActivities.storyboard in Resources */,
 				863F99FC2A7BBC87004140AF /* countdown_animation.json in Resources */,
 				86E4CEA32A6FB24500B53C32 /* Profile.storyboard in Resources */,
 				86E30FFE2A5E9E10007EB56B /* Assets.xcassets in Resources */,
@@ -1752,6 +1770,7 @@
 				86E4CE912A6FB02800B53C32 /* DietViewModel.swift in Sources */,
 				86E4CE832A6FAD9E00B53C32 /* WorkoutFlowCoordinator.swift in Sources */,
 				86E4CEC32A6FF95400B53C32 /* SplashCheckForUserUseCase.swift in Sources */,
+				86AFC0332A929595008B7439 /* FavoriteActivitiesViewController.swift in Sources */,
 				86E4CE742A6FA97400B53C32 /* ActivityDIContainer.swift in Sources */,
 				86AFC0172A9270C7008B7439 /* NameViewController.swift in Sources */,
 				860F952F2A7465DB003131EC /* ActivityParameterViewModel.swift in Sources */,
@@ -1779,6 +1798,7 @@
 				86B2F7B32A7ED5CA00B364FB /* CustomAlert.swift in Sources */,
 				86E4CEB72A6FD4A800B53C32 /* MainDIContainer.swift in Sources */,
 				86AFC0082A926DFF008B7439 /* RegistrationModule.swift in Sources */,
+				86AFC02E2A929154008B7439 /* ActivityEnum.swift in Sources */,
 				86E310302A5EC323007EB56B /* AppDIContainer.swift in Sources */,
 				86E4CECF2A7109D200B53C32 /* ActivityCollectionView.swift in Sources */,
 				86E4CE9F2A6FB1DE00B53C32 /* ProfileFlowCoordinator.swift in Sources */,

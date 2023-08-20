@@ -17,36 +17,12 @@ class ActivitySetupUseCase: ActivitySetupUseCaseProtocol {
     func execute(completion: @escaping ([ActivityCollectionViewModel]) -> Void) {
         // Service, fetch, completion with enum
         // For now, dummy data
-        let activityModels: [ActivityCollectionViewModel] = [ActivityCollectionViewModel(activityImage: .init(systemName: "figure.run"),
-                                                                                         activityName: "Running",
-                                                                                         isFavorite: false),
-                                                             ActivityCollectionViewModel(activityImage: .init(systemName: "figure.climbing"),
-                                                                                         activityName: "Climbing",
-                                                                                         isFavorite: false),
-                                                             ActivityCollectionViewModel(activityImage: .init(systemName: "figure.outdoor.cycle"),
-                                                                                         activityName: "Cycling",
-                                                                                         isFavorite: false),
-                                                             ActivityCollectionViewModel(activityImage: .init(systemName: "figure.indoor.cycle"),
-                                                                                         activityName: "Indoor Running",
-                                                                                         isFavorite: true),
-                                                             ActivityCollectionViewModel(activityImage: .init(systemName: "figure.walk"),
-                                                                                         activityName: "Walking",
-                                                                                         isFavorite: false),
-                                                             ActivityCollectionViewModel(activityImage: .init(systemName: "figure.basketball"),
-                                                                                         activityName: "Basketball",
-                                                                                         isFavorite: false),
-                                                             ActivityCollectionViewModel(activityImage: .init(systemName: "figure.jumprope"),
-                                                                                         activityName: "Jumping Rope",
-                                                                                         isFavorite: true),
-                                                             ActivityCollectionViewModel(activityImage: .init(systemName: "figure.soccer"),
-                                                                                         activityName: "Football",
-                                                                                         isFavorite: true),
-                                                             ActivityCollectionViewModel(activityImage: .init(systemName: "figure.boxing"),
-                                                                                         activityName: "Boxing",
-                                                                                         isFavorite: false),
-                                                             ActivityCollectionViewModel(activityImage: .init(systemName: "tennis.racket"),
-                                                                                         activityName: "Ping Pong",
-                                                                                         isFavorite: false)]
+        
+        var activityModels: [ActivityCollectionViewModel] = []
+        
+        for activity in ActivityEnum.allCases {
+            activityModels.append(ActivityCollectionViewModel(type: activity, isFavorite: false))
+        }
         completion(activityModels)
     }
 }

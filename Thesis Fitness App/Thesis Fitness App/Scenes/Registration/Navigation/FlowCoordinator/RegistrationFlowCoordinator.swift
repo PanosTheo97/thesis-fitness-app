@@ -53,13 +53,13 @@ final class RegistrationFlowCoordinator {
     }
     
     func moveToFavoriteActivities() {
-//        guard let nameViewController = NameViewController.create(storyboardName: "Name") else {
-//            return
-//        }
-//        nameViewController.viewModel = registrationNavigationController?.viewModel
-//        nameViewController.registrationNavigation = registrationNavigationController
-//
-//        registrationNavigationController?.pushViewController(activityGoalsViewController, animated: true)
+        guard let favoriteActivitiesViewController = FavoriteActivitiesViewController.create(storyboardName: "FavoriteActivities") else {
+            return
+        }
+        favoriteActivitiesViewController.viewModel = registrationNavigationController?.viewModel
+        favoriteActivitiesViewController.registrationNavigation = registrationNavigationController
+
+        registrationNavigationController?.pushViewController(favoriteActivitiesViewController, animated: true)
     }
     
     func moveToDietGoals() {

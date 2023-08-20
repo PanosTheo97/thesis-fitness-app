@@ -97,5 +97,4 @@ class ActivityGoalsViewController: UIViewController {
         self.registrationNavigation?.flowCoordinator?.moveToFavoriteActivities()
     }
 
-
 }

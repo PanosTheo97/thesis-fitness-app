@@ -18,7 +18,8 @@ class RegistrationViewModel: BaseViewModelProtocol {
                          musclePercentage: nil,
                          fatPercentage: nil,
                          dailyStepGoal: nil,
-                         dailyCalorieBurnGoal: nil)
+                         dailyCalorieBurnGoal: nil,
+                         favoriteActivities: [])
     
     // MARK: - Life cycle
     
@@ -39,6 +40,10 @@ class RegistrationViewModel: BaseViewModelProtocol {
     func setUserActivityGoals(dailyStepGoal: Int?, dailyCalorieBurnGoal: Int?) {
         self.user.dailyStepGoal = dailyStepGoal
         self.user.dailyCalorieBurnGoal = dailyCalorieBurnGoal
+    }
+    
+    func setUserFavoriteActivities(favoriteActivities: [ActivityEnum]) {
+        self.user.favoriteActivities = favoriteActivities
     }
     
 }
