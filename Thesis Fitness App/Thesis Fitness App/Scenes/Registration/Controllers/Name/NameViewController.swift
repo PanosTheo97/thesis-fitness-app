@@ -24,15 +24,24 @@ class NameViewController: UIViewController, RegistrationViewControllerProtocol {
             nameTextField.borderStyle = .none
             nameTextField.tintColor = .label
             nameTextField.textColor = .label
-            nameTextField.keyboardType = .namePhonePad
-            //nameTextField.delegate = self
+            nameTextField.keyboardType = .alphabet
             nameTextField.backgroundColor = .App.mainText
             nameTextField.layer.cornerRadius = 4
             nameTextField.font = .systemFont(ofSize: 16, weight: .semibold)
+            nameTextField.placeholder = "Registration_Name_placeholder".getLocalized()
             nameTextField.setLeftPaddingPoints(10)
         }
     }
     
+    @IBOutlet weak var registrationPageControll: UIPageControl! {
+        didSet {
+            registrationPageControll.numberOfPages = 5
+            registrationPageControll.currentPage = 0
+            registrationPageControll.currentPageIndicatorTintColor = .App.mainText
+            registrationPageControll.pageIndicatorTintColor = .systemGray
+            registrationPageControll.isUserInteractionEnabled = false
+        }
+    }
     // MARK: - Properties
     
     var viewModel: RegistrationViewModel?
@@ -57,11 +66,11 @@ class NameViewController: UIViewController, RegistrationViewControllerProtocol {
     }
     
     @objc func nextButtonTapped() {
-        if (self.nameTextField.text ?? "").isEmpty {
-            print("Give us your name")
-        } else {
-            print("next")
+        guard let name = self.nameTextField.text, !name.isEmpty else {
+            return
         }
+        self.viewModel?.setUserName(name: name)
+        self.registrationNavigation?.flowCoordinator?.moveToBodyComposition()
     }
 
 }

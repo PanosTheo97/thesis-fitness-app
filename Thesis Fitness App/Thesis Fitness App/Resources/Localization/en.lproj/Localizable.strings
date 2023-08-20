@@ -6,6 +6,8 @@
   
 */
 
+"user" = "User";
+
 // MARK: - Welcome
 
 "Welcome_welcomeLabel" = "Welcome";
@@ -15,6 +17,17 @@
 // MARK: - Registration
 
 "Registration_Name_titleLabel" = "What is your name?";
+"Registration_Name_placeholder" = "Name";
+
+"Registration_BodyComposition_titleLabel" = "Give us the following body composition measurements";
+"Registration_BodyComposition_weightPlaceholder" = "Weight (in kg.)";
+"Registration_BodyComposition_musclePlaceholder" = "Lean Muscle Mass Percentage (%) - Optional";
+"Registration_BodyComposition_fatPlaceholder" = "Fat Mass Percentage (%) - Optional";
+
+"Registration_ActivityGoals_titleLabel" = "If you want, set some daily goals and we will help you track them!";
+"Registration_ActivityGoals_stepsPlaceholder" = "Steps";
+"Registration_ActivityGoals_caloriesPlaceholder" = "Calories Burned";
+
 
 // MARK: - Lobby
 

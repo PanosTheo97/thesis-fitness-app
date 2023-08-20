@@ -48,6 +48,13 @@
 		86AFC0152A9270B7008B7439 /* Name.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86AFC0142A9270B7008B7439 /* Name.storyboard */; };
 		86AFC0172A9270C7008B7439 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFC0162A9270C7008B7439 /* NameViewController.swift */; };
 		86AFC0192A927348008B7439 /* RegistrationViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFC0182A927348008B7439 /* RegistrationViewControllerProtocol.swift */; };
+		86AFC01F2A92829F008B7439 /* BodyComposition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86AFC01E2A92829F008B7439 /* BodyComposition.storyboard */; };
+		86AFC0212A9282AD008B7439 /* BodyCompositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFC0202A9282AD008B7439 /* BodyCompositionViewController.swift */; };
+		86AFC0232A928429008B7439 /* BodyCompositionViewController+UITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFC0222A928429008B7439 /* BodyCompositionViewController+UITextFieldDelegate.swift */; };
+		86AFC0262A928645008B7439 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFC0252A928645008B7439 /* UserModel.swift */; };
+		86AFC0282A928CD8008B7439 /* ActivityGoals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86AFC0272A928CD8008B7439 /* ActivityGoals.storyboard */; };
+		86AFC02A2A928CE1008B7439 /* ActivityGoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFC0292A928CE1008B7439 /* ActivityGoalsViewController.swift */; };
+		86AFC02C2A928E46008B7439 /* ActivityGoalsViewController+UITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFC02B2A928E46008B7439 /* ActivityGoalsViewController+UITextFieldDelegate.swift */; };
 		86B2F7862A7CEF0C00B364FB /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2F7852A7CEF0C00B364FB /* Stopwatch.swift */; };
 		86B2F78C2A7D06A900B364FB /* EdgeInsetLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2F78B2A7D06A900B364FB /* EdgeInsetLabel.swift */; };
 		86B2F7932A7D06EE00B364FB /* PopoverModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2F7922A7D06EE00B364FB /* PopoverModule.swift */; };
@@ -216,6 +223,13 @@
 		86AFC0142A9270B7008B7439 /* Name.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Name.storyboard; sourceTree = "<group>"; };
 		86AFC0162A9270C7008B7439 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
 		86AFC0182A927348008B7439 /* RegistrationViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewControllerProtocol.swift; sourceTree = "<group>"; };
+		86AFC01E2A92829F008B7439 /* BodyComposition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BodyComposition.storyboard; sourceTree = "<group>"; };
+		86AFC0202A9282AD008B7439 /* BodyCompositionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyCompositionViewController.swift; sourceTree = "<group>"; };
+		86AFC0222A928429008B7439 /* BodyCompositionViewController+UITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BodyCompositionViewController+UITextFieldDelegate.swift"; sourceTree = "<group>"; };
+		86AFC0252A928645008B7439 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		86AFC0272A928CD8008B7439 /* ActivityGoals.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ActivityGoals.storyboard; sourceTree = "<group>"; };
+		86AFC0292A928CE1008B7439 /* ActivityGoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityGoalsViewController.swift; sourceTree = "<group>"; };
+		86AFC02B2A928E46008B7439 /* ActivityGoalsViewController+UITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityGoalsViewController+UITextFieldDelegate.swift"; sourceTree = "<group>"; };
 		86B2F7852A7CEF0C00B364FB /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
 		86B2F78B2A7D06A900B364FB /* EdgeInsetLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeInsetLabel.swift; sourceTree = "<group>"; };
 		86B2F7922A7D06EE00B364FB /* PopoverModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverModule.swift; sourceTree = "<group>"; };
@@ -632,6 +646,8 @@
 			isa = PBXGroup;
 			children = (
 				86AFC0132A9270AC008B7439 /* Name */,
+				86AFC01A2A927B69008B7439 /* BodyComposition */,
+				86AFC01B2A927B72008B7439 /* ActivityGoals */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -643,6 +659,34 @@
 				86AFC0162A9270C7008B7439 /* NameViewController.swift */,
 			);
 			path = Name;
+			sourceTree = "<group>";
+		};
+		86AFC01A2A927B69008B7439 /* BodyComposition */ = {
+			isa = PBXGroup;
+			children = (
+				86AFC01E2A92829F008B7439 /* BodyComposition.storyboard */,
+				86AFC0202A9282AD008B7439 /* BodyCompositionViewController.swift */,
+				86AFC0222A928429008B7439 /* BodyCompositionViewController+UITextFieldDelegate.swift */,
+			);
+			path = BodyComposition;
+			sourceTree = "<group>";
+		};
+		86AFC01B2A927B72008B7439 /* ActivityGoals */ = {
+			isa = PBXGroup;
+			children = (
+				86AFC0272A928CD8008B7439 /* ActivityGoals.storyboard */,
+				86AFC0292A928CE1008B7439 /* ActivityGoalsViewController.swift */,
+				86AFC02B2A928E46008B7439 /* ActivityGoalsViewController+UITextFieldDelegate.swift */,
+			);
+			path = ActivityGoals;
+			sourceTree = "<group>";
+		};
+		86AFC0242A92863B008B7439 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				86AFC0252A928645008B7439 /* UserModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		86B2F7872A7CF26400B364FB /* UseCases */ = {
@@ -780,6 +824,7 @@
 		86E310092A5EA56E007EB56B /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				86AFC0242A92863B008B7439 /* Models */,
 				866F8FDC2A6684B900C3F30F /* Enums */,
 				866F8FD92A66849300C3F30F /* Managers */,
 				86E3101C2A5EAB30007EB56B /* Extensions */,
@@ -1563,6 +1608,7 @@
 			files = (
 				866F8FC62A667ABE00C3F30F /* Welcome.storyboard in Resources */,
 				860F95332A7465F8003131EC /* ActivityParameter.storyboard in Resources */,
+				86AFC0282A928CD8008B7439 /* ActivityGoals.storyboard in Resources */,
 				8644AC0B2A7A924F0019C943 /* ActivitySession.storyboard in Resources */,
 				86E4CE932A6FB04800B53C32 /* Diet.storyboard in Resources */,
 				86E4CE6E2A6FA93D00B53C32 /* Activity.storyboard in Resources */,
@@ -1575,6 +1621,7 @@
 				86E4CEA32A6FB24500B53C32 /* Profile.storyboard in Resources */,
 				86E30FFE2A5E9E10007EB56B /* Assets.xcassets in Resources */,
 				86E3104F2A5EC52A007EB56B /* Splash.storyboard in Resources */,
+				86AFC01F2A92829F008B7439 /* BodyComposition.storyboard in Resources */,
 				86252C882A6E722A009FEAF9 /* GoogleService-Info.plist in Resources */,
 				86B2F7AC2A7D0E4200B364FB /* anim_start_session_dark.json in Resources */,
 				86E4CE7F2A6FAD8500B53C32 /* Workout.storyboard in Resources */,
@@ -1677,6 +1724,7 @@
 				86B2F7992A7D074400B364FB /* PopoverViewModel.swift in Sources */,
 				86E4CEDF2A71116500B53C32 /* ActivitySetupUseCase.swift in Sources */,
 				86E4CE8D2A6FAFB700B53C32 /* DietDIContainer.swift in Sources */,
+				86AFC0232A928429008B7439 /* BodyCompositionViewController+UITextFieldDelegate.swift in Sources */,
 				86E310332A5EC33C007EB56B /* AppViewModel.swift in Sources */,
 				86E310512A5EC538007EB56B /* SplashViewController.swift in Sources */,
 				860F95422A79302C003131EC /* UITextFieldExtension.swift in Sources */,
@@ -1684,6 +1732,7 @@
 				86E310112A5EA61C007EB56B /* RefreshableTableView.swift in Sources */,
 				86E4CE8B2A6FAF1700B53C32 /* DietModule.swift in Sources */,
 				86EC39C72A8F9489007E7045 /* MacrosFlowCoordinator.swift in Sources */,
+				86AFC02C2A928E46008B7439 /* ActivityGoalsViewController+UITextFieldDelegate.swift in Sources */,
 				86E4CE5E2A6FA5DC00B53C32 /* HomeFlowCoordinator.swift in Sources */,
 				86E310282A5EAC25007EB56B /* UICollectionViewExtension.swift in Sources */,
 				86B2F79B2A7D078200B364FB /* PopoverSetUpUseCase.swift in Sources */,
@@ -1721,6 +1770,7 @@
 				86E310242A5EABDA007EB56B /* UIImageExtension.swift in Sources */,
 				8644AC0D2A7A925B0019C943 /* ActivitySessionViewController.swift in Sources */,
 				86E4CE9D2A6FB1C100B53C32 /* ProfileDIContainer.swift in Sources */,
+				86AFC0212A9282AD008B7439 /* BodyCompositionViewController.swift in Sources */,
 				86EC39D72A8FBCE2007E7045 /* MacrosViewController+UITextFieldDelegate.swift in Sources */,
 				866F8FE02A66852200C3F30F /* DefaultsManager.swift in Sources */,
 				860F95292A7465B3003131EC /* ActivityParameterModule.swift in Sources */,
@@ -1753,6 +1803,7 @@
 				86B2F78C2A7D06A900B364FB /* EdgeInsetLabel.swift in Sources */,
 				86E4CE5A2A6FA57800B53C32 /* HomeModule.swift in Sources */,
 				86E3104B2A5EC500007EB56B /* SplashFlowCoordinator.swift in Sources */,
+				86AFC02A2A928CE1008B7439 /* ActivityGoalsViewController.swift in Sources */,
 				860F95402A792F3A003131EC /* ActivityParameterViewController+UITextFieldDelegate.swift in Sources */,
 				86E4CEC62A7005F500B53C32 /* MainNavigationController+ProfileViewControllerProtocol.swift in Sources */,
 				860F95312A7465EF003131EC /* ActivityParameterViewController.swift in Sources */,
@@ -1763,6 +1814,7 @@
 				86AFC0192A927348008B7439 /* RegistrationViewControllerProtocol.swift in Sources */,
 				86B2F7BA2A7FC68E00B364FB /* CustomCircleView.swift in Sources */,
 				86E4CE8F2A6FAFCE00B53C32 /* DietFlowCoordinator.swift in Sources */,
+				86AFC0262A928645008B7439 /* UserModel.swift in Sources */,
 				86B2F7932A7D06EE00B364FB /* PopoverModule.swift in Sources */,
 				86B2F7C02A7FCB4400B364FB /* AttributedProperty.swift in Sources */,
 				86E4CE4F2A6F223900B53C32 /* WelcomeSignInUseCase.swift in Sources */,

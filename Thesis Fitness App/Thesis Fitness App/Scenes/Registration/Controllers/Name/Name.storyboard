@@ -17,34 +17,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adU-hg-jYU">
-                                <rect key="frame" x="78.666666666666671" y="366.66666666666669" width="41.333333333333329" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="adU-hg-jYU">
+                                <rect key="frame" x="59" y="322.66666666666669" width="41.333333333333343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rh0-gq-wAq">
-                                <rect key="frame" x="78.666666666666671" y="403.66666666666669" width="235.66666666666663" height="45"/>
+                                <rect key="frame" x="59" y="359.66666666666669" width="275" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="jqm-H1-vEh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="jTF-e5-p0B">
+                                <rect key="frame" x="138.66666666666666" y="768" width="116" height="26"/>
+                            </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Rh0-gq-wAq" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="Lda-ZA-XI9"/>
+                            <constraint firstItem="jTF-e5-p0B" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="3cf-zW-EMV"/>
+                            <constraint firstItem="Rh0-gq-wAq" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-44" id="Lda-ZA-XI9"/>
                             <constraint firstItem="Rh0-gq-wAq" firstAttribute="leading" secondItem="adU-hg-jYU" secondAttribute="leading" id="gG9-N2-RkJ"/>
                             <constraint firstItem="Rh0-gq-wAq" firstAttribute="top" secondItem="adU-hg-jYU" secondAttribute="bottom" constant="16" id="kZb-lr-E75"/>
                             <constraint firstItem="Rh0-gq-wAq" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="adU-hg-jYU" secondAttribute="trailing" id="loT-XO-hFe"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="jTF-e5-p0B" secondAttribute="bottom" constant="24" id="mSN-1j-FOD"/>
                             <constraint firstItem="Rh0-gq-wAq" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="qBH-as-6CZ"/>
-                            <constraint firstItem="Rh0-gq-wAq" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.6" id="qve-o6-1SU"/>
+                            <constraint firstItem="Rh0-gq-wAq" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.7" id="qve-o6-1SU"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="nameTextField" destination="Rh0-gq-wAq" id="tvH-re-7fR"/>
+                        <outlet property="registrationPageControll" destination="jTF-e5-p0B" id="PxL-9r-vxc"/>
                         <outlet property="titleLabel" destination="adU-hg-jYU" id="Jpr-cg-yAa"/>
                     </connections>
                 </viewController>

@@ -6,6 +6,8 @@
   
 */
 
+"user" = "Χρήστης";
+
 // MARK: - Welcome
 
 "Welcome_welcomeLabel" = "Καλωσήρθες";
@@ -15,6 +17,16 @@
 // MARK: - Registration
 
 "Registration_Name_titleLabel" = "Ποιό είναι το όνομα σου;";
+"Registration_Name_placeholder" = "Όνομα";
+
+"Registration_BodyComposition_titleLabel" = "Δώσε τις παρακάτω μετρήσεις σχετικά με το σώμα σου";
+"Registration_BodyComposition_weightPlaceholder" = "Βάρος (σε kg.)";
+"Registration_BodyComposition_musclePlaceholder" = "Ποσοστό Μυικής Μάζας (%) - Προεραιτικά";
+"Registration_BodyComposition_fatPlaceholder" = "Ποσοστό Λιπώδους Ιστού (%) - Προεραιτικά";
+
+"Registration_ActivityGoals_titleLabel" = "Εαν θέλεις, θέσε ημερίσιους στόχους κι εμείς θα σε βοηθήσουμε να τους ελέγχεις!";
+"Registration_ActivityGoals_stepsPlaceholder" = "Βήματα";
+"Registration_ActivityGoals_caloriesPlaceholder" = "Καύση Θερμίδων";
 
 // MARK: - Lobby
 
