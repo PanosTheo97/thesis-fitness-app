@@ -14,10 +14,12 @@ class HomeViewModel: BaseViewModelProtocol {
     var isLoading = Observable<Bool?>(value: nil)
     var routingEnum = Observable<Home.RoutingEnum?>(value: nil)
     
+    var user: UserModel
+    
     // MARK: - Life cycle
     
-    init() {
-        
+    init(user: UserModel) {
+        self.user = user
     }
     
     func update(routing: Home.RoutingEnum) {

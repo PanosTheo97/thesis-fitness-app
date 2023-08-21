@@ -37,7 +37,7 @@ enum ActivityEnum: CaseIterable {
         case .boxing:
             return .init(systemName: "figure.boxing")
         case .pingPong:
-            return .init(systemName: "figure.racquetball")
+            return .init(systemName: "figure.table.tennis")
         }
     }
     

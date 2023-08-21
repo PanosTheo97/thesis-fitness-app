@@ -34,7 +34,7 @@ class SplashFlowCoordinator: BaseFlowCoordinatorProtocol {
         guard let mainNavigation = self.splashViewController?.navigationController as? MainNavigationController else {
             return
         }
-        mainNavigation.flowCoordinator?.moveToLobby(user: UserModel(name: "", bodyweight: "", favoriteActivities: []))
+        mainNavigation.flowCoordinator?.moveToLobby(user: UserModel(name: "user".getLocalized(), bodyweight: "75.5", favoriteActivities: []))
     }
 
 }

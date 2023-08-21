@@ -26,13 +26,13 @@ final class MainFlowCoordinator {
         
         // Create Lobby controllers
         
-        guard let homeNavigationController = self.mainDIContainer.homeModule.makeHomeNavigationController() else {
+        guard let homeNavigationController = self.mainDIContainer.homeModule.makeHomeNavigationController(user: user) else {
             return
         }
         homeNavigationController.tabBarItem.image = .get(image: .Home)
         homeNavigationController.title = "Lobby_homeTitle".getLocalized()
         
-        guard let activityNavigationController = self.mainDIContainer.activityModule.makeActivityNavigationController() else {
+        guard let activityNavigationController = self.mainDIContainer.activityModule.makeActivityNavigationController(favoriteActivities: user.favoriteActivities) else {
             return
         }
         activityNavigationController.tabBarItem.image = .get(image: .Activity)

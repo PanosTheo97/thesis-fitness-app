@@ -10,8 +10,8 @@ import UIKit
 
 class HomeModule {
     
-    func makeHomeNavigationController() -> UINavigationController? {
-        if let viewController = self.makeHomeViewController() {
+    func makeHomeNavigationController(user: UserModel) -> UINavigationController? {
+        if let viewController = self.makeHomeViewController(user: user) {
             let homeNavigationController = UINavigationController(rootViewController: viewController)
             homeNavigationController.navigationBar.tintColor = .App.mainText
             homeNavigationController.navigationBar.barTintColor = .clear
@@ -20,17 +20,17 @@ class HomeModule {
         return nil
     }
     
-    func makeHomeViewController() -> HomeViewController? {
+    func makeHomeViewController(user: UserModel) -> HomeViewController? {
         if let viewController = HomeViewController.create(storyboardName: "Home") {
-            viewController.viewModel = makeHomeViewModel()
+            viewController.viewModel = makeHomeViewModel(user: user)
             viewController.flowCoordinator = makeHomeFlowCoordinator(viewController)
             return viewController
         }
         return nil
     }
     
-    private func makeHomeViewModel() -> HomeViewModel {
-        HomeViewModel()
+    private func makeHomeViewModel(user: UserModel) -> HomeViewModel {
+        HomeViewModel(user: user)
     }
     
     private func makeHomeFlowCoordinator(_ viewController: HomeViewController) -> HomeFlowCoordinator {

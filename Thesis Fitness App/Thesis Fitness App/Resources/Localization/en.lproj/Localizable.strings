@@ -28,7 +28,7 @@
 "Registration_ActivityGoals_stepsPlaceholder" = "Steps";
 "Registration_ActivityGoals_caloriesPlaceholder" = "Calories Burned";
 
-"Registration_DietyGoals_titleLabel" = "Almost Done!/nIf you want, set daily diet goals and track them in the diet tab!";
+"Registration_DietyGoals_titleLabel" = "Almost Done!\nIf you want, set daily diet goals and track them in the diet tab!";
 "Registration_DietGoals_caloriesPlaceholder" = "Calorie Intake (in kcal)";
 "Registration_DietGoals_proteinPlaceholder" = "Protein Intake (in gram.)";
 "Registration_DietGoals_carbsPlaceholder" = "Carbohydrates Intake (in gram.)";
@@ -51,7 +51,7 @@
 
 // MARK: - Home
 
-"Home_displayNameLabel" = "Welcome back \n %@";
+"Home_displayNameLabel" = "Hello, %@";
 
 // MARK: - Activity
 

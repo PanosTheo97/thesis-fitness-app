@@ -49,7 +49,7 @@
 
 // MARK: - Home
 
-"Home_displayNameLabel" = "Γειά σου και πάλι, %@";
+"Home_displayNameLabel" = "Γειά σου, %@";
 
 // MARK: - Activity
 
