@@ -56,24 +56,16 @@ final class NetworkManager {
         }
     }
     
-    //    func addUser() {
-    //        guard let imageUrl = AccountManager.shared.user?.photoURL, let email = AccountManager.shared.user?.email else {
-    //            return
-    //        }
-    //
-    //        let db = Firestore.firestore()
-    //        var ref: DocumentReference?
-    //        let user = FUserModel(name: self.user.name,
-    //                              email: email,
-    //                              imgUrl: imageUrl)
-    //
-    //        ref = db.collection("users").addDocument(data: user.toJSON()) { err in
-    //            if let err = err {
-    //                print("Error adding document: \(err)")
-    //            } else {
-    //                print("Document added with ID: \(ref!.documentID)")
-    //            }
-    //        }
-    //    }
-    //
+    static func addDocument<DocumentType: Mappable>(_ document: DocumentType, _ collection: CollectionTypeEnum, completion: @escaping (Result<DocumentReference?, Error>) -> Void) {
+        let db = Firestore.firestore()
+        var ref: DocumentReference?
+        
+        ref = db.collection(collection.rawValue).addDocument(data: document.toJSON()) { err in
+            if let error = err {
+                completion(.failure(error))
+            } else {
+                completion(.success(ref))
+            }
+        }
+    }
 }
