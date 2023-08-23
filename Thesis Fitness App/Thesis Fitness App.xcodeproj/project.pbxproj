@@ -28,6 +28,8 @@
 		861EBEC52A96431E00DA536D /* FActivityDoneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861EBEC42A96431E00DA536D /* FActivityDoneModel.swift */; };
 		861EBEC72A96439F00DA536D /* FActivityStatisticModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861EBEC62A96439F00DA536D /* FActivityStatisticModel.swift */; };
 		861EBEC92A9652FE00DA536D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861EBEC82A9652FE00DA536D /* NetworkManager.swift */; };
+		861EBECC2A96A81800DA536D /* RegistrationAddUserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861EBECB2A96A81800DA536D /* RegistrationAddUserUseCase.swift */; };
+		861EBECF2A96AD2A00DA536D /* WelcomeCheckForRegisteredUserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861EBECE2A96AD2A00DA536D /* WelcomeCheckForRegisteredUserUseCase.swift */; };
 		86252C882A6E722A009FEAF9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86252C872A6E71CA009FEAF9 /* GoogleService-Info.plist */; };
 		863F99FC2A7BBC87004140AF /* countdown_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 863F99FB2A7BBC84004140AF /* countdown_animation.json */; };
 		8644AC032A7A91810019C943 /* ActivitySessionModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644AC022A7A91810019C943 /* ActivitySessionModule.swift */; };
@@ -218,6 +220,8 @@
 		861EBEC42A96431E00DA536D /* FActivityDoneModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FActivityDoneModel.swift; sourceTree = "<group>"; };
 		861EBEC62A96439F00DA536D /* FActivityStatisticModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FActivityStatisticModel.swift; sourceTree = "<group>"; };
 		861EBEC82A9652FE00DA536D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		861EBECB2A96A81800DA536D /* RegistrationAddUserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationAddUserUseCase.swift; sourceTree = "<group>"; };
+		861EBECE2A96AD2A00DA536D /* WelcomeCheckForRegisteredUserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCheckForRegisteredUserUseCase.swift; sourceTree = "<group>"; };
 		86252C872A6E71CA009FEAF9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		863F99FB2A7BBC84004140AF /* countdown_animation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = countdown_animation.json; sourceTree = "<group>"; };
 		8644AC022A7A91810019C943 /* ActivitySessionModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySessionModule.swift; sourceTree = "<group>"; };
@@ -508,6 +512,22 @@
 			path = Firestore;
 			sourceTree = "<group>";
 		};
+		861EBECA2A96A7E200DA536D /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				861EBECB2A96A81800DA536D /* RegistrationAddUserUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		861EBECD2A96AD0100DA536D /* WelcomeCheckForRegisteredUserUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				861EBECE2A96AD2A00DA536D /* WelcomeCheckForRegisteredUserUseCase.swift */,
+			);
+			path = WelcomeCheckForRegisteredUserUseCase;
+			sourceTree = "<group>";
+		};
 		8644ABFA2A7A8FFD0019C943 /* ActivitySession */ = {
 			isa = PBXGroup;
 			children = (
@@ -661,6 +681,7 @@
 		86AFC0042A926DC6008B7439 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				861EBECA2A96A7E200DA536D /* UseCases */,
 				86AFC00B2A926EB9008B7439 /* RegistrationViewModel.swift */,
 			);
 			path = ViewModel;
@@ -1116,6 +1137,7 @@
 		86E4CE4C2A6F221800B53C32 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				861EBECD2A96AD0100DA536D /* WelcomeCheckForRegisteredUserUseCase */,
 				86E4CE4D2A6F222200B53C32 /* WelcomeSignInUseCase */,
 			);
 			path = UseCases;
@@ -1821,6 +1843,7 @@
 				86B2F7A42A7D088600B364FB /* PopoverPresentingViewControllerProtocol.swift in Sources */,
 				866F8FCE2A667FCE00C3F30F /* UIViewExtension.swift in Sources */,
 				8644AC052A7A91B60019C943 /* ActivitySessionDIContainer.swift in Sources */,
+				861EBECF2A96AD2A00DA536D /* WelcomeCheckForRegisteredUserUseCase.swift in Sources */,
 				860F952B2A7465C2003131EC /* ActivityParameterDIContainer.swift in Sources */,
 				86B2F79F2A7D07FA00B364FB /* PopoverViewController.swift in Sources */,
 				86E30FF52A5E9E0E007EB56B /* AppDelegate.swift in Sources */,
@@ -1902,6 +1925,7 @@
 				86E4CEAE2A6FCFDA00B53C32 /* LobbyDIContainer.swift in Sources */,
 				86E4CED42A710C9E00B53C32 /* ActivityCollectionView+UICollectionViewDelegate.swift in Sources */,
 				86AFC0192A927348008B7439 /* RegistrationViewControllerProtocol.swift in Sources */,
+				861EBECC2A96A81800DA536D /* RegistrationAddUserUseCase.swift in Sources */,
 				86B2F7BA2A7FC68E00B364FB /* CustomCircleView.swift in Sources */,
 				86E4CE8F2A6FAFCE00B53C32 /* DietFlowCoordinator.swift in Sources */,
 				86AFC0262A928645008B7439 /* UserModel.swift in Sources */,

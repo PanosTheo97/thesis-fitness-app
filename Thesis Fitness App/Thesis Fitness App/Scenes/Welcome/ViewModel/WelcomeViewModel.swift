@@ -17,6 +17,7 @@ protocol WelcomeViewModelProtocol: BaseViewModelProtocol {
     
     func update(routingEnum: Welcome.RoutingEnum?)
     func executeWelcomeSignInUseCase()
+    func executeWelcomeCheckForRegistereduserUseCase()
     
 }
 
@@ -30,11 +31,13 @@ class WelcomeViewModel: WelcomeViewModelProtocol {
     // MARK: - Properties
     
     var welcomeSignInUseCase: WelcomeSignInUseCaseProtocol
+    var welcomeCheckForRegistereduserUseCase: WelcomeCheckForRegistereduserUseCaseProtocol
     
     // MARK: - LifeCycle
     
-    init(welcomeSignInUseCase: WelcomeSignInUseCaseProtocol) {
+    init(welcomeSignInUseCase: WelcomeSignInUseCaseProtocol, welcomeCheckForRegistereduserUseCase: WelcomeCheckForRegistereduserUseCaseProtocol) {
         self.welcomeSignInUseCase = welcomeSignInUseCase
+        self.welcomeCheckForRegistereduserUseCase = welcomeCheckForRegistereduserUseCase
     }
     
     // MARK: - Methods
@@ -46,10 +49,24 @@ class WelcomeViewModel: WelcomeViewModelProtocol {
     func executeWelcomeSignInUseCase() {
         self.isLoading.value = true
         self.welcomeSignInUseCase.execute { successfulSignIn in
-            self.isLoading.value = false
             if successfulSignIn {
-                #warning("Check needed to manage routing to Lobby or Registration")
+                self.executeWelcomeCheckForRegistereduserUseCase()
+            } else {
+                self.isLoading.value = false
+            }
+        }
+    }
+    
+    func executeWelcomeCheckForRegistereduserUseCase() {
+        self.welcomeCheckForRegistereduserUseCase.execute { isAlreadyRegistered in
+            self.isLoading.value = false
+            switch isAlreadyRegistered {
+            case true:
+                self.update(routingEnum: .lobby)
+            case false:
                 self.update(routingEnum: .firstTimeSignIn)
+            default:
+                print("NETWORK ERROR")
             }
         }
     }

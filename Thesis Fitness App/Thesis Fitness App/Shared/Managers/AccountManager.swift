@@ -19,6 +19,7 @@ class AccountManager {
     // MARK: - Properties
     
     var user: User?
+    var userDocimentId: String?
     
     // MARK: - Methods
     

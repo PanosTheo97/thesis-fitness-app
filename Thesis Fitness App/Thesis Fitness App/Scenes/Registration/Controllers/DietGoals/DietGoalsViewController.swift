@@ -137,15 +137,18 @@ class DietGoalsViewController: UIViewController {
     }
     
     @objc func doneButtonTapped() {
-        self.viewModel?.setUserDietGoals(calorieGoal: self.caloriesTextField.text,
-                                         proteinGoal: self.proteinTextField.text,
-                                         carbGoal: self.carbsTextField.text,
-                                         fatsGoal: self.fatsTextField.text,
-                                         waterGoal: self.waterTextField.text)
-        guard let user = self.viewModel?.user else {
-            return
-        }
-        self.registrationNavigation?.flowCoordinator?.moveToLobby(user: user)
+        self.viewModel?.setUserDietGoals(calorieGoal: self.caloriesTextField.text ?? "0",
+                                         proteinGoal: self.proteinTextField.text ?? "0",
+                                         carbGoal: self.carbsTextField.text  ?? "0",
+                                         fatsGoal: self.fatsTextField.text ?? "0",
+                                         waterGoal: self.waterTextField.text  ?? "0")
+        
+        self.viewModel?.executeRegistrationAddUserUseCase(completion: { status in
+            if status {
+                #warning("Actuall user injection to Lobby/Home")
+                self.registrationNavigation?.flowCoordinator?.moveToLobby(user: UserModel(name: "Panoulis", bodyweight: "75.5", favoriteActivities: []))
+            }
+        })
     }
 
 }

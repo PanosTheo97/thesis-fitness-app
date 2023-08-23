@@ -20,7 +20,7 @@ class RegistrationModule {
     }
     
     private func makeRegistrationViewModel() -> RegistrationViewModel {
-        RegistrationViewModel()
+        RegistrationViewModel(registrationAddUserUseCase: makeRegistrationAddUserUseCase())
     }
     
     func makeRegistrationFlowCoordinator(registrationNavigationController: RegistrationNavigationController) -> RegistrationFlowCoordinator {
@@ -29,6 +29,10 @@ class RegistrationModule {
     
     private func makeRegistrationDIContainer() -> RegistrationDIContainer {
         RegistrationDIContainer()
+    }
+    
+    private func makeRegistrationAddUserUseCase() -> RegistrationAddUserUseCaseProtocol {
+        RegistrationAddUserUseCase()
     }
     
 }

@@ -61,4 +61,25 @@ enum ActivityEnum: String, CaseIterable {
             return "Activity_pingPong".getLocalized()
         }
     }
+    
+    func getActivityId() -> String {
+        switch self {
+        case .running:
+            return "YjBbZzm1SjahJnFryDjN"
+        case .climbing:
+            return "rOGkpF0m5WxCxWOhwQg9"
+        case .cycling:
+            return "khuM7tOiXxq3GAzd6vG7"
+        case .indoorRunning:
+            return "DeycT4SHRC7oXICdz8Eu"
+        case .walking:
+            return "GQwtuStM2lK3K9HPPbuL"
+        case .jumpingRope:
+            return "hT4SiXXhJNLTZcLh2Ftw"
+        case .boxing:
+            return "nbLxd82u7iq0vGxzFsf5"
+        case .pingPong:
+            return "B7i1ymOBSpyug4JpVCUY"
+        }
+    }
 }
