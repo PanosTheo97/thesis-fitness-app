@@ -24,6 +24,9 @@
 		861EBEBD2A963AFB00DA536D /* FGoalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861EBEBC2A963AFB00DA536D /* FGoalModel.swift */; };
 		861EBEBF2A963D7C00DA536D /* FActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861EBEBE2A963D7C00DA536D /* FActivityModel.swift */; };
 		861EBEC12A963EBC00DA536D /* FChallengeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861EBEC02A963EBC00DA536D /* FChallengeModel.swift */; };
+		861EBEC32A9640FD00DA536D /* FDaySummaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861EBEC22A9640FD00DA536D /* FDaySummaryModel.swift */; };
+		861EBEC52A96431E00DA536D /* FActivityDoneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861EBEC42A96431E00DA536D /* FActivityDoneModel.swift */; };
+		861EBEC72A96439F00DA536D /* FActivityStatisticModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861EBEC62A96439F00DA536D /* FActivityStatisticModel.swift */; };
 		86252C882A6E722A009FEAF9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86252C872A6E71CA009FEAF9 /* GoogleService-Info.plist */; };
 		863F99FC2A7BBC87004140AF /* countdown_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 863F99FB2A7BBC84004140AF /* countdown_animation.json */; };
 		8644AC032A7A91810019C943 /* ActivitySessionModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644AC022A7A91810019C943 /* ActivitySessionModule.swift */; };
@@ -210,6 +213,9 @@
 		861EBEBC2A963AFB00DA536D /* FGoalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FGoalModel.swift; sourceTree = "<group>"; };
 		861EBEBE2A963D7C00DA536D /* FActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FActivityModel.swift; sourceTree = "<group>"; };
 		861EBEC02A963EBC00DA536D /* FChallengeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FChallengeModel.swift; sourceTree = "<group>"; };
+		861EBEC22A9640FD00DA536D /* FDaySummaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDaySummaryModel.swift; sourceTree = "<group>"; };
+		861EBEC42A96431E00DA536D /* FActivityDoneModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FActivityDoneModel.swift; sourceTree = "<group>"; };
+		861EBEC62A96439F00DA536D /* FActivityStatisticModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FActivityStatisticModel.swift; sourceTree = "<group>"; };
 		86252C872A6E71CA009FEAF9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		863F99FB2A7BBC84004140AF /* countdown_animation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = countdown_animation.json; sourceTree = "<group>"; };
 		8644AC022A7A91810019C943 /* ActivitySessionModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySessionModule.swift; sourceTree = "<group>"; };
@@ -493,6 +499,9 @@
 				861EBEBC2A963AFB00DA536D /* FGoalModel.swift */,
 				861EBEBE2A963D7C00DA536D /* FActivityModel.swift */,
 				861EBEC02A963EBC00DA536D /* FChallengeModel.swift */,
+				861EBEC22A9640FD00DA536D /* FDaySummaryModel.swift */,
+				861EBEC42A96431E00DA536D /* FActivityDoneModel.swift */,
+				861EBEC62A96439F00DA536D /* FActivityStatisticModel.swift */,
 			);
 			path = Firestore;
 			sourceTree = "<group>";
@@ -1766,6 +1775,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				866F8FCA2A667C0100C3F30F /* WelcomeModule.swift in Sources */,
+				861EBEC52A96431E00DA536D /* FActivityDoneModel.swift in Sources */,
 				86AFC03A2A929B82008B7439 /* DietGoalsViewController+UITextFieldDelegate.swift in Sources */,
 				86E3101B2A5EA69D007EB56B /* BaseProtocol.swift in Sources */,
 				8644AC032A7A91810019C943 /* ActivitySessionModule.swift in Sources */,
@@ -1838,6 +1848,7 @@
 				8644AC072A7A91D20019C943 /* ActivitySessionFlowCoordinator.swift in Sources */,
 				86E4CEB02A6FCFF800B53C32 /* LobbyViewModel.swift in Sources */,
 				861EBEC12A963EBC00DA536D /* FChallengeModel.swift in Sources */,
+				861EBEC72A96439F00DA536D /* FActivityStatisticModel.swift in Sources */,
 				86E3103F2A5EC42D007EB56B /* MainFlowCoordinator.swift in Sources */,
 				86E310242A5EABDA007EB56B /* UIImageExtension.swift in Sources */,
 				8644AC0D2A7A925B0019C943 /* ActivitySessionViewController.swift in Sources */,
@@ -1907,6 +1918,7 @@
 				86B2F7A62A7D08B900B364FB /* PopoverPresentingFlowCoordinatorProtocol.swift in Sources */,
 				86EC39CD2A8F9527007E7045 /* MacrosViewController.swift in Sources */,
 				86E3102A2A5EAC39007EB56B /* UIImageViewExtension.swift in Sources */,
+				861EBEC32A9640FD00DA536D /* FDaySummaryModel.swift in Sources */,
 				86B2F7BC2A7FC8B800B364FB /* MacroTypeEnum.swift in Sources */,
 				86E4CEC92A70091700B53C32 /* LobbyTabBarController+UITabBarControllerDelegate.swift in Sources */,
 				860F95372A7469B5003131EC /* ActivityParameterSetupUseCase.swift in Sources */,
