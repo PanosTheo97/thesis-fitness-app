@@ -27,6 +27,7 @@
 		861EBEC32A9640FD00DA536D /* FDaySummaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861EBEC22A9640FD00DA536D /* FDaySummaryModel.swift */; };
 		861EBEC52A96431E00DA536D /* FActivityDoneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861EBEC42A96431E00DA536D /* FActivityDoneModel.swift */; };
 		861EBEC72A96439F00DA536D /* FActivityStatisticModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861EBEC62A96439F00DA536D /* FActivityStatisticModel.swift */; };
+		861EBEC92A9652FE00DA536D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861EBEC82A9652FE00DA536D /* NetworkManager.swift */; };
 		86252C882A6E722A009FEAF9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86252C872A6E71CA009FEAF9 /* GoogleService-Info.plist */; };
 		863F99FC2A7BBC87004140AF /* countdown_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 863F99FB2A7BBC84004140AF /* countdown_animation.json */; };
 		8644AC032A7A91810019C943 /* ActivitySessionModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644AC022A7A91810019C943 /* ActivitySessionModule.swift */; };
@@ -216,6 +217,7 @@
 		861EBEC22A9640FD00DA536D /* FDaySummaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDaySummaryModel.swift; sourceTree = "<group>"; };
 		861EBEC42A96431E00DA536D /* FActivityDoneModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FActivityDoneModel.swift; sourceTree = "<group>"; };
 		861EBEC62A96439F00DA536D /* FActivityStatisticModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FActivityStatisticModel.swift; sourceTree = "<group>"; };
+		861EBEC82A9652FE00DA536D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		86252C872A6E71CA009FEAF9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		863F99FB2A7BBC84004140AF /* countdown_animation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = countdown_animation.json; sourceTree = "<group>"; };
 		8644AC022A7A91810019C943 /* ActivitySessionModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySessionModule.swift; sourceTree = "<group>"; };
@@ -623,6 +625,7 @@
 				866F8FDA2A66849D00C3F30F /* LocalizationManager.swift */,
 				866F8FDF2A66852200C3F30F /* DefaultsManager.swift */,
 				86E4CE4A2A6F1B2C00B53C32 /* AccountManager.swift */,
+				861EBEC82A9652FE00DA536D /* NetworkManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -1780,6 +1783,7 @@
 				86E3101B2A5EA69D007EB56B /* BaseProtocol.swift in Sources */,
 				8644AC032A7A91810019C943 /* ActivitySessionModule.swift in Sources */,
 				866F8FC42A667A3F00C3F30F /* WelcomeViewModel.swift in Sources */,
+				861EBEC92A9652FE00DA536D /* NetworkManager.swift in Sources */,
 				86E4CE5C2A6FA58700B53C32 /* HomeViewModel.swift in Sources */,
 				86EC39D52A8FBCA6007E7045 /* DietViewController+MacrosViewControllerProtocol.swift in Sources */,
 				866F8FDE2A6684C600C3F30F /* LanguageEnum.swift in Sources */,
