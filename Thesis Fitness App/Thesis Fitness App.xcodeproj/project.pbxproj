@@ -18,6 +18,10 @@
 		860F95392A746D0A003131EC /* TabBarViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860F95382A746D0A003131EC /* TabBarViewControllerProtocol.swift */; };
 		860F95402A792F3A003131EC /* ActivityParameterViewController+UITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860F953F2A792F3A003131EC /* ActivityParameterViewController+UITextFieldDelegate.swift */; };
 		860F95422A79302C003131EC /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860F95412A79302C003131EC /* UITextFieldExtension.swift */; };
+		861EBEB72A96353600DA536D /* FDietModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861EBEB62A96353600DA536D /* FDietModel.swift */; };
+		861EBEB92A96354400DA536D /* MappableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861EBEB82A96354400DA536D /* MappableExtension.swift */; };
+		861EBEBB2A9639BE00DA536D /* FUserChallengeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861EBEBA2A9639BE00DA536D /* FUserChallengeModel.swift */; };
+		861EBEBD2A963AFB00DA536D /* FGoalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861EBEBC2A963AFB00DA536D /* FGoalModel.swift */; };
 		86252C882A6E722A009FEAF9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86252C872A6E71CA009FEAF9 /* GoogleService-Info.plist */; };
 		863F99FC2A7BBC87004140AF /* countdown_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 863F99FB2A7BBC84004140AF /* countdown_animation.json */; };
 		8644AC032A7A91810019C943 /* ActivitySessionModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644AC022A7A91810019C943 /* ActivitySessionModule.swift */; };
@@ -61,6 +65,7 @@
 		86AFC0362A929B66008B7439 /* DietGoals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86AFC0352A929B66008B7439 /* DietGoals.storyboard */; };
 		86AFC0382A929B71008B7439 /* DietGoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFC0372A929B71008B7439 /* DietGoalsViewController.swift */; };
 		86AFC03A2A929B82008B7439 /* DietGoalsViewController+UITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFC0392A929B82008B7439 /* DietGoalsViewController+UITextFieldDelegate.swift */; };
+		86AFC03C2A94A7F3008B7439 /* FUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFC03B2A94A7F3008B7439 /* FUserModel.swift */; };
 		86B2F7862A7CEF0C00B364FB /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2F7852A7CEF0C00B364FB /* Stopwatch.swift */; };
 		86B2F78C2A7D06A900B364FB /* EdgeInsetLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2F78B2A7D06A900B364FB /* EdgeInsetLabel.swift */; };
 		86B2F7932A7D06EE00B364FB /* PopoverModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2F7922A7D06EE00B364FB /* PopoverModule.swift */; };
@@ -197,6 +202,10 @@
 		860F95382A746D0A003131EC /* TabBarViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewControllerProtocol.swift; sourceTree = "<group>"; };
 		860F953F2A792F3A003131EC /* ActivityParameterViewController+UITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityParameterViewController+UITextFieldDelegate.swift"; sourceTree = "<group>"; };
 		860F95412A79302C003131EC /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
+		861EBEB62A96353600DA536D /* FDietModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDietModel.swift; sourceTree = "<group>"; };
+		861EBEB82A96354400DA536D /* MappableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappableExtension.swift; sourceTree = "<group>"; };
+		861EBEBA2A9639BE00DA536D /* FUserChallengeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FUserChallengeModel.swift; sourceTree = "<group>"; };
+		861EBEBC2A963AFB00DA536D /* FGoalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FGoalModel.swift; sourceTree = "<group>"; };
 		86252C872A6E71CA009FEAF9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		863F99FB2A7BBC84004140AF /* countdown_animation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = countdown_animation.json; sourceTree = "<group>"; };
 		8644AC022A7A91810019C943 /* ActivitySessionModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySessionModule.swift; sourceTree = "<group>"; };
@@ -242,6 +251,7 @@
 		86AFC0352A929B66008B7439 /* DietGoals.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DietGoals.storyboard; sourceTree = "<group>"; };
 		86AFC0372A929B71008B7439 /* DietGoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietGoalsViewController.swift; sourceTree = "<group>"; };
 		86AFC0392A929B82008B7439 /* DietGoalsViewController+UITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DietGoalsViewController+UITextFieldDelegate.swift"; sourceTree = "<group>"; };
+		86AFC03B2A94A7F3008B7439 /* FUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FUserModel.swift; sourceTree = "<group>"; };
 		86B2F7852A7CEF0C00B364FB /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
 		86B2F78B2A7D06A900B364FB /* EdgeInsetLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeInsetLabel.swift; sourceTree = "<group>"; };
 		86B2F7922A7D06EE00B364FB /* PopoverModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverModule.swift; sourceTree = "<group>"; };
@@ -468,6 +478,17 @@
 				86B2F7A92A7D0B3100B364FB /* ActivityParameterViewController+ActivitySessionViewControllerProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		861EBEB52A96349400DA536D /* Firestore */ = {
+			isa = PBXGroup;
+			children = (
+				86AFC03B2A94A7F3008B7439 /* FUserModel.swift */,
+				861EBEB62A96353600DA536D /* FDietModel.swift */,
+				861EBEBA2A9639BE00DA536D /* FUserChallengeModel.swift */,
+				861EBEBC2A963AFB00DA536D /* FGoalModel.swift */,
+			);
+			path = Firestore;
 			sourceTree = "<group>";
 		};
 		8644ABFA2A7A8FFD0019C943 /* ActivitySession */ = {
@@ -699,6 +720,7 @@
 		86AFC0242A92863B008B7439 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				861EBEB52A96349400DA536D /* Firestore */,
 				86AFC0252A928645008B7439 /* UserModel.swift */,
 			);
 			path = Models;
@@ -934,6 +956,7 @@
 				86E4CECA2A700FC600B53C32 /* UINavigationControllerExtension.swift */,
 				860F95412A79302C003131EC /* UITextFieldExtension.swift */,
 				86B2F7BD2A7FCB1C00B364FB /* UILabelExtension.swift */,
+				861EBEB82A96354400DA536D /* MappableExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1759,6 +1782,7 @@
 				86AFC00E2A926F1C008B7439 /* RegistrationFlowCoordinator.swift in Sources */,
 				86EC39C32A8F9397007E7045 /* MacrosModule.swift in Sources */,
 				86B2F7992A7D074400B364FB /* PopoverViewModel.swift in Sources */,
+				861EBEB92A96354400DA536D /* MappableExtension.swift in Sources */,
 				86E4CEDF2A71116500B53C32 /* ActivitySetupUseCase.swift in Sources */,
 				86E4CE8D2A6FAFB700B53C32 /* DietDIContainer.swift in Sources */,
 				86AFC0232A928429008B7439 /* BodyCompositionViewController+UITextFieldDelegate.swift in Sources */,
@@ -1783,6 +1807,7 @@
 				86E30FF72A5E9E0E007EB56B /* SceneDelegate.swift in Sources */,
 				86E4CEB92A6FED8A00B53C32 /* NavigationButtonTypeEnum.swift in Sources */,
 				86B2F7972A7D072700B364FB /* PopoverFlowCoordinator.swift in Sources */,
+				861EBEB72A96353600DA536D /* FDietModel.swift in Sources */,
 				866F8FC82A667ACA00C3F30F /* WelcomeViewController.swift in Sources */,
 				86E4CE6A2A6FA92700B53C32 /* ActivityModule.swift in Sources */,
 				86B2F7A22A7D085C00B364FB /* PopoverConfiguration.swift in Sources */,
@@ -1795,6 +1820,7 @@
 				86AFC0172A9270C7008B7439 /* NameViewController.swift in Sources */,
 				860F952F2A7465DB003131EC /* ActivityParameterViewModel.swift in Sources */,
 				86E310172A5EA673007EB56B /* BaseViewModelProtocol.swift in Sources */,
+				861EBEBD2A963AFB00DA536D /* FGoalModel.swift in Sources */,
 				86E3101E2A5EAB4D007EB56B /* UIColorExtension.swift in Sources */,
 				86E4CEDB2A71109C00B53C32 /* ActivityViewController+ActivityCollectionViewProtocol.swift in Sources */,
 				8644AC092A7A92210019C943 /* ActivitySessionViewModel.swift in Sources */,
@@ -1834,6 +1860,7 @@
 				86B2F7B12A7ED11700B364FB /* ActivitySessionSetupUseCase.swift in Sources */,
 				866F8FC02A66799000C3F30F /* WelcomeDIContainer.swift in Sources */,
 				86E4CE7D2A6FAD7C00B53C32 /* WorkoutViewController.swift in Sources */,
+				861EBEBB2A9639BE00DA536D /* FUserChallengeModel.swift in Sources */,
 				866F8FCC2A667FA900C3F30F /* UIButtonExtension.swift in Sources */,
 				866F8FC22A6679A700C3F30F /* WelcomeFlowCoordinator.swift in Sources */,
 				86E4CE952A6FB05000B53C32 /* DietViewController.swift in Sources */,
@@ -1877,6 +1904,7 @@
 				860F95372A7469B5003131EC /* ActivityParameterSetupUseCase.swift in Sources */,
 				866F8FE22A66859A00C3F30F /* DefaultKeys.swift in Sources */,
 				86B2F7952A7D071100B364FB /* PopoverDIContainer.swift in Sources */,
+				86AFC03C2A94A7F3008B7439 /* FUserModel.swift in Sources */,
 				86E310262A5EAC08007EB56B /* UITableViewExtension.swift in Sources */,
 				86E3103D2A5EC414007EB56B /* MainModule.swift in Sources */,
 				86E4CEB22A6FD03E00B53C32 /* LobbyTabBarController.swift in Sources */,

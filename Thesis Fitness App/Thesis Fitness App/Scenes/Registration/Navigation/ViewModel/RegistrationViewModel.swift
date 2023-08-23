@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FirebaseFirestore
 
 class RegistrationViewModel: BaseViewModelProtocol {
     
@@ -50,4 +51,38 @@ class RegistrationViewModel: BaseViewModelProtocol {
         self.user.waterGoal = waterGoal
     }
     
+//    func addUser() {
+//        guard let imageUrl = AccountManager.shared.user?.photoURL, let email = AccountManager.shared.user?.email else {
+//            return
+//        }
+//
+//        let db = Firestore.firestore()
+//        var ref: DocumentReference?
+//        let user = FUserModel(name: self.user.name,
+//                              email: email,
+//                              imgUrl: imageUrl)
+//
+//        ref = db.collection("users").addDocument(data: user.toJSON()) { err in
+//            if let err = err {
+//                print("Error adding document: \(err)")
+//            } else {
+//                print("Document added with ID: \(ref!.documentID)")
+//            }
+//        }
+//    }
+//
+//    func getUser() {
+//        let db = Firestore.firestore()
+//
+//        db.collection("users").document("SCeAr1KLaVDAs8GEOZJt")
+//            .getDocument { (document, error) in
+//                if let document = document, document.exists, let data = document.data() {
+//                    if let user = FUserModel(document: data) {
+//                        print(user.email)
+//                    }
+//                } else {
+//                    print("Document does not exist")
+//                }
+//            }
+//    }
 }
