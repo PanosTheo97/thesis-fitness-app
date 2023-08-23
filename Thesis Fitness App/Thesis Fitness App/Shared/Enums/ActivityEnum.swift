@@ -8,15 +8,15 @@
 import Foundation
 import UIKit
 
-enum ActivityEnum: CaseIterable {
-    case running
-    case climbing
-    case cycling
-    case indoorRunning
-    case walking
-    case jumpingRope
-    case boxing
-    case pingPong
+enum ActivityEnum: String, CaseIterable {
+    case running = "Runing"
+    case climbing = "Climbing"
+    case cycling = "Cycling"
+    case indoorRunning = "Indoor Running"
+    case walking = "Walking"
+    case jumpingRope = "Jumping Rope"
+    case boxing = "Boxing"
+    case pingPong = "Ping Pong"
     
     // MARK: - Methods
     
