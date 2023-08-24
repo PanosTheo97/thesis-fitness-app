@@ -19,7 +19,7 @@ class WelcomeModule {
     
     private func makeWelcomeViewModel() -> WelcomeViewModelProtocol {
         WelcomeViewModel(welcomeSignInUseCase: makeWelcomeSignInUseCase(),
-                         welcomeCheckForRegistereduserUseCase: makeWelcomeCheckForRegistereduserUseCase())
+                         checkForRegistereduserUseCase: makeCheckForRegistereduserUseCase())
     }
     
     private func makeWelcomeFlowCoordinator(_ viewController: WelcomeViewController) -> WelcomeFlowCoordinatorProtocol {
@@ -35,8 +35,8 @@ class WelcomeModule {
         WelcomeSignInUseCase()
     }
     
-    private func makeWelcomeCheckForRegistereduserUseCase() -> WelcomeCheckForRegistereduserUseCaseProtocol {
-        WelcomeCheckForRegistereduserUseCase()
+    private func makeCheckForRegistereduserUseCase() -> CheckForRegistereduserUseCaseProtocol {
+       CheckForRegistereduserUseCase()
     }
     
 }

@@ -31,13 +31,13 @@ class WelcomeViewModel: WelcomeViewModelProtocol {
     // MARK: - Properties
     
     var welcomeSignInUseCase: WelcomeSignInUseCaseProtocol
-    var welcomeCheckForRegistereduserUseCase: WelcomeCheckForRegistereduserUseCaseProtocol
+    var checkForRegistereduserUseCase: CheckForRegistereduserUseCaseProtocol
     
     // MARK: - LifeCycle
     
-    init(welcomeSignInUseCase: WelcomeSignInUseCaseProtocol, welcomeCheckForRegistereduserUseCase: WelcomeCheckForRegistereduserUseCaseProtocol) {
+    init(welcomeSignInUseCase: WelcomeSignInUseCaseProtocol, checkForRegistereduserUseCase: CheckForRegistereduserUseCaseProtocol) {
         self.welcomeSignInUseCase = welcomeSignInUseCase
-        self.welcomeCheckForRegistereduserUseCase = welcomeCheckForRegistereduserUseCase
+        self.checkForRegistereduserUseCase = checkForRegistereduserUseCase
     }
     
     // MARK: - Methods
@@ -58,7 +58,7 @@ class WelcomeViewModel: WelcomeViewModelProtocol {
     }
     
     func executeWelcomeCheckForRegistereduserUseCase() {
-        self.welcomeCheckForRegistereduserUseCase.execute { isAlreadyRegistered in
+        self.checkForRegistereduserUseCase.execute { isAlreadyRegistered in
             self.isLoading.value = false
             switch isAlreadyRegistered {
             case true:

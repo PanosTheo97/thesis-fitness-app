@@ -77,6 +77,6 @@ class RegistrationViewModel: BaseViewModelProtocol {
                                         carbohydrates: carbs,
                                         fats: fats,
                                         protein: protein,
-                                        water: water)
+                                        water: water).toJSON()
     }
 }

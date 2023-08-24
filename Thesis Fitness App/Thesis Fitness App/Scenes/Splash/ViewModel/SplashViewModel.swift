@@ -17,11 +17,13 @@ class SplashViewModel: BaseViewModelProtocol {
     // MARK: - Properties
     
     var splashCheckForUserUseCase: SplashCheckForUserUseCaseProtocol
+    var checkForRegistereduserUseCase: CheckForRegistereduserUseCaseProtocol
     
     // MARK: - Life cycle
     
-    init(splashCheckForUserUseCase: SplashCheckForUserUseCaseProtocol) {
+    init(splashCheckForUserUseCase: SplashCheckForUserUseCaseProtocol, checkForRegistereduserUseCase: CheckForRegistereduserUseCaseProtocol) {
         self.splashCheckForUserUseCase = splashCheckForUserUseCase
+        self.checkForRegistereduserUseCase = checkForRegistereduserUseCase
     }
     
     func update(routing: Splash.RoutingEnum) {
@@ -31,9 +33,20 @@ class SplashViewModel: BaseViewModelProtocol {
     func executeSplashCheckForUserUseCase() {
         self.splashCheckForUserUseCase.execute { isSignedInUser in
             if isSignedInUser {
-                self.update(routing: .lobby)
+                self.executeWelcomeCheckForRegistereduserUseCase()
             } else {
                 self.update(routing: .welcome)
+            }
+        }
+    }
+    
+    func executeWelcomeCheckForRegistereduserUseCase() {
+        self.checkForRegistereduserUseCase.execute { isAlreadyRegistered in
+            switch isAlreadyRegistered {
+            case true:
+                self.update(routing: .lobby)
+            default:
+                print("ERROR")
             }
         }
     }

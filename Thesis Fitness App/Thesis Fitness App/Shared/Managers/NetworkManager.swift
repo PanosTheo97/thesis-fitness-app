@@ -35,7 +35,7 @@ final class NetworkManager {
         }
     }
     
-    static func getDocuments<ResponseType: Mappable>(_ responseType: ResponseType.Type, _ collection: CollectionTypeEnum, completion: @escaping (Result<[ResponseType], Error>) -> Void) {
+    static func getDocuments<ResponseType: Mappable>(_ responseType: ResponseType.Type, _ collection: CollectionTypeEnum, completion: @escaping (Result<([ResponseType], [String]), Error>) -> Void) {
         let db = Firestore.firestore()
         
         db.collection(collection.rawValue).getDocuments { (querySnapshot, error) in
@@ -43,15 +43,17 @@ final class NetworkManager {
                 completion(.failure(error))
             } else {
                 var data: [ResponseType] = []
+                var ids: [String] = []
                 guard let documents = querySnapshot?.documents else {
                     return
                 }
                 documents.forEach { document in
                     if let object = ResponseType.init(document: document.data()) {
                         data.append(object)
+                        ids.append(document.documentID)
                     }
                 }
-                completion(.success(data))
+                completion(.success((data, ids)))
             }
         }
     }

@@ -70,7 +70,6 @@ final class MainFlowCoordinator {
     }
     
     func moveToWelcome() {
-        #warning("Might be bugged cause of registration navigation / additional pops needed")
         if let welcomeViewController = self.mainNavigationController?.viewControllers.first(where: {$0 is WelcomeViewController}) {
             self.mainNavigationController?.popViewController(animated: true)
         } else {

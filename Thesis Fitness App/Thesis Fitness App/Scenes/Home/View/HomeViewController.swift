@@ -132,6 +132,15 @@ class HomeViewController: UIViewController, BaseProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setup()
+        
+        NetworkManager.getDocument(FUserModel.self, .users, "2PO4dJTwIVooO03bC4iX") { result in
+            switch result {
+            case .success(let user):
+                print(user.bodyweight)
+            case .failure:
+                print("ERROR")
+            }
+        }
     }
 
     // MARK: - Methods

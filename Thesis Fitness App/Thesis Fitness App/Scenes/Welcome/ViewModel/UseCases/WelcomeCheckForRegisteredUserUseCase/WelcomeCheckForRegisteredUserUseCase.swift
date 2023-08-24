@@ -7,18 +7,19 @@
 
 import Foundation
 
-protocol WelcomeCheckForRegistereduserUseCaseProtocol: AnyObject {
+protocol CheckForRegistereduserUseCaseProtocol: AnyObject {
     func execute(completion: @escaping (Bool?) -> Void)
 }
 
-class WelcomeCheckForRegistereduserUseCase: WelcomeCheckForRegistereduserUseCaseProtocol {
+class CheckForRegistereduserUseCase: CheckForRegistereduserUseCaseProtocol {
     
     func execute(completion: @escaping (Bool?) -> Void) {
         // Get all users
         NetworkManager.getDocuments(FUserModel.self, .users) { result in
             switch result {
-            case .success(let users):
-                if let registeredUser = users.first(where: { $0.email == AccountManager.shared.user?.email }) {
+            case .success((let users, let ids)):
+                if let registeredUserIndex = users.firstIndex(where: { $0.email == AccountManager.shared.user?.email }) {
+                    AccountManager.shared.userDocimentId = ids[registeredUserIndex]
                     completion(true)
                 } else {
                     completion(false)

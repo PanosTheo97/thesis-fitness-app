@@ -23,8 +23,8 @@ class FUserModel: Mappable {
     var dailyCaloricBurnGoal: Int?
     var dailyStepsGoal: Int?
     
-    var challenges: [FUserChallengeModel]?
-    var dietGoal: FDietModel?
+    var challenges: [[String: Any]]? // FUserChallengeModel
+    var dietGoal: [String: Any]? // FDietModel
     var favoriteActivitiesID: [String]?
     
     // MARK: - Life cycle

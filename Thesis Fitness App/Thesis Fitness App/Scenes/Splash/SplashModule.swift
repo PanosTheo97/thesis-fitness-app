@@ -18,7 +18,8 @@ class SplashModule {
     }
     
     private func makeSplashViewModel() -> SplashViewModel {
-        SplashViewModel(splashCheckForUserUseCase: self.makeSplashCheckForUserUseCase())
+        SplashViewModel(splashCheckForUserUseCase: makeSplashCheckForUserUseCase(),
+                        checkForRegistereduserUseCase: makeCheckForRegistereduserUseCase())
     }
     
     private func makeSplashFlowCoordinator(_ viewController: SplashViewController) -> SplashFlowCoordinator {
@@ -32,5 +33,9 @@ class SplashModule {
     
     private func makeSplashCheckForUserUseCase() -> SplashCheckForUserUseCaseProtocol {
         SplashCheckForUserUseCase()
+    }
+    
+    private func makeCheckForRegistereduserUseCase() -> CheckForRegistereduserUseCaseProtocol {
+       CheckForRegistereduserUseCase()
     }
 }

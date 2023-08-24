@@ -92,7 +92,6 @@ class WelcomeViewController: UIViewController, BaseProtocol {
             switch routingEnum {
             case .lobby:
                 self?.flowCoordinator?.moveToLobby()
-                print(AccountManager.shared.user?.email)
             case .firstTimeSignIn:
                 self?.flowCoordinator?.moveToRegistration()
             default: ()
