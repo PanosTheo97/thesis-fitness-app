@@ -10,6 +10,8 @@ import UIKit
 
 protocol TabBarViewControllerProtocol: UIViewController {
     
+    var lobbyTabBarController: LobbyTabBarController? { get set }
+    
     func hideTabBar()
     func showTabBar()
 }

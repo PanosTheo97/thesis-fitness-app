@@ -29,16 +29,15 @@ class ActivityViewController: UIViewController, BaseProtocol, TabBarViewControll
     var viewModel: ActivityViewModel?
     var flowCoordinator: ActivityFlowCoordinator?
     
+    weak var lobbyTabBarController: LobbyTabBarController?
+    
     // MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setup()
         
-        guard let lobbyTabBarController = self.navigationController?.tabBarController as? LobbyTabBarController else {
-            return
-        }
-        self.viewModel?.executeActivitySetupuseCase(favoriteActivities: lobbyTabBarController.viewModel?.user?.favoriteActivities ?? [])
+        self.viewModel?.executeActivitySetupuseCase(favoriteActivities: self.lobbyTabBarController?.viewModel?.user?.favoriteActivities ?? [])
     }
     
     override func viewDidAppear(_ animated: Bool) {

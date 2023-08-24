@@ -10,9 +10,8 @@ import UIKit
 
 class LobbyModule {
     
-    func makeLobbyTabBarController(tabBarControllers: [UIViewController]) -> LobbyTabBarController? {
+    func makeLobbyTabBarController() -> LobbyTabBarController? {
         let viewController = LobbyTabBarController()
-        viewController.setViewControllers(tabBarControllers, animated: false)
         viewController.viewModel = makeLobbyViewModel()
         viewController.flowCoordinator = makeLobbyFlowCoordinator(viewController)
         return viewController

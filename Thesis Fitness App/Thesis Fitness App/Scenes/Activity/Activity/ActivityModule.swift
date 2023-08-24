@@ -10,8 +10,8 @@ import UIKit
 
 class ActivityModule {
     
-    func makeActivityNavigationController() -> UINavigationController? {
-        if let viewController = self.makeActivityViewController() {
+    func makeActivityNavigationController(tabBarController: LobbyTabBarController) -> UINavigationController? {
+        if let viewController = self.makeActivityViewController(tabBarController: tabBarController) {
             let activityNavigationController = UINavigationController(rootViewController: viewController)
             activityNavigationController.navigationBar.tintColor = .App.mainText
             activityNavigationController.navigationBar.barTintColor = .clear
@@ -20,8 +20,9 @@ class ActivityModule {
         return nil
     }
     
-    func makeActivityViewController() -> ActivityViewController? {
+    func makeActivityViewController(tabBarController: LobbyTabBarController) -> ActivityViewController? {
         if let viewController = ActivityViewController.create(storyboardName: "Activity") {
+            viewController.lobbyTabBarController = tabBarController
             viewController.viewModel = makeActivityViewModel()
             viewController.flowCoordinator = makeActivityFlowCoordinator(viewController)
             return viewController

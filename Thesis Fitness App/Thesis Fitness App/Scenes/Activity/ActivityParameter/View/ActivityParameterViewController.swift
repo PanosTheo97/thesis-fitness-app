@@ -8,7 +8,7 @@
 import UIKit
 
 class ActivityParameterViewController: UIViewController, BaseProtocol, TabBarViewControllerProtocol {
-
+    
     // MARK: - IBProperties
     
     @IBOutlet weak var titleLabel: UILabel! {
@@ -60,6 +60,8 @@ class ActivityParameterViewController: UIViewController, BaseProtocol, TabBarVie
     
     var viewModel: ActivityParameterViewModel?
     var flowCoordinator: ActivityParameterFlowCoordinator?
+    
+    weak var lobbyTabBarController: LobbyTabBarController?
     
     #warning("Menu Items created at view model after call")
     var menuItems: [UIAction] {

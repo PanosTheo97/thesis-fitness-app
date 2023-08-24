@@ -24,15 +24,21 @@ final class MainFlowCoordinator {
     
     func moveToLobby() {
         
+        // Create LobbyTabBarController with it's respective controllers
+        
+        guard let lobbyTabBarController = self.mainDIContainer.lobbyModule.makeLobbyTabBarController() else {
+            return
+        }
+        
         // Create Lobby controllers
         
-        guard let homeNavigationController = self.mainDIContainer.homeModule.makeHomeNavigationController() else {
+        guard let homeNavigationController = self.mainDIContainer.homeModule.makeHomeNavigationController(tabBarController: lobbyTabBarController) else {
             return
         }
         homeNavigationController.tabBarItem.image = .get(image: .Home)
         homeNavigationController.title = "Lobby_homeTitle".getLocalized()
         
-        guard let activityNavigationController = self.mainDIContainer.activityModule.makeActivityNavigationController() else {
+        guard let activityNavigationController = self.mainDIContainer.activityModule.makeActivityNavigationController(tabBarController: lobbyTabBarController) else {
             return
         }
         activityNavigationController.tabBarItem.image = .get(image: .Activity)
@@ -56,14 +62,10 @@ final class MainFlowCoordinator {
         profileNavigationController.tabBarItem.image = .get(image: .Profile)
         profileNavigationController.title = "Lobby_profileTitle".getLocalized()
         
-        // Create LobbyTabBarController with it's respective controllers
-        
         let lobbyControllers = [homeNavigationController, activityNavigationController, workoutNavigationController, dietNavigationController, profileNavigationController]
         
-        guard let lobbyTabBarController = self.mainDIContainer.lobbyModule.makeLobbyTabBarController(tabBarControllers: lobbyControllers) else {
-            return
-        }
-        
+        lobbyTabBarController.setViewControllers(lobbyControllers, animated: false)
+      
         // Push Lobby to MainNavigation
         
         self.mainNavigationController?.pushViewController(lobbyTabBarController, animated: true)

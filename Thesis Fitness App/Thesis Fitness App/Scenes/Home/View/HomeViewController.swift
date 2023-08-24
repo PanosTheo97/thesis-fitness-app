@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, BaseProtocol {
+class HomeViewController: UIViewController, BaseProtocol, TabBarViewControllerProtocol {
 
     // MARK: - IBProperties
     
@@ -129,6 +129,8 @@ class HomeViewController: UIViewController, BaseProtocol {
     var viewModel: HomeViewModel?
     var flowCoordinator: HomeFlowCoordinator?
     
+    weak var lobbyTabBarController: LobbyTabBarController?
+    
     // MARK: - Life cycle
     
     override func viewDidLoad() {
@@ -165,11 +167,7 @@ class HomeViewController: UIViewController, BaseProtocol {
                 return
             }
             self?.configureUI(user: user)
-            
-            guard let lobbyTabBarController = self?.navigationController?.tabBarController as? LobbyTabBarController else {
-                return
-            }
-            lobbyTabBarController.viewModel?.user = user
+            self?.lobbyTabBarController?.viewModel?.user = user
         })
         
     }
