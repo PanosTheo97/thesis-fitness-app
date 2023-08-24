@@ -70,4 +70,17 @@ final class NetworkManager {
             }
         }
     }
+    
+    static func updateDocument(with data: [String: Any], _ collection: CollectionTypeEnum, _ documentId: String, completion: @escaping (Result<Bool, Error>) -> Void) {
+        let db = Firestore.firestore()
+        
+        db.collection(collection.rawValue).document(documentId).getDocument { (document, error) in
+            if let error = error {
+                completion(.failure(error))
+            } else {
+                document?.reference.updateData(data)
+                completion(.success(true))
+            }
+        }
+    }
 }

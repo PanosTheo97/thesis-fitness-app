@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import UIKit
 
 protocol ActivitySetupUseCaseProtocol: AnyObject {
     func execute(favoriteActivities: [ActivityEnum], completion: @escaping ([ActivityCollectionViewModel]) -> Void)
@@ -15,13 +14,9 @@ protocol ActivitySetupUseCaseProtocol: AnyObject {
 class ActivitySetupUseCase: ActivitySetupUseCaseProtocol {
     
     func execute(favoriteActivities: [ActivityEnum], completion: @escaping ([ActivityCollectionViewModel]) -> Void) {
-        // Service, fetch, completion with enum
-        // For now, dummy data
         
         var activityModels: [ActivityCollectionViewModel] = []
-        
         for activity in ActivityEnum.allCases {
-            
             activityModels.append(ActivityCollectionViewModel(type: activity,
                                                               isFavorite: favoriteActivities.contains(activity)))
         }

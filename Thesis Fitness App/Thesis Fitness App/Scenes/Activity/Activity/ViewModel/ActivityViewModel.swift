@@ -14,15 +14,18 @@ class ActivityViewModel: BaseViewModelProtocol {
     var isLoading = Observable<Bool?>(value: nil)
     var routingEnum = Observable<Activity.RoutingEnum?>(value: nil)
     var activityData = Observable<[ActivityCollectionViewModel]>(value: [])
+    var updatedFavorites = Observable<[ActivityEnum]?>(value: nil)
     
     // MARK: - Properties
     
     var activitySetupUseCase: ActivitySetupUseCaseProtocol
+    var activityUpdateFavoritesUseCase: ActivityUpdateFavoritesUseCaseProtocol
     
     // MARK: - Life cycle
     
-    init(activitySetupUseCase: ActivitySetupUseCaseProtocol) {
+    init(activitySetupUseCase: ActivitySetupUseCaseProtocol, activityUpdateFavoritesUseCase: ActivityUpdateFavoritesUseCaseProtocol) {
         self.activitySetupUseCase = activitySetupUseCase
+        self.activityUpdateFavoritesUseCase = activityUpdateFavoritesUseCase
     }
     
     // MARK: - Methods
@@ -31,9 +34,20 @@ class ActivityViewModel: BaseViewModelProtocol {
         self.routingEnum.value = routing
     }
     
-    func executeActivitySetupuseCase(favoriteActivities: [ActivityEnum]) {
+    func executeActivitySetupUseCase(favoriteActivities: [ActivityEnum]) {
         self.activitySetupUseCase.execute(favoriteActivities: favoriteActivities) { data in
             self.activityData.value = data
+        }
+    }
+    
+    func executeActivityUpdateFavoritesUseCase(activities: [ActivityCollectionViewModel]) {
+        var favoriteActivities: [ActivityEnum] = []
+        activities.forEach { activity in
+            if activity.isFavorite { favoriteActivities.append(activity.type) }
+        }
+        
+        self.activityUpdateFavoritesUseCase.execute(favoriteActivities: favoriteActivities) { _ in
+            self.updatedFavorites.value = favoriteActivities
         }
     }
 }

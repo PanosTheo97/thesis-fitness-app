@@ -36,13 +36,12 @@ class ActivityViewController: UIViewController, BaseProtocol, TabBarViewControll
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setup()
-        
-        self.viewModel?.executeActivitySetupuseCase(favoriteActivities: self.lobbyTabBarController?.viewModel?.user?.favoriteActivities ?? [])
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.showTabBar()
+        self.viewModel?.executeActivitySetupUseCase(favoriteActivities: self.lobbyTabBarController?.viewModel?.user?.favoriteActivities ?? [])
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -78,6 +77,13 @@ class ActivityViewController: UIViewController, BaseProtocol, TabBarViewControll
             self?.activityCollectionView.setup(data: activityData)
         })
         
+        viewModel?.updatedFavorites.addObserver({ newFavorites in
+            guard let favorites = newFavorites else {
+                return
+            }
+            self.lobbyTabBarController?.viewModel?.user?.favoriteActivities = favorites
+        })
+        
     }
     
     func addNavigationButtons() {
@@ -85,7 +91,7 @@ class ActivityViewController: UIViewController, BaseProtocol, TabBarViewControll
         self.navigationItem.addTitle(title: "Lobby_activityTitle".getLocalized())
         self.navigationItem.addButtons(barButtonPositionEnum: .right,
                                        navigationButtons: [(navigationButtonTypeEnum: .history,
-                                                            action: #selector(editButtonTapped),
+                                                            action: #selector(historyButtonTapped),
                                                             target: self),
                                                            (navigationButtonTypeEnum: .edit,
                                                                                 action: #selector(editButtonTapped),
@@ -106,9 +112,9 @@ class ActivityViewController: UIViewController, BaseProtocol, TabBarViewControll
     
     @objc func checkButtonTapped() {
         
-        // Use case to actually save updated favorites
+        self.viewModel?.executeActivityUpdateFavoritesUseCase(activities: self.activityCollectionView.data)
         
-        self.viewModel?.activityData.value = self.activityCollectionView.data
+        //self.viewModel?.activityData.value = self.activityCollectionView.data
         
         self.navigationItem.addButtons(barButtonPositionEnum: .right,
                                        navigationButtons: [(navigationButtonTypeEnum: .history,

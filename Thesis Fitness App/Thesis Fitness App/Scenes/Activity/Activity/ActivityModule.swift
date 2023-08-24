@@ -31,7 +31,8 @@ class ActivityModule {
     }
     
     private func makeActivityViewModel() -> ActivityViewModel {
-        ActivityViewModel(activitySetupUseCase: makeActivitySetupUseCase())
+        ActivityViewModel(activitySetupUseCase: makeActivitySetupUseCase(),
+                          activityUpdateFavoritesUseCase: makeActivityUpdateFavoritesUseCase())
     }
     
     private func makeActivityFlowCoordinator(_ viewController: ActivityViewController) -> ActivityFlowCoordinator {
@@ -45,4 +46,9 @@ class ActivityModule {
     private func makeActivitySetupUseCase() -> ActivitySetupUseCaseProtocol {
         ActivitySetupUseCase()
     }
+    
+    private func makeActivityUpdateFavoritesUseCase() -> ActivityUpdateFavoritesUseCaseProtocol {
+        ActivityUpdateFavoritesUseCase()
+    }
+    
 }
