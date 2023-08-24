@@ -83,3 +83,28 @@ enum ActivityEnum: String, CaseIterable {
         }
     }
 }
+
+extension ActivityEnum {
+    init?(string: String) {
+        switch string {
+        case "YjBbZzm1SjahJnFryDjN":
+            self.init(rawValue: "Runing")
+        case "rOGkpF0m5WxCxWOhwQg9":
+            self.init(rawValue: "Climbing")
+        case "khuM7tOiXxq3GAzd6vG7":
+            self.init(rawValue: "Cycling")
+        case "DeycT4SHRC7oXICdz8Eu":
+            self.init(rawValue: "Indoor Running")
+        case "GQwtuStM2lK3K9HPPbuL":
+            self.init(rawValue: "Walking")
+        case "hT4SiXXhJNLTZcLh2Ftw":
+            self.init(rawValue: "Jumping Rope")
+        case "nbLxd82u7iq0vGxzFsf5":
+            self.init(rawValue: "Boxing")
+        case "B7i1ymOBSpyug4JpVCUY":
+            self.init(rawValue: "Ping Pong")
+        default:
+            self.init(rawValue: "Runing")
+        }
+    }
+}

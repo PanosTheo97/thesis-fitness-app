@@ -50,6 +50,8 @@
 // MARK: - Home
 
 "Home_displayNameLabel" = "Γειά σου, %@";
+"Home_caloriesTitleLabel" = "Θερμίδες";
+"Home_stepsTitleLabel" = "Βήματα";
 
 // MARK: - Activity
 

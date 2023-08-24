@@ -30,6 +30,9 @@
 		861EBEC92A9652FE00DA536D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861EBEC82A9652FE00DA536D /* NetworkManager.swift */; };
 		861EBECC2A96A81800DA536D /* RegistrationAddUserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861EBECB2A96A81800DA536D /* RegistrationAddUserUseCase.swift */; };
 		861EBECF2A96AD2A00DA536D /* WelcomeCheckForRegisteredUserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861EBECE2A96AD2A00DA536D /* WelcomeCheckForRegisteredUserUseCase.swift */; };
+		861EBED22A9766D000DA536D /* HomeSetupUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861EBED12A9766D000DA536D /* HomeSetupUseCase.swift */; };
+		861EBED42A97679200DA536D /* DietModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861EBED32A97679200DA536D /* DietModel.swift */; };
+		861EBED62A976D0B00DA536D /* UserDietModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861EBED52A976D0B00DA536D /* UserDietModel.swift */; };
 		86252C882A6E722A009FEAF9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86252C872A6E71CA009FEAF9 /* GoogleService-Info.plist */; };
 		863F99FC2A7BBC87004140AF /* countdown_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 863F99FB2A7BBC84004140AF /* countdown_animation.json */; };
 		8644AC032A7A91810019C943 /* ActivitySessionModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8644AC022A7A91810019C943 /* ActivitySessionModule.swift */; };
@@ -222,6 +225,9 @@
 		861EBEC82A9652FE00DA536D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		861EBECB2A96A81800DA536D /* RegistrationAddUserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationAddUserUseCase.swift; sourceTree = "<group>"; };
 		861EBECE2A96AD2A00DA536D /* WelcomeCheckForRegisteredUserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCheckForRegisteredUserUseCase.swift; sourceTree = "<group>"; };
+		861EBED12A9766D000DA536D /* HomeSetupUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSetupUseCase.swift; sourceTree = "<group>"; };
+		861EBED32A97679200DA536D /* DietModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietModel.swift; sourceTree = "<group>"; };
+		861EBED52A976D0B00DA536D /* UserDietModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDietModel.swift; sourceTree = "<group>"; };
 		86252C872A6E71CA009FEAF9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		863F99FB2A7BBC84004140AF /* countdown_animation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = countdown_animation.json; sourceTree = "<group>"; };
 		8644AC022A7A91810019C943 /* ActivitySessionModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySessionModule.swift; sourceTree = "<group>"; };
@@ -528,6 +534,14 @@
 			path = WelcomeCheckForRegisteredUserUseCase;
 			sourceTree = "<group>";
 		};
+		861EBED02A9766B700DA536D /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				861EBED12A9766D000DA536D /* HomeSetupUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
 		8644ABFA2A7A8FFD0019C943 /* ActivitySession */ = {
 			isa = PBXGroup;
 			children = (
@@ -759,8 +773,10 @@
 		86AFC0242A92863B008B7439 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				861EBEB52A96349400DA536D /* Firestore */,
 				86AFC0252A928645008B7439 /* UserModel.swift */,
+				861EBED32A97679200DA536D /* DietModel.swift */,
+				861EBED52A976D0B00DA536D /* UserDietModel.swift */,
+				861EBEB52A96349400DA536D /* Firestore */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1222,6 +1238,7 @@
 			isa = PBXGroup;
 			children = (
 				86E4CE5B2A6FA58700B53C32 /* HomeViewModel.swift */,
+				861EBED02A9766B700DA536D /* UseCases */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1887,6 +1904,7 @@
 				86E310492A5EC4E8007EB56B /* SplashDIContainer.swift in Sources */,
 				86E4CE852A6FADA700B53C32 /* WorkoutDIContainer.swift in Sources */,
 				86B2F7B32A7ED5CA00B364FB /* CustomAlert.swift in Sources */,
+				861EBED22A9766D000DA536D /* HomeSetupUseCase.swift in Sources */,
 				86E4CEB72A6FD4A800B53C32 /* MainDIContainer.swift in Sources */,
 				86AFC0082A926DFF008B7439 /* RegistrationModule.swift in Sources */,
 				86AFC02E2A929154008B7439 /* ActivityEnum.swift in Sources */,
@@ -1931,6 +1949,7 @@
 				86AFC0262A928645008B7439 /* UserModel.swift in Sources */,
 				86B2F7932A7D06EE00B364FB /* PopoverModule.swift in Sources */,
 				86B2F7C02A7FCB4400B364FB /* AttributedProperty.swift in Sources */,
+				861EBED42A97679200DA536D /* DietModel.swift in Sources */,
 				86E4CE4F2A6F223900B53C32 /* WelcomeSignInUseCase.swift in Sources */,
 				866F8FDB2A66849D00C3F30F /* LocalizationManager.swift in Sources */,
 				86E310192A5EA687007EB56B /* BaseFlowCoordinatorProtocol.swift in Sources */,
@@ -1951,6 +1970,7 @@
 				86E4CEC92A70091700B53C32 /* LobbyTabBarController+UITabBarControllerDelegate.swift in Sources */,
 				860F95372A7469B5003131EC /* ActivityParameterSetupUseCase.swift in Sources */,
 				866F8FE22A66859A00C3F30F /* DefaultKeys.swift in Sources */,
+				861EBED62A976D0B00DA536D /* UserDietModel.swift in Sources */,
 				86B2F7952A7D071100B364FB /* PopoverDIContainer.swift in Sources */,
 				86AFC03C2A94A7F3008B7439 /* FUserModel.swift in Sources */,
 				86E310262A5EAC08007EB56B /* UITableViewExtension.swift in Sources */,

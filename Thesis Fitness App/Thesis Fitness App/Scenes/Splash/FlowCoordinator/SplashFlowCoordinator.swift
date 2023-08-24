@@ -30,11 +30,10 @@ class SplashFlowCoordinator: BaseFlowCoordinatorProtocol {
     }
     
     func moveToLobby() {
-        #warning("User model not passed correctly")
         guard let mainNavigation = self.splashViewController?.navigationController as? MainNavigationController else {
             return
         }
-        mainNavigation.flowCoordinator?.moveToLobby(user: UserModel(name: "user".getLocalized(), bodyweight: "75.5", favoriteActivities: []))
+        mainNavigation.flowCoordinator?.moveToLobby()
     }
 
 }

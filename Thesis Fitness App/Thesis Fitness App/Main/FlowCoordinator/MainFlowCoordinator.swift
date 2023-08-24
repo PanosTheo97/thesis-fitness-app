@@ -22,17 +22,17 @@ final class MainFlowCoordinator {
         self.mainDIContainer = mainDIContainer
     }
     
-    func moveToLobby(user: UserModel) {
+    func moveToLobby() {
         
         // Create Lobby controllers
         
-        guard let homeNavigationController = self.mainDIContainer.homeModule.makeHomeNavigationController(user: user) else {
+        guard let homeNavigationController = self.mainDIContainer.homeModule.makeHomeNavigationController() else {
             return
         }
         homeNavigationController.tabBarItem.image = .get(image: .Home)
         homeNavigationController.title = "Lobby_homeTitle".getLocalized()
         
-        guard let activityNavigationController = self.mainDIContainer.activityModule.makeActivityNavigationController(favoriteActivities: user.favoriteActivities) else {
+        guard let activityNavigationController = self.mainDIContainer.activityModule.makeActivityNavigationController(favoriteActivities: []) else {
             return
         }
         activityNavigationController.tabBarItem.image = .get(image: .Activity)
@@ -60,7 +60,7 @@ final class MainFlowCoordinator {
         
         let lobbyControllers = [homeNavigationController, activityNavigationController, workoutNavigationController, dietNavigationController, profileNavigationController]
         
-        guard let lobbyTabBarController = self.mainDIContainer.lobbyModule.makeLobbyTabBarController(tabBarControllers: lobbyControllers, user: user) else {
+        guard let lobbyTabBarController = self.mainDIContainer.lobbyModule.makeLobbyTabBarController(tabBarControllers: lobbyControllers) else {
             return
         }
         

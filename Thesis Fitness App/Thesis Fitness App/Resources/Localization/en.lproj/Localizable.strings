@@ -52,6 +52,8 @@
 // MARK: - Home
 
 "Home_displayNameLabel" = "Hello, %@";
+"Home_caloriesTitleLabel" = "Calories";
+"Home_stepsTitleLabel" = "Steps";
 
 // MARK: - Activity
 

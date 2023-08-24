@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-enum MacroTypeEnum {
+enum MacroTypeEnum: String {
     case protein
     case carbonhydrates
     case fats

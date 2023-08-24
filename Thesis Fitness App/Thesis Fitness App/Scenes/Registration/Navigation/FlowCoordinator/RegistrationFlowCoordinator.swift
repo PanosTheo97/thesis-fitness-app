@@ -72,11 +72,11 @@ final class RegistrationFlowCoordinator {
         registrationNavigationController?.pushViewController(dietGoalsViewController, animated: true)
     }
     
-    func moveToLobby(user: UserModel) {
+    func moveToLobby() {
         guard let presentingViewController = self.registrationNavigationController?.presentingViewController as? MainNavigationController else {
             return
         }
-        presentingViewController.flowCoordinator?.moveToLobby(user: user)
+        presentingViewController.flowCoordinator?.moveToLobby()
         self.registrationNavigationController?.dismiss(animated: true)
     }
     

@@ -31,7 +31,7 @@ class HomeViewController: UIViewController, BaseProtocol {
         didSet {
             bodyweightLabel.font = .systemFont(ofSize: 16, weight: .bold)
             bodyweightLabel.textColor = .App.mainText
-            bodyweightLabel.text = "75.5kg"
+            bodyweightLabel.text = "-"
         }
     }
     
@@ -39,6 +39,7 @@ class HomeViewController: UIViewController, BaseProtocol {
         didSet {
             muscleLabel.font = .systemFont(ofSize: 16, weight: .bold)
             muscleLabel.textColor = .App.mainText
+            muscleLabel.text = "-"
         }
     }
     
@@ -46,6 +47,7 @@ class HomeViewController: UIViewController, BaseProtocol {
         didSet {
             fatLabel.font = .systemFont(ofSize: 16, weight: .bold)
             fatLabel.textColor = .App.mainText
+            fatLabel.text = "-"
         }
     }
     
@@ -74,7 +76,7 @@ class HomeViewController: UIViewController, BaseProtocol {
         didSet {
             caloriesTitleLabel.font = .systemFont(ofSize: 16, weight: .regular)
             caloriesTitleLabel.textColor = .label
-            caloriesTitleLabel.text = "Calories"
+            caloriesTitleLabel.text = "Home_caloriesTitleLabel".getLocalized()
         }
     }
     
@@ -96,7 +98,7 @@ class HomeViewController: UIViewController, BaseProtocol {
         didSet {
             stepsTitleLabel.font = .systemFont(ofSize: 16, weight: .regular)
             stepsTitleLabel.textColor = .label
-            stepsTitleLabel.text = "Steps"
+            stepsTitleLabel.text = "Home_stepsTitleLabel".getLocalized()
         }
     }
     
@@ -132,15 +134,11 @@ class HomeViewController: UIViewController, BaseProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setup()
-        
-        NetworkManager.getDocument(FUserModel.self, .users, "2PO4dJTwIVooO03bC4iX") { result in
-            switch result {
-            case .success(let user):
-                print(user.bodyweight)
-            case .failure:
-                print("ERROR")
-            }
-        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.viewModel?.executeHomeSetupUseCase()
     }
 
     // MARK: - Methods
@@ -150,48 +148,6 @@ class HomeViewController: UIViewController, BaseProtocol {
         
         self.view.backgroundColor = .systemBackground
         self.addEditButton()
-        
-        #warning("setup Use Case needed")
-        
-        if let name = self.viewModel?.user.name {
-            self.displayNameLabel.text = String(format: "Home_displayNameLabel".getLocalized(), name)
-            self.displayNameLabel.isHidden = false
-        }
-        
-        if let imageUrl = AccountManager.shared.user?.photoURL {
-            self.profileImageView.displayImage(url: imageUrl, placeholder: nil)
-        } else {
-            self.profileImageView.image = .init(systemName: "person.fill")
-        }
-        
-        if let bodyweight = self.viewModel?.user.bodyweight {
-            self.bodyweightLabel.text = "\(bodyweight)kg"
-        }
-        
-        if let muscle = self.viewModel?.user.musclePercentage {
-            self.muscleLabel.text = "\(muscle)%"
-        } else {
-            self.muscleLabel.text = "-"
-        }
-        
-        if let fat = self.viewModel?.user.fatPercentage {
-            self.fatLabel.text = "\(fat)%"
-        } else {
-            self.fatLabel.text = "-"
-        }
-        
-        if let calories = self.viewModel?.user.dailyCalorieBurnGoal {
-            self.caloriesLabel.text = "0/\(calories)"
-        } else {
-            self.caloriesLabel.text = "0"
-        }
-        
-        if let steps = self.viewModel?.user.dailyStepGoal {
-            self.stepsLabel.text = "0/\(steps)"
-        } else {
-            self.stepsLabel.text = "0"
-        }
-        
     }
     
     private func registerObservers() {
@@ -203,6 +159,54 @@ class HomeViewController: UIViewController, BaseProtocol {
             default: ()
             }
         })
+        
+        viewModel?.user.addObserver({ [weak self] user in
+            guard let user = user else {
+                return
+            }
+            self?.configureUI(user: user)
+        })
+        
+    }
+    
+    func configureUI(user: UserModel) {
+        
+        self.displayNameLabel.text = String(format: "Home_displayNameLabel".getLocalized(), user.name)
+        self.displayNameLabel.isHidden = false
+        
+        
+        if let imageUrl = AccountManager.shared.user?.photoURL {
+            self.profileImageView.displayImage(url: imageUrl, placeholder: nil)
+        } else {
+            self.profileImageView.image = .init(systemName: "person.fill")
+        }
+        
+        self.bodyweightLabel.text = "\(user.bodyweight)kg"
+        
+        
+        if let muscle = user.musclePercentage {
+            self.muscleLabel.text = "\(muscle)%"
+        } else {
+            self.muscleLabel.text = "-"
+        }
+        
+        if let fat = user.fatPercentage {
+            self.fatLabel.text = "\(fat)%"
+        } else {
+            self.fatLabel.text = "-"
+        }
+        
+        if let calories = user.dailyCalorieBurnGoal {
+            self.caloriesLabel.text = "0/\(calories)"
+        } else {
+            self.caloriesLabel.text = "0"
+        }
+        
+        if let steps = user.dailyStepGoal {
+            self.stepsLabel.text = "0/\(steps)"
+        } else {
+            self.stepsLabel.text = "0"
+        }
         
     }
     

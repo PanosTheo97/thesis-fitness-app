@@ -7,22 +7,6 @@
 
 import Foundation
 
-class DietModel {
-#warning("Dummy Model, will change on database implementation")
-    
-    // MARK: - Properties
-    
-    var macroTypeEnum: MacroTypeEnum
-    var maxQuantity: Int
-    var consumedQuantity: Int
-    
-    init(macroTypeEnum: MacroTypeEnum, maxQuantity: Int, consumedQuantity: Int) {
-        self.macroTypeEnum = macroTypeEnum
-        self.maxQuantity = maxQuantity
-        self.consumedQuantity = consumedQuantity
-    }
-}
-
 class DietViewModel: BaseViewModelProtocol {
     
     // MARK: - Observables

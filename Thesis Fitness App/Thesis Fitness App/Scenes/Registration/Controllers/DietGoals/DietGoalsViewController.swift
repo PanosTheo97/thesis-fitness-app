@@ -145,8 +145,7 @@ class DietGoalsViewController: UIViewController {
         
         self.viewModel?.executeRegistrationAddUserUseCase(completion: { status in
             if status {
-                #warning("Actuall user injection to Lobby/Home")
-                self.registrationNavigation?.flowCoordinator?.moveToLobby(user: UserModel(name: "Panoulis", bodyweight: "75.5", favoriteActivities: []))
+                self.registrationNavigation?.flowCoordinator?.moveToLobby()
             }
         })
     }
