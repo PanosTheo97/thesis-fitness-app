@@ -34,7 +34,11 @@ class ActivityViewController: UIViewController, BaseProtocol, TabBarViewControll
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setup()
-        self.viewModel?.executeActivitySetupuseCase()
+        
+        guard let lobbyTabBarController = self.navigationController?.tabBarController as? LobbyTabBarController else {
+            return
+        }
+        self.viewModel?.executeActivitySetupuseCase(favoriteActivities: lobbyTabBarController.viewModel?.user?.favoriteActivities ?? [])
     }
     
     override func viewDidAppear(_ animated: Bool) {

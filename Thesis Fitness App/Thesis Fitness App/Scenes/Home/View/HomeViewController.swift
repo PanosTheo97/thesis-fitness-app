@@ -165,6 +165,11 @@ class HomeViewController: UIViewController, BaseProtocol {
                 return
             }
             self?.configureUI(user: user)
+            
+            guard let lobbyTabBarController = self?.navigationController?.tabBarController as? LobbyTabBarController else {
+                return
+            }
+            lobbyTabBarController.viewModel?.user = user
         })
         
     }
@@ -174,7 +179,6 @@ class HomeViewController: UIViewController, BaseProtocol {
         self.displayNameLabel.text = String(format: "Home_displayNameLabel".getLocalized(), user.name)
         self.displayNameLabel.isHidden = false
         
-        
         if let imageUrl = AccountManager.shared.user?.photoURL {
             self.profileImageView.displayImage(url: imageUrl, placeholder: nil)
         } else {
@@ -182,7 +186,6 @@ class HomeViewController: UIViewController, BaseProtocol {
         }
         
         self.bodyweightLabel.text = "\(user.bodyweight)kg"
-        
         
         if let muscle = user.musclePercentage {
             self.muscleLabel.text = "\(muscle)%"

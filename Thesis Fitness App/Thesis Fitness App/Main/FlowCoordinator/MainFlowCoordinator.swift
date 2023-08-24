@@ -32,7 +32,7 @@ final class MainFlowCoordinator {
         homeNavigationController.tabBarItem.image = .get(image: .Home)
         homeNavigationController.title = "Lobby_homeTitle".getLocalized()
         
-        guard let activityNavigationController = self.mainDIContainer.activityModule.makeActivityNavigationController(favoriteActivities: []) else {
+        guard let activityNavigationController = self.mainDIContainer.activityModule.makeActivityNavigationController() else {
             return
         }
         activityNavigationController.tabBarItem.image = .get(image: .Activity)

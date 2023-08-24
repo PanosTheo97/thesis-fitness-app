@@ -18,13 +18,11 @@ class ActivityViewModel: BaseViewModelProtocol {
     // MARK: - Properties
     
     var activitySetupUseCase: ActivitySetupUseCaseProtocol
-    var favoriteActivities: [ActivityEnum] = []
     
     // MARK: - Life cycle
     
-    init(activitySetupUseCase: ActivitySetupUseCaseProtocol, favoriteActivities: [ActivityEnum]) {
+    init(activitySetupUseCase: ActivitySetupUseCaseProtocol) {
         self.activitySetupUseCase = activitySetupUseCase
-        self.favoriteActivities = favoriteActivities
     }
     
     // MARK: - Methods
@@ -33,7 +31,7 @@ class ActivityViewModel: BaseViewModelProtocol {
         self.routingEnum.value = routing
     }
     
-    func executeActivitySetupuseCase() {
+    func executeActivitySetupuseCase(favoriteActivities: [ActivityEnum]) {
         self.activitySetupUseCase.execute(favoriteActivities: favoriteActivities) { data in
             self.activityData.value = data
         }

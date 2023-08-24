@@ -10,8 +10,8 @@ import UIKit
 
 class ActivityModule {
     
-    func makeActivityNavigationController(favoriteActivities: [ActivityEnum]) -> UINavigationController? {
-        if let viewController = self.makeActivityViewController(favoriteActivities: favoriteActivities) {
+    func makeActivityNavigationController() -> UINavigationController? {
+        if let viewController = self.makeActivityViewController() {
             let activityNavigationController = UINavigationController(rootViewController: viewController)
             activityNavigationController.navigationBar.tintColor = .App.mainText
             activityNavigationController.navigationBar.barTintColor = .clear
@@ -20,17 +20,17 @@ class ActivityModule {
         return nil
     }
     
-    func makeActivityViewController(favoriteActivities: [ActivityEnum]) -> ActivityViewController? {
+    func makeActivityViewController() -> ActivityViewController? {
         if let viewController = ActivityViewController.create(storyboardName: "Activity") {
-            viewController.viewModel = makeActivityViewModel(favoriteActivities: favoriteActivities)
+            viewController.viewModel = makeActivityViewModel()
             viewController.flowCoordinator = makeActivityFlowCoordinator(viewController)
             return viewController
         }
         return nil
     }
     
-    private func makeActivityViewModel(favoriteActivities: [ActivityEnum]) -> ActivityViewModel {
-        ActivityViewModel(activitySetupUseCase: makeActivitySetupUseCase(), favoriteActivities: favoriteActivities)
+    private func makeActivityViewModel() -> ActivityViewModel {
+        ActivityViewModel(activitySetupUseCase: makeActivitySetupUseCase())
     }
     
     private func makeActivityFlowCoordinator(_ viewController: ActivityViewController) -> ActivityFlowCoordinator {
