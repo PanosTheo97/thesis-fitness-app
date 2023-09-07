@@ -28,7 +28,10 @@ class NameViewController: UIViewController, RegistrationViewControllerProtocol {
             nameTextField.backgroundColor = .App.mainText
             nameTextField.layer.cornerRadius = 4
             nameTextField.font = .systemFont(ofSize: 16, weight: .semibold)
-            nameTextField.placeholder = "Registration_Name_placeholder".getLocalized()
+            nameTextField.attributedPlaceholder = NSAttributedString(
+                string: "Registration_Name_placeholder".getLocalized(),
+                attributes: [NSAttributedString.Key.foregroundColor: UIColor.label.withAlphaComponent(0.6)]
+            )
             nameTextField.setLeftPaddingPoints(10)
         }
     }

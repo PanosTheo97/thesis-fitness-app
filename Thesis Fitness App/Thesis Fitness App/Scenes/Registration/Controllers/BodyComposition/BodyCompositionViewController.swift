@@ -29,7 +29,10 @@ class BodyCompositionViewController: UIViewController, RegistrationViewControlle
             bodyweightTextField.backgroundColor = .App.mainText
             bodyweightTextField.layer.cornerRadius = 4
             bodyweightTextField.font = .systemFont(ofSize: 16, weight: .semibold)
-            bodyweightTextField.placeholder = "Registration_BodyComposition_weightPlaceholder".getLocalized()
+            bodyweightTextField.attributedPlaceholder = NSAttributedString(
+                string: "Registration_BodyComposition_weightPlaceholder".getLocalized(),
+                attributes: [NSAttributedString.Key.foregroundColor: UIColor.label.withAlphaComponent(0.6)]
+            )
             bodyweightTextField.setLeftPaddingPoints(10)
         }
     }
@@ -44,7 +47,10 @@ class BodyCompositionViewController: UIViewController, RegistrationViewControlle
             muscleMassTextField.backgroundColor = .App.mainText
             muscleMassTextField.layer.cornerRadius = 4
             muscleMassTextField.font = .systemFont(ofSize: 16, weight: .semibold)
-            muscleMassTextField.placeholder = "Registration_BodyComposition_musclePlaceholder".getLocalized()
+            muscleMassTextField.attributedPlaceholder = NSAttributedString(
+                string: "Registration_BodyComposition_musclePlaceholder".getLocalized(),
+                attributes: [NSAttributedString.Key.foregroundColor: UIColor.label.withAlphaComponent(0.6)]
+            )
             muscleMassTextField.setLeftPaddingPoints(10)
         }
     }
@@ -59,7 +65,10 @@ class BodyCompositionViewController: UIViewController, RegistrationViewControlle
             fatMassTextField.backgroundColor = .App.mainText
             fatMassTextField.layer.cornerRadius = 4
             fatMassTextField.font = .systemFont(ofSize: 16, weight: .semibold)
-            fatMassTextField.placeholder = "Registration_BodyComposition_fatPlaceholder".getLocalized()
+            fatMassTextField.attributedPlaceholder = NSAttributedString(
+                string: "Registration_BodyComposition_fatPlaceholder".getLocalized(),
+                attributes: [NSAttributedString.Key.foregroundColor: UIColor.label.withAlphaComponent(0.6)]
+            )
             fatMassTextField.setLeftPaddingPoints(10)
         }
     }

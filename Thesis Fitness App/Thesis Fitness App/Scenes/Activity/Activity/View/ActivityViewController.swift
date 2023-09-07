@@ -113,9 +113,6 @@ class ActivityViewController: UIViewController, BaseProtocol, TabBarViewControll
     @objc func checkButtonTapped() {
         
         self.viewModel?.executeActivityUpdateFavoritesUseCase(activities: self.activityCollectionView.data)
-        
-        //self.viewModel?.activityData.value = self.activityCollectionView.data
-        
         self.navigationItem.addButtons(barButtonPositionEnum: .right,
                                        navigationButtons: [(navigationButtonTypeEnum: .history,
                                                             action: #selector(editButtonTapped),

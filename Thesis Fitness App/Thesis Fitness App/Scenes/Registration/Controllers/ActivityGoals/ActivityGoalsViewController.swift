@@ -29,7 +29,10 @@ class ActivityGoalsViewController: UIViewController {
             stepsTextField.backgroundColor = .App.mainText
             stepsTextField.layer.cornerRadius = 4
             stepsTextField.font = .systemFont(ofSize: 16, weight: .semibold)
-            stepsTextField.placeholder = "Registration_ActivityGoals_stepsPlaceholder".getLocalized()
+            stepsTextField.attributedPlaceholder = NSAttributedString(
+                string: "Registration_ActivityGoals_stepsPlaceholder".getLocalized(),
+                attributes: [NSAttributedString.Key.foregroundColor: UIColor.label.withAlphaComponent(0.6)]
+            )
             stepsTextField.setLeftPaddingPoints(10)
         }
     }
@@ -44,7 +47,10 @@ class ActivityGoalsViewController: UIViewController {
             caloriesTextField.backgroundColor = .App.mainText
             caloriesTextField.layer.cornerRadius = 4
             caloriesTextField.font = .systemFont(ofSize: 16, weight: .semibold)
-            caloriesTextField.placeholder = "Registration_ActivityGoals_caloriesPlaceholder".getLocalized()
+            caloriesTextField.attributedPlaceholder = NSAttributedString(
+                string: "Registration_ActivityGoals_caloriesPlaceholder".getLocalized(),
+                attributes: [NSAttributedString.Key.foregroundColor: UIColor.label.withAlphaComponent(0.6)]
+            )
             caloriesTextField.setLeftPaddingPoints(10)
         }
     }

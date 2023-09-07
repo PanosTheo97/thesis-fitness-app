@@ -31,7 +31,8 @@ class HomeModule {
     }
     
     private func makeHomeViewModel() -> HomeViewModel {
-        HomeViewModel(homeSetupUseCase: makeHomeSetupUseCase())
+        HomeViewModel(homeSetupUseCase: makeHomeSetupUseCase(),
+                      homePedometerUseCase: makeHomePedometerUseCase())
     }
     
     private func makeHomeFlowCoordinator(_ viewController: HomeViewController) -> HomeFlowCoordinator {
@@ -45,5 +46,9 @@ class HomeModule {
     
     private func makeHomeSetupUseCase() -> HomeSetupUseCaseProtocol {
         HomeSetupUseCase()
+    }
+    
+    private func makeHomePedometerUseCase() -> HomePedometerUseCaseProtocol {
+        HomePedometerUseCase()
     }
 }

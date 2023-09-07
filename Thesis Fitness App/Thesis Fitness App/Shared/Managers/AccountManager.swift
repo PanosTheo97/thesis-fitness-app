@@ -31,7 +31,6 @@ class AccountManager {
         let config = GIDConfiguration(clientID: clientID)
         GIDSignIn.sharedInstance.signIn(with: config, presenting: UIWindow.topMostViewController) { result, error in
             guard error == nil else {
-                print(error)
                 completion(false)
                 return
             }
@@ -47,14 +46,10 @@ class AccountManager {
             
             Auth.auth().signIn(with: credential) { result, error in
                 guard error == nil else {
-                    print(error)
                     completion(false)
                     return
                 }
                 self.user = result?.user
-                // Create the user if not existing
-                
-                // Handle the UI
                 completion(true)
             }
         }

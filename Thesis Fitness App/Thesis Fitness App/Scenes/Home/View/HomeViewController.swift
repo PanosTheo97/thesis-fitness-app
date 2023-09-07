@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreMotion
 
 class HomeViewController: UIViewController, BaseProtocol, TabBarViewControllerProtocol {
 
@@ -136,6 +137,7 @@ class HomeViewController: UIViewController, BaseProtocol, TabBarViewControllerPr
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setup()
+        //self.viewModel?.executeHomePedometerUseCase()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -150,6 +152,21 @@ class HomeViewController: UIViewController, BaseProtocol, TabBarViewControllerPr
         
         self.view.backgroundColor = .systemBackground
         self.addEditButton()
+        
+        let pedometer = CMPedometer()
+        
+        if CMPedometer.isStepCountingAvailable() {
+            pedometer.startUpdates(from: Date()) { pedometerData, error in
+                guard let pedometerData = pedometerData, error == nil else { return }
+                DispatchQueue.main.async {
+                    if let stepsGoal = self.lobbyTabBarController?.viewModel?.user?.dailyStepGoal {
+                        self.stepsLabel.text = "\(pedometerData.numberOfSteps.intValue)/\(stepsGoal)"
+                    } else {
+                        self.stepsLabel.text = "\(pedometerData.numberOfSteps.intValue)"
+                    }
+                }
+            }
+        }
     }
     
     private func registerObservers() {
@@ -168,6 +185,14 @@ class HomeViewController: UIViewController, BaseProtocol, TabBarViewControllerPr
             }
             self?.configureUI(user: user)
             self?.lobbyTabBarController?.viewModel?.user = user
+        })
+        
+        viewModel?.stepCounter.addObserver({ [weak self] steps in
+            if let stepsGoal = self?.lobbyTabBarController?.viewModel?.user?.dailyStepGoal {
+                self?.stepsLabel.text = "\(steps)/\(stepsGoal)"
+            } else {
+                self?.stepsLabel.text = "\(steps)"
+            }
         })
         
     }

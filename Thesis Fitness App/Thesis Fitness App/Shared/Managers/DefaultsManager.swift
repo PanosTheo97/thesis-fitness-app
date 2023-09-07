@@ -16,7 +16,6 @@ protocol DefaultsManagerProtocol {
 
 class DefaultsManager: DefaultsManagerProtocol {
     
-    // MARK: - Properties
     // MARK: - Shared
     
     func setNew(languageEnum: LanguageEnum) {
@@ -25,14 +24,5 @@ class DefaultsManager: DefaultsManagerProtocol {
     func getLanguage() -> String? {
         Defaults[\.selectedLanguageKey]
     }
-    
-    // MARK: - QuickLogin
-    
-//    func saveCookies(cookiesDictionany: [String: AnyObject]) {
-//        Defaults[\.quickLoginCookiesDictionaryKey] = cookiesDictionany
-//    }
-//    func loadCookies() -> [String: AnyObject] {
-//        return Defaults[\.quickLoginCookiesDictionaryKey]
-//    }
     
 }

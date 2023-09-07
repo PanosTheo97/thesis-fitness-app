@@ -29,7 +29,10 @@ class DietGoalsViewController: UIViewController {
             caloriesTextField.backgroundColor = .App.mainText
             caloriesTextField.layer.cornerRadius = 4
             caloriesTextField.font = .systemFont(ofSize: 16, weight: .semibold)
-            caloriesTextField.placeholder = "Registration_DietGoals_caloriesPlaceholder".getLocalized()
+            caloriesTextField.attributedPlaceholder = NSAttributedString(
+                string: "Registration_DietGoals_caloriesPlaceholder".getLocalized(),
+                attributes: [NSAttributedString.Key.foregroundColor: UIColor.label.withAlphaComponent(0.6)]
+            )
             caloriesTextField.setLeftPaddingPoints(10)
         }
     }
@@ -44,7 +47,10 @@ class DietGoalsViewController: UIViewController {
             proteinTextField.backgroundColor = .App.mainText
             proteinTextField.layer.cornerRadius = 4
             proteinTextField.font = .systemFont(ofSize: 16, weight: .semibold)
-            proteinTextField.placeholder = "Registration_DietGoals_proteinPlaceholder".getLocalized()
+            proteinTextField.attributedPlaceholder = NSAttributedString(
+                string: "Registration_DietGoals_proteinPlaceholder".getLocalized(),
+                attributes: [NSAttributedString.Key.foregroundColor: UIColor.label.withAlphaComponent(0.6)]
+            )
             proteinTextField.setLeftPaddingPoints(10)
         }
     }
@@ -59,7 +65,10 @@ class DietGoalsViewController: UIViewController {
             carbsTextField.backgroundColor = .App.mainText
             carbsTextField.layer.cornerRadius = 4
             carbsTextField.font = .systemFont(ofSize: 16, weight: .semibold)
-            carbsTextField.placeholder = "Registration_DietGoals_carbsPlaceholder".getLocalized()
+            carbsTextField.attributedPlaceholder = NSAttributedString(
+                string: "Registration_DietGoals_carbsPlaceholder".getLocalized(),
+                attributes: [NSAttributedString.Key.foregroundColor: UIColor.label.withAlphaComponent(0.6)]
+            )
             carbsTextField.setLeftPaddingPoints(10)
         }
     }
@@ -74,7 +83,10 @@ class DietGoalsViewController: UIViewController {
             fatsTextField.backgroundColor = .App.mainText
             fatsTextField.layer.cornerRadius = 4
             fatsTextField.font = .systemFont(ofSize: 16, weight: .semibold)
-            fatsTextField.placeholder = "Registration_DietGoals_fatsPlaceholder".getLocalized()
+            fatsTextField.attributedPlaceholder = NSAttributedString(
+                string: "Registration_DietGoals_fatsPlaceholder".getLocalized(),
+                attributes: [NSAttributedString.Key.foregroundColor: UIColor.label.withAlphaComponent(0.6)]
+            )
             fatsTextField.setLeftPaddingPoints(10)
         }
     }
@@ -89,7 +101,10 @@ class DietGoalsViewController: UIViewController {
             waterTextField.backgroundColor = .App.mainText
             waterTextField.layer.cornerRadius = 4
             waterTextField.font = .systemFont(ofSize: 16, weight: .semibold)
-            waterTextField.placeholder = "Registration_DietGoals_waterPlaceholder".getLocalized()
+            waterTextField.attributedPlaceholder = NSAttributedString(
+                string: "Registration_DietGoals_waterPlaceholder".getLocalized(),
+                attributes: [NSAttributedString.Key.foregroundColor: UIColor.label.withAlphaComponent(0.6)]
+            )
             waterTextField.setLeftPaddingPoints(10)
         }
     }
