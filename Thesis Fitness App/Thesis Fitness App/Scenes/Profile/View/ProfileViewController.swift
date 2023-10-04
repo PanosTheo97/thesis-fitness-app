@@ -15,12 +15,62 @@ class ProfileViewController: UIViewController, BaseProtocol {
 
     // MARK: - IBProperties
     
+    @IBOutlet weak var bodyCompositionButton: UIButton! {
+        didSet {
+            bodyCompositionButton.backgroundColor = .clear
+            bodyCompositionButton.applyStyle(buttonStyleEnum: .rounded(backgroundcolor: .clear,
+                                                             textColor: .App.mainText,
+                                                             text: "Profile_bodyCompositionButton".getLocalized(),
+                                                             font: .systemFont(ofSize: 16, weight: .bold)))
+        }
+    }
+    
+    @IBOutlet weak var dailyMovementGoalsButton: UIButton! {
+        didSet {
+            dailyMovementGoalsButton.backgroundColor = .clear
+            dailyMovementGoalsButton.applyStyle(buttonStyleEnum: .rounded(backgroundcolor: .clear,
+                                                             textColor: .App.mainText,
+                                                             text: "Profile_dailyMovementButton".getLocalized(),
+                                                             font: .systemFont(ofSize: 16, weight: .bold)))
+        }
+    }
+    
+    @IBOutlet weak var dailyDietGoalsButton: UIButton! {
+        didSet {
+            dailyDietGoalsButton.backgroundColor = .clear
+            dailyDietGoalsButton.applyStyle(buttonStyleEnum: .rounded(backgroundcolor: .clear,
+                                                             textColor: .App.mainText,
+                                                             text: "Profile_dailyDietButton".getLocalized(),
+                                                             font: .systemFont(ofSize: 16, weight: .bold)))
+        }
+    }
+    
+    @IBOutlet weak var changeLanguageButton: UIButton! {
+        didSet {
+            changeLanguageButton.backgroundColor = .clear
+            changeLanguageButton.applyStyle(buttonStyleEnum: .rounded(backgroundcolor: .clear,
+                                                             textColor: .App.mainText,
+                                                             text: "Profile_changeLanguageButton".getLocalized(),
+                                                             font: .systemFont(ofSize: 16, weight: .bold)))
+        }
+    }
+    
     @IBOutlet weak var logoutButton: UIButton! {
         didSet {
             logoutButton.backgroundColor = .clear
             logoutButton.applyStyle(buttonStyleEnum: .rounded(backgroundcolor: .clear,
                                                              textColor: .App.mainText,
                                                              text: "Profile_logoutButton".getLocalized(),
+                                                             font: .systemFont(ofSize: 16, weight: .bold)))
+        }
+    }
+    
+    @IBOutlet weak var deleteAccountButton: UIButton! {
+        didSet {
+            deleteAccountButton.backgroundColor = .clear
+            deleteAccountButton.applyStyle(buttonStyleEnum: .rounded(backgroundcolor: .clear,
+                                                             textColor: .systemRed,
+                                                             text: "Profile_deleteAccountButton".getLocalized(),
                                                              font: .systemFont(ofSize: 16, weight: .bold)))
         }
     }
@@ -65,10 +115,10 @@ class ProfileViewController: UIViewController, BaseProtocol {
     
     func addSettingsButton() {
         self.navigationItem.addTitle(title: "Lobby_profileTitle".getLocalized())
-        self.navigationItem.addButtons(barButtonPositionEnum: .right,
-                                       navigationButtons: [(navigationButtonTypeEnum: .settings,
-                                                            action: #selector(settingsButtonTapped),
-                                                            target: self)])
+//        self.navigationItem.addButtons(barButtonPositionEnum: .right,
+//                                       navigationButtons: [(navigationButtonTypeEnum: .settings,
+//                                                            action: #selector(settingsButtonTapped),
+//                                                            target: self)])
     }
     
     @objc func settingsButtonTapped() {

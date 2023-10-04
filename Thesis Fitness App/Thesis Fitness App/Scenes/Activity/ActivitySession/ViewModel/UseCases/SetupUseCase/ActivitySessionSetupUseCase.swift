@@ -14,7 +14,7 @@ protocol ActivitySessionSetupUseCaseProtocol: AnyObject {
 class ActivitySessionSetupUseCase: ActivitySessionSetupUseCaseProtocol {
     
     func execute(completion: @escaping (Bool) -> Void) {
-        // Check if activity should show map
+        #warning("Check if activity should show map")
         completion(true)
     }
 }

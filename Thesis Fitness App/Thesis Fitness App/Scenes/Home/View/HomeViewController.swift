@@ -125,6 +125,54 @@ class HomeViewController: UIViewController, BaseProtocol, TabBarViewControllerPr
         }
     }
     
+    @IBOutlet weak var backgroundShadowView: UIView! {
+        didSet {
+            backgroundShadowView.backgroundColor = UIColor(hexString: "#ECEEF5")
+            backgroundShadowView.layer.cornerRadius = 8
+        }
+    }
+    
+    @IBOutlet weak var cellView: UIView! {
+        didSet {
+            cellView.layer.masksToBounds = true
+            cellView.layer.cornerRadius = 8
+            cellView.backgroundColor = .secondarySystemGroupedBackground
+        }
+    }
+    
+    @IBOutlet weak var customCircleView: CustomCircleView! {
+        didSet {
+            customCircleView.backgroundColor = .clear
+            self.customCircleView.configure(circleViewTypeEnum: .half,
+                                            macroTypeEnum: .protein,
+                                            maxQuantity: 240,
+                                            consumedQuantity: 60)
+        }
+    }
+    
+    @IBOutlet weak var titleLabel: UILabel! {
+        didSet {
+            titleLabel.font = .systemFont(ofSize: 16, weight: .bold)
+            titleLabel.textColor = .label
+            titleLabel.text = "Play for time (min.)"
+        }
+    }
+    
+    @IBOutlet weak var activityTypeLabel: UILabel! {
+        didSet {
+            activityTypeLabel.font = .systemFont(ofSize: 14, weight: .medium)
+            activityTypeLabel.text = "Ping Pong"
+            activityTypeLabel.textColor = .label
+        }
+    }
+    
+    @IBOutlet weak var activityImageView: UIImageView! {
+        didSet {
+            activityImageView.contentMode = .scaleAspectFit
+            activityImageView.image = .init(systemName: "figure.table.tennis")?.withTintColor(.label, renderingMode: .alwaysOriginal)
+        }
+    }
+    
     // MARK: - Properties
     
     var viewModel: HomeViewModel?
@@ -151,6 +199,7 @@ class HomeViewController: UIViewController, BaseProtocol, TabBarViewControllerPr
         registerObservers()
         
         self.view.backgroundColor = .systemBackground
+        self.backgroundShadowView.dropShadow(offset: CGSize(width: 0, height: 5), radius: 2, color: .lightGray)
         self.addEditButton()
         
         let pedometer = CMPedometer()

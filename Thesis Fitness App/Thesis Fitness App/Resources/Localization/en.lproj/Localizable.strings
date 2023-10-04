@@ -48,6 +48,11 @@
 // MARK: - Profile
 
 "Profile_logoutButton" = "Logout";
+"Profile_bodyCompositionButton" = "Body Composition Details";
+"Profile_dailyMovementButton" = "Daily Movement Goals";
+"Profile_dailyDietButton" = "Daily Diet Goals";
+"Profile_changeLanguageButton" = "Change Language";
+"Profile_deleteAccountButton" = "Delete Account";
 
 // MARK: - Home
 

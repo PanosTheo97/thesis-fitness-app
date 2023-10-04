@@ -59,6 +59,5 @@ class DietTableViewCell: UITableViewCell {
                                         macroTypeEnum: model.macroTypeEnum,
                                         maxQuantity: model.maxQuantity,
                                         consumedQuantity: model.consumedQuantity)
-        //self.layoutIfNeeded()
     }
 }
