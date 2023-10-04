@@ -66,6 +66,10 @@ class DietViewController: UIViewController, BaseProtocol {
     
     func addNavigationButtons() {
         self.navigationItem.addTitle(title: "Lobby_dietTitle".getLocalized())
+        self.navigationItem.addButtons(barButtonPositionEnum: .right,
+                                       navigationButtons: [(navigationButtonTypeEnum: .history,
+                                                            action: #selector(historyButtonTapped),
+                                                            target: self)])
     }
     
     func configureFAB() {
@@ -93,6 +97,15 @@ class DietViewController: UIViewController, BaseProtocol {
         self.addMetricsFAB.addItem(item: addMacrosItem)
         self.addMetricsFAB.addItem(item: addFoodItem)
         
+    }
+    
+    @objc func historyButtonTapped() {
+        print("History")
+        guard let viewController = DateViewController.create(storyboardName: "Date") else {
+            return
+        }
+        
+        self.present(viewController, animated: true)
     }
 }
 

@@ -127,6 +127,11 @@ class ActivityViewController: UIViewController, BaseProtocol, TabBarViewControll
     
     @objc func historyButtonTapped() {
         print("History")
+        guard let viewController = DateViewController.create(storyboardName: "Date") else {
+            return
+        }
+        
+        self.present(viewController, animated: true)
     }
 }
 

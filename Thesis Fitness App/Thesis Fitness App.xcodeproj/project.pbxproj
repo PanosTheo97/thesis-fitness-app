@@ -63,6 +63,8 @@
 		866F8FDE2A6684C600C3F30F /* LanguageEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866F8FDD2A6684C600C3F30F /* LanguageEnum.swift */; };
 		866F8FE02A66852200C3F30F /* DefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866F8FDF2A66852200C3F30F /* DefaultsManager.swift */; };
 		866F8FE22A66859A00C3F30F /* DefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866F8FE12A66859A00C3F30F /* DefaultKeys.swift */; };
+		86AEC7ED2ACD6C7C00B1175B /* Date.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86AEC7EC2ACD6C7C00B1175B /* Date.storyboard */; };
+		86AEC7EF2ACD6C9000B1175B /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AEC7EE2ACD6C9000B1175B /* DateViewController.swift */; };
 		86AFC0082A926DFF008B7439 /* RegistrationModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFC0072A926DFE008B7439 /* RegistrationModule.swift */; };
 		86AFC00A2A926E79008B7439 /* RegistrationNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFC0092A926E79008B7439 /* RegistrationNavigationController.swift */; };
 		86AFC00C2A926EB9008B7439 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFC00B2A926EB9008B7439 /* RegistrationViewModel.swift */; };
@@ -262,6 +264,8 @@
 		866F8FDD2A6684C600C3F30F /* LanguageEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageEnum.swift; sourceTree = "<group>"; };
 		866F8FDF2A66852200C3F30F /* DefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsManager.swift; sourceTree = "<group>"; };
 		866F8FE12A66859A00C3F30F /* DefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultKeys.swift; sourceTree = "<group>"; };
+		86AEC7EC2ACD6C7C00B1175B /* Date.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Date.storyboard; sourceTree = "<group>"; };
+		86AEC7EE2ACD6C9000B1175B /* DateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
 		86AFC0072A926DFE008B7439 /* RegistrationModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationModule.swift; sourceTree = "<group>"; };
 		86AFC0092A926E79008B7439 /* RegistrationNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationNavigationController.swift; sourceTree = "<group>"; };
 		86AFC00B2A926EB9008B7439 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
@@ -688,6 +692,15 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
+		86AEC7EB2ACD6C6700B1175B /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				86AEC7EC2ACD6C7C00B1175B /* Date.storyboard */,
+				86AEC7EE2ACD6C9000B1175B /* DateViewController.swift */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
 		86AFC0022A926DA3008B7439 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
@@ -1067,6 +1080,7 @@
 		86E310372A5EC383007EB56B /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				86AEC7EB2ACD6C6700B1175B /* Date */,
 				86E310382A5EC3DE007EB56B /* Splash */,
 				866F8FBA2A66794A00C3F30F /* Welcome */,
 				86AFC0022A926DA3008B7439 /* Registration */,
@@ -1749,6 +1763,7 @@
 				863F99FC2A7BBC87004140AF /* countdown_animation.json in Resources */,
 				86E4CEA32A6FB24500B53C32 /* Profile.storyboard in Resources */,
 				86E30FFE2A5E9E10007EB56B /* Assets.xcassets in Resources */,
+				86AEC7ED2ACD6C7C00B1175B /* Date.storyboard in Resources */,
 				86E3104F2A5EC52A007EB56B /* Splash.storyboard in Resources */,
 				86AFC01F2A92829F008B7439 /* BodyComposition.storyboard in Resources */,
 				861EBEEB2A98DBB100DA536D /* Macros.storyboard in Resources */,
@@ -1882,6 +1897,7 @@
 				86E30FF72A5E9E0E007EB56B /* SceneDelegate.swift in Sources */,
 				86E4CEB92A6FED8A00B53C32 /* NavigationButtonTypeEnum.swift in Sources */,
 				86B2F7972A7D072700B364FB /* PopoverFlowCoordinator.swift in Sources */,
+				86AEC7EF2ACD6C9000B1175B /* DateViewController.swift in Sources */,
 				861EBEB72A96353600DA536D /* FDietModel.swift in Sources */,
 				866F8FC82A667ACA00C3F30F /* WelcomeViewController.swift in Sources */,
 				86E4CE6A2A6FA92700B53C32 /* ActivityModule.swift in Sources */,

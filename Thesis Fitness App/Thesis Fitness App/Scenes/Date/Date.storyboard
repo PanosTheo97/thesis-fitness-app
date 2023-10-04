@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Date View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="DateViewControllerIdentifier" id="Y6W-OH-hqX" customClass="DateViewController" customModule="Thesis_Fitness_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Zh-xb-Kox">
+                                <rect key="frame" x="0.0" y="426" width="393" height="426"/>
+                                <subviews>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="UHc-Z7-M5N">
+                                        <rect key="frame" x="16" y="24" width="361" height="289"/>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bo2-lc-cYV">
+                                        <rect key="frame" x="108" y="337" width="177" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="N83-kL-pi6"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="bo2-lc-cYV" firstAttribute="width" secondItem="8Zh-xb-Kox" secondAttribute="width" multiplier="0.450382" id="7Np-Cx-9mI"/>
+                                    <constraint firstItem="bo2-lc-cYV" firstAttribute="top" secondItem="UHc-Z7-M5N" secondAttribute="bottom" constant="24" id="9Vt-rz-RcS"/>
+                                    <constraint firstItem="UHc-Z7-M5N" firstAttribute="top" secondItem="8Zh-xb-Kox" secondAttribute="top" constant="24" id="CjF-ta-C1h"/>
+                                    <constraint firstAttribute="trailing" secondItem="UHc-Z7-M5N" secondAttribute="trailing" constant="16" id="EHu-7T-04u"/>
+                                    <constraint firstItem="UHc-Z7-M5N" firstAttribute="leading" secondItem="8Zh-xb-Kox" secondAttribute="leading" constant="16" id="Jxy-Zu-Z2T"/>
+                                    <constraint firstItem="bo2-lc-cYV" firstAttribute="centerX" secondItem="8Zh-xb-Kox" secondAttribute="centerX" id="L7b-r1-xbI"/>
+                                    <constraint firstAttribute="bottom" secondItem="bo2-lc-cYV" secondAttribute="bottom" constant="44" id="mfw-AH-ZWK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8Zh-xb-Kox" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.5" id="GMM-PB-B64"/>
+                            <constraint firstItem="8Zh-xb-Kox" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="mdK-bS-0vT"/>
+                            <constraint firstItem="8Zh-xb-Kox" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="or9-Kh-cdP"/>
+                            <constraint firstAttribute="bottom" secondItem="8Zh-xb-Kox" secondAttribute="bottom" id="r1O-ID-qjs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="UHc-Z7-M5N" id="nOQ-9C-36I"/>
+                        <outlet property="mainView" destination="8Zh-xb-Kox" id="Y8b-La-jkH"/>
+                        <outlet property="okButton" destination="bo2-lc-cYV" id="2nw-SY-9pm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.76335877862595414" y="-7.042253521126761"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
