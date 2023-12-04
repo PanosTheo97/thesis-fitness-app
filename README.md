@@ -31,7 +31,7 @@ Another commonly used pattern is the **Delegation** pattern, which is used to pa
 ### Pods
 
 Thesis Fitness App uses a number of pods to simplify the development procedure. These are pods that I am familiar with and have used widely in my day to day development workflows. \
-The pods used are the following:
+Some major pods used are the following:
 
 * **Alamofire** - Handles data requests and Networking.
 * **ObjectMapper** and **SwiftyJson** - Used for JSON mapping.
@@ -40,11 +40,7 @@ The pods used are the following:
 * **SVProgressHud** - An easy to use loader.
 * **SwiftLint** - Helps keep track of code formatting.
 
-## Final Thoughts
-
-I would like to thank you for taking the time to review this project, as well as for giving me an opportunity to test my skills.I want to note that **Localization** as well as **Light/Dark mode support** are **not** included in the project. That was a design choice made due to the scope of the project itself, but you should know that I am familiar with those concepts and have working experience on them.
-
-**Testing** is also not included, as my exprerience on the topic is minor and the time frame was not enough for me to study and produce valid code testing. That said, I want to learn code testing and it's applications and I believe you can help me on that.
+## Epilogue
 
 For any questions feel free to contect me on my LinkedIn or my Email Address
 
